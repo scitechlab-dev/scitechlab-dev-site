@@ -195,6 +195,15 @@ a { color: inherit; text-decoration: none; }
   background: var(--bg); border: 1px solid var(--line); padding: 3px 8px; border-radius: 3px;
 }
 
+.card p.card-link { flex: 0 0 auto; margin: 14px 0 0; }
+.card-link a {
+  font-family: var(--mono); font-size: 12px; color: var(--accent-2);
+  display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s ease;
+}
+.card-link a:hover { color: var(--accent); }
+.card-link a span { transition: transform 0.2s ease; display: inline-block; }
+.card-link a:hover span { transform: translateX(3px); }
+
 .current-learning { margin-top: 36px; }
 .current-learning h3 {
   font-family: var(--display); font-weight: 600; font-size: 0.95rem;
