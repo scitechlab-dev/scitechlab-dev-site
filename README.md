@@ -38,3 +38,9 @@ For a manual/CLI deploy instead: `wrangler pages deploy . --project-name=scitech
 Everything lives in `index.html`. Project cards are the `<article class="card">`
 blocks under `#work`. Colors and fonts are CSS variables at the top of
 `assets/style.css` (`--accent` is the amber signal color).
+
+`/assets/*` is served with a one-year `immutable` cache header (see `_headers`).
+If you replace a file under `assets/` without renaming it (e.g. `portrait.jpg`),
+browsers and Cloudflare's edge cache will keep serving the old version. Bump
+the query string referencing it in `index.html` (`portrait.jpg?v=3`, etc.) so
+it's treated as a new URL.
