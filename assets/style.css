@@ -142,26 +142,6 @@ a { color: inherit; text-decoration: none; }
 .btn-ghost { border-color: var(--line-2); color: var(--ink); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-/* telemetry strip */
-.telemetry {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  border: 1px solid var(--line); border-radius: var(--radius);
-  background: linear-gradient(180deg, var(--bg-2), var(--bg));
-  margin: 0; overflow: hidden;
-}
-.tel-item { padding: 22px 24px; border-right: 1px solid var(--line); }
-.tel-item:last-child { border-right: none; }
-.tel-item dt {
-  font-family: var(--mono); font-size: 11.5px; text-transform: uppercase;
-  letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: 10px;
-}
-.tel-item dd {
-  margin: 0; font-family: var(--display); font-weight: 600;
-  font-size: 2rem; line-height: 1; color: var(--ink);
-}
-.tel-item .num { color: var(--accent); }
-.tel-item .sub { font-size: 1.2rem; color: var(--ink-dim); }
-
 /* ---------- generic section ---------- */
 .section { position: relative; z-index: 1; padding: 88px 0; border-top: 1px solid var(--line); }
 .section-alt { background: var(--bg-2); }
@@ -180,7 +160,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- project grid ---------- */
 .project-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
 }
 .card {
   background: var(--bg-3); border: 1px solid var(--line);
@@ -213,6 +193,12 @@ a { color: inherit; text-decoration: none; }
 .stack li {
   font-family: var(--mono); font-size: 11px; color: var(--ink-dim);
   background: var(--bg); border: 1px solid var(--line); padding: 3px 8px; border-radius: 3px;
+}
+
+.current-learning { margin-top: 36px; }
+.current-learning h3 {
+  font-family: var(--display); font-weight: 600; font-size: 0.95rem;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-dim); margin: 0 0 14px;
 }
 
 /* ---------- about ---------- */
@@ -301,7 +287,6 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 940px) {
-  .project-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .research-cols { grid-template-columns: 1fr; gap: 36px; }
 }
@@ -309,9 +294,6 @@ a { color: inherit; text-decoration: none; }
   .wrap { padding: 0 20px; }
   .site-nav { display: none; }
   .hero { padding: 64px 0 48px; }
-  .telemetry { grid-template-columns: 1fr 1fr; }
-  .tel-item:nth-child(2) { border-right: none; }
-  .tel-item:nth-child(1), .tel-item:nth-child(2) { border-bottom: 1px solid var(--line); }
   .project-grid { grid-template-columns: 1fr; }
   .cred-grid { grid-template-columns: 1fr; }
   .contact-links { grid-template-columns: 1fr; }

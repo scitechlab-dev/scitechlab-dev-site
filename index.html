@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SciTechLab — Josué Aldana · Electrical Engineer · Embedded Systems, Telecom &amp; Aerospace</title>
-<meta name="description" content="Portfolio of Josué Aldana — Electrical Engineer working across power-grid protection &amp; operations, embedded systems, and high-altitude balloon (HAB) research." />
+<meta name="description" content="Portfolio of Josué Aldana — Electrical Engineer working on grid protection, SCADA/ADMS analytics, and embedded systems for high-altitude balloon research." />
 <meta name="author" content="Josué Romeo Aldana Aguilar" />
 <meta property="og:title" content="SciTechLab — Josué Aldana" />
-<meta property="og:description" content="Electrical Engineer · power-grid operations, embedded systems, HAB / near-space research." />
+<meta property="og:description" content="Electrical Engineer · grid protection &amp; operations, SCADA/ADMS, embedded systems, HAB research." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scitechlab-dev.com" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,41 +42,22 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
     <div class="wrap">
-      <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Power Grid Operations · Embedded Systems · Aerospace R&amp;D</p>
+      <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Utilities · Grid Operations · SCADA · Embedded Systems · IoT · AI</p>
       <h1 class="hero-title">
-        Electrical engineering from the<br />
-        <span class="accent">substation</span> to the <span class="accent">stratosphere</span>.
+        Electrical engineering, from the<br />
+        <span class="accent">grid</span> to <span class="accent">near space</span>.
       </h1>
       <p class="hero-lede">
-        I'm Josué Aldana — an electrical engineer working as a Network Operations Analyst at an electric
-        distribution utility, where I investigate protection events and model distribution-network topology.
-        My research background spans high-altitude balloon (HAB) systems, embedded electronics, and applied
-        machine learning, published across 8 IEEE conference papers.
+        I'm Josué Aldana, an electrical engineer with a strong interest in technology. I currently work on
+        grid protection analysis, intelligent switching maneuvers, and process automation for utilities —
+        using ADMS data, SCADA events, and network topology models with OpenDSS and Python. In parallel, I
+        collaborate on high-altitude balloon missions built around microcontrollers, and I'm learning about
+        MPSoCs with the ZedBoard. I also enjoy exploring practical, efficient ways to apply AI.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#work">View projects</a>
         <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
-
-      <!-- telemetry strip -->
-      <dl class="telemetry" aria-label="At a glance">
-        <div class="tel-item">
-          <dt>IEEE publications</dt>
-          <dd><span class="num" data-count="8">0</span></dd>
-        </div>
-        <div class="tel-item">
-          <dt>HAB mission altitude</dt>
-          <dd><span class="num" data-count="30" data-suffix=" km+">0</span></dd>
-        </div>
-        <div class="tel-item">
-          <dt>Years in aerospace R&amp;D</dt>
-          <dd><span class="num" data-count="4" data-suffix="+">0</span></dd>
-        </div>
-        <div class="tel-item">
-          <dt>University GPA</dt>
-          <dd><span class="num" data-count="8.5">0</span><span class="sub"> /10</span></dd>
-        </div>
-      </dl>
     </div>
   </section>
 
@@ -86,83 +67,66 @@
       <div class="section-head">
         <span class="section-tag">01 — Work</span>
         <h2>Experience &amp; project work</h2>
-        <p class="section-sub">Research and industry work spanning grid protection &amp; operations, high-altitude balloon systems, and embedded/IoT engineering.</p>
+        <p class="section-sub">Research and industry work spanning SCADA, grid protection &amp; operations.</p>
       </div>
 
       <div class="project-grid">
 
-        <article class="card" data-domain="Grid / Protection">
+        <article class="card" data-domain="Protection">
           <div class="card-top">
-            <span class="domain">Protection · COMTRADE</span>
-            <span class="status">Current role</span>
+            <span class="domain">Protection · ML</span>
+            <span class="status">Ongoing</span>
           </div>
-          <h3>Protection &amp; Event Analysis</h3>
-          <p>At an electric distribution utility, I extract and analyze COMTRADE oscillography and event logs from multi-vendor relays (SEL, Siemens, ABB) for post-fault root-cause investigation, and review overcurrent, reclosing, and distance protection settings on 23, 13.2, and 4.1 kV feeders.</p>
+          <h3>Coordination of Protection</h3>
+          <p>Using grid topology data, SCADA telemetry, and machine learning, I'm working on a deployable way to predict the most efficient setting groups for IEDs.</p>
           <ul class="stack">
-            <li>COMTRADE</li><li>DNP3</li><li>Relay coordination</li><li>SEL / Siemens / ABB</li>
+            <li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li>
           </ul>
         </article>
 
-        <article class="card" data-domain="Grid / Data">
+        <article class="card" data-domain="Grid Operations">
           <div class="card-top">
-            <span class="domain">DMS · Python</span>
-            <span class="status">Current role</span>
+            <span class="domain">OpenDSS · GIS</span>
+            <span class="status">Ongoing</span>
           </div>
-          <h3>DMS Topology &amp; Reliability</h3>
-          <p>Extraction of distribution management system (DMS) tables and construction of MV network topology models in Python for connectivity analysis and engineering studies, alongside SAIDI/SAIFI reliability indicators calculated per IEEE Std 1366.</p>
+          <h3>Grid Operations</h3>
+          <p>Data fusion for intelligent switching-maneuver design, combining topology data, SCADA state of IEDs, telemetry, and operations history. Supported by OpenDSS and GIS data, with a mechanism to weigh the impact and restrictions of each candidate maneuver.</p>
           <ul class="stack">
-            <li>Python</li><li>DMS</li><li>IEEE Std 1366</li><li>SAIDI / SAIFI</li>
+            <li>OpenDSS</li><li>GIS</li><li>SCADA</li><li>Python</li>
           </ul>
         </article>
 
-        <article class="card" data-domain="Aerospace / Power">
+        <article class="card" data-domain="RF Planning">
           <div class="card-top">
-            <span class="domain">HAB · EPS</span>
-            <span class="status">2022 — present</span>
+            <span class="domain">RF · GA</span>
+            <span class="status">Done</span>
           </div>
-          <h3>HAB Electrical Power System</h3>
-          <p>At Observatorio Micro-Macro, I design DC-DC converters, protection circuitry, and PCB layout for power subsystems operating above 30 km altitude under low pressure, low temperature, and elevated radiation exposure, with defined V&amp;V test cases ahead of flight campaigns.</p>
+          <h3>RF Planning</h3>
+          <p>Smart placement of RF concentrators for a distribution utility — minimizing the number of sites while maximizing IED-to-SCADA coverage — using a genetic algorithm to find optimal tower locations among existing utility poles from GIS data.</p>
           <ul class="stack">
-            <li>DC-DC converters</li><li>PCB design</li><li>Systems Engineering</li><li>V&amp;V</li>
+            <li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li>
           </ul>
         </article>
 
-        <article class="card" data-domain="RF / Telecom">
+        <article class="card" data-domain="HAB / Aerospace">
           <div class="card-top">
-            <span class="domain">UHF · LoRa · Iridium</span>
-            <span class="status">Published research</span>
+            <span class="domain">HAB · Trajectory</span>
+            <span class="status">Done</span>
           </div>
-          <h3>HAB Communications</h3>
-          <p>Selection and characterization of UHF antennas on regulated frequencies, link analysis for LoRa at 915 MHz under ionospheric and volcanic disturbance, and integration of Iridium satellite modems for near-space telemetry.</p>
+          <h3>HAB Trajectory Simulations</h3>
+          <p>Simulation of high-altitude balloon flight trajectories — ascent, burst, and descent — to support mission planning and recovery-zone estimation.</p>
           <ul class="stack">
-            <li>UHF</li><li>LoRa 915 MHz</li><li>Iridium</li><li>RF link analysis</li>
+            <li>HAB</li><li>Trajectory modeling</li><li>Mission planning</li>
           </ul>
         </article>
 
-        <article class="card" data-domain="IoT / Embedded">
-          <div class="card-top">
-            <span class="domain">IoT · Cyber-Physical</span>
-            <span class="status">2024 — 2025</span>
-          </div>
-          <h3>Cyber-Physical Systems (SARA Robotics)</h3>
-          <p>Integration of IoT solutions combining embedded hardware (Raspberry Pi, ESP32), cloud platforms, industrial messaging (MQTT), and computer vision applied to production environments.</p>
-          <ul class="stack">
-            <li>ESP32</li><li>Raspberry Pi</li><li>MQTT</li><li>Computer vision</li>
-          </ul>
-        </article>
+      </div>
 
-        <article class="card" data-domain="Signals / Firmware">
-          <div class="card-top">
-            <span class="domain">RF · Firmware</span>
-            <span class="status">2024</span>
-          </div>
-          <h3>Signal Processing &amp; Firmware (SelfNET)</h3>
-          <p>Time- and frequency-domain signal analysis with oscilloscopes and spectrum analyzers, and firmware development for STM32 and ESP32 microcontrollers in telecommunications applications.</p>
-          <ul class="stack">
-            <li>STM32</li><li>ESP32</li><li>Spectrum analysis</li><li>Firmware</li>
-          </ul>
-        </article>
-
+      <div class="current-learning">
+        <h3>Currently learning</h3>
+        <ul class="stack">
+          <li>FPGA · ZedBoard</li><li>OpenDSS</li><li>Demand forecasting (ML)</li><li>Maneuver design</li><li>AI tooling</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -179,24 +143,9 @@
           </figcaption>
         </figure>
         <span class="section-tag">02 — About</span>
-        <h2>Where grid operations meet aerospace systems engineering</h2>
+        <h2>Snapshot</h2>
       </div>
       <div class="about-body">
-        <p>
-          I'm an <strong>Electrical Engineer</strong> working as a <strong>Network Operations Analyst</strong>
-          at an electric distribution utility, where I analyze protection settings and fault events, build
-          Python tooling for distribution-network topology, and calculate reliability indicators
-          (SAIDI/SAIFI) under IEEE Std 1366.
-        </p>
-        <p>
-          My research background is in <strong>systems engineering for aerospace</strong>: since 2022 I've
-          contributed to high-altitude balloon (HAB) missions at Observatorio Micro-Macro, designing power
-          subsystems and communications links for near-space environments — a methodology I also applied to
-          my undergraduate thesis under Dr. Jesús González-Llorente (Space Systems Engineering, Senior
-          Member IEEE). I also teach electrical engineering at the university level and mentor undergraduate
-          research.
-        </p>
-
         <div class="cred-grid">
           <div class="cred">
             <span class="cred-k">Focus</span>
@@ -285,9 +234,9 @@
           <span class="cc-k">Email</span>
           <span class="cc-v">jaldana.aguilar@ieee.org</span>
         </a>
-        <a class="contact-card" href="https://github.com/" rel="noopener">
+        <a class="contact-card" href="https://github.com/scitechlab-dev" rel="noopener">
           <span class="cc-k">GitHub</span>
-          <span class="cc-v">@scitechlab</span>
+          <span class="cc-v">@scitechlab-dev</span>
         </a>
         <a class="contact-card" href="https://linkedin.com/in/scitechlab" rel="noopener">
           <span class="cc-k">LinkedIn</span>
