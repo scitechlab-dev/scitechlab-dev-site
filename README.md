@@ -16,12 +16,13 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 │                         #   hero → work (tabbed by domain)
 │                         #   → articles + contact (side by side)
 ├── articles/
-│   ├── _template.html    # copy this to start a new article
-│   └── sample-note.html  # placeholder, delete after first real post
+│   └── _template.html    # copy this to start a new article
 ├── assets/
 │   ├── style.css         # minimal dark theme, CSS variables
 │   ├── main.js           # footer year + work tabs
-│   └── portrait.jpg
+│   ├── portrait.jpg
+│   ├── favicon.svg       # site icon (favicon.png / apple-touch-icon.png are fallbacks)
+│   └── share.png         # 1200x627 og:image used by LinkedIn preview cards
 ├── _headers              # security + cache headers (Cloudflare Pages)
 └── README.md
 ```
@@ -68,7 +69,9 @@ the inactive ones on load.
    </li>
    ```
 
-5. Commit and push. Cloudflare redeploys automatically.
+5. If it's the first article, also delete the `.articles-empty` placeholder
+   paragraph under the list in `index.html`.
+6. Commit and push. Cloudflare redeploys automatically.
 
 ### Sharing on LinkedIn
 
@@ -80,9 +83,10 @@ LinkedIn caches previews aggressively. After editing a published article, run th
 URL through the [Post Inspector](https://www.linkedin.com/post-inspector/) to
 force a re-scrape.
 
-`og:image` currently points at `assets/portrait.jpg`, which is square and small.
-LinkedIn prefers roughly **1200×627**; a dedicated share image at that size would
-render a noticeably better card.
+`og:image` points at `assets/share.png`, a dedicated 1200×627 card matching the
+site theme (dark background, amber signal mark). If the name or tagline ever
+changes, regenerate it at the same size and force LinkedIn to re-scrape with
+the Post Inspector above.
 
 ## Cache busting
 
@@ -91,3 +95,10 @@ If you change a file under `assets/` without renaming it, browsers and
 Cloudflare's edge cache keep serving the old version. Bump the query string
 wherever it's referenced (`style.css?v=2` → `?v=3`) so it counts as a new URL.
 This applies to `index.html` **and** every page in `articles/`.
+
+## Commits
+
+Write short imperative messages that say what changed
+(`Add article: relay setting groups`, `Fix contact links`). The early history
+is full of `x` placeholders; it is already pushed so it stays, but don't
+repeat it.
