@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Josué Aldana-Aguilar — Electrical Engineer</title>
-<meta name="description" content="Josué Aldana-Aguilar — Electrical Engineer. Grid operations analyst building data-driven tools for energy utilities, from SCADA/ADMS, data analysis and automation." />
+<title>Josué Aldana-Aguilar · Electrical Engineer</title>
+<meta name="description" content="Josué Aldana-Aguilar, Electrical Engineer. Grid operations analyst building data-driven tools for energy utilities from SCADA/ADMS, data analysis and automation." />
 <meta name="author" content="Josué Romeo Aldana Aguilar" />
-<meta property="og:title" content="Josué Aldana-Aguilar — Electrical Engineer" />
+<meta property="og:title" content="Josué Aldana-Aguilar · Electrical Engineer" />
 <meta property="og:description" content="Building data-driven tools for energy utilities. Electrical engineering, electronics, computer science." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scitechlab-dev.com" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css?v=2" />
+<link rel="stylesheet" href="assets/style.css?v=3" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -22,7 +22,7 @@
   <div class="wrap header-inner">
     <a class="brand" href="#top">Josué Aldana-Aguilar</a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#electrical">Projects</a>
+      <a href="#work">Work</a>
       <a href="#articles">Articles</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -36,194 +36,209 @@
       <div class="hero-text">
         <p class="eyebrow">Electrical Engineer · Electronics · Computer Science</p>
         <h1 class="hero-title">Building data-driven tools for energy utilities</h1>
-        <div class="hero-lede">
-          <p>
-            I'm Josué Aldana, an Electrical Engineer. I'm currently working as a grid
-            operations analyst, taking advantage of my previous experience in SCADA/ADMS,
-            data analysis and automation to create tools for smart operational
-            decision-making — using the data and experience of years in energy utilities
-            and legacy systems for optimal operation and KPI goal achievement.
-          </p>
-          <p>I'm currently studying a Master's in Data Science at UOC.</p>
-          <p>
-            In my free time I'm learning about OpenDSS, embedded systems for IoT,
-            and AI.
-          </p>
-        </div>
+        <p class="hero-lede">
+          I'm Josué Aldana, an Electrical Engineer working as a grid operations
+          analyst. I build tools for smarter operational decisions, drawing on years
+          of SCADA/ADMS, data analysis and automation work across energy utilities
+          and their legacy systems, so operations run closer to optimal and KPI
+          targets are met.
+        </p>
+
+        <dl class="now">
+          <div class="now-item">
+            <dt>Now</dt>
+            <dd>Grid Operations Analyst</dd>
+          </div>
+          <div class="now-item">
+            <dt>Studying</dt>
+            <dd>MSc Data Science, UOC</dd>
+          </div>
+          <div class="now-item">
+            <dt>Learning</dt>
+            <dd>OpenDSS, IoT embedded systems, AI</dd>
+          </div>
+        </dl>
+
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#electrical">View projects</a>
+          <a class="btn btn-primary" href="#work">View projects</a>
           <a class="btn btn-ghost" href="#articles">Articles &amp; Insights</a>
           <a class="btn btn-ghost" href="#contact">Get in touch</a>
         </div>
       </div>
+
       <figure class="hero-photo">
-        <img src="assets/portrait.jpg?v=2" alt="Josué Aldana-Aguilar" width="200" height="200" />
+        <img src="assets/portrait.jpg?v=2" alt="Josué Aldana-Aguilar" width="180" height="180" />
         <figcaption>San Salvador, El Salvador</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- ============ 01 — ELECTRICAL ENGINEERING ============ -->
-  <section class="section" id="electrical">
+  <!-- ============ WORK (tabbed by domain) ============ -->
+  <section class="section" id="work">
     <div class="wrap">
-      <div class="section-head">
-        <span class="section-tag">01 — Electrical Engineering</span>
-        <h2>Current projects</h2>
+      <div class="section-head work-head">
+        <div>
+          <span class="section-tag">Current projects</span>
+          <h2>Work</h2>
+        </div>
+        <p class="section-sub">Seven projects across three domains. Pick one to browse.</p>
       </div>
 
-      <ol class="projects">
-        <li class="project">
-          <div class="p-head">
-            <h3>Coordination of Protection</h3>
-            <span class="p-status">Ongoing</span>
-          </div>
-          <p>Predicting the most efficient relay setting groups for IEDs, from grid topology, SCADA telemetry, and machine learning.</p>
-          <ul class="stack"><li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li></ul>
-        </li>
+      <div class="tabs" role="tablist" aria-label="Project domains">
+        <button class="tab" role="tab" id="tab-ee" aria-controls="panel-ee" aria-selected="true" tabindex="0">
+          <span class="tab-n">01</span>
+          <span class="tab-l">Electrical Engineering</span>
+          <span class="tab-c">3</span>
+        </button>
+        <button class="tab" role="tab" id="tab-el" aria-controls="panel-el" aria-selected="false" tabindex="-1">
+          <span class="tab-n">02</span>
+          <span class="tab-l">Electronics</span>
+          <span class="tab-c">2</span>
+        </button>
+        <button class="tab" role="tab" id="tab-cs" aria-controls="panel-cs" aria-selected="false" tabindex="-1">
+          <span class="tab-n">03</span>
+          <span class="tab-l">Computer Science</span>
+          <span class="tab-c">2</span>
+        </button>
+      </div>
 
-        <li class="project">
-          <div class="p-head">
-            <h3>Grid Operations</h3>
-            <span class="p-status">Ongoing</span>
-          </div>
-          <p>Designing switching maneuvers by fusing topology, SCADA state, telemetry, and operations history in OpenDSS, with a scoring method to weigh each maneuver's impact and constraints.</p>
-          <ul class="stack"><li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li></ul>
-        </li>
+      <!-- Panels render unhidden so the content still works without JavaScript. -->
+      <div class="panel" id="panel-ee" role="tabpanel" aria-labelledby="tab-ee">
+        <ol class="projects">
+          <li class="project">
+            <div class="p-head">
+              <h3>Coordination of Protection</h3>
+              <span class="p-status" data-state="on">Ongoing</span>
+            </div>
+            <p>Predicting the most efficient relay setting groups for IEDs from grid topology, SCADA telemetry, and machine learning.</p>
+            <ul class="stack"><li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li></ul>
+          </li>
 
-        <li class="project">
-          <div class="p-head">
-            <h3>RF Planning</h3>
-            <span class="p-status">Done</span>
-          </div>
-          <p>A genetic algorithm that places RF concentrators on existing utility poles (from GIS data), minimizing tower count while maximizing SCADA coverage of the IED fleet.</p>
-          <ul class="stack"><li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li></ul>
-        </li>
-      </ol>
+          <li class="project">
+            <div class="p-head">
+              <h3>Grid Operations</h3>
+              <span class="p-status" data-state="on">Ongoing</span>
+            </div>
+            <p>Designing switching maneuvers by fusing topology, SCADA state, telemetry, and operations history in OpenDSS, with a scoring method that weighs the impact and constraints of each maneuver.</p>
+            <ul class="stack"><li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li></ul>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>RF Planning</h3>
+              <span class="p-status">Done</span>
+            </div>
+            <p>A genetic algorithm that places RF concentrators on existing utility poles from GIS data, minimizing tower count while maximizing SCADA coverage of the IED fleet.</p>
+            <ul class="stack"><li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li></ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="panel" id="panel-el" role="tabpanel" aria-labelledby="tab-el">
+        <ol class="projects">
+          <li class="project">
+            <div class="p-head">
+              <h3>High-Altitude Balloon Electronics</h3>
+              <span class="p-status" data-state="on">Ongoing</span>
+            </div>
+            <p>Power system, on-board computer, and payload electronics for a high-altitude balloon mission, built with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
+            <ul class="stack"><li>EPS</li><li>OBC</li><li>Li-ion</li><li>Arduino</li><li>TinyML</li></ul>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>Project-based learning with ZedBoard</h3>
+              <span class="p-status" data-state="on">Ongoing</span>
+            </div>
+            <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
+            <ul class="stack"><li>FPGA</li><li>APSoC</li><li>Zynq-7000</li></ul>
+            <p class="p-link"><a href="https://github.com/scitechlab-dev/fpga_learning_zedboard/tree/main" target="_blank" rel="noopener">View lab notes <span aria-hidden="true">→</span></a></p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="panel" id="panel-cs" role="tabpanel" aria-labelledby="tab-cs">
+        <ol class="projects">
+          <li class="project">
+            <div class="p-head">
+              <h3>Local LLM-Based Laboratory</h3>
+              <span class="p-status" data-state="on">Ongoing</span>
+            </div>
+            <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
+            <ul class="stack"><li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li></ul>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>High-Altitude Balloon Trajectory Simulations</h3>
+              <span class="p-status">Done</span>
+            </div>
+            <p>Simulating balloon flight through ascent, burst, and descent to plan missions and estimate recovery zones.</p>
+            <ul class="stack"><li>Trajectory modeling</li><li>Mission planning</li><li>Python</li></ul>
+            <p class="p-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">View live project <span aria-hidden="true">→</span></a></p>
+          </li>
+        </ol>
+      </div>
     </div>
   </section>
 
-  <!-- ============ 02 — ELECTRONICS ============ -->
-  <section class="section" id="electronics">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-tag">02 — Electronics</span>
-        <h2>Current projects</h2>
+  <!-- ============ ARTICLES + CONTACT (two columns) ============ -->
+  <section class="section closing">
+    <div class="wrap closing-grid">
+
+      <div id="articles">
+        <div class="section-head">
+          <span class="section-tag">Articles &amp; Insights</span>
+          <h2>Notes and things I'm learning</h2>
+          <p class="section-sub">Short notes on grid operations, electronics, and data work, written to be shared.</p>
+        </div>
+
+        <!-- Add a new entry at the TOP of this list. See README.md, "Publishing an article". -->
+        <ol class="articles">
+          <li class="article-row">
+            <a href="articles/sample-note.html">
+              <time datetime="2026-08-09">2026-08-09</time>
+              <span class="a-title">Sample note, replace this with your first article</span>
+              <span class="a-desc">A working example of the article layout, including the tags that make LinkedIn render a preview card when you paste the link.</span>
+            </a>
+          </li>
+        </ol>
       </div>
 
-      <ol class="projects">
-        <li class="project">
-          <div class="p-head">
-            <h3>High-Altitude Balloon Electronics: EPS, OBC &amp; Payload</h3>
-            <span class="p-status">Ongoing</span>
-          </div>
-          <p>Building the power system, on-board computer, and payload electronics for a high-altitude balloon mission with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
-          <ul class="stack"><li>COTS</li><li>Li-ion</li><li>Arduino</li><li>TinyML</li></ul>
-        </li>
+      <div id="contact">
+        <div class="section-head">
+          <span class="section-tag">Contact</span>
+          <h2>Get in touch</h2>
+          <p class="section-sub">Open to collaborating on grid operations, embedded systems, and applied data work.</p>
+        </div>
 
-        <li class="project">
-          <div class="p-head">
-            <h3>Project-based learning with ZedBoard</h3>
-            <span class="p-status">Ongoing</span>
-          </div>
-          <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
-          <ul class="stack"><li>FPGA</li><li>APSoC</li><li>Zynq-7000</li></ul>
-          <p class="p-link"><a href="https://github.com/scitechlab-dev/fpga_learning_zedboard/tree/main" target="_blank" rel="noopener">View lab notes <span aria-hidden="true">→</span></a></p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============ 03 — COMPUTER SCIENCE ============ -->
-  <section class="section" id="computer-science">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-tag">03 — Computer Science</span>
-        <h2>Current projects</h2>
-      </div>
-
-      <ol class="projects">
-        <li class="project">
-          <div class="p-head">
-            <h3>Local LLM-Based Laboratory</h3>
-            <span class="p-status">Ongoing</span>
-          </div>
-          <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
-          <ul class="stack"><li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li></ul>
-        </li>
-
-        <li class="project">
-          <div class="p-head">
-            <h3>High-Altitude Balloon Trajectory Simulations</h3>
-            <span class="p-status">Done</span>
-          </div>
-          <p>Simulating high-altitude balloon flight (ascent, burst, descent) to plan missions and estimate recovery zones.</p>
-          <ul class="stack"><li>Trajectory modeling</li><li>Mission planning</li><li>Python</li></ul>
-          <p class="p-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">View live project <span aria-hidden="true">→</span></a></p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============ 04 — ARTICLES & INSIGHTS ============ -->
-  <section class="section" id="articles">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-tag">04 — Articles &amp; Insights</span>
-        <h2>Notes and things I'm learning</h2>
-        <p class="section-sub">Short write-ups on grid operations, electronics, and data work — written to be shared.</p>
-      </div>
-
-      <!-- Add a new entry at the TOP of this list. See README.md → "Publishing an article". -->
-      <ol class="articles">
-        <li class="article-row">
-          <a href="articles/sample-note.html">
-            <time datetime="2026-08-09">2026-08-09</time>
-            <span class="a-title">Sample note — replace this with your first article</span>
-            <span class="a-desc">A working example of the article layout, including the tags that make LinkedIn render a preview card when you paste the link.</span>
-          </a>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============ 05 — CONTACT ============ -->
-  <section class="section" id="contact">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-tag">05 — Contact</span>
-        <h2>Get in touch</h2>
-        <p class="section-sub">Open to collaborating on grid operations, embedded systems, and applied data work.</p>
-      </div>
-
-      <div class="contact-links">
-        <a class="contact-card" href="mailto:jaldana.aguilar@ieee.org">
-          <span class="cc-k">Email</span>
-          <span class="cc-v">jaldana.aguilar@ieee.org</span>
-        </a>
-        <a class="contact-card" href="https://linkedin.com/in/scitechlab" rel="noopener">
-          <span class="cc-k">LinkedIn</span>
-          <span class="cc-v">scitechlab</span>
-        </a>
-        <a class="contact-card" href="https://github.com/scitechlab-dev" rel="noopener">
-          <span class="cc-k">GitHub</span>
-          <span class="cc-v">@scitechlab-dev</span>
-        </a>
-        <a class="contact-card" href="https://orcid.org/0000-0002-7686-5065" rel="noopener">
-          <span class="cc-k">ORCID</span>
-          <span class="cc-v">0000-0002-7686-5065</span>
-        </a>
-      </div>
-
-      <div class="profiles">
-        <h3>Profiles</h3>
-        <ul class="profile-list">
-          <li><a href="https://orcid.org/0000-0002-7686-5065" rel="noopener">ORCID</a></li>
-          <!-- TODO: replace the # placeholders below with the real profile URLs. -->
-          <li><a class="pending" href="#contact" aria-disabled="true">Google Scholar <span class="pending-tag">link pending</span></a></li>
-          <li><a class="pending" href="#contact" aria-disabled="true">IEEE Xplore <span class="pending-tag">link pending</span></a></li>
-          <li><a class="pending" href="#contact" aria-disabled="true">ResearchGate <span class="pending-tag">link pending</span></a></li>
+        <ul class="contact-links">
+          <li><a href="mailto:jaldana.aguilar@ieee.org">
+            <span class="cc-k">Email</span><span class="cc-v">jaldana.aguilar@ieee.org</span>
+          </a></li>
+          <li><a href="https://linkedin.com/in/scitechlab" rel="noopener">
+            <span class="cc-k">LinkedIn</span><span class="cc-v">scitechlab</span>
+          </a></li>
+          <li><a href="https://github.com/scitechlab-dev" rel="noopener">
+            <span class="cc-k">GitHub</span><span class="cc-v">@scitechlab-dev</span>
+          </a></li>
+          <li><a href="https://orcid.org/0000-0002-7686-5065" rel="noopener">
+            <span class="cc-k">ORCID</span><span class="cc-v">0000-0002-7686-5065</span>
+          </a></li>
         </ul>
+
+        <div class="profiles">
+          <h3>Profiles</h3>
+          <ul class="profile-list">
+            <li><a href="https://orcid.org/0000-0002-7686-5065" rel="noopener">ORCID</a></li>
+            <!-- TODO: replace the # placeholders below with the real profile URLs. -->
+            <li><a class="pending" href="#contact" aria-disabled="true">Google Scholar <span class="pending-tag">link pending</span></a></li>
+            <li><a class="pending" href="#contact" aria-disabled="true">IEEE Xplore <span class="pending-tag">link pending</span></a></li>
+            <li><a class="pending" href="#contact" aria-disabled="true">ResearchGate <span class="pending-tag">link pending</span></a></li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </section>
 </main>
@@ -235,6 +250,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=2"></script>
+<script src="assets/main.js?v=3"></script>
 </body>
 </html>

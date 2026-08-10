@@ -1,6 +1,6 @@
 # scitechlab-dev-site
 
-Personal site for **Josué Aldana-Aguilar** — Electrical Engineer, currently a grid
+Personal site for **Josué Aldana-Aguilar**, Electrical Engineer, currently a grid
 operations analyst building data-driven tools for energy utilities. Static
 HTML/CSS/JS, zero build step, deployed on **Cloudflare Pages**.
 
@@ -13,14 +13,14 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 ```
 .
 ├── index.html            # single-page site
-│                         #   hero → 01 Electrical Engineering → 02 Electronics
-│                         #   → 03 Computer Science → 04 Articles → 05 Contact
+│                         #   hero → work (tabbed by domain)
+│                         #   → articles + contact (side by side)
 ├── articles/
 │   ├── _template.html    # copy this to start a new article
-│   └── sample-note.html  # placeholder — delete after the first real post
+│   └── sample-note.html  # placeholder, delete after first real post
 ├── assets/
 │   ├── style.css         # minimal dark theme, CSS variables
-│   ├── main.js           # footer year only
+│   ├── main.js           # footer year + work tabs
 │   └── portrait.jpg
 ├── _headers              # security + cache headers (Cloudflare Pages)
 └── README.md
@@ -28,7 +28,7 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 
 ## Deploy
 
-Connected to Cloudflare Pages via Git — pushes to `main` redeploy automatically.
+Connected to Cloudflare Pages via Git. Pushes to `main` redeploy automatically.
 
 - **Framework preset:** None
 - **Build command:** *(none)*
@@ -38,14 +38,23 @@ For a manual/CLI deploy instead: `wrangler pages deploy . --project-name=scitech
 
 ## Editing content
 
-Projects are the `<li class="project">` blocks under `#electrical`, `#electronics`
-and `#computer-science` in `index.html`. Colors and fonts are CSS variables at the
-top of `assets/style.css` (`--accent` is the amber signal color).
+Projects are the `<li class="project">` blocks inside `#panel-ee` (Electrical
+Engineering), `#panel-el` (Electronics) and `#panel-cs` (Computer Science) in
+`index.html`. Colors and fonts are CSS variables at the top of
+`assets/style.css` (`--accent` is the amber signal color).
+
+**When adding or removing a project, update the count** in its tab button
+(`<span class="tab-c">`) and the total in the section subtitle. Nothing counts
+them automatically.
+
+The tabs are progressive enhancement: all three panels ship unhidden, so the
+page still reads as one long list if JavaScript fails. `assets/main.js` hides
+the inactive ones on load.
 
 ## Publishing an article
 
 1. `cp articles/_template.html articles/my-slug.html`
-2. Replace every `{{PLACEHOLDER}}` in the `<head>` — title, summary, slug, date.
+2. Replace every `{{PLACEHOLDER}}` in the `<head>`: title, summary, slug, date.
 3. Write the article inside `<div class="post-body">`.
 4. Add a row at the **top** of the `<ol class="articles">` list in `index.html`:
 
