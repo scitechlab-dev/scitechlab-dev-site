@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css?v=5" />
+<link rel="stylesheet" href="assets/style.css?v=6" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -42,11 +42,11 @@
         <p class="eyebrow">Electrical Engineer · Electronics · Computer Science</p>
         <h1 class="hero-title">Building data-driven tools for energy utilities</h1>
         <p class="hero-lede">
-          I'm Josué Aldana, an Electrical Engineer working as a grid operations
-          analyst. I build tools that support better operational decisions, drawing
-          on SCADA/ADMS data, analysis and automation across utility systems,
-          including the legacy ones still in daily use. The aim is steadier
-          operations and measurable progress against KPI targets.
+          I'm Josué Aldana, an electrical engineer working as a grid operations
+          analyst. I build tools that turn SCADA/ADMS data, analysis and automation
+          into better operational decisions — even on the legacy systems utilities
+          still rely on every day. The goal: steadier operations and measurable
+          progress against KPI targets.
         </p>
 
         <dl class="now">
@@ -57,10 +57,6 @@
           <div class="now-item">
             <dt>Studying</dt>
             <dd>MSc Data Science, UOC</dd>
-          </div>
-          <div class="now-item">
-            <dt>Learning</dt>
-            <dd>OpenDSS, IoT embedded systems, AI</dd>
           </div>
         </dl>
 
@@ -81,29 +77,26 @@
   <!-- ============ WORK (tabbed by domain) ============ -->
   <section class="section" id="work">
     <div class="wrap">
-      <div class="section-head work-head">
-        <div>
-          <span class="section-tag">Current projects</span>
-          <h2>Work</h2>
-        </div>
-        <p class="section-sub">Seven projects across three domains. Pick one to browse.</p>
+      <div class="section-head">
+        <span class="section-tag">Projects &amp; learning</span>
+        <h2>Work</h2>
       </div>
 
       <div class="tabs" role="tablist" aria-label="Project domains">
         <button class="tab" role="tab" id="tab-ee" aria-controls="panel-ee" aria-selected="true" tabindex="0">
           <span class="tab-n">01</span>
           <span class="tab-l">Electrical Engineering</span>
-          <span class="tab-c">3</span>
+          <span class="tab-c">4</span>
         </button>
         <button class="tab" role="tab" id="tab-el" aria-controls="panel-el" aria-selected="false" tabindex="-1">
           <span class="tab-n">02</span>
           <span class="tab-l">Electronics</span>
-          <span class="tab-c">2</span>
+          <span class="tab-c">3</span>
         </button>
         <button class="tab" role="tab" id="tab-cs" aria-controls="panel-cs" aria-selected="false" tabindex="-1">
           <span class="tab-n">03</span>
           <span class="tab-l">Computer Science</span>
-          <span class="tab-c">2</span>
+          <span class="tab-c">3</span>
         </button>
       </div>
 
@@ -113,7 +106,7 @@
           <li class="project">
             <div class="p-head">
               <h3>Coordination of Protection</h3>
-              <span class="p-status" data-state="on">Ongoing</span>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Predicting the most efficient relay setting groups for IEDs from grid topology, SCADA telemetry, and machine learning.</p>
             <ul class="stack"><li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li></ul>
@@ -122,7 +115,7 @@
           <li class="project">
             <div class="p-head">
               <h3>Grid Operations</h3>
-              <span class="p-status" data-state="on">Ongoing</span>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Designing switching maneuvers by fusing topology, SCADA state, telemetry, and operations history in OpenDSS, with a scoring method that weighs the impact and constraints of each maneuver.</p>
             <ul class="stack"><li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li></ul>
@@ -131,11 +124,20 @@
           <li class="project">
             <div class="p-head">
               <h3>RF Planning</h3>
-              <span class="p-status">Done</span>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status">Done</span></span>
             </div>
             <p>A genetic algorithm that places RF concentrators on existing utility poles from GIS data, minimizing tower count while maximizing SCADA coverage of the IED fleet.</p>
             <ul class="stack"><li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li></ul>
             <p class="p-link"><a href="https://github.com/scitechlab-dev/rf_ga_ot" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a></p>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>OpenDSS</h3>
+              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Deepening my command of OpenDSS for distribution modeling, fault studies, and what-if simulation of switching maneuvers.</p>
+            <ul class="stack"><li>OpenDSS</li><li>Power flow</li><li>Python</li></ul>
           </li>
         </ol>
       </div>
@@ -145,7 +147,7 @@
           <li class="project">
             <div class="p-head">
               <h3>High-Altitude Balloon Electronics</h3>
-              <span class="p-status" data-state="on">Ongoing</span>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Power system, on-board computer, and payload electronics for a high-altitude balloon mission, built with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
             <ul class="stack"><li>EPS</li><li>OBC</li><li>Li-ion</li><li>Arduino</li><li>TinyML</li></ul>
@@ -154,11 +156,20 @@
           <li class="project">
             <div class="p-head">
               <h3>Project-based learning with ZedBoard</h3>
-              <span class="p-status" data-state="on">Ongoing</span>
+              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
             <ul class="stack"><li>FPGA</li><li>APSoC</li><li>Zynq-7000</li></ul>
             <p class="p-link"><a href="https://github.com/scitechlab-dev/fpga_learning_zedboard/tree/main" target="_blank" rel="noopener">View lab notes <span aria-hidden="true">→</span></a></p>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>IoT Embedded Systems</h3>
+              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Exploring sensors, low-power firmware, and telemetry pipelines on COTS development boards.</p>
+            <ul class="stack"><li>IoT</li><li>Embedded C</li><li>Telemetry</li></ul>
           </li>
         </ol>
       </div>
@@ -168,7 +179,7 @@
           <li class="project">
             <div class="p-head">
               <h3>Local LLM-Based Laboratory</h3>
-              <span class="p-status" data-state="on">Ongoing</span>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
             <ul class="stack"><li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li></ul>
@@ -177,11 +188,20 @@
           <li class="project">
             <div class="p-head">
               <h3>High-Altitude Balloon Trajectory Simulations</h3>
-              <span class="p-status">Done</span>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status">Done</span></span>
             </div>
             <p>Simulating balloon flight through ascent, burst, and descent to plan missions and estimate recovery zones.</p>
             <ul class="stack"><li>Trajectory modeling</li><li>Mission planning</li><li>Python</li></ul>
             <p class="p-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">View live project <span aria-hidden="true">→</span></a></p>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>Applied AI &amp; ML</h3>
+              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Working through applied machine learning, from MSc coursework to models for grid analytics and protection coordination.</p>
+            <ul class="stack"><li>ML</li><li>LLMs</li><li>Python</li></ul>
           </li>
         </ol>
       </div>

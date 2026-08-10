@@ -89,7 +89,7 @@ a { color: inherit; text-decoration: none; }
 /* "now" strip: a spec-sheet row rather than another bordered box, since the
    tabs, project grid and contact list downstream are all boxed already. */
 .now {
-  display: grid; grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(2, 1fr);
   margin: 0 0 32px; border-top: 1px solid var(--line);
 }
 .now-item { position: relative; padding: 18px 26px 0 0; }
@@ -144,12 +144,6 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.2; letter-spacing: -0.02em; margin: 0;
 }
 .section-sub { color: var(--ink-dim); margin: 10px 0 0; max-width: 52ch; font-size: 0.96rem; }
-
-.work-head {
-  display: flex; align-items: flex-end; justify-content: space-between;
-  gap: 32px; flex-wrap: wrap;
-}
-.work-head .section-sub { margin: 0; text-align: right; max-width: 34ch; }
 
 /* ---------- tabs ---------- */
 .tabs {
@@ -217,6 +211,14 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line-2); border-radius: 20px; padding: 2px 9px;
 }
 .p-status[data-state="on"] { color: var(--live); border-color: rgba(45,212,191,0.3); }
+
+.p-tags { display: flex; gap: 6px; align-items: center; }
+.p-kind {
+  font-family: var(--mono); font-size: 10px; color: var(--ink-faint);
+  white-space: nowrap; text-transform: uppercase; letter-spacing: 0.06em;
+  border: 1px solid var(--line-2); border-radius: 20px; padding: 2px 9px;
+}
+.p-kind[data-kind="learning"] { color: var(--accent); border-color: rgba(255,176,0,0.35); }
 
 .project > p { color: var(--ink-dim); font-size: 0.9rem; margin: 0 0 16px; flex: 1; }
 
@@ -334,7 +336,6 @@ a { color: inherit; text-decoration: none; }
   .hero-photo { order: -1; }
   .hero-photo img { width: 120px; height: 120px; }
   .closing-grid { grid-template-columns: 1fr; gap: 48px; }
-  .work-head .section-sub { text-align: left; }
 }
 @media (max-width: 720px) {
   .projects { grid-template-columns: 1fr; }

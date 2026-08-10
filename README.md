@@ -45,8 +45,11 @@ Engineering), `#panel-el` (Electronics) and `#panel-cs` (Computer Science) in
 `assets/style.css` (`--accent` is the amber signal color).
 
 **When adding or removing a project, update the count** in its tab button
-(`<span class="tab-c">`) and the total in the section subtitle. Nothing counts
-them automatically.
+(`<span class="tab-c">`). Nothing counts them automatically.
+
+Each card carries a kind tag next to its status pill:
+`<span class="p-kind">Project</span>` or
+`<span class="p-kind" data-kind="learning">Learning</span>`.
 
 The tabs are progressive enhancement: all three panels ship unhidden, so the
 page still reads as one long list if JavaScript fails. `assets/main.js` hides
