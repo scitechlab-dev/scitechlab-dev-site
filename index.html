@@ -3,36 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SciTechLab — Josué Aldana · Electrical Engineer · Embedded Systems, Telecom &amp; Aerospace</title>
-<meta name="description" content="Portfolio of Josué Aldana, Electrical Engineer working on grid protection, SCADA/ADMS analytics, and embedded systems for high-altitude balloon (HAB) research." />
+<title>Josué Aldana-Aguilar — Electrical Engineer</title>
+<meta name="description" content="Josué Aldana-Aguilar — Electrical Engineer. Grid operations analyst building data-driven tools for energy utilities, from SCADA/ADMS, data analysis and automation." />
 <meta name="author" content="Josué Romeo Aldana Aguilar" />
-<meta property="og:title" content="SciTechLab — Josué Aldana" />
-<meta property="og:description" content="Electrical Engineer · grid protection &amp; operations, SCADA/ADMS, embedded systems, HAB research." />
+<meta property="og:title" content="Josué Aldana-Aguilar — Electrical Engineer" />
+<meta property="og:description" content="Building data-driven tools for energy utilities. Electrical engineering, electronics, computer science." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scitechlab-dev.com" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css?v=2" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ambient grid + scanline -->
-<div class="grid-bg" aria-hidden="true"></div>
-
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="#top" aria-label="SciTechLab home">
-      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
-        <path d="M2 26 L10 26 L13 12 L19 32 L24 20 L28 26 L38 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-text">scitechlab<span class="brand-dim">-dev</span></span>
-    </a>
+    <a class="brand" href="#top">Josué Aldana-Aguilar</a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
+      <a href="#electrical">Projects</a>
+      <a href="#articles">Articles</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -41,250 +32,197 @@
 <main id="main">
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
-    <div class="wrap">
-      <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Grid Operations  · SCADA · IoT · FPGA </p>
-      <h1 class="hero-title">
-        Building data-driven tools for utilities from ADMS, GIS, and legacy operational systems.
-      </h1>
-      <p class="hero-lede">
-        I'm Josué Aldana, an Electrical Engineer working at the intersection of power systems and data engineering. As a Grid Operations Analyst at a power distribution utility, I work with SCADA, ADMS and GIS data while building ETL pipelines from legacy operational tools like fuse management systems and switching order applications, to support future machine learning in distribution operations. In parallel, I collaborate with universities on embedded systems R&D, with IEEE published work in near-space electronics, UHF/LoRa communications, and IoT.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">View projects</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Electrical Engineer · Electronics · Computer Science</p>
+        <h1 class="hero-title">Building data-driven tools for energy utilities</h1>
+        <div class="hero-lede">
+          <p>
+            I'm Josué Aldana, an Electrical Engineer. I'm currently working as a grid
+            operations analyst, taking advantage of my previous experience in SCADA/ADMS,
+            data analysis and automation to create tools for smart operational
+            decision-making — using the data and experience of years in energy utilities
+            and legacy systems for optimal operation and KPI goal achievement.
+          </p>
+          <p>I'm currently studying a Master's in Data Science at UOC.</p>
+          <p>
+            In my free time I'm learning about OpenDSS, embedded systems for IoT,
+            and AI.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#electrical">View projects</a>
+          <a class="btn btn-ghost" href="#articles">Articles &amp; Insights</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
       </div>
+      <figure class="hero-photo">
+        <img src="assets/portrait.jpg?v=2" alt="Josué Aldana-Aguilar" width="200" height="200" />
+        <figcaption>San Salvador, El Salvador</figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- ============ WORK ============ -->
-  <section class="section" id="work">
+  <!-- ============ 01 — ELECTRICAL ENGINEERING ============ -->
+  <section class="section" id="electrical">
     <div class="wrap">
       <div class="section-head">
-        <span class="section-tag">01 — Work</span>
-        <h2>Experience &amp; project work</h2>
-        <p class="section-sub">Engineering work across grid protection &amp; operations, and high-altitude balloon (HAB) missions.</p>
+        <span class="section-tag">01 — Electrical Engineering</span>
+        <h2>Current projects</h2>
       </div>
 
-      <div class="project-grid">
-
-        <article class="card" data-domain="Protection">
-          <div class="card-top">
-            <span class="domain">Protection · ML</span>
-            <span class="status">Ongoing</span>
+      <ol class="projects">
+        <li class="project">
+          <div class="p-head">
+            <h3>Coordination of Protection</h3>
+            <span class="p-status">Ongoing</span>
           </div>
-          <h3>Coordination of Protection</h3>
           <p>Predicting the most efficient relay setting groups for IEDs, from grid topology, SCADA telemetry, and machine learning.</p>
-          <ul class="stack">
-            <li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li>
-          </ul>
-        </article>
+          <ul class="stack"><li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li></ul>
+        </li>
 
-        <article class="card" data-domain="Grid Operations">
-          <div class="card-top">
-            <span class="domain">OpenDSS · ADMS</span>
-            <span class="status">Ongoing</span>
+        <li class="project">
+          <div class="p-head">
+            <h3>Grid Operations</h3>
+            <span class="p-status">Ongoing</span>
           </div>
-          <h3>Grid Operations</h3>
           <p>Designing switching maneuvers by fusing topology, SCADA state, telemetry, and operations history in OpenDSS, with a scoring method to weigh each maneuver's impact and constraints.</p>
-          <ul class="stack">
-            <li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li>
-          </ul>
-        </article>
+          <ul class="stack"><li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li></ul>
+        </li>
 
-        <article class="card" data-domain="RF Planning">
-          <div class="card-top">
-            <span class="domain">RF · GA</span>
-            <span class="status">Done</span>
+        <li class="project">
+          <div class="p-head">
+            <h3>RF Planning</h3>
+            <span class="p-status">Done</span>
           </div>
-          <h3>RF Planning</h3>
           <p>A genetic algorithm that places RF concentrators on existing utility poles (from GIS data), minimizing tower count while maximizing SCADA coverage of the IED fleet.</p>
-          <ul class="stack">
-            <li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li>
-          </ul>
-        </article>
-
-        <article class="card" data-domain="HAB / Aerospace">
-          <div class="card-top">
-            <span class="domain">HAB · Trajectory</span>
-            <span class="status">Done</span>
-          </div>
-          <h3>High-Altitude Balloon Trajectory Simulations</h3>
-          <p>Simulating high-altitude balloon flight (ascent, burst, descent) to plan missions and estimate recovery zones.</p>
-          <ul class="stack">
-            <li>HAB</li><li>Trajectory modeling</li><li>Mission planning</li>
-          </ul>
-          <p class="card-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">View live project <span aria-hidden="true">→</span></a></p>
-        </article>
-
-        <article class="card" data-domain="HAB / Aerospace">
-          <div class="card-top">
-            <span class="domain">HAB · EPS/OBC</span>
-            <span class="status">Ongoing</span>
-          </div>
-          <h3>High-Altitude Balloon Electronics: EPS, OBC &amp; Payload</h3>
-          <p>Building the power system, on-board computer, and payload electronics for a high-altitude balloon mission with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
-          <ul class="stack">
-            <li>COTS</li><li>Li-ion</li><li>Arduino</li><li>TinyML</li>
-          </ul>
-        </article>
-
-        <article class="card" data-domain="LLM / Education">
-          <div class="card-top">
-            <span class="domain">LLM · STEAM</span>
-            <span class="status">Ongoing</span>
-          </div>
-          <h3>Local LLM-Based Laboratory</h3>
-          <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
-          <ul class="stack">
-            <li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li>
-          </ul>
-        </article>
-
-          <article class="card" data-domain="FPGA">
-          <div class="card-top">
-            <span class="domain">FPGA Learning</span>
-            <span class="status">Ongoing</span>
-          </div>
-          <h3>Project-based learning with ZedBoard</h3>
-            <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
-          <ul class="stack">
-            <li>FPGA</li><li>APSoC</li><li>Zynq-7000</li>
-          </ul>
-          <p class="card-link"><a href="https://github.com/scitechlab-dev/fpga_learning_zedboard/tree/main" target="_blank" rel="noopener">View lab notes <span aria-hidden="true">→</span></a></p>
-        </article>
-
-      </div>
-
-      <div class="current-learning">
-        <h3>Currently learning</h3>
-        <ul class="stack">
-          <li>FPGA · ZedBoard</li><li>OpenDSS</li><li>Demand forecasting (ML)</li><li>Maneuver design</li><li>AI tooling</li>
-        </ul>
-      </div>
+          <ul class="stack"><li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li></ul>
+        </li>
+      </ol>
     </div>
   </section>
 
-
-
-
-
-
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section section-alt" id="about">
-    <div class="wrap about-grid">
-      <div class="about-head">
-        <figure class="about-photo">
-          <img src="assets/portrait.jpg?v=2" alt="Josué Aldana" width="320" height="320" loading="lazy" />
-          <figcaption>
-            <span class="ap-name">Josué Aldana</span>
-            <span class="ap-role">Electrical Engineer · San Salvador, El Salvador</span>
-          </figcaption>
-        </figure>
-        <span class="section-tag">02 — About</span>
-        <h2>Snapshot</h2>
-      </div>
-      <div class="about-body">
-        <div class="cred-grid">
-          <div class="cred">
-            <span class="cred-k">Focus</span>
-            <span class="cred-v">Grid Protection &amp; Operations · HAB / Aerospace Systems</span>
-          </div>
-          <div class="cred">
-            <span class="cred-k">Toolbox</span>
-            <span class="cred-v">Python · OpenDSS · STM32 / ESP32</span>
-          </div>
-          <div class="cred">
-            <span class="cred-k">Training</span>
-            <span class="cred-v">RF Site Optimization w/ GA (UTP) · Industrial Wireless Networks (GE Vernova)</span>
-          </div>
-          <div class="cred">
-            <span class="cred-k">Recognition</span>
-            <span class="cred-v">8 IEEE Publications · Best Graduate 2023</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ RESEARCH / PUBLICATIONS ============ -->
-  <section class="section" id="research">
+  <!-- ============ 02 — ELECTRONICS ============ -->
+  <section class="section" id="electronics">
     <div class="wrap">
       <div class="section-head">
-        <span class="section-tag">03 — Research</span>
-        <h2>Publications &amp; research interests</h2>
-        <p class="section-sub">8 peer-reviewed IEEE conference papers, spanning HAB systems engineering, RF under environmental disturbance, and applied computer vision.</p>
+        <span class="section-tag">02 — Electronics</span>
+        <h2>Current projects</h2>
       </div>
 
-      <div class="research-cols">
-        <div class="interests">
-          <h3>Current research lines</h3>
-          <ul class="interest-list">
-            <li>
-              <span class="il-title">HAB systems engineering</span>
-              <span class="il-desc">Power-system design, operating-area estimation, and antenna/comms selection for near-space missions, following a Vee-model systems-engineering process.</span>
-            </li>
-            <li>
-              <span class="il-title">RF under environmental disturbance</span>
-              <span class="il-desc">How ionization and volcanic activity affect 915 MHz LoRa links, and UHF antenna selection on regulated frequencies for near-space missions.</span>
-            </li>
-            <li>
-              <span class="il-title">Applied computer vision &amp; ML</span>
-              <span class="il-desc">Deep-learning segmentation for coffee-cultivation shade estimation, and a computer-vision/IoT platform for automatic waste classification.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="pubs">
-          <h3>Profiles</h3>
-          <div class="profile-links">
-            <a class="profile-link" href="#contact">
-              <span class="pl-name">Google Scholar</span>
-              <span class="pl-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="profile-link" href="#contact">
-              <span class="pl-name">IEEE Xplore</span>
-              <span class="pl-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="profile-link" href="https://orcid.org/0000-0002-7686-5065" rel="noopener" target="_blank">
-              <span class="pl-name">ORCID · 0000-0002-7686-5065</span>
-              <span class="pl-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="profile-link" href="#contact">
-              <span class="pl-name">ResearchGate</span>
-              <span class="pl-arrow" aria-hidden="true">→</span>
-            </a>
+      <ol class="projects">
+        <li class="project">
+          <div class="p-head">
+            <h3>High-Altitude Balloon Electronics: EPS, OBC &amp; Payload</h3>
+            <span class="p-status">Ongoing</span>
           </div>
-          <p class="pubs-note">Topics include HAB mission design, UHF/LoRa/Iridium communications, electromobility policy in Central America, and AI in education, presented at IEEE CONCAPAN, CONESCAPAN, and related conferences.</p>
-        </div>
-      </div>
+          <p>Building the power system, on-board computer, and payload electronics for a high-altitude balloon mission with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
+          <ul class="stack"><li>COTS</li><li>Li-ion</li><li>Arduino</li><li>TinyML</li></ul>
+        </li>
+
+        <li class="project">
+          <div class="p-head">
+            <h3>Project-based learning with ZedBoard</h3>
+            <span class="p-status">Ongoing</span>
+          </div>
+          <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
+          <ul class="stack"><li>FPGA</li><li>APSoC</li><li>Zynq-7000</li></ul>
+          <p class="p-link"><a href="https://github.com/scitechlab-dev/fpga_learning_zedboard/tree/main" target="_blank" rel="noopener">View lab notes <span aria-hidden="true">→</span></a></p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="section section-alt" id="contact">
-    <div class="wrap contact-inner">
-      <span class="section-tag">04 — Contact</span>
-      <h2>Let's build something</h2>
-      <p class="contact-lede">Open to collaborating on grid protection &amp; operations, HAB/near-space systems, and applied research. Reach me below.</p>
+  <!-- ============ 03 — COMPUTER SCIENCE ============ -->
+  <section class="section" id="computer-science">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">03 — Computer Science</span>
+        <h2>Current projects</h2>
+      </div>
+
+      <ol class="projects">
+        <li class="project">
+          <div class="p-head">
+            <h3>Local LLM-Based Laboratory</h3>
+            <span class="p-status">Ongoing</span>
+          </div>
+          <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
+          <ul class="stack"><li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li></ul>
+        </li>
+
+        <li class="project">
+          <div class="p-head">
+            <h3>High-Altitude Balloon Trajectory Simulations</h3>
+            <span class="p-status">Done</span>
+          </div>
+          <p>Simulating high-altitude balloon flight (ascent, burst, descent) to plan missions and estimate recovery zones.</p>
+          <ul class="stack"><li>Trajectory modeling</li><li>Mission planning</li><li>Python</li></ul>
+          <p class="p-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">View live project <span aria-hidden="true">→</span></a></p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 04 — ARTICLES & INSIGHTS ============ -->
+  <section class="section" id="articles">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">04 — Articles &amp; Insights</span>
+        <h2>Notes and things I'm learning</h2>
+        <p class="section-sub">Short write-ups on grid operations, electronics, and data work — written to be shared.</p>
+      </div>
+
+      <!-- Add a new entry at the TOP of this list. See README.md → "Publishing an article". -->
+      <ol class="articles">
+        <li class="article-row">
+          <a href="articles/sample-note.html">
+            <time datetime="2026-08-09">2026-08-09</time>
+            <span class="a-title">Sample note — replace this with your first article</span>
+            <span class="a-desc">A working example of the article layout, including the tags that make LinkedIn render a preview card when you paste the link.</span>
+          </a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 05 — CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">05 — Contact</span>
+        <h2>Get in touch</h2>
+        <p class="section-sub">Open to collaborating on grid operations, embedded systems, and applied data work.</p>
+      </div>
 
       <div class="contact-links">
         <a class="contact-card" href="mailto:jaldana.aguilar@ieee.org">
           <span class="cc-k">Email</span>
           <span class="cc-v">jaldana.aguilar@ieee.org</span>
         </a>
-        <a class="contact-card" href="https://github.com/scitechlab-dev" rel="noopener">
-          <span class="cc-k">GitHub</span>
-          <span class="cc-v">@scitechlab-dev</span>
-        </a>
         <a class="contact-card" href="https://linkedin.com/in/scitechlab" rel="noopener">
           <span class="cc-k">LinkedIn</span>
           <span class="cc-v">scitechlab</span>
+        </a>
+        <a class="contact-card" href="https://github.com/scitechlab-dev" rel="noopener">
+          <span class="cc-k">GitHub</span>
+          <span class="cc-v">@scitechlab-dev</span>
         </a>
         <a class="contact-card" href="https://orcid.org/0000-0002-7686-5065" rel="noopener">
           <span class="cc-k">ORCID</span>
           <span class="cc-v">0000-0002-7686-5065</span>
         </a>
+      </div>
+
+      <div class="profiles">
+        <h3>Profiles</h3>
+        <ul class="profile-list">
+          <li><a href="https://orcid.org/0000-0002-7686-5065" rel="noopener">ORCID</a></li>
+          <!-- TODO: replace the # placeholders below with the real profile URLs. -->
+          <li><a class="pending" href="#contact" aria-disabled="true">Google Scholar <span class="pending-tag">link pending</span></a></li>
+          <li><a class="pending" href="#contact" aria-disabled="true">IEEE Xplore <span class="pending-tag">link pending</span></a></li>
+          <li><a class="pending" href="#contact" aria-disabled="true">ResearchGate <span class="pending-tag">link pending</span></a></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -292,11 +230,11 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span class="brand-text small">scitechlab<span class="brand-dim">-dev</span></span>
-    <span class="footer-meta">San Salvador · Built for Cloudflare Pages · <span id="year"></span></span>
+    <span>Josué Aldana-Aguilar</span>
+    <span class="footer-meta">San Salvador · <span id="year"></span></span>
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=2"></script>
 </body>
 </html>

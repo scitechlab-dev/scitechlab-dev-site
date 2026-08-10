@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Sample note — Josué Aldana-Aguilar</title>
+<meta name="description" content="A placeholder article showing the layout and the metadata that drives LinkedIn preview cards. Replace it with your first real note." />
+<meta name="author" content="Josué Romeo Aldana Aguilar" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Sample note" />
+<meta property="og:description" content="A placeholder article showing the layout and the metadata that drives LinkedIn preview cards. Replace it with your first real note." />
+<meta property="og:url" content="https://scitechlab-dev.com/articles/sample-note.html" />
+<meta property="og:image" content="https://scitechlab-dev.com/assets/portrait.jpg" />
+<meta property="article:published_time" content="2026-08-09" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="canonical" href="https://scitechlab-dev.com/articles/sample-note.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css?v=2" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">Josué Aldana-Aguilar</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html#electrical">Projects</a>
+      <a href="../index.html#articles">Articles</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article class="post">
+    <div class="wrap post-inner">
+      <a class="post-back" href="../index.html#articles">← All articles</a>
+
+      <p class="post-meta">
+        <time datetime="2026-08-09">2026-08-09</time>
+        <span>Placeholder</span>
+      </p>
+
+      <h1>Sample note — replace this with your first article</h1>
+
+      <div class="post-body">
+        <p>
+          This page exists so you can see the article layout rendered, and so the
+          link in the <em>Articles &amp; Insights</em> list on the home page points
+          somewhere real. Delete it once you publish your first note.
+        </p>
+
+        <h2>How to publish a new one</h2>
+        <p>
+          Copy <code>articles/_template.html</code> to <code>articles/your-slug.html</code>,
+          replace the <code>{{PLACEHOLDER}}</code> values in the <code>&lt;head&gt;</code>,
+          write the body, then add a row to the article list in <code>index.html</code>.
+          The full steps are in <code>README.md</code>.
+        </p>
+
+        <h2>Why the metadata matters</h2>
+        <p>
+          When you paste a link into LinkedIn, it fetches the page and reads the
+          <code>og:title</code>, <code>og:description</code> and <code>og:image</code>
+          tags to build the preview card. Those URLs have to be absolute — a relative
+          path like <code>../assets/portrait.jpg</code> is silently ignored, and you
+          get a bare link with no card.
+        </p>
+        <p>
+          If you edit an article after sharing it, LinkedIn will keep serving the old
+          cached preview. Their
+          <a href="https://www.linkedin.com/post-inspector/" target="_blank" rel="noopener">Post Inspector</a>
+          forces a re-scrape.
+        </p>
+
+        <h2>What the body supports</h2>
+        <p>Headings, paragraphs, lists, links, quotes, images, and code:</p>
+        <ul>
+          <li>Inline <code>code</code> and fenced blocks</li>
+          <li>Ordered and unordered lists</li>
+          <li>Images — they scale to the column width automatically</li>
+        </ul>
+        <pre><code>opendss > compile master.dss
+opendss > solve</code></pre>
+        <blockquote>
+          Block quotes render like this.
+        </blockquote>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Josué Aldana-Aguilar</span>
+    <span class="footer-meta">San Salvador · <span id="year"></span></span>
+  </div>
+</footer>
+
+<script src="../assets/main.js?v=2"></script>
+</body>
+</html>
