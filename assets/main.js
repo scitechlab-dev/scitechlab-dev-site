@@ -41,3 +41,17 @@ if (tablist) {
 
   select(tabs[0], false);
 }
+
+// ---- Scroll reveal ----
+// Progressive enhancement: the .reveal class is only added when this script
+// runs, so without JS (or with reduced motion) everything stays visible.
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.project, .contact-links li, .now-item, .hero-text > *')
+    .forEach(el => { el.classList.add('reveal'); io.observe(el); });
+}

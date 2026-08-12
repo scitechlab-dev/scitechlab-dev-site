@@ -14,7 +14,7 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 .
 ├── index.html            # single-page site
 │                         #   hero → work (tabbed by domain)
-│                         #   → articles + contact (side by side)
+│                         #   → contact
 ├── articles/
 │   └── _template.html    # copy this to start a new article
 ├── assets/
@@ -60,21 +60,13 @@ the inactive ones on load.
 1. `cp articles/_template.html articles/my-slug.html`
 2. Replace every `{{PLACEHOLDER}}` in the `<head>`: title, summary, slug, date.
 3. Write the article inside `<div class="post-body">`.
-4. Add a row at the **top** of the `<ol class="articles">` list in `index.html`:
+4. Commit and push. Cloudflare redeploys automatically. Share the article by
+   direct link; LinkedIn builds the preview card from the og tags.
 
-   ```html
-   <li class="article-row">
-     <a href="articles/my-slug.html">
-       <time datetime="2026-08-15">2026-08-15</time>
-       <span class="a-title">Title of the note</span>
-       <span class="a-desc">One or two sentences of summary.</span>
-     </a>
-   </li>
-   ```
-
-5. If it's the first article, also delete the `.articles-empty` placeholder
-   paragraph under the list in `index.html`.
-6. Commit and push. Cloudflare redeploys automatically.
+The home page does not currently show an articles list. To bring it back, add
+an `<ol class="articles">` block in `index.html` with one
+`<li class="article-row">` per article; the matching styles already exist in
+`assets/style.css`.
 
 ### Sharing on LinkedIn
 
