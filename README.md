@@ -13,19 +13,39 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 ```
 .
 ├── index.html            # single-page site
-│                         #   hero → work (tabbed by domain)
+│                         #   hero → selected work (3, in depth)
+│                         #   → index of other work + currently learning
 │                         #   → contact
 ├── articles/
 │   └── _template.html    # copy this to start a new article
 ├── assets/
-│   ├── style.css         # minimal dark theme, CSS variables
-│   ├── main.js           # footer year + work tabs
+│   ├── style.css         # light/dark theme via CSS variables
+│   ├── main.js           # footer year + scroll reveal
 │   ├── portrait.jpg
 │   ├── favicon.svg       # site icon (favicon.png / apple-touch-icon.png are fallbacks)
 │   └── share.png         # 1200x627 og:image used by LinkedIn preview cards
 ├── _headers              # security + cache headers (Cloudflare Pages)
+├── robots.txt
+├── sitemap.xml           # add a <url> block per published article
 └── README.md
 ```
+
+## Design rules
+
+Worth keeping in mind before adding anything:
+
+- **One layout idiom.** Horizontal rules plus a left meta column. No card
+  grids, no boxed panels. The only ornament is the small open-breaker square
+  sitting on each section rule (`.section::before`).
+- **Monospace is for data only** — status, stack, contact values, dates, the
+  diagram labels. Everything else is IBM Plex Sans. Spreading mono across every
+  small label is what made the previous version read as a template.
+- **Nothing animates above the fold.** The scroll reveal in `main.js` is
+  deliberately scoped to `.work-item` and `.idx-row`.
+- **Light is the default theme**, dark comes from `prefers-color-scheme` in
+  `assets/style.css`. To flip the default, swap the two variable blocks at the
+  top of that file. The dark accent (`#ffb000`) is the one `favicon.svg` and
+  `share.png` are drawn in, so leave it alone unless you regenerate both.
 
 ## Deploy
 
@@ -39,28 +59,45 @@ For a manual/CLI deploy instead: `wrangler pages deploy . --project-name=scitech
 
 ## Editing content
 
-Projects are the `<li class="project">` blocks inside `#panel-ee` (Electrical
-Engineering), `#panel-el` (Electronics) and `#panel-cs` (Computer Science) in
-`index.html`. Colors and fonts are CSS variables at the top of
-`assets/style.css` (`--accent` is the amber signal color).
+Work lives in two tiers, on purpose. Three projects get real space; everything
+else is a one-line row. Resist letting the featured list grow — the moment
+every project looks equally important, none of them do.
 
-**When adding or removing a project, update the count** in its tab button
-(`<span class="tab-c">`). Nothing counts them automatically.
+- **Featured** (`#work`): an `<article class="work-item">` with a `.w-meta`
+  column (domain + status) and a `.w-body` (title, prose, `.stack`, optional
+  `.w-link`).
+- **Index** (`#more`): an `<li class="idx-row">` with domain, title, one
+  sentence, and a status. Add a year with
+  `<span class="idx-year">2024</span>` as the first child of `.idx-body`.
+- **Learning** (`.learn-list`): aspirational items go here, not in the two
+  lists above. Keeping them separate is what stops the portfolio from reading
+  as eight things in progress and nothing finished.
 
-Each card carries a kind tag next to its status pill:
-`<span class="p-kind">Project</span>` or
-`<span class="p-kind" data-kind="learning">Learning</span>`.
+Status is `<p class="w-status" data-state="on">In progress</p>`; drop the
+`data-state` for finished work. Nothing is counted automatically anymore,
+because nothing displays a count.
 
-The tabs are progressive enhancement: all three panels ship unhidden, so the
-page still reads as one long list if JavaScript fails. `assets/main.js` hides
-the inactive ones on load.
+Colors and fonts are CSS variables at the top of `assets/style.css`.
+
+### Writing the copy
+
+Two failure modes to avoid, both of which the earlier version had:
+
+1. **Uniform descriptions.** If every entry is one sentence of the same length
+   opening with a gerund ("Building…", "Designing…", "Exploring…"), the list
+   reads as generated. Let the lengths differ.
+2. **Abstractions instead of facts.** "Measurable KPI improvement" says
+   nothing. How many IEDs, how many poles, how many feeders, how long the study
+   used to take. One hard number per project is worth more than a paragraph of
+   positioning.
 
 ## Publishing an article
 
 1. `cp articles/_template.html articles/my-slug.html`
 2. Replace every `{{PLACEHOLDER}}` in the `<head>`: title, summary, slug, date.
 3. Write the article inside `<div class="post-body">`.
-4. Commit and push. Cloudflare redeploys automatically. Share the article by
+4. Add a `<url>` block for it in `sitemap.xml`.
+5. Commit and push. Cloudflare redeploys automatically. Share the article by
    direct link; LinkedIn builds the preview card from the og tags.
 
 The home page does not currently show an articles list. To bring it back, add
@@ -90,6 +127,8 @@ If you change a file under `assets/` without renaming it, browsers and
 Cloudflare's edge cache keep serving the old version. Bump the query string
 wherever it's referenced (`style.css?v=2` → `?v=3`) so it counts as a new URL.
 This applies to `index.html` **and** every page in `articles/`.
+
+Currently at `style.css?v=8` and `main.js?v=6`.
 
 ## Commits
 
