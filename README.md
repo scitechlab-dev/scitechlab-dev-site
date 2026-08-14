@@ -13,13 +13,13 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 ```
 .
 ├── index.html            # single-page site
-│                         #   hero → work (tabbed by domain)
-│                         #   → contact
+│                         #   hero → statement → work (one row per
+│                         #   domain) → contact, divided by label bands
 ├── articles/
 │   └── _template.html    # copy this to start a new article
 ├── assets/
 │   ├── style.css         # minimal dark theme, CSS variables
-│   ├── main.js           # footer year + work tabs
+│   ├── main.js           # footer year + scroll reveal
 │   ├── portrait.jpg
 │   ├── favicon.svg       # site icon (favicon.png / apple-touch-icon.png are fallbacks)
 │   └── share.png         # 1200x627 og:image used by LinkedIn preview cards
@@ -39,21 +39,36 @@ For a manual/CLI deploy instead: `wrangler pages deploy . --project-name=scitech
 
 ## Editing content
 
-Projects are the `<li class="project">` blocks inside `#panel-ee` (Electrical
-Engineering), `#panel-el` (Electronics) and `#panel-cs` (Computer Science) in
-`index.html`. Colors and fonts are CSS variables at the top of
+Each domain is a full-bleed `<div class="domain">` row (glyph, name, count)
+followed by a `<div class="wrap domain-projects">` holding that domain's
+`<li class="project">` cards. Colors and fonts are CSS variables at the top of
 `assets/style.css` (`--accent` is the amber signal color).
 
-**When adding or removing a project, update the count** in its tab button
-(`<span class="tab-c">`). Nothing counts them automatically.
+**When adding or removing a project, update the count** in its domain row
+(`<span class="domain-count">`). Nothing counts them automatically.
 
 Each card carries a kind tag next to its status pill:
 `<span class="p-kind">Project</span>` or
 `<span class="p-kind" data-kind="learning">Learning</span>`.
 
-The tabs are progressive enhancement: all three panels ship unhidden, so the
-page still reads as one long list if JavaScript fails. `assets/main.js` hides
-the inactive ones on load.
+There is no JavaScript behind the work section anymore — the tabs are gone and
+every project is visible on load.
+
+## Design rules
+
+The layout is deliberately editorial, so a few things are load-bearing:
+
+- **Bands divide the page.** `<div class="band">` is a full-bleed pair of
+  hairlines with a dotted label on the content column. Sections that follow a
+  band carry `sec-flush` and drop their own padding and top border.
+- **Rules go edge to edge, content stays on the column.** That contrast is
+  what makes the page read as designed rather than as a centered document.
+- **One loud moment.** The amber underlines in `.statement` are the only
+  emphasis of their kind; the headline deliberately has none. Adding a second
+  emphasis style anywhere cancels the effect.
+- **Big jumps in type scale.** 11px band labels against a display headline,
+  with little in between.
+- **Nothing animates above the fold** (`assets/main.js`).
 
 ## Publishing an article
 
@@ -90,6 +105,10 @@ If you change a file under `assets/` without renaming it, browsers and
 Cloudflare's edge cache keep serving the old version. Bump the query string
 wherever it's referenced (`style.css?v=2` → `?v=3`) so it counts as a new URL.
 This applies to `index.html` **and** every page in `articles/`.
+
+Currently at `style.css?v=9` and `main.js?v=7`. Versions 8 and 6 were burned by
+a deploy that has since been reverted; don't reuse them, the edge still has
+that content cached as immutable.
 
 ## Commits
 

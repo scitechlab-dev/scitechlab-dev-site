@@ -92,13 +92,13 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase; color: var(--ink-faint); margin: 0 0 20px;
 }
 .eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--accent); }
-.hl { background: linear-gradient(transparent 76%, rgba(255,176,0,0.32) 0); }
+/* Display scale. The jump from 11px labels to a headline this size is doing
+   most of the work; anything in between flattens it back out. */
 .hero-title {
-  font-weight: 600; font-size: clamp(2rem, 4.2vw, 2.8rem);
-  line-height: 1.14; letter-spacing: -0.025em; margin: 0 0 22px;
-  max-width: 18ch;
+  font-weight: 600; font-size: clamp(2.4rem, 6.4vw, 4.4rem);
+  line-height: 1.04; letter-spacing: -0.035em; margin: 0 0 34px;
+  max-width: 15ch; text-wrap: balance;
 }
-.hero-lede { color: var(--ink-dim); max-width: 60ch; margin: 0 0 30px; }
 
 /* "now" strip: a spec-sheet row rather than another bordered box, since the
    tabs, project grid and contact list downstream are all boxed already. */
@@ -154,63 +154,82 @@ a { color: inherit; text-decoration: none; }
 /* ---------- generic section ---------- */
 .section { padding: 64px 0; border-top: 1px solid var(--line); }
 
-.section-head { margin-bottom: 28px; position: relative; }
-.sec-num {
-  position: absolute; top: -10px; right: 0;
-  font-family: var(--mono); font-size: 44px; line-height: 1;
-  color: var(--line-2); user-select: none;
-}
-.section-tag {
-  font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.07em;
-  color: var(--accent); text-transform: uppercase; display: block; margin-bottom: 10px;
-}
-.section h2 {
+/* Sections whose structure comes from bands and rows instead of padding. */
+.sec-flush { padding: 0; border-top: none; }
+
+.section[id], .hero[id] { scroll-margin-top: 70px; }
+
+.section-head { margin-bottom: 28px; }
+.contact-title {
   font-weight: 600; font-size: clamp(1.4rem, 2.6vw, 1.8rem);
   line-height: 1.2; letter-spacing: -0.02em; margin: 0;
 }
 .section-sub { color: var(--ink-dim); margin: 10px 0 0; max-width: 52ch; font-size: 0.96rem; }
 
-/* ---------- tabs ---------- */
-.tabs {
-  display: flex; gap: 1px; margin-bottom: 28px;
-  background: var(--line); border: 1px solid var(--line);
-  border-radius: var(--radius); overflow: hidden;
+/* ---------- section bands ----------
+   Full-bleed rules with the label sitting on the content column. These are
+   what divide the page now, so sections no longer carry their own border. */
+.band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.band-inner { display: flex; align-items: center; gap: 11px; height: 46px; }
+.band-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); flex: 0 0 auto;
 }
-.tab {
-  flex: 1; display: flex; align-items: center; gap: 10px;
-  background: var(--bg); border: none; cursor: pointer;
-  padding: 14px 16px; text-align: left; color: var(--ink-dim);
-  font-family: var(--body); font-size: 0.92rem;
-  border-bottom: 2px solid transparent;
-  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
-}
-.tab:hover { background: var(--bg-2); color: var(--ink); }
-.tab[aria-selected="true"] {
-  background: var(--bg-2); color: var(--ink);
-  border-bottom-color: var(--accent);
-}
-.tab-n {
-  font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
-  letter-spacing: 0.05em;
-}
-.tab[aria-selected="true"] .tab-n { color: var(--accent); }
-.tab-l { flex: 1; letter-spacing: -0.01em; }
-.tab-c {
-  font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint);
-  border: 1px solid var(--line-2); border-radius: 20px;
-  min-width: 20px; text-align: center; padding: 0 6px; line-height: 17px;
+.band-label {
+  font-family: var(--mono); font-size: 11px; font-weight: 400;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--ink-dim); margin: 0;
 }
 
-.panel[hidden] { display: none; }
-.panel { animation: fade 0.22s ease; }
-@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+/* ---------- statement ---------- */
+.statement-inner { padding: 58px 0 62px; }
+.statement {
+  margin: 0; max-width: 38ch;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  font-weight: 400; line-height: 1.34; letter-spacing: -0.018em;
+  color: var(--ink);
+}
+/* Emphasis lives here, not in the headline, so the page has one loud moment. */
+.statement em {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
 
-/* ---------- project grid ---------- */
+/* ---------- domain rows ---------- */
+.domain { border-bottom: 1px solid var(--line); }
+.domain-inner {
+  display: grid; grid-template-columns: 72px 1fr auto;
+  gap: 26px; align-items: center; padding: 26px 0;
+}
+.domain-glyph {
+  width: 72px; height: 72px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  color: var(--accent);
+}
+.domain-glyph svg { width: 32px; height: 32px; display: block; }
+.domain-text h3 {
+  font-weight: 600; font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  letter-spacing: -0.022em; margin: 0 0 3px;
+}
+.domain-text p { margin: 0; color: var(--ink-dim); font-size: 0.92rem; }
+.domain-count {
+  font-family: var(--mono); font-size: 13px; color: var(--ink-dim);
+  letter-spacing: 0.08em;
+}
+
+.domain-projects { padding: 30px 0 46px; }
+.contact-body { padding: 56px 0 64px; }
+
+/* ---------- project grid ----------
+   No outer box: the hairline gaps read as a continuation of the full-bleed
+   rules above, instead of parking a bordered card grid under each row. */
 .projects {
   list-style: none; margin: 0; padding: 0;
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
-  background: var(--line); border: 1px solid var(--line);
-  border-radius: var(--radius); overflow: hidden;
+  background: var(--line);
 }
 .project {
   background: var(--bg); padding: 22px 22px 20px;
@@ -229,7 +248,7 @@ a { color: inherit; text-decoration: none; }
   display: flex; align-items: baseline; justify-content: space-between;
   gap: 14px; margin-bottom: 8px;
 }
-.project h3 { font-weight: 600; font-size: 1.02rem; margin: 0; letter-spacing: -0.01em; }
+.project h4 { font-weight: 600; font-size: 1.02rem; margin: 0; letter-spacing: -0.01em; }
 .p-status {
   font-family: var(--mono); font-size: 10px; color: var(--ink-faint);
   white-space: nowrap; text-transform: uppercase; letter-spacing: 0.06em;
@@ -293,11 +312,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------- contact ---------- */
+/* Borderless, like .projects: the hairline gaps are the structure. */
 .contact-links {
   list-style: none; margin: 0; padding: 0; max-width: 640px;
-  display: grid; gap: 1px;
-  background: var(--line); border: 1px solid var(--line);
-  border-radius: var(--radius); overflow: hidden;
+  display: grid; gap: 1px; background: var(--line);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
 .contact-links a {
   display: flex; align-items: baseline; justify-content: space-between;
@@ -389,9 +408,11 @@ a { color: inherit; text-decoration: none; }
   .now-item { padding: 16px 0 4px; border-top: 1px solid var(--line); }
   .now-item + .now-item { padding-left: 0; border-left: none; }
   .now-item + .now-item::before { left: 0; }
-  .tabs { flex-direction: column; }
-  .tab { border-bottom: none; border-left: 2px solid transparent; }
-  .tab[aria-selected="true"] { border-bottom-color: transparent; border-left-color: var(--accent); }
+  .domain-inner { grid-template-columns: 44px 1fr auto; gap: 18px; padding: 22px 0; }
+  .domain-glyph { width: 44px; height: 44px; }
+  .domain-glyph svg { width: 20px; height: 20px; }
+  .domain-projects { padding: 22px 0 34px; }
+  .statement-inner { padding: 42px 0 46px; }
 }
 @media (max-width: 620px) {
   .wrap { padding: 0 20px; }

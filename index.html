@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css?v=7" />
+<link rel="stylesheet" href="assets/style.css?v=9" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -39,13 +39,7 @@
     <div class="wrap hero-inner">
       <div class="hero-text">
         <p class="eyebrow">Electrical Engineer · Electronics · Computer Science</p>
-        <h1 class="hero-title">Building <span class="hl">data-driven tools</span> for energy utilities</h1>
-        <p class="hero-lede">
-          I'm Josué Aldana, an electrical engineer and grid operations analyst.
-          I build data-driven tools that support better operational decisions
-          across utility systems, including legacy platforms still in daily use,
-          to deliver steadier operations and measurable KPI improvement.
-        </p>
+        <h1 class="hero-title">Building data-driven tools for energy utilities</h1>
 
         <dl class="now">
           <div class="now-item">
@@ -73,39 +67,56 @@
     </div>
   </section>
 
-  <!-- ============ WORK (tabbed by domain) ============ -->
-  <section class="section" id="work">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="sec-num" aria-hidden="true">01</span>
-        <span class="section-tag">Projects &amp; learning</span>
-        <h2>Work</h2>
+  <!-- ============ STATEMENT ============ -->
+  <section class="statement-sec">
+    <div class="band">
+      <div class="wrap band-inner">
+        <span class="band-dot" aria-hidden="true"></span>
+        <h2 class="band-label">What I do</h2>
       </div>
+    </div>
 
-      <div class="tabs" role="tablist" aria-label="Project domains">
-        <button class="tab" role="tab" id="tab-ee" aria-controls="panel-ee" aria-selected="true" tabindex="0">
-          <span class="tab-n">01</span>
-          <span class="tab-l">Electrical Engineering</span>
-          <span class="tab-c">4</span>
-        </button>
-        <button class="tab" role="tab" id="tab-el" aria-controls="panel-el" aria-selected="false" tabindex="-1">
-          <span class="tab-n">02</span>
-          <span class="tab-l">Electronics</span>
-          <span class="tab-c">3</span>
-        </button>
-        <button class="tab" role="tab" id="tab-cs" aria-controls="panel-cs" aria-selected="false" tabindex="-1">
-          <span class="tab-n">03</span>
-          <span class="tab-l">Computer Science</span>
-          <span class="tab-c">3</span>
-        </button>
+    <div class="wrap statement-inner">
+      <p class="statement">
+        I work in grid operations: SCADA telemetry, network topology and
+        <em>switching decisions</em> on a live distribution system, much of it
+        running on <em>platforms older than my career</em>. I build the tooling
+        that turns that data into something an operator can act on.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ WORK (one band per domain, no tabs) ============ -->
+  <section class="section sec-flush" id="work">
+    <div class="band">
+      <div class="wrap band-inner">
+        <span class="band-dot" aria-hidden="true"></span>
+        <h2 class="band-label">Projects &amp; learning</h2>
       </div>
+    </div>
 
-      <!-- Panels render unhidden so the content still works without JavaScript. -->
-      <div class="panel" id="panel-ee" role="tabpanel" aria-labelledby="tab-ee">
-        <ol class="projects">
+    <div class="domain">
+      <div class="wrap domain-inner">
+        <span class="domain-glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <path d="M1 12h5" /><path d="M18 12h5" />
+            <circle cx="7" cy="12" r="1.3" /><circle cx="17" cy="12" r="1.3" />
+            <path d="M8.1 11.2 16 5.6" />
+          </svg>
+        </span>
+        <div class="domain-text">
+          <h3>Electrical Engineering</h3>
+          <p>Protection, switching, and the data behind both.</p>
+        </div>
+        <span class="domain-count">04</span>
+      </div>
+    </div>
+
+    <div class="wrap domain-projects">
+      <ol class="projects">
           <li class="project">
             <div class="p-head">
-              <h3>Coordination of Protection</h3>
+              <h4>Coordination of Protection</h4>
               <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Predicting the most efficient relay setting groups for IEDs from grid topology, SCADA telemetry, and machine learning.</p>
@@ -114,7 +125,7 @@
 
           <li class="project">
             <div class="p-head">
-              <h3>Grid Operations</h3>
+              <h4>Grid Operations</h4>
               <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Designing switching maneuvers by fusing topology, SCADA state, telemetry, and operations history in OpenDSS, with a scoring method that weighs the impact and constraints of each maneuver.</p>
@@ -123,7 +134,7 @@
 
           <li class="project">
             <div class="p-head">
-              <h3>RF Planning</h3>
+              <h4>RF Planning</h4>
               <span class="p-tags"><span class="p-kind">Project</span><span class="p-status">Done</span></span>
             </div>
             <p>A genetic algorithm that places RF concentrators on existing utility poles from GIS data, minimizing tower count while maximizing SCADA coverage of the IED fleet.</p>
@@ -133,20 +144,36 @@
 
           <li class="project">
             <div class="p-head">
-              <h3>OpenDSS</h3>
+              <h4>OpenDSS</h4>
               <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Deepening my command of OpenDSS for distribution modeling, fault studies, and what-if simulation of switching maneuvers.</p>
             <ul class="stack"><li>OpenDSS</li><li>Power flow</li><li>Python</li></ul>
           </li>
         </ol>
-      </div>
+    </div>
 
-      <div class="panel" id="panel-el" role="tabpanel" aria-labelledby="tab-el">
-        <ol class="projects">
+    <div class="domain">
+      <div class="wrap domain-inner">
+        <span class="domain-glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <rect x="7" y="7" width="10" height="10" rx="1" />
+            <path d="M10 7V4M14 7V4M10 20v-3M14 20v-3M7 10H4M7 14H4M20 10h-3M20 14h-3" />
+          </svg>
+        </span>
+        <div class="domain-text">
+          <h3>Electronics</h3>
+          <p>Hardware for missions, and lab work to keep the hands sharp.</p>
+        </div>
+        <span class="domain-count">03</span>
+      </div>
+    </div>
+
+    <div class="wrap domain-projects">
+      <ol class="projects">
           <li class="project">
             <div class="p-head">
-              <h3>High-Altitude Balloon Electronics</h3>
+              <h4>High-Altitude Balloon Electronics</h4>
               <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Power system, on-board computer, and payload electronics for a high-altitude balloon mission, built with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
@@ -155,7 +182,7 @@
 
           <li class="project">
             <div class="p-head">
-              <h3>Project-based learning with ZedBoard</h3>
+              <h4>Project-based learning with ZedBoard</h4>
               <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
@@ -165,20 +192,35 @@
 
           <li class="project">
             <div class="p-head">
-              <h3>IoT Embedded Systems</h3>
+              <h4>IoT Embedded Systems</h4>
               <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Exploring sensors, low-power firmware, and telemetry pipelines on COTS development boards.</p>
             <ul class="stack"><li>IoT</li><li>Embedded C</li><li>Telemetry</li></ul>
           </li>
         </ol>
-      </div>
+    </div>
 
-      <div class="panel" id="panel-cs" role="tabpanel" aria-labelledby="tab-cs">
-        <ol class="projects">
+    <div class="domain">
+      <div class="wrap domain-inner">
+        <span class="domain-glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <path d="M4 7l4.5 5L4 17" /><path d="M12.5 17H20" />
+          </svg>
+        </span>
+        <div class="domain-text">
+          <h3>Computer Science</h3>
+          <p>Simulation, models, and the tooling around them.</p>
+        </div>
+        <span class="domain-count">03</span>
+      </div>
+    </div>
+
+    <div class="wrap domain-projects">
+      <ol class="projects">
           <li class="project">
             <div class="p-head">
-              <h3>Local LLM-Based Laboratory</h3>
+              <h4>Local LLM-Based Laboratory</h4>
               <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
@@ -187,7 +229,7 @@
 
           <li class="project">
             <div class="p-head">
-              <h3>High-Altitude Balloon Trajectory Simulations</h3>
+              <h4>High-Altitude Balloon Trajectory Simulations</h4>
               <span class="p-tags"><span class="p-kind">Project</span><span class="p-status">Done</span></span>
             </div>
             <p>Simulating balloon flight through ascent, burst, and descent to plan missions and estimate recovery zones.</p>
@@ -197,25 +239,28 @@
 
           <li class="project">
             <div class="p-head">
-              <h3>Applied AI &amp; ML</h3>
+              <h4>Applied AI &amp; ML</h4>
               <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
             </div>
             <p>Working through applied machine learning, from MSc coursework to models for grid analytics and protection coordination.</p>
             <ul class="stack"><li>ML</li><li>LLMs</li><li>Python</li></ul>
           </li>
         </ol>
-      </div>
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section class="section">
-    <div class="wrap">
-      <div id="contact">
+  <section class="section sec-flush" id="contact">
+    <div class="band">
+      <div class="wrap band-inner">
+        <span class="band-dot" aria-hidden="true"></span>
+        <h2 class="band-label">Contact</h2>
+      </div>
+    </div>
+
+    <div class="wrap contact-body">
         <div class="section-head">
-          <span class="sec-num" aria-hidden="true">02</span>
-          <span class="section-tag">Contact</span>
-          <h2>Get in touch</h2>
+          <h3 class="contact-title">Get in touch</h3>
           <p class="section-sub">Open to collaborating on grid operations, embedded systems, and applied data work.</p>
         </div>
 
@@ -233,8 +278,6 @@
             <span class="cc-k">ORCID</span><span class="cc-v">0000-0002-7686-5065</span>
           </a></li>
         </ul>
-      </div>
-
     </div>
   </section>
 </main>
@@ -246,6 +289,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=5"></script>
+<script src="assets/main.js?v=7"></script>
 </body>
 </html>
