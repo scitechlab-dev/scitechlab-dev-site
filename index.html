@@ -6,40 +6,19 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-<title>Josué Aldana-Aguilar · Electrical Engineer, Grid Operations</title>
-<meta name="description" content="Josué Aldana-Aguilar, electrical engineer in San Salvador. Grid operations: SCADA telemetry, network topology, switching studies in OpenDSS, and the tooling around them." />
+<title>scitechlab-dev</title>
+<meta name="description" content="Josué Aldana-Aguilar, Electrical Engineer. Grid operations analyst building data-driven tools for energy utilities from SCADA/ADMS, data analysis and automation." />
 <meta name="author" content="Josué Romeo Aldana Aguilar" />
-<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#0b0e13" media="(prefers-color-scheme: dark)" />
-<link rel="canonical" href="https://scitechlab-dev.com/" />
 <meta property="og:title" content="Josué Aldana-Aguilar · Electrical Engineer" />
-<meta property="og:description" content="Grid operations in San Salvador: SCADA, topology, switching studies, and the tooling around them." />
+<meta property="og:description" content="Building data-driven tools for energy utilities. Electrical engineering, electronics, computer science." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scitechlab-dev.com" />
 <meta property="og:image" content="https://scitechlab-dev.com/assets/share.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css?v=8" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Josué Romeo Aldana Aguilar",
-  "alternateName": "Josué Aldana-Aguilar",
-  "jobTitle": "Electrical Engineer, Grid Operations Analyst",
-  "url": "https://scitechlab-dev.com",
-  "email": "mailto:jaldana.aguilar.tec@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" },
-  "knowsAbout": ["Power distribution", "SCADA", "ADMS", "OpenDSS", "Protection coordination", "Embedded systems", "Machine learning"],
-  "sameAs": [
-    "https://github.com/scitechlab-dev",
-    "https://linkedin.com/in/scitechlab",
-    "https://orcid.org/0000-0002-7686-5065"
-  ]
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css?v=7" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -49,7 +28,6 @@
     <a class="brand" href="#top">Josué Aldana-Aguilar</a>
     <nav class="site-nav" aria-label="Primary">
       <a href="#work">Work</a>
-      <a href="#more">Index</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -60,14 +38,13 @@
   <section class="hero" id="top">
     <div class="wrap hero-inner">
       <div class="hero-text">
-        <p class="eyebrow">Electrical engineer · San Salvador</p>
-        <h1 class="hero-title">Better instruments for the people running the grid.</h1>
+        <p class="eyebrow">Electrical Engineer · Electronics · Computer Science</p>
+        <h1 class="hero-title">Building <span class="hl">data-driven tools</span> for energy utilities</h1>
         <p class="hero-lede">
-          I work in grid operations. Most of my day is SCADA telemetry, network
-          topology and switching decisions on a live distribution system, much of
-          it on platforms older than my career. I write the tooling that makes
-          that data usable: power-flow models, coverage optimizers, and analysis
-          that survives contact with a control room.
+          I'm Josué Aldana, an electrical engineer and grid operations analyst.
+          I build data-driven tools that support better operational decisions
+          across utility systems, including legacy platforms still in daily use,
+          to deliver steadier operations and measurable KPI improvement.
         </p>
 
         <dl class="now">
@@ -79,207 +56,169 @@
             <dt>Studying</dt>
             <dd>MSc Data Science, UOC</dd>
           </div>
-          <div class="now-item">
-            <dt>Based in</dt>
-            <dd>San Salvador, El Salvador</dd>
-          </div>
         </dl>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">See the work</a>
-          <a class="btn btn-ghost" href="mailto:jaldana.aguilar.tec@gmail.com">Email me</a>
+          <a class="btn btn-primary" href="#work">View projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
         </div>
       </div>
 
-      <!--
-        Hero visual. This is an honest schematic, not project output.
-        When you have a real artifact to show (an OpenDSS plot, the RF coverage
-        map, a HAB trajectory), replace this whole <svg> with:
-            <img src="assets/hero-artifact.png" alt="…" width="340" height="240" />
-        and rewrite the figcaption to say what it is. That single swap is the
-        biggest upgrade left on this page.
-      -->
-      <figure class="hero-figure">
-        <svg class="oneline" viewBox="0 0 340 240" role="img" aria-labelledby="oneline-title" fill="none">
-          <title id="oneline-title">Single-line diagram of a distribution feeder: bus, breaker, recloser, transformer and loads</title>
-
-          <g stroke="currentColor" stroke-width="1.5" class="ol-line">
-            <path d="M22 28 V212" stroke-width="4" />
-            <path d="M22 68 H318" />
-            <path d="M132 68 V132" />
-            <path d="M232 68 V172" />
-            <path d="M22 180 H98 V208" />
-          </g>
-
-          <g class="ol-dev" stroke="currentColor" stroke-width="1.5">
-            <circle cx="132" cy="96" r="8" />
-            <rect x="226" y="104" width="12" height="12" />
-            <circle cx="232" cy="140" r="8" />
-            <circle cx="232" cy="152" r="8" />
-          </g>
-
-          <g class="ol-load" stroke="currentColor" stroke-width="1.5">
-            <path d="M124 132 H140 L132 146 Z" />
-            <path d="M224 172 H240 L232 186 Z" />
-            <path d="M90 208 H106 L98 222 Z" />
-          </g>
-
-          <rect class="ol-acc" x="56" y="62" width="12" height="12" stroke-width="2" />
-
-          <g class="ol-label">
-            <text x="76" y="58">52</text>
-            <text x="146" y="100">79</text>
-            <text x="286" y="58">F-01</text>
-            <text x="40" y="172">F-02</text>
-          </g>
-        </svg>
-        <figcaption>
-          A distribution feeder the way a control room draws it: bus, breaker,
-          recloser, transformer, load. Most of what I build attaches somewhere
-          on this diagram.
-        </figcaption>
+      <figure class="hero-photo">
+        <span class="photo-frame">
+          <img src="assets/portrait.jpg?v=2" alt="Josué Aldana-Aguilar" width="180" height="180" />
+        </span>
+        <figcaption>San Salvador, El Salvador</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- ============ SELECTED WORK ============ -->
+  <!-- ============ WORK (tabbed by domain) ============ -->
   <section class="section" id="work">
     <div class="wrap">
       <div class="section-head">
-        <p class="section-tag">Selected work</p>
-        <h2>Three projects, up close</h2>
+        <span class="sec-num" aria-hidden="true">01</span>
+        <span class="section-tag">Projects &amp; learning</span>
+        <h2>Work</h2>
       </div>
 
-      <!--
-        Each of these is stronger with one hard number in it: how many IEDs,
-        how many poles, how many feeders, how long a study used to take.
-        Drop them into the prose below wherever they fit.
-      -->
-      <div class="work-list">
+      <div class="tabs" role="tablist" aria-label="Project domains">
+        <button class="tab" role="tab" id="tab-ee" aria-controls="panel-ee" aria-selected="true" tabindex="0">
+          <span class="tab-n">01</span>
+          <span class="tab-l">Electrical Engineering</span>
+          <span class="tab-c">4</span>
+        </button>
+        <button class="tab" role="tab" id="tab-el" aria-controls="panel-el" aria-selected="false" tabindex="-1">
+          <span class="tab-n">02</span>
+          <span class="tab-l">Electronics</span>
+          <span class="tab-c">3</span>
+        </button>
+        <button class="tab" role="tab" id="tab-cs" aria-controls="panel-cs" aria-selected="false" tabindex="-1">
+          <span class="tab-n">03</span>
+          <span class="tab-l">Computer Science</span>
+          <span class="tab-c">3</span>
+        </button>
+      </div>
 
-        <article class="work-item">
-          <div class="w-meta">
-            <p class="w-domain">Electrical engineering</p>
-            <p class="w-status" data-state="on">In progress</p>
-          </div>
-          <div class="w-body">
-            <h3>Switching maneuver design</h3>
-            <p>
-              Switching a feeder is a decision with a dozen constraints attached
-              and no time to model them by hand. This pulls network topology,
-              SCADA state and operations history into OpenDSS, then scores the
-              candidate maneuvers by operational impact and by which constraints
-              each one bends.
-            </p>
-            <p class="w-note">The scoring weights are the hard part, and they are still moving.</p>
-            <ul class="stack"><li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li></ul>
-          </div>
-        </article>
-
-        <article class="work-item">
-          <div class="w-meta">
-            <p class="w-domain">Electrical engineering</p>
-            <p class="w-status" data-state="on">In progress</p>
-          </div>
-          <div class="w-body">
-            <h3>Protection coordination that keeps up</h3>
-            <p>
-              Relay setting groups tend to get chosen once and then left alone,
-              even as the network around them keeps changing. I'm training models
-              on grid topology and SCADA telemetry to predict which setting group
-              an IED should actually be on, given the state the network is in
-              right now rather than the state it was in at commissioning.
-            </p>
+      <!-- Panels render unhidden so the content still works without JavaScript. -->
+      <div class="panel" id="panel-ee" role="tabpanel" aria-labelledby="tab-ee">
+        <ol class="projects">
+          <li class="project">
+            <div class="p-head">
+              <h3>Coordination of Protection</h3>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Predicting the most efficient relay setting groups for IEDs from grid topology, SCADA telemetry, and machine learning.</p>
             <ul class="stack"><li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li></ul>
-          </div>
-        </article>
-
-        <article class="work-item">
-          <div class="w-meta">
-            <p class="w-domain">Electrical engineering</p>
-            <p class="w-status">Shipped</p>
-          </div>
-          <div class="w-body">
-            <h3>RF concentrator placement</h3>
-            <p>
-              A genetic algorithm that decides which of the poles already standing
-              should carry RF concentrators. It reads pole positions from GIS and
-              trades tower count against SCADA coverage of the IED fleet. Code is
-              public.
-            </p>
-            <ul class="stack"><li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li></ul>
-            <p class="w-link"><a href="https://github.com/scitechlab-dev/rf_ga_ot" target="_blank" rel="noopener">Repository <span aria-hidden="true">→</span></a></p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ INDEX + LEARNING ============ -->
-  <section class="section" id="more">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="section-tag">Also</p>
-        <h2>Everything else on the bench</h2>
-      </div>
-
-      <!-- Years make this list far more credible. Add one per row:
-           <span class="idx-year">2024</span> as the first child of .idx-row -->
-      <ol class="idx">
-        <li class="idx-row">
-          <p class="idx-domain">Electronics</p>
-          <div class="idx-body">
-            <h3>High-altitude balloon electronics</h3>
-            <p>Power system, on-board computer and payload for a HAB mission. COTS parts, Li-ion pack, Arduino-class TinyML.</p>
-          </div>
-          <p class="idx-status" data-state="on">In progress</p>
-        </li>
-
-        <li class="idx-row">
-          <p class="idx-domain">Computer science</p>
-          <div class="idx-body">
-            <h3>HAB trajectory simulation</h3>
-            <p>Ascent, burst and descent modelled end to end, to plan a mission and narrow down where it lands.</p>
-            <p class="idx-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">Live <span aria-hidden="true">→</span></a></p>
-          </div>
-          <p class="idx-status">Shipped</p>
-        </li>
-
-        <li class="idx-row">
-          <p class="idx-domain">Computer science</p>
-          <div class="idx-body">
-            <h3>Local LLM laboratory</h3>
-            <p>Local models that hand students on-demand access to real development boards, so a STEAM lab is less setup and more lab.</p>
-          </div>
-          <p class="idx-status" data-state="on">In progress</p>
-        </li>
-      </ol>
-
-      <div class="learning">
-        <h3 class="learn-head">Currently learning</h3>
-        <ul class="learn-list">
-          <li>OpenDSS, deeper: fault studies and what-if switching</li>
-          <li>Zynq-7000 on a ZedBoard, in Vivado
-            <a href="https://github.com/scitechlab-dev/fpga_learning_zedboard/tree/main" target="_blank" rel="noopener">lab notes <span aria-hidden="true">→</span></a>
           </li>
-          <li>Low-power firmware and telemetry pipelines</li>
-          <li>Applied ML, from MSc coursework toward grid analytics</li>
-        </ul>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>Grid Operations</h3>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Designing switching maneuvers by fusing topology, SCADA state, telemetry, and operations history in OpenDSS, with a scoring method that weighs the impact and constraints of each maneuver.</p>
+            <ul class="stack"><li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li></ul>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>RF Planning</h3>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status">Done</span></span>
+            </div>
+            <p>A genetic algorithm that places RF concentrators on existing utility poles from GIS data, minimizing tower count while maximizing SCADA coverage of the IED fleet.</p>
+            <ul class="stack"><li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li></ul>
+            <p class="p-link"><a href="https://github.com/scitechlab-dev/rf_ga_ot" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a></p>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>OpenDSS</h3>
+              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Deepening my command of OpenDSS for distribution modeling, fault studies, and what-if simulation of switching maneuvers.</p>
+            <ul class="stack"><li>OpenDSS</li><li>Power flow</li><li>Python</li></ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="panel" id="panel-el" role="tabpanel" aria-labelledby="tab-el">
+        <ol class="projects">
+          <li class="project">
+            <div class="p-head">
+              <h3>High-Altitude Balloon Electronics</h3>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Power system, on-board computer, and payload electronics for a high-altitude balloon mission, built with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
+            <ul class="stack"><li>EPS</li><li>OBC</li><li>Li-ion</li><li>Arduino</li><li>TinyML</li></ul>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>Project-based learning with ZedBoard</h3>
+              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
+            <ul class="stack"><li>FPGA</li><li>APSoC</li><li>Zynq-7000</li></ul>
+            <p class="p-link"><a href="https://github.com/scitechlab-dev/fpga_learning_zedboard/tree/main" target="_blank" rel="noopener">View lab notes <span aria-hidden="true">→</span></a></p>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>IoT Embedded Systems</h3>
+              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Exploring sensors, low-power firmware, and telemetry pipelines on COTS development boards.</p>
+            <ul class="stack"><li>IoT</li><li>Embedded C</li><li>Telemetry</li></ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="panel" id="panel-cs" role="tabpanel" aria-labelledby="tab-cs">
+        <ol class="projects">
+          <li class="project">
+            <div class="p-head">
+              <h3>Local LLM-Based Laboratory</h3>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
+            <ul class="stack"><li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li></ul>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>High-Altitude Balloon Trajectory Simulations</h3>
+              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status">Done</span></span>
+            </div>
+            <p>Simulating balloon flight through ascent, burst, and descent to plan missions and estimate recovery zones.</p>
+            <ul class="stack"><li>Trajectory modeling</li><li>Mission planning</li><li>Python</li></ul>
+            <p class="p-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">View live project <span aria-hidden="true">→</span></a></p>
+          </li>
+
+          <li class="project">
+            <div class="p-head">
+              <h3>Applied AI &amp; ML</h3>
+              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
+            </div>
+            <p>Working through applied machine learning, from MSc coursework to models for grid analytics and protection coordination.</p>
+            <ul class="stack"><li>ML</li><li>LLMs</li><li>Python</li></ul>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section class="section" id="contact">
+  <section class="section">
     <div class="wrap">
-      <div class="section-head">
-        <p class="section-tag">Contact</p>
-        <h2>Get in touch</h2>
-        <p class="section-sub">Grid operations, embedded systems, applied data work. Email is the fastest way to reach me.</p>
-      </div>
+      <div id="contact">
+        <div class="section-head">
+          <span class="sec-num" aria-hidden="true">02</span>
+          <span class="section-tag">Contact</span>
+          <h2>Get in touch</h2>
+          <p class="section-sub">Open to collaborating on grid operations, embedded systems, and applied data work.</p>
+        </div>
 
-      <div class="contact-inner">
         <ul class="contact-links">
           <li><a href="mailto:jaldana.aguilar.tec@gmail.com">
             <span class="cc-k">Email</span><span class="cc-v">jaldana.aguilar.tec@gmail.com</span>
@@ -294,11 +233,8 @@
             <span class="cc-k">ORCID</span><span class="cc-v">0000-0002-7686-5065</span>
           </a></li>
         </ul>
-
-        <figure class="contact-photo">
-          <img src="assets/portrait.jpg?v=2" alt="Josué Aldana-Aguilar" width="104" height="104" loading="lazy" />
-        </figure>
       </div>
+
     </div>
   </section>
 </main>
@@ -310,6 +246,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=6"></script>
+<script src="assets/main.js?v=5"></script>
 </body>
 </html>
