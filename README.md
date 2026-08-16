@@ -2,7 +2,12 @@
 
 Personal site for **Josué Aldana-Aguilar**, Electrical Engineer, currently a grid
 operations analyst building data-driven tools for energy utilities. Static
-HTML/CSS/JS, zero build step, deployed on **Cloudflare Pages**.
+HTML/CSS/JS served by a **Cloudflare Worker** (static assets, no `main`),
+deployed by Workers Builds on every push to `main`.
+
+The pages are hand-written HTML. The one build step assembles `dist/` — the
+deployable site — and turns `content/*.md` into `dist/articles/*.html`, so
+publishing an article means adding a markdown file and pushing, nothing more.
 
 Live at [scitechlab-dev.com](https://scitechlab-dev.com). Project work that
 outgrows a single page (e.g. ongoing HAB telemetry work) gets its own subdomain,
@@ -14,29 +19,56 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 .
 ├── index.html            # single-page site
 │                         #   hero → signal chain → statement → work (one row
-│                         #   per domain) → publications → contact,
+│                         #   per domain) → publications → writing → contact,
 │                         #   divided by label bands
-├── articles/
-│   └── _template.html    # copy this to start a new article
+├── content/              # SOURCE: one markdown file per article
+│   └── _example.md       #   a draft; copy it to start writing
+├── dist/                 # GENERATED, gitignored — the deployed site
+├── scripts/
+│   ├── build.mjs         # assembles dist/; content/*.md → dist/articles/*.html
+│   └── templates/
+│       ├── article.html  # shell every article shares
+│       └── archive.html  # the /articles/ index
 ├── assets/
 │   ├── style.css         # minimal dark theme, CSS variables
 │   ├── main.js           # footer year + scroll reveal
 │   ├── portrait.jpg
 │   ├── favicon.svg       # JA monogram (favicon.png / apple-touch-icon.png are fallbacks)
 │   └── share.png         # 1200x627 og:image used by LinkedIn preview cards
-├── _headers              # security + cache headers (Cloudflare Pages)
+├── _headers              # security + cache headers
+├── robots.txt
+├── wrangler.jsonc        # Worker config: assets dir + build command
 └── README.md
 ```
 
 ## Deploy
 
-Connected to Cloudflare Pages via Git. Pushes to `main` redeploy automatically.
+A Cloudflare Worker serving static assets, built and deployed by Workers Builds
+on every push to `main`. All of it is configured in `wrangler.jsonc` — the only
+dashboard settings that matter are the Git connection and the deploy command
+(`npx wrangler deploy`, the default).
 
-- **Framework preset:** None
-- **Build command:** *(none)*
-- **Build output directory:** `/`
+The build runs from `wrangler.jsonc`'s `build.command`, not from the dashboard
+"Build command" field, which can stay empty. Wrangler runs it before reading the
+assets directory, including for assets-only Workers.
 
-For a manual/CLI deploy instead: `wrangler pages deploy . --project-name=scitechlab-dev-site`
+If the build fails, the previous version stays live — a broken article cannot
+take the site down, it just does not ship.
+
+Manual deploy: `npx wrangler deploy` (it runs the build itself).
+
+### dist/ is an allowlist, and that is load-bearing
+
+`assets.directory` points at `dist/`, which `scripts/build.mjs` assembles from an
+explicit list of files. **Never point it at `"."`.** Workers static assets
+exclude nothing by default, so serving the repo root published the entire git
+repository — `/.git/config` and `/.git/index` were fetchable by anyone, which
+means the full history was downloadable. `.assetsignore` is the documented fix
+but did not filter anything when tested against wrangler 4.103; the allowlist
+does not depend on it working.
+
+To add a new top-level file to the site, add it to the `STATIC` array in
+`scripts/build.mjs`. If it is not on that list, it is not published.
 
 ## Editing content
 
@@ -129,16 +161,52 @@ The layout is deliberately editorial, so a few things are load-bearing:
 
 ## Publishing an article
 
-1. `cp articles/_template.html articles/my-slug.html`
-2. Replace every `{{PLACEHOLDER}}` in the `<head>`: title, summary, slug, date.
-3. Write the article inside `<div class="post-body">`.
-4. Commit and push. Cloudflare redeploys automatically. Share the article by
-   direct link; LinkedIn builds the preview card from the og tags.
+Add one markdown file to `content/` and push. That is the whole workflow — the
+file can be committed from a laptop or straight from the GitHub web UI, because
+the conversion runs on Cloudflare at deploy time.
 
-The home page does not currently show an articles list. To bring it back, add
-an `<ol class="articles">` block in `index.html` with one
-`<li class="article-row">` per article; the matching styles already exist in
-`assets/style.css`.
+```markdown
+---
+title: Relay setting groups, one is never enough
+summary: Why a single group of protection settings breaks when a feeder is reconfigured.
+date: 2026-08-10
+topic: Grid operations
+---
+
+Body in normal markdown: headings, lists, links, quotes, code fences, images.
+```
+
+- `title`, `summary` and `date` are **required**. The build fails loudly rather
+  than publishing a page whose LinkedIn card would come out empty.
+- `topic` is optional and shows next to the date.
+- `draft: true` keeps the file in the repo and out of the site.
+- `slug` is optional; only needed to keep a URL stable after renaming the file.
+
+The file name becomes the URL: `content/relay-setting-groups.md` publishes at
+`/articles/relay-setting-groups.html`. A `YYYY-MM-DD-` prefix is allowed and
+gets stripped from the slug, if you prefer the folder sorted by date.
+
+To preview locally before pushing:
+
+```
+npm install                      # once
+npm run build
+cd dist && python -m http.server 8787   # then open http://localhost:8787
+```
+
+The build injects the newest four articles (then a link to the archive) between
+the `ARTICLES:START` / `ARTICLES:END` markers **on the way into `dist/`**. The
+source `index.html` keeps its `Nothing published yet.` placeholder and is never
+written to, so `git status` stays clean whether or not you have built.
+
+The full archive lives at `/articles/`, generated from
+`scripts/templates/archive.html`.
+
+### Changing how articles look
+
+Edit `scripts/templates/article.html`, not the generated pages — anything typed
+into `dist/articles/*.html` is overwritten on the next build. The body styles
+(`.post-body h2`, `pre`, `blockquote`, `img`, …) are in `assets/style.css`.
 
 ### Sharing on LinkedIn
 
@@ -187,9 +255,13 @@ Cloudflare's edge cache keep serving the old version. Bump the query string
 wherever it's referenced (`style.css?v=2` → `?v=3`) so it counts as a new URL.
 This applies to `index.html` **and** every page in `articles/`.
 
-Currently at `style.css?v=11` and `main.js?v=9`. Versions 8 and 6 were burned by
+Currently at `style.css?v=12` and `main.js?v=9`. Versions 8 and 6 were burned by
 a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
+
+Article pages no longer need bumping by hand: `scripts/build.mjs` reads the
+versions out of `index.html` and injects them, so bumping `index.html` is enough
+to carry every generated page with it.
 
 ## Commits
 

@@ -1,0 +1,16 @@
+{
+  "name": "scitechlab-dev-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static personal site. The only build step turns content/*.md into articles/*.html.",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "marked": "^15.0.7"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

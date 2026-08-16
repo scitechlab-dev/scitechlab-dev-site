@@ -1,1 +1,13 @@
 *.zip
+node_modules/
+
+# The whole deployable site, assembled by scripts/build.mjs. Cloudflare rebuilds
+# it on every deploy, so committing it would only create merge noise.
+/dist/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

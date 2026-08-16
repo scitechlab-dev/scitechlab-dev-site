@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "scitechlab-dev-site",
+  "compatibility_date": "2026-07-05",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+
+  // The site is static, so the Worker has no "main" — it only serves assets.
+  //
+  // This MUST stay pointed at dist/, never at ".". dist/ is assembled by the
+  // build from an explicit allowlist, so only real pages reach the public.
+  // Pointing it at the repo root is what previously served /.git/config —
+  // Workers static assets exclude nothing by default, and .assetsignore did not
+  // filter anything when tested against wrangler 4.103.
+  "assets": {
+    "directory": "dist"
+  },
+
+  // Runs before the assets are read, so pushing a markdown file to content/ is
+  // all it takes to publish an article. Verified: wrangler does run this for
+  // assets-only Workers.
+  "build": {
+    "command": "npm run build"
+  }
+}

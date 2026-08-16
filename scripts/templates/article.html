@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <!--
-  ARTICLE TEMPLATE. Copy this file, don't edit it in place.
-
-    1. cp articles/_template.html articles/my-slug.html
-    2. Replace every {{PLACEHOLDER}} below.
-    3. Write the article inside <div class="post-body">.
-    4. Add a matching row to the <ol class="articles"> list in index.html.
+  GENERATED FILE — do not edit articles/*.html by hand, your changes are
+  overwritten on the next build. Edit the markdown in content/ instead, or
+  this template if you want to change the shell every article shares.
 
   The og:* tags are what LinkedIn reads to build the preview card when you
   paste the link. They must be ABSOLUTE URLs; relative paths are ignored.
@@ -19,22 +16,22 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=2" />
 
 <title>{{TITLE}} · Josué Aldana-Aguilar</title>
-<meta name="description" content="{{ONE_SENTENCE_SUMMARY}}" />
+<meta name="description" content="{{SUMMARY}}" />
 <meta name="author" content="Josué Romeo Aldana Aguilar" />
 
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{TITLE}}" />
-<meta property="og:description" content="{{ONE_SENTENCE_SUMMARY}}" />
+<meta property="og:description" content="{{SUMMARY}}" />
 <meta property="og:url" content="https://scitechlab-dev.com/articles/{{SLUG}}.html" />
 <meta property="og:image" content="https://scitechlab-dev.com/assets/share.png" />
-<meta property="article:published_time" content="{{YYYY-MM-DD}}" />
+<meta property="article:published_time" content="{{DATE}}" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="canonical" href="https://scitechlab-dev.com/articles/{{SLUG}}.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../assets/style.css?v=9" />
+<link rel="stylesheet" href="../assets/style.css?v={{STYLE_V}}" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -44,6 +41,7 @@
     <a class="brand" href="../index.html">Josué Aldana-Aguilar</a>
     <nav class="site-nav" aria-label="Primary">
       <a href="../index.html#work">Work</a>
+      <a href="../articles/">Writing</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
   </div>
@@ -52,23 +50,16 @@
 <main id="main">
   <article class="post">
     <div class="wrap post-inner">
-      <a class="post-back" href="../index.html">← Home</a>
+      <a class="post-back" href="../articles/">← Writing</a>
 
       <p class="post-meta">
-        <time datetime="{{YYYY-MM-DD}}">{{YYYY-MM-DD}}</time>
-        <span>{{TOPIC, e.g. Grid operations}}</span>
+        <time datetime="{{DATE}}">{{DATE}}</time>{{TOPIC}}
       </p>
 
       <h1>{{TITLE}}</h1>
 
       <div class="post-body">
-        <p>{{Opening paragraph.}}</p>
-
-        <h2>{{Section heading}}</h2>
-        <p>{{Body text.}}</p>
-        <ul>
-          <li>{{List item}}</li>
-        </ul>
+{{CONTENT}}
       </div>
     </div>
   </article>
@@ -81,6 +72,6 @@
   </div>
 </footer>
 
-<script src="../assets/main.js?v=7"></script>
+<script src="../assets/main.js?v={{MAIN_V}}"></script>
 </body>
 </html>
