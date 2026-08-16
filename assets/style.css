@@ -687,6 +687,35 @@ a { color: inherit; text-decoration: none; }
   border-left: 2px solid var(--line); color: var(--ink-faint);
 }
 .post-body img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.post-body h3 {
+  font-weight: 600; font-size: 1.02rem; color: var(--ink);
+  letter-spacing: -0.01em; margin: 28px 0 10px;
+}
+.post-body strong { color: var(--ink); font-weight: 600; }
+.post-body hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
+
+/* Markdown tables get the same hairline treatment as .pubs — structure from
+   rules, no outer box. The build wraps each one in .table-scroll, so a table
+   too wide for the 660px column scrolls inside itself instead of pushing the
+   whole page sideways. */
+.post-body .table-scroll { margin: 0 0 20px; }
+.post-body table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.87rem; text-align: left;
+}
+.post-body th, .post-body td {
+  padding: 10px 16px 10px 0; vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+.post-body thead th {
+  font-family: var(--mono); font-weight: 400; font-size: 10.5px;
+  text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--ink-faint); white-space: nowrap;
+  border-bottom: 1px solid var(--line-2);
+}
+.post-body tbody td { color: var(--ink-dim); }
+.post-body tbody td:first-child { color: var(--ink); white-space: nowrap; }
+.post-body tbody td code { white-space: nowrap; }
 
 /* ---------- scroll reveal ---------- */
 @media (prefers-reduced-motion: no-preference) {

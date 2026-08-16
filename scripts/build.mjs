@@ -204,7 +204,13 @@ async function main() {
       summary: String(data.summary ?? ''),
       date: String(data.date ?? ''),
       topic: data.topic ? String(data.topic) : '',
-      html: marked.parse(body),
+      // Wrap tables the way the publications table is wrapped: a table wider
+      // than the 660px article column scrolls in its own box rather than
+      // pushing the page sideways on a phone.
+      html: marked
+        .parse(body)
+        .replace(/<table>/g, '<div class="table-scroll"><table>')
+        .replace(/<\/table>/g, '</table></div>'),
     });
   }
 
