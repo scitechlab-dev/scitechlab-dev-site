@@ -1,19 +1,42 @@
 /* ============================================================
-   Josué Aldana-Aguilar. Minimal dark theme.
+   Josué Aldana-Aguilar. True-black theme.
    Two families (Inter + IBM Plex Mono), one accent.
-   Work is tabbed by domain; projects sit in a 2-column grid.
+   Work is one band per domain; projects sit in a 2-column grid.
+
+   Every color the site uses is declared in :root below, including the
+   channel triplets the partial-alpha values need. Nothing downstream
+   hard-codes a color, so retheming means editing that block only.
    ============================================================ */
 
 :root {
-  --bg:        #0b0e13;   /* near-black slate */
-  --bg-2:      #11161f;   /* raised surface */
-  --line:      #1e2733;   /* hairline */
-  --line-2:    #2a3646;   /* stronger hairline */
-  --ink:       #e8edf4;   /* primary text */
-  --ink-dim:   #98a5b6;   /* secondary text */
-  --ink-faint: #5d6a7c;   /* captions, meta */
+  --bg:        #000000;   /* true black */
+  --bg-2:      #0c0c0e;   /* raised surface */
+  --line:      #1d1d21;   /* hairline */
+  --line-2:    #31313a;   /* stronger hairline */
+  --ink:       #f6f6f8;   /* primary text */
+  --ink-dim:   #a6a6b0;   /* secondary text */
+  --ink-faint: #70707c;   /* captions, meta */
+  /* Two accents with a rule, not two accents for variety:
+       --accent   the physical side — current, plant, hardware, and every
+                  interactive affordance (links, buttons, hovers).
+       --accent-2 the measured side — telemetry, models, live state.
+     The signal-chain strip changes from one to the other at the CT, which is
+     exactly where measurement starts. If a new element is neither, it is grey. */
   --accent:    #ffb000;   /* signal amber */
-  --live:      #2dd4bf;   /* ongoing state */
+  --accent-2:  #2dd4bf;   /* measurement teal */
+  --live:      var(--accent-2);   /* ongoing state reads as measured state */
+
+  /* Channel triplets for the same three colors. Everything that needs the
+     accent at partial alpha goes through these, so retheming the site means
+     editing this block and nothing else. Keep them in sync with the hex
+     values above. */
+  --bg-rgb:     0 0 0;
+  --accent-rgb: 255 176 0;
+  --accent-2-rgb: 45 212 191;
+  --live-rgb:   var(--accent-2-rgb);
+  --accent-hi:  #ffc233;  /* accent, one step brighter: button hover */
+  --on-accent:  #1a1200;  /* text that sits on top of a filled accent */
+
   --radius: 3px;
   --maxw: 1060px;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -43,19 +66,30 @@ a { color: inherit; text-decoration: none; }
 
 .skip-link {
   position: absolute; left: -9999px; top: 0;
-  background: var(--accent); color: #000; padding: 10px 16px;
+  background: var(--accent); color: var(--on-accent); padding: 10px 16px;
   font-family: var(--mono); font-size: 13px; z-index: 200;
 }
 .skip-link:focus { left: 12px; top: 12px; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-::selection { background: var(--accent); color: #000; }
+::selection { background: var(--accent); color: var(--on-accent); }
+
+/* ---------- scroll progress ----------
+   Sits on the header's bottom rule and energizes it as you read. */
+.scroll-line {
+  position: fixed; top: 60px; left: 0; right: 0; height: 2px;
+  z-index: 110; pointer-events: none;
+}
+.scroll-line span {
+  display: block; height: 100%; background: var(--accent);
+  transform: scaleX(0); transform-origin: 0 50%;
+}
 
 /* ---------- header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(11,14,19,0.86);
+  background: rgb(var(--bg-rgb) / 0.86);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -77,7 +111,7 @@ a { color: inherit; text-decoration: none; }
 .hero::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(720px 340px at 82% -10%, rgba(255,176,0,0.08), transparent 70%),
+    radial-gradient(720px 340px at 82% -10%, rgb(var(--accent-rgb) / 0.08), transparent 70%),
     radial-gradient(var(--line) 1px, transparent 1px) 0 0 / 28px 28px;
   -webkit-mask-image: linear-gradient(#000 45%, transparent 92%);
   mask-image: linear-gradient(#000 45%, transparent 92%);
@@ -129,8 +163,8 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid transparent;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
-.btn-primary { background: var(--accent); color: #1a1200; font-weight: 500; }
-.btn-primary:hover { background: #ffc233; }
+.btn-primary { background: var(--accent); color: var(--on-accent); font-weight: 500; }
+.btn-primary:hover { background: var(--accent-hi); }
 .btn-ghost { border-color: var(--line-2); color: var(--ink-dim); }
 .btn-ghost:hover { border-color: var(--ink-faint); color: var(--ink); }
 
@@ -159,17 +193,20 @@ a { color: inherit; text-decoration: none; }
 
 .section[id], .hero[id] { scroll-margin-top: 70px; }
 
-.section-head { margin-bottom: 28px; }
-.contact-title {
-  font-weight: 600; font-size: clamp(1.4rem, 2.6vw, 1.8rem);
-  line-height: 1.2; letter-spacing: -0.02em; margin: 0;
-}
 .section-sub { color: var(--ink-dim); margin: 10px 0 0; max-width: 52ch; font-size: 0.96rem; }
 
 /* ---------- section bands ----------
    Full-bleed rules with the label sitting on the content column. These are
-   what divide the page now, so sections no longer carry their own border. */
-.band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+   what divide the page now, so sections no longer carry their own border.
+
+   Each band sticks under the header for as long as its own section is on
+   screen, then the next one pushes it out. Scrolling gets a running label of
+   where you are, and the page stops feeling like one flat column. */
+.band {
+  position: sticky; top: 61px; z-index: 50;
+  background: var(--bg);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
 .band-inner { display: flex; align-items: center; gap: 11px; height: 46px; }
 .band-dot {
   width: 6px; height: 6px; border-radius: 50%;
@@ -180,6 +217,49 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.13em; text-transform: uppercase;
   color: var(--ink-dim); margin: 0;
 }
+
+/* ---------- signal chain strip ---------- */
+.feeder-strip { border-top: 1px solid var(--line); overflow: hidden; }
+.feeder { display: block; width: 100%; height: 132px; color: var(--line-2); }
+.fd-dev circle, .fd-dev rect, .fd-load path, .fd-acc { fill: var(--bg); }
+.fd-acc { stroke: var(--accent); }
+/* past the CT the chain is measurement, so it changes color there */
+.fd-model { stroke: var(--accent-2); stroke-width: 2; fill: none; }
+.fd-label text {
+  fill: var(--ink-faint); font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.08em;
+}
+
+/* One short dash per path, run end to end. Each flow needs its own dasharray
+   and keyframes because the offsets are in path-length units, so the numbers
+   below are tied to the path geometry in index.html — change one, change both.
+   Grid spine: 1440 long. Telemetry branch: 64 down + 410 across = 474. */
+.fd-flow {
+  stroke: var(--accent); stroke-width: 3; stroke-linecap: round;
+  filter: drop-shadow(0 0 5px rgb(var(--accent-rgb) / 0.5));
+}
+.fd-flow-grid {
+  stroke-dasharray: 54 1386;
+  animation: fd-run-grid 7s linear infinite;
+}
+/* offset half a cycle, so there are always two pulses on the spine */
+.fd-flow-b { animation-delay: -3.5s; opacity: 0.5; }
+.fd-flow-data {
+  stroke: var(--accent-2);
+  filter: drop-shadow(0 0 5px rgb(var(--accent-2-rgb) / 0.5));
+  stroke-dasharray: 40 434;
+  animation: fd-run-data 4.4s linear infinite;
+  animation-delay: -1.4s;
+}
+@keyframes fd-run-grid {
+  from { stroke-dashoffset: 1440; }
+  to   { stroke-dashoffset: -54; }
+}
+@keyframes fd-run-data {
+  from { stroke-dashoffset: 474; }
+  to   { stroke-dashoffset: -40; }
+}
+@media (prefers-reduced-motion: reduce) { .fd-flow { display: none; } }
 
 /* ---------- statement ---------- */
 .statement-inner { padding: 58px 0 62px; }
@@ -220,8 +300,31 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.08em;
 }
 
+/* ---------- glyphs come alive on hover ----------
+   Each one does what its symbol actually does: the disconnector closes, the
+   IC pulses, the prompt blinks. No row background change, because the rows
+   are headings and shouldn't look clickable. */
+.domain-glyph { transition: border-color 0.25s ease; }
+.domain:hover .domain-glyph { border-color: rgb(var(--accent-rgb) / 0.4); }
+
+.glyph-blade {
+  transform-box: view-box; transform-origin: 8.1px 11.2px;
+  transition: transform 0.4s cubic-bezier(0.34, 0.8, 0.3, 1);
+}
+.domain:hover .glyph-blade { transform: rotate(35deg); }
+
+.glyph-chip { transform-box: fill-box; transform-origin: center; }
+.domain:hover .glyph-chip { animation: chip-pulse 1.5s ease-in-out infinite; }
+@keyframes chip-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.1); }
+}
+
+.glyph-caret { opacity: 0; }
+.domain:hover .glyph-caret { animation: caret 1.05s steps(1) infinite; }
+@keyframes caret { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
 .domain-projects { padding: 30px 0 46px; }
-.contact-body { padding: 56px 0 64px; }
 
 /* ---------- project grid ----------
    No outer box: the hairline gaps read as a continuation of the full-bleed
@@ -244,35 +347,54 @@ a { color: inherit; text-decoration: none; }
   content: ""; background: var(--bg);
 }
 
-.p-head {
-  display: flex; align-items: baseline; justify-content: space-between;
-  gap: 14px; margin-bottom: 8px;
+/* ---------- project thumbnails ----------
+   One schematic per project, drawn in the feeder's vocabulary: grey symbols
+   carry the structure, a single amber element carries the point. No stock
+   imagery — each one is the thing the project actually produces.
+
+   Full bleed across the top of the card via negative margins, and left with
+   no background of its own so the card's hover rail still runs top to bottom.
+
+   Same viewBox trick as .feeder: the box is far taller than the rendered
+   strip, so width always drives the scale and nothing is ever cropped
+   horizontally. Keep drawing inside the y 38..106 band. */
+.thumb {
+  display: block; width: calc(100% + 44px); height: 84px;
+  margin: -22px -22px 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--line-2);
+  transition: color 0.25s ease;
 }
-.project h4 { font-weight: 600; font-size: 1.02rem; margin: 0; letter-spacing: -0.01em; }
-.p-status {
-  font-family: var(--mono); font-size: 10px; color: var(--ink-faint);
-  white-space: nowrap; text-transform: uppercase; letter-spacing: 0.06em;
-  border: 1px solid var(--line-2); border-radius: 20px; padding: 2px 9px;
-}
-.p-status[data-state="on"] { color: var(--live); border-color: rgba(45,212,191,0.3); }
-.p-status[data-state="on"]::before {
-  content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%;
-  background: var(--live); margin-right: 6px; vertical-align: 1px;
-  animation: pulse 2.2s ease-out infinite;
-}
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(45,212,191,0.45); }
-  70% { box-shadow: 0 0 0 5px rgba(45,212,191,0); }
-  100% { box-shadow: 0 0 0 0 rgba(45,212,191,0); }
+.project:hover .thumb { color: var(--ink-faint); }
+
+.th-acc { stroke: var(--accent); }
+.th-acc-f { fill: var(--accent); stroke: none; }
+.th-acc, .th-acc-f { transition: filter 0.25s ease; }
+.project:hover .th-acc,
+.project:hover .th-acc-f { filter: drop-shadow(0 0 6px rgb(var(--accent-rgb) / 0.5)); }
+.th-fill { fill: var(--bg); }
+
+/* Thumbnails whose amber idea is a measurement or a model output rather than
+   a piece of plant carry .thumb-2 and switch to the second accent. Scrolling
+   the work section then reads warm through Electrical Engineering and cool
+   through Data Science, without a single label saying so. */
+.thumb-2 .th-acc { stroke: var(--accent-2); }
+.thumb-2 .th-acc-f { fill: var(--accent-2); }
+.project:hover .thumb-2 .th-acc,
+.project:hover .thumb-2 .th-acc-f { filter: drop-shadow(0 0 6px rgb(var(--accent-2-rgb) / 0.5)); }
+
+.project h4 {
+  font-weight: 600; font-size: 1.02rem; letter-spacing: -0.01em;
+  margin: 0 0 8px;
 }
 
-.p-tags { display: flex; gap: 6px; align-items: center; }
-.p-kind {
-  font-family: var(--mono); font-size: 10px; color: var(--ink-faint);
-  white-space: nowrap; text-transform: uppercase; letter-spacing: 0.06em;
-  border: 1px solid var(--line-2); border-radius: 20px; padding: 2px 9px;
+/* Used by .avail-dot in the contact block — the only status signal left. */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgb(var(--live-rgb) / 0.45); }
+  70% { box-shadow: 0 0 0 5px rgb(var(--live-rgb) / 0); }
+  100% { box-shadow: 0 0 0 0 rgb(var(--live-rgb) / 0); }
 }
-.p-kind[data-kind="learning"] { color: var(--accent); border-color: rgba(255,176,0,0.35); }
+
 
 .project > p { color: var(--ink-dim); font-size: 0.9rem; margin: 0 0 16px; flex: 1; }
 
@@ -311,29 +433,189 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin: 0;
 }
 
-/* ---------- contact ---------- */
-/* Borderless, like .projects: the hairline gaps are the structure. */
+/* ---------- publications ----------
+   A real table, because it is real tabular data: the year and DOI columns are
+   only useful if they line up down the page. Same borderless treatment as the
+   project grid — hairlines are the structure, no outer box. */
+.pubs-body { padding: 52px 0 60px; }
+.pubs-head { margin-bottom: 26px; }
+.pubs-title {
+  font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  line-height: 1.2; letter-spacing: -0.02em; margin: 0;
+}
+.pubs-head a { color: var(--accent); border-bottom: 1px solid transparent; }
+.pubs-head a:hover { border-bottom-color: var(--accent); }
+
+/* The DOI column cannot wrap without looking broken, so on narrow screens the
+   table scrolls inside its own box instead of forcing the page sideways. */
+.table-scroll { overflow-x: auto; }
+
+.pubs {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.9rem; text-align: left;
+}
+.pubs th, .pubs td {
+  padding: 13px 18px 13px 0; vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+.pubs thead th {
+  font-family: var(--mono); font-weight: 400; font-size: 10.5px;
+  text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--ink-faint); padding-bottom: 10px;
+  border-bottom: 1px solid var(--line-2);
+  white-space: nowrap;
+}
+.pubs tbody tr { transition: background 0.2s ease; }
+.pubs tbody tr:hover { background: var(--bg-2); }
+.pubs tbody th {
+  font-weight: 500; color: var(--ink); letter-spacing: -0.01em;
+  min-width: 24ch; padding-left: 14px; padding-right: 26px;
+  box-shadow: inset 3px 0 0 transparent; transition: box-shadow 0.2s ease;
+}
+.pubs tbody tr:hover th { box-shadow: inset 3px 0 0 var(--accent); }
+.pc-year {
+  font-family: var(--mono); color: var(--ink-dim);
+  white-space: nowrap; width: 1%;
+}
+.pc-venue { color: var(--ink-dim); min-width: 18ch; }
+.pc-doi { width: 1%; }
+.pc-doi a {
+  font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint);
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.pc-doi a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+/* ---------- contact ----------
+   The page's closing move, so it carries the hero's texture rather than
+   another plain column: an invitation on the left, the actual addresses on
+   the right, with email promoted out of the list. */
+.contact-body { position: relative; padding: 62px 0 76px; }
+.contact-body::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(660px 320px at 6% 116%, rgb(var(--accent-rgb) / 0.09), transparent 70%),
+    radial-gradient(var(--line) 1px, transparent 1px) 0 0 / 28px 28px;
+  -webkit-mask-image: linear-gradient(transparent 6%, #000 58%);
+  mask-image: linear-gradient(transparent 6%, #000 58%);
+}
+.contact-grid {
+  position: relative;   /* lifts the content off the texture above */
+  display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start;
+}
+
+/* Availability pill. Reuses the teal "ongoing" signal from the project
+   status pills, so it reads as state rather than as a second accent. */
+.avail {
+  display: inline-flex; align-items: center; gap: 9px; margin: 0 0 20px;
+  font-family: var(--mono); font-size: 10.5px; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--ink-dim);
+  border: 1px solid var(--line-2); border-radius: 20px; padding: 4px 12px;
+}
+.avail-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--live);
+  animation: pulse 2.2s ease-out infinite;
+}
+
+/* Display scale, same as the hero: this is a closing statement, not a
+   subheading over a list. */
+.contact-title {
+  font-weight: 600; font-size: clamp(1.9rem, 4.4vw, 2.8rem);
+  line-height: 1.06; letter-spacing: -0.032em; margin: 0;
+  max-width: 9ch; text-wrap: balance;
+}
+.contact-meta {
+  font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint);
+  margin: 24px 0 0;
+}
+
+/* ---------- email panel ----------
+   Corner brackets on hover, borrowed from the portrait frame, so the one
+   primary action on the page announces itself without another accent color. */
+.mail { position: relative; }
+.mail::before, .mail::after {
+  content: ""; position: absolute; width: 16px; height: 16px;
+  pointer-events: none; opacity: 0; transition: opacity 0.22s ease;
+}
+.mail::before {
+  top: -5px; left: -5px;
+  border-top: 2px solid var(--accent); border-left: 2px solid var(--accent);
+}
+.mail::after {
+  bottom: -5px; right: -5px;
+  border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent);
+}
+.mail:hover::before, .mail:hover::after,
+.mail:focus-within::before, .mail:focus-within::after { opacity: 1; }
+
+.mail-link {
+  display: block; padding: 18px 20px 17px;
+  background: var(--bg-2); border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.mail-link:hover {
+  border-color: rgb(var(--accent-rgb) / 0.45);
+  box-shadow: 0 10px 34px -22px rgb(var(--accent-rgb) / 0.85);
+}
+.mail-addr {
+  display: block; margin: 9px 0 14px;
+  font-family: var(--mono); font-size: clamp(0.92rem, 2vw, 1.1rem);
+  color: var(--ink); letter-spacing: -0.015em; word-break: break-all;
+}
+.mail-go {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 12px; color: var(--accent);
+}
+.mail-go span { transition: transform 0.2s ease; }
+.mail-link:hover .mail-go span { transform: translateX(4px); }
+
+/* Rendered hidden; assets/main.js reveals it only where the clipboard API
+   is actually available. */
+.mail-copy {
+  position: absolute; top: 11px; right: 11px;
+  font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--ink-faint);
+  background: var(--bg); border: 1px solid var(--line-2);
+  border-radius: var(--radius); padding: 4px 9px; cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.mail-copy:hover { color: var(--ink); border-color: var(--ink-faint); }
+.mail-copy[data-done] { color: var(--live); border-color: rgb(var(--live-rgb) / 0.4); }
+
+/* ---------- profile rows ----------
+   Borderless, like .projects: the hairline gaps are the structure. */
 .contact-links {
-  list-style: none; margin: 0; padding: 0; max-width: 640px;
+  list-style: none; margin: 18px 0 0; padding: 0;
   display: grid; gap: 1px; background: var(--line);
   border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
 .contact-links a {
   display: flex; align-items: baseline; justify-content: space-between;
   gap: 14px; background: var(--bg); padding: 13px 16px;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
-.contact-links a:hover { background: var(--bg-2); }
-.contact-links a[target="_blank"]::after {
+.contact-links a:hover { background: var(--bg-2); box-shadow: inset 3px 0 0 var(--accent); }
+.contact-links a::after {
   content: "\2197"; font-family: var(--mono); font-size: 12px;
-  color: var(--accent); opacity: 0; transition: opacity 0.2s ease;
+  color: var(--accent); opacity: 0.32;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
-.contact-links a[target="_blank"]:hover::after { opacity: 1; }
+.contact-links a:hover::after { opacity: 1; transform: translate(2px, -2px); }
 .cc-k {
   font-family: var(--mono); font-size: 10.5px; text-transform: uppercase;
   letter-spacing: 0.07em; color: var(--ink-faint); flex: 0 0 auto;
 }
-.cc-v { font-size: 0.9rem; color: var(--ink); text-align: right; word-break: break-word; }
+.cc-v {
+  font-size: 0.9rem; color: var(--ink); margin-left: auto;
+  text-align: right; word-break: break-word;
+}
 
 /* ---------- footer ---------- */
 .site-footer { border-top: 1px solid var(--line); padding: 24px 0; }
@@ -392,6 +674,11 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: no-preference) {
   .reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
   .reveal.in { opacity: 1; transform: none; }
+
+  /* Cards in a grid arrive in sequence rather than as one block. */
+  .projects .project:nth-child(2) { transition-delay: 0.07s; }
+  .projects .project:nth-child(3) { transition-delay: 0.14s; }
+  .projects .project:nth-child(4) { transition-delay: 0.21s; }
 }
 
 /* ---------- responsive ---------- */
@@ -399,6 +686,8 @@ a { color: inherit; text-decoration: none; }
   .hero-inner { grid-template-columns: 1fr; gap: 32px; }
   .hero-photo { order: -1; }
   .hero-photo img { width: 120px; height: 120px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+  .contact-title { max-width: 14ch; }
 }
 @media (max-width: 720px) {
   .projects { grid-template-columns: 1fr; }
@@ -413,13 +702,23 @@ a { color: inherit; text-decoration: none; }
   .domain-glyph svg { width: 20px; height: 20px; }
   .domain-projects { padding: 22px 0 34px; }
   .statement-inner { padding: 42px 0 46px; }
+  /* shorter strip widens the slice window, so the whole chain still fits */
+  .feeder { height: 96px; }
 }
 @media (max-width: 620px) {
   .wrap { padding: 0 20px; }
-  .site-nav { gap: 18px; }
+  .site-nav { gap: 14px; }
+  .pubs-body { padding: 40px 0 46px; }
   .hero { padding: 48px 0 44px; }
   .section { padding: 48px 0; }
-  .contact-links a { flex-direction: column; gap: 3px; }
-  .cc-v { text-align: left; }
+  /* stacked label over value, with the arrow parked in the corner instead of
+     becoming a third line */
+  .contact-links a {
+    position: relative; flex-direction: column; align-items: flex-start;
+    gap: 3px; padding-right: 36px;
+  }
+  .cc-v { text-align: left; margin-left: 0; }
+  .contact-links a::after { position: absolute; top: 12px; right: 15px; }
+  .contact-body { padding: 46px 0 56px; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }

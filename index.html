@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2" />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=2" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2" />
 <title>scitechlab-dev</title>
 <meta name="description" content="Josué Aldana-Aguilar, Electrical Engineer. Grid operations analyst building data-driven tools for energy utilities from SCADA/ADMS, data analysis and automation." />
 <meta name="author" content="Josué Romeo Aldana Aguilar" />
 <meta property="og:title" content="Josué Aldana-Aguilar · Electrical Engineer" />
-<meta property="og:description" content="Building data-driven tools for energy utilities. Electrical engineering, electronics, computer science." />
+<meta property="og:description" content="Building data-driven tools for energy utilities. Electrical engineering, data science, electronics." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scitechlab-dev.com" />
 <meta property="og:image" content="https://scitechlab-dev.com/assets/share.png" />
@@ -18,16 +18,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css?v=9" />
+<link rel="stylesheet" href="assets/style.css?v=11" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-line" aria-hidden="true"><span id="scroll-bar"></span></div>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="#top">Josué Aldana-Aguilar</a>
     <nav class="site-nav" aria-label="Primary">
       <a href="#work">Work</a>
+      <a href="#publications">Papers</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -38,7 +40,7 @@
   <section class="hero" id="top">
     <div class="wrap hero-inner">
       <div class="hero-text">
-        <p class="eyebrow">Electrical Engineer · Electronics · Computer Science</p>
+        <p class="eyebrow">Electrical Engineer · Data Science · Electronics</p>
         <h1 class="hero-title">Building data-driven tools for energy utilities</h1>
 
         <dl class="now">
@@ -66,6 +68,79 @@
       </figure>
     </div>
   </section>
+
+  <!-- ============ SIGNAL CHAIN ============
+       Full-bleed strip running the three things this site is about, left to
+       right: the distribution feeder that carries the power (bus, breaker 52,
+       recloser 79, load), the instrumentation that measures it (CT, IED, RTU),
+       and what comes out the other end (sampled telemetry, then a load curve).
+       Real symbols throughout.
+
+       The strip changes color at the CT, which is exactly where measurement
+       starts: amber for the current on the spine, teal for the telemetry
+       coming down the branch and the model at the end. That is the argument
+       the page makes in words further down, drawn once at the top. Pulses are
+       CSS, so reduced-motion kills them. -->
+  <div class="feeder-strip">
+    <!-- The viewBox is deliberately much taller than the rendered strip so on
+         desktop the width drives the scale and the spine runs edge to edge.
+         Below ~530px the height takes over and the view crops horizontally
+         instead, so every symbol lives inside x 230..1220 and y 74..186 —
+         that box is what survives on a phone. -->
+    <svg class="feeder" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMid slice"
+         role="img" aria-labelledby="feeder-title" fill="none">
+      <title id="feeder-title">A distribution feeder turned into data: substation bus, breaker, recloser and load, measured by a current transformer feeding an IED and an RTU, ending in sampled telemetry and a load curve</title>
+
+      <g class="fd-line" stroke="currentColor" stroke-width="1.5">
+        <path d="M0 100H1440" />
+        <path d="M230 74V126" stroke-width="5" />
+        <path d="M500 100V120" />
+        <path d="M620 111V164" />
+        <path d="M620 164H656M734 164H786M864 164H900" />
+      </g>
+
+      <g class="fd-load" stroke="currentColor" stroke-width="1.5">
+        <path d="M491 120H509L500 134Z" />
+      </g>
+
+      <g class="fd-dev" stroke="currentColor" stroke-width="1.5">
+        <circle cx="400" cy="100" r="10" />
+        <circle cx="620" cy="100" r="11" />
+        <rect x="656" y="148" width="78" height="32" rx="2" />
+        <rect x="786" y="148" width="78" height="32" rx="2" />
+        <path d="M825 148V130" fill="none" />
+        <path d="M813 128a12 12 0 0 1 24 0" fill="none" />
+      </g>
+
+      <rect class="fd-acc" x="286" y="92" width="16" height="16" stroke-width="2.5" />
+
+      <g class="fd-samp" stroke="currentColor" stroke-width="1.5">
+        <path d="M900 164H1030" />
+        <path d="M910 164v-18M932 164v-26M954 164v-12M976 164v-32M998 164v-20M1020 164v-14" />
+        <path d="M1040 164h30M1064 159l6 5-6 5" />
+      </g>
+      <g fill="currentColor">
+        <circle cx="910" cy="146" r="2.6" /><circle cx="932" cy="138" r="2.6" />
+        <circle cx="954" cy="152" r="2.6" /><circle cx="976" cy="132" r="2.6" />
+        <circle cx="998" cy="144" r="2.6" /><circle cx="1020" cy="150" r="2.6" />
+      </g>
+
+      <path class="fd-line" stroke="currentColor" stroke-width="1.5" d="M1080 120V186H1220" />
+      <path class="fd-model" d="M1086 178c18-2 30-14 46-12s26 14 44 4 32-38 44-42c8-2 12 6 14 12" />
+
+      <g class="fd-label">
+        <text x="312" y="86">52</text>
+        <text x="418" y="86">79</text>
+        <text x="638" y="86">CT</text>
+        <text x="695" y="169" text-anchor="middle">IED</text>
+        <text x="825" y="169" text-anchor="middle">RTU</text>
+      </g>
+
+      <path class="fd-flow fd-flow-grid" d="M0 100H1440" />
+      <path class="fd-flow fd-flow-grid fd-flow-b" d="M0 100H1440" />
+      <path class="fd-flow fd-flow-data" d="M620 100V164H1030" />
+    </svg>
+  </div>
 
   <!-- ============ STATEMENT ============ -->
   <section class="statement-sec">
@@ -101,7 +176,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
             <path d="M1 12h5" /><path d="M18 12h5" />
             <circle cx="7" cy="12" r="1.3" /><circle cx="17" cy="12" r="1.3" />
-            <path d="M8.1 11.2 16 5.6" />
+            <path class="glyph-blade" d="M8.1 11.2 16 5.6" />
           </svg>
         </span>
         <div class="domain-text">
@@ -115,38 +190,125 @@
     <div class="wrap domain-projects">
       <ol class="projects">
           <li class="project">
-            <div class="p-head">
-              <h4>Coordination of Protection</h4>
-              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
-            </div>
+            <!-- a real TCC plot: log-log grid (decade lines bunching to the
+                 right of each decade), backup curve above, primary in amber
+                 below with the coordination interval between them, and the
+                 primary's instantaneous element dropping vertically at the
+                 top of its range -->
+            <svg class="thumb" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round">
+              <!-- log decades: 1,2,3..9 spacing, twice across -->
+              <g opacity=".3" stroke-width="1">
+                <path d="M98 38V106M147 38V106M182 38V106M209 38V106M231 38V106M250 38V106M266 38V106M280 38V106" />
+                <path d="M292 38V106M341 38V106M376 38V106" />
+                <path d="M46 52H400M46 74H400M46 92H400" />
+              </g>
+              <path d="M46 38V106H400" />
+              <!-- backup relay -->
+              <path d="M60 44C110 46 150 72 200 82c58 12 130 16 200 17" />
+              <!-- primary: inverse curve into a definite-time knee, then the
+                   instantaneous element cutting straight down -->
+              <g class="th-acc" stroke-width="2">
+                <path d="M60 60C104 62 138 84 180 92c40 8 82 10 112 11" />
+                <path d="M292 103V38" />
+              </g>
+            </svg>
+            <h4>Coordination of Protection</h4>
             <p>Predicting the most efficient relay setting groups for IEDs from grid topology, SCADA telemetry, and machine learning.</p>
             <ul class="stack"><li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li></ul>
           </li>
 
           <li class="project">
-            <div class="p-head">
-              <h4>Grid Operations</h4>
-              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
-            </div>
+            <!-- the actual shape of a transfer: two substations, each with its
+                 own breaker and load, joined by a normally-open tie. Closing
+                 the amber blade and opening a breaker is the maneuver. -->
+            <svg class="thumb" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round">
+              <!-- substation A and its feeder -->
+              <path d="M56 38V66" stroke-width="4" />
+              <path d="M56 52H250" />
+              <rect x="98" y="44" width="16" height="16" class="th-fill" />
+              <path d="M170 52v12" /><path d="M161 64h18l-9 14z" />
+              <!-- substation B and its feeder, fed from the other end -->
+              <path d="M384 74V102" stroke-width="4" />
+              <path d="M384 88H250" />
+              <rect x="310" y="80" width="16" height="16" class="th-fill" />
+              <path d="M272 88V76" /><path d="M263 76h18l-9-14z" />
+              <!-- tie risers -->
+              <path d="M250 52v9M250 79v9" />
+              <g class="th-acc" stroke-width="1.9">
+                <circle cx="250" cy="63" r="3.4" class="th-fill" />
+                <circle cx="250" cy="79" r="3.4" class="th-fill" />
+                <path d="M252 60 266 47" />
+              </g>
+            </svg>
+            <h4>Grid Operations</h4>
             <p>Designing switching maneuvers by fusing topology, SCADA state, telemetry, and operations history in OpenDSS, with a scoring method that weighs the impact and constraints of each maneuver.</p>
             <ul class="stack"><li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li></ul>
           </li>
 
           <li class="project">
-            <div class="p-head">
-              <h4>RF Planning</h4>
-              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status">Done</span></span>
-            </div>
+            <!-- poles are not scattered at random, they follow the feeder
+                 routes: dots on the lines are candidate poles, squares are the
+                 IEDs that have to be reached, dashed rings are rejected sites
+                 and the amber tower is what the GA kept -->
+            <svg class="thumb" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.3" stroke-linecap="round">
+              <!-- feeder routes -->
+              <g opacity=".8">
+                <path d="M50 92 132 78 214 84 292 62 396 54" />
+                <path d="M132 78 148 44 236 40" />
+                <path d="M214 84 226 104 330 100" />
+              </g>
+              <!-- rejected candidate sites -->
+              <circle cx="118" cy="72" r="26" stroke-dasharray="3 4" opacity=".45" />
+              <circle cx="330" cy="76" r="26" stroke-dasharray="3 4" opacity=".45" />
+              <!-- poles -->
+              <g fill="currentColor" stroke="none">
+                <circle cx="90" cy="87" r="2.2" /><circle cx="132" cy="78" r="2.2" />
+                <circle cx="174" cy="81" r="2.2" /><circle cx="214" cy="84" r="2.2" />
+                <circle cx="254" cy="72" r="2.2" /><circle cx="292" cy="62" r="2.2" />
+                <circle cx="344" cy="58" r="2.2" /><circle cx="190" cy="42" r="2.2" />
+                <circle cx="276" cy="102" r="2.2" />
+              </g>
+              <!-- IEDs that have to be covered -->
+              <g stroke-width="1.4">
+                <rect x="232" y="36" width="8" height="8" />
+                <rect x="326" y="96" width="8" height="8" />
+                <rect x="392" y="50" width="8" height="8" />
+              </g>
+              <g class="th-acc" stroke-width="1.8">
+                <circle cx="226" cy="70" r="38" stroke-dasharray="5 4" />
+                <circle cx="226" cy="70" r="21" stroke-dasharray="3 4" opacity=".6" />
+                <path d="M219 84 226 56 233 84" /><path d="M221 72h10" />
+              </g>
+            </svg>
+            <h4>RF Planning</h4>
             <p>A genetic algorithm that places RF concentrators on existing utility poles from GIS data, minimizing tower count while maximizing SCADA coverage of the IED fleet.</p>
             <ul class="stack"><li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li></ul>
             <p class="p-link"><a href="https://github.com/scitechlab-dev/rf_ga_ot" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a></p>
           </li>
 
           <li class="project">
-            <div class="p-head">
-              <h4>OpenDSS</h4>
-              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
-            </div>
+            <!-- what a solved circuit actually prints: per-unit voltage
+                 against distance from the substation, three phases spreading
+                 apart as the feeder unbalances, dropping at each transformer.
+                 Amber is the 0.95 pu limit the profile has to stay above. -->
+            <svg class="thumb thumb-2" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round">
+              <path d="M46 38V106H400" />
+              <path d="M46 50h6M46 68h6M46 86h6" opacity=".7" />
+              <!-- three phases, common at the bus then diverging -->
+              <path d="M60 48h52l6 7h58l6 8h56l7 9h54l7 8h48" />
+              <path d="M60 48h52l6 9h58l7 10h56l7 11h54l7 9h48" opacity=".8" />
+              <path d="M60 48h52l6 11h58l7 13h56l8 12h54l7 10h47" opacity=".62" />
+              <path class="th-acc" stroke-width="1.6" stroke-dasharray="6 5" d="M56 98H396" />
+            </svg>
+            <h4>OpenDSS</h4>
             <p>Deepening my command of OpenDSS for distribution modeling, fault studies, and what-if simulation of switching maneuvers.</p>
             <ul class="stack"><li>OpenDSS</li><li>Power flow</li><li>Python</li></ul>
           </li>
@@ -157,7 +319,117 @@
       <div class="wrap domain-inner">
         <span class="domain-glyph" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-            <rect x="7" y="7" width="10" height="10" rx="1" />
+            <path d="M4 7l4.5 5L4 17" /><path d="M12.5 17H20" />
+            <rect class="glyph-caret" x="12.5" y="6" width="2.6" height="7" fill="currentColor" stroke="none" />
+          </svg>
+        </span>
+        <div class="domain-text">
+          <h3>Data Science</h3>
+          <p>Models, simulation, and the tooling around them.</p>
+        </div>
+        <span class="domain-count">03</span>
+      </div>
+    </div>
+
+    <div class="wrap domain-projects">
+      <ol class="projects">
+          <li class="project">
+            <!-- the point is that it is local: the dashed boundary is one
+                 machine holding both the prompt and the model weights, wired
+                 out to real boards. Nothing leaves the box. -->
+            <svg class="thumb thumb-2" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round">
+              <!-- the local machine -->
+              <rect x="42" y="34" width="212" height="74" rx="3"
+                    stroke-dasharray="5 5" opacity=".55" />
+              <!-- prompt -->
+              <rect x="56" y="48" width="80" height="46" rx="2" />
+              <path d="M80 66h44M80 78h28" opacity=".8" />
+              <rect class="th-acc-f" x="66" y="60" width="4" height="14" />
+              <!-- model weights: a stack of layers -->
+              <path d="M136 71h20" />
+              <g>
+                <rect x="156" y="48" width="84" height="10" rx="1.5" />
+                <rect x="156" y="60" width="84" height="10" rx="1.5" />
+                <rect x="156" y="72" width="84" height="10" rx="1.5" />
+                <rect x="156" y="84" width="84" height="10" rx="1.5" />
+              </g>
+              <!-- out to the boards -->
+              <path d="M254 71h24M278 71c22 0 16-19 40-19M278 71h40M278 71c22 0 16 19 40 19" opacity=".9" />
+              <rect x="318" y="42" width="52" height="20" rx="1.5" />
+              <rect x="318" y="61" width="52" height="20" rx="1.5" />
+              <rect x="318" y="80" width="52" height="20" rx="1.5" />
+              <path d="M370 48h12M370 56h12M370 67h12M370 75h12M370 86h12M370 94h12" opacity=".7" />
+            </svg>
+            <h4>Local LLM-Based Laboratory</h4>
+            <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
+            <ul class="stack"><li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li></ul>
+          </li>
+
+          <li class="project">
+            <!-- the real flight profile: near-linear ascent at a steady climb
+                 rate, burst at ceiling (amber), a steep free-fall until the
+                 parachute bites, then a slow drift down to the recovery
+                 point. The asymmetry is the whole reason the sim exists. -->
+            <svg class="thumb thumb-2" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round">
+              <path d="M46 106H400" stroke-dasharray="4 5" opacity=".7" />
+              <path d="M46 38V106" opacity=".7" />
+              <path d="M46 52h5M46 70h5M46 88h5" opacity=".55" />
+              <!-- ascent: steady climb rate, so nearly a straight line -->
+              <path d="M58 104 190 50" />
+              <!-- free fall, then parachute-limited descent -->
+              <path d="M190 50c8 12 14 22 20 30" />
+              <path d="M210 80c16 12 44 18 78 20s70 4 96 6" stroke-dasharray="6 4" />
+              <!-- parachute canopy and shrouds over the payload -->
+              <path d="M238 78a16 16 0 0 1 32 0" />
+              <path d="M238 78 252 92M270 78 256 92M254 78v14" opacity=".8" />
+              <rect x="248" y="92" width="12" height="9" rx="1" />
+              <!-- recovery point -->
+              <path d="M384 99v7M378 106h13" />
+              <g class="th-acc" stroke-width="1.8">
+                <circle cx="190" cy="50" r="5" />
+                <path d="M190 41v-6M199 50h6M184 44l-4-4M196 44l4-4M184 56l-4 4" />
+              </g>
+            </svg>
+            <h4>High-Altitude Balloon Trajectory Simulations</h4>
+            <p>Simulating balloon flight through ascent, burst, and descent to plan missions and estimate recovery zones.</p>
+            <ul class="stack"><li>Trajectory modeling</li><li>Mission planning</li><li>Python</li></ul>
+            <p class="p-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">View live project <span aria-hidden="true">→</span></a></p>
+          </li>
+
+          <li class="project">
+            <!-- the plot you actually stare at while training: loss against
+                 epochs, training falling away steadily while validation
+                 (amber) bottoms out and starts climbing again. The gap that
+                 opens after the dashed line is where you stop. -->
+            <svg class="thumb thumb-2" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round">
+              <path d="M46 38V106H400" />
+              <path d="M46 52h5M46 70h5M46 88h5" opacity=".55" />
+              <!-- training loss -->
+              <path d="M62 44C96 62 118 76 152 84c44 10 96 13 154 15c34 1 54 1 74 2" />
+              <!-- best epoch -->
+              <path d="M216 38V106" stroke-dasharray="4 4" opacity=".45" />
+              <!-- validation loss: the overfit turn -->
+              <path class="th-acc" stroke-width="2"
+                    d="M62 46C96 64 120 78 154 84c26 5 46 6 62 7c40 3 78 9 112 17" />
+            </svg>
+            <h4>Applied AI &amp; ML</h4>
+            <p>Working through applied machine learning, from MSc coursework to models for grid analytics and protection coordination.</p>
+            <ul class="stack"><li>ML</li><li>LLMs</li><li>Python</li></ul>
+          </li>
+        </ol>
+    </div>
+
+    <div class="domain">
+      <div class="wrap domain-inner">
+        <span class="domain-glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <rect class="glyph-chip" x="7" y="7" width="10" height="10" rx="1" />
             <path d="M10 7V4M14 7V4M10 20v-3M14 20v-3M7 10H4M7 14H4M20 10h-3M20 14h-3" />
           </svg>
         </span>
@@ -172,80 +444,218 @@
     <div class="wrap domain-projects">
       <ol class="projects">
           <li class="project">
-            <div class="p-head">
-              <h4>High-Altitude Balloon Electronics</h4>
-              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
-            </div>
+            <!-- the EPS drawn as a schematic rather than a block diagram:
+                 Li-ion cells into a switching regulator (amber inductor and
+                 its smoothing cap), then a regulated rail feeding the OBC and
+                 the payload in parallel, each with its own return. -->
+            <svg class="thumb" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round">
+              <!-- Li-ion cells -->
+              <path d="M50 60v22M60 66v10M70 60v22M80 66v10" />
+              <path d="M80 71h34" />
+              <!-- switch node -->
+              <path d="M114 71v-9M114 71h10" opacity=".8" />
+              <!-- regulated rail out to the loads -->
+              <path d="M186 71h34M244 62h96M244 86h96" />
+              <path d="M244 62v24" />
+              <path d="M220 71h24" />
+              <!-- OBC -->
+              <rect x="256" y="44" width="70" height="18" rx="1.5" />
+              <path d="M268 44v-6M282 44v-6M296 44v-6" opacity=".75" />
+              <!-- payload -->
+              <rect x="256" y="86" width="70" height="18" rx="1.5" />
+              <circle cx="272" cy="95" r="2.6" /><circle cx="290" cy="95" r="2.6" />
+              <circle cx="308" cy="95" r="2.6" />
+              <!-- ground return -->
+              <path d="M340 62v24" opacity=".8" />
+              <path d="M352 74h16M356 79h8M359 84h2" opacity=".7" />
+              <path d="M340 74h12" opacity=".8" />
+              <g class="th-acc" stroke-width="1.9">
+                <!-- inductor: four half-turns, the real symbol -->
+                <path d="M124 71a8 8 0 0 1 16 0a8 8 0 0 1 16 0a8 8 0 0 1 16 0a8 8 0 0 1 14 0" />
+                <!-- output capacitor to ground -->
+                <path d="M186 71v10M178 81h16M180 87h12" />
+              </g>
+            </svg>
+            <h4>High-Altitude Balloon Electronics</h4>
             <p>Power system, on-board computer, and payload electronics for a high-altitude balloon mission, built with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
             <ul class="stack"><li>EPS</li><li>OBC</li><li>Li-ion</li><li>Arduino</li><li>TinyML</li></ul>
           </li>
 
           <li class="project">
-            <div class="p-head">
-              <h4>Project-based learning with ZedBoard</h4>
-              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
-            </div>
+            <!-- the FPGA slice itself: a 4-input LUT clocked into a D
+                 flip-flop, with the CLB array it tiles into behind. Amber is
+                 the routed net entering the LUT and leaving the register. -->
+            <svg class="thumb" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.4" stroke-linecap="round">
+              <!-- CLB array, the fabric this slice repeats across -->
+              <g opacity=".45">
+                <rect x="46" y="40" width="13" height="12" rx="1" />
+                <rect x="46" y="64" width="13" height="12" rx="1" />
+                <rect x="46" y="88" width="13" height="12" rx="1" />
+                <rect x="70" y="40" width="13" height="12" rx="1" />
+                <rect x="70" y="88" width="13" height="12" rx="1" />
+                <rect x="376" y="40" width="13" height="12" rx="1" />
+                <rect x="376" y="64" width="13" height="12" rx="1" />
+                <rect x="376" y="88" width="13" height="12" rx="1" />
+                <rect x="400" y="40" width="13" height="12" rx="1" />
+                <rect x="400" y="64" width="13" height="12" rx="1" />
+                <rect x="400" y="88" width="13" height="12" rx="1" />
+              </g>
+
+              <!-- four LUT inputs -->
+              <path d="M100 52h44M100 64h44M100 76h44M100 88h44" />
+              <!-- LUT: trapezoid, the standard look-up table symbol -->
+              <path d="M144 42h50l16 14v28l-16 14h-50z" />
+              <path d="M156 60h26M156 70h18" opacity=".7" />
+              <!-- LUT output into the D flip-flop -->
+              <path d="M210 70h34" />
+              <!-- D flip-flop: D in, Q out, clock notch on the lower left -->
+              <rect x="244" y="46" width="66" height="48" rx="2" />
+              <path d="M244 78l12 6-12 6" />
+              <path d="M258 62h18M282 62h16" opacity=".7" />
+              <path d="M310 70h30" />
+              <!-- clock net into the register -->
+              <path d="M270 110v-16M262 110h16" opacity=".75" />
+
+              <g class="th-acc" stroke-width="1.9">
+                <path d="M83 64h17" />
+                <path d="M340 70h36" />
+                <circle cx="340" cy="70" r="2.8" class="th-acc-f" />
+              </g>
+            </svg>
+            <h4>Project-based learning with ZedBoard</h4>
             <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
             <ul class="stack"><li>FPGA</li><li>APSoC</li><li>Zynq-7000</li></ul>
             <p class="p-link"><a href="https://github.com/scitechlab-dev/fpga_learning_zedboard/tree/main" target="_blank" rel="noopener">View lab notes <span aria-hidden="true">→</span></a></p>
           </li>
 
           <li class="project">
-            <div class="p-head">
-              <h4>IoT Embedded Systems</h4>
-              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
-            </div>
+            <!-- nodes carrying a sensing element and an antenna, radiating up
+                 to a gateway on the amber uplink, which backhauls the
+                 telemetry to storage. The propagation arcs are what make it
+                 wireless rather than three wires drawn diagonally. -->
+            <svg class="thumb" viewBox="0 0 440 140" preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round">
+              <g>
+                <rect x="48" y="40" width="26" height="18" rx="1.5" />
+                <rect x="48" y="84" width="26" height="18" rx="1.5" />
+                <path d="M61 40v-8M55 32h12M61 84v-8M55 76h12" />
+                <path d="M74 49h12M74 93h12" opacity=".8" />
+                <circle cx="92" cy="49" r="5" /><circle cx="92" cy="93" r="5" />
+              </g>
+              <g opacity=".65">
+                <path d="M108 42a28 28 0 0 1 0 20" stroke-dasharray="3 4" />
+                <path d="M122 34a44 44 0 0 1 0 36" stroke-dasharray="3 4" />
+                <path d="M108 90a28 28 0 0 0 0-20" stroke-dasharray="3 4" />
+                <path d="M122 98a44 44 0 0 0 0-36" stroke-dasharray="3 4" />
+              </g>
+              <rect x="176" y="56" width="38" height="34" rx="2" />
+              <path d="M195 56V38" />
+              <path d="M186 36a12 12 0 0 1 18 0" />
+              <path d="M184 68h22M184 78h14" opacity=".75" />
+              <path d="M214 73h44M330 73h22" opacity=".85" />
+              <rect x="352" y="54" width="42" height="12" rx="1.5" />
+              <rect x="352" y="68" width="42" height="12" rx="1.5" />
+              <rect x="352" y="82" width="42" height="12" rx="1.5" />
+              <g fill="currentColor" stroke="none">
+                <circle cx="360" cy="60" r="1.6" /><circle cx="360" cy="74" r="1.6" />
+                <circle cx="360" cy="88" r="1.6" />
+              </g>
+              <path class="th-acc" stroke-width="2" stroke-dasharray="9 6" d="M258 73h72" />
+            </svg>
+            <h4>IoT Embedded Systems</h4>
             <p>Exploring sensors, low-power firmware, and telemetry pipelines on COTS development boards.</p>
             <ul class="stack"><li>IoT</li><li>Embedded C</li><li>Telemetry</li></ul>
           </li>
         </ol>
     </div>
+  </section>
 
-    <div class="domain">
-      <div class="wrap domain-inner">
-        <span class="domain-glyph" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-            <path d="M4 7l4.5 5L4 17" /><path d="M12.5 17H20" />
-          </svg>
-        </span>
-        <div class="domain-text">
-          <h3>Computer Science</h3>
-          <p>Simulation, models, and the tooling around them.</p>
-        </div>
-        <span class="domain-count">03</span>
+  <!-- ============ PUBLICATIONS ============
+       Mirrors the ORCID record at 0000-0002-7686-5065. Every row carries a
+       resolvable DOI; if a new paper has none yet, leave the cell showing the
+       venue only rather than linking somewhere that 404s. -->
+  <section class="section sec-flush" id="publications">
+    <div class="band">
+      <div class="wrap band-inner">
+        <span class="band-dot" aria-hidden="true"></span>
+        <h2 class="band-label">Publications</h2>
       </div>
     </div>
 
-    <div class="wrap domain-projects">
-      <ol class="projects">
-          <li class="project">
-            <div class="p-head">
-              <h4>Local LLM-Based Laboratory</h4>
-              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status" data-state="on">Ongoing</span></span>
-            </div>
-            <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
-            <ul class="stack"><li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li></ul>
-          </li>
+    <div class="wrap pubs-body">
+      <div class="pubs-head">
+        <h3 class="pubs-title">Conference papers</h3>
+        <p class="section-sub">Peer-reviewed work.</p>
+      </div>
 
-          <li class="project">
-            <div class="p-head">
-              <h4>High-Altitude Balloon Trajectory Simulations</h4>
-              <span class="p-tags"><span class="p-kind">Project</span><span class="p-status">Done</span></span>
-            </div>
-            <p>Simulating balloon flight through ascent, burst, and descent to plan missions and estimate recovery zones.</p>
-            <ul class="stack"><li>Trajectory modeling</li><li>Mission planning</li><li>Python</li></ul>
-            <p class="p-link"><a href="https://hab.scitechlab-dev.com" target="_blank" rel="noopener">View live project <span aria-hidden="true">→</span></a></p>
-          </li>
-
-          <li class="project">
-            <div class="p-head">
-              <h4>Applied AI &amp; ML</h4>
-              <span class="p-tags"><span class="p-kind" data-kind="learning">Learning</span><span class="p-status" data-state="on">Ongoing</span></span>
-            </div>
-            <p>Working through applied machine learning, from MSc coursework to models for grid analytics and protection coordination.</p>
-            <ul class="stack"><li>ML</li><li>LLMs</li><li>Python</li></ul>
-          </li>
-        </ol>
+      <div class="table-scroll">
+        <table class="pubs">
+          <caption class="visually-hidden">Conference papers by year, with venue and DOI</caption>
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col" class="pc-year">Year</th>
+              <th scope="col">Conference</th>
+              <th scope="col">DOI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Design and Simulation of a COTS-Based Electrical Power System for High-Altitude Balloon Missions</th>
+              <td class="pc-year">2025</td>
+              <td class="pc-venue">IEEE CONESCAPAN 2025</td>
+              <td class="pc-doi"><a href="https://doi.org/10.1109/CONESCAPAN67936.2025.11229727" target="_blank" rel="noopener">10.1109/CONESCAPAN67936.2025.11229727</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Effects of Ionization and Volcanic Activity on LoRa Communications in the 915 MHz Band</th>
+              <td class="pc-year">2025</td>
+              <td class="pc-venue">IEEE CONESCAPAN 2025</td>
+              <td class="pc-doi"><a href="https://doi.org/10.1109/CONESCAPAN67936.2025.11229787" target="_blank" rel="noopener">10.1109/CONESCAPAN67936.2025.11229787</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Eco Buddy: A Novel Robotic Platform for Automatic Waste Classification using Computer Vision and IoT</th>
+              <td class="pc-year">2025</td>
+              <td class="pc-venue">Annals of Computer Science and Information Systems</td>
+              <td class="pc-doi"><a href="https://doi.org/10.15439/2024R71" target="_blank" rel="noopener">10.15439/2024R71</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Advancing Electromobility in Central America: An Analysis of Policies and Regulations</th>
+              <td class="pc-year">2024</td>
+              <td class="pc-venue">IEEE CONCAPAN XLII</td>
+              <td class="pc-doi"><a href="https://doi.org/10.1109/CONCAPAN63470.2024.10933892" target="_blank" rel="noopener">10.1109/CONCAPAN63470.2024.10933892</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Estimation of Operation Areas and Environmental Parameters for High-Altitude Balloon Missions</th>
+              <td class="pc-year">2024</td>
+              <td class="pc-venue">IEEE CONCAPAN XLII</td>
+              <td class="pc-doi"><a href="https://doi.org/10.1109/CONCAPAN63470.2024.10933890" target="_blank" rel="noopener">10.1109/CONCAPAN63470.2024.10933890</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Harnessing Artificial Intelligence in Education: Innovations, Opportunities, and Challenges</th>
+              <td class="pc-year">2024</td>
+              <td class="pc-venue">IEEE CONCAPAN XLII</td>
+              <td class="pc-doi"><a href="https://doi.org/10.1109/CONCAPAN63470.2024.10933829" target="_blank" rel="noopener">10.1109/CONCAPAN63470.2024.10933829</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Estimation of Shade Levels in Coffee Cultivation Using Segmentation Methods and Deep Learning</th>
+              <td class="pc-year">2023</td>
+              <td class="pc-venue">IEEE CONCAPAN XLI</td>
+              <td class="pc-doi"><a href="https://doi.org/10.1109/CONCAPANXLI59599.2023.10517562" target="_blank" rel="noopener">10.1109/CONCAPANXLI59599.2023.10517562</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Selección de Antenas UHF para una Misión Near-Space en un HAB y las frecuencias reguladas</th>
+              <td class="pc-year">2022</td>
+              <td class="pc-venue">IEEE CONESCAPAN 2022</td>
+              <td class="pc-doi"><a href="https://doi.org/10.1109/CONESCAPAN56456.2022.9959735" target="_blank" rel="noopener">10.1109/CONESCAPAN56456.2022.9959735</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -258,26 +668,44 @@
       </div>
     </div>
 
-    <div class="wrap contact-body">
-        <div class="section-head">
+    <!-- Full-bleed close. Same dot grid and amber glow as the hero, mirrored to
+         the opposite corner, so the page ends on the texture it opened on
+         instead of trailing off into a list of links. -->
+    <div class="contact-body">
+      <div class="wrap contact-grid">
+        <div class="contact-lede">
+          <p class="avail"><span class="avail-dot" aria-hidden="true"></span>Open to collaboration</p>
           <h3 class="contact-title">Get in touch</h3>
-          <p class="section-sub">Open to collaborating on grid operations, embedded systems, and applied data work.</p>
+          <p class="section-sub">Grid operations, embedded systems, and applied data work.</p>
+          <p class="contact-meta">San Salvador · UTC−6</p>
         </div>
 
-        <ul class="contact-links">
-          <li><a href="mailto:jaldana.aguilar.tec@gmail.com">
-            <span class="cc-k">Email</span><span class="cc-v">jaldana.aguilar.tec@gmail.com</span>
-          </a></li>
-          <li><a href="https://linkedin.com/in/scitechlab" target="_blank" rel="noopener">
-            <span class="cc-k">LinkedIn</span><span class="cc-v">scitechlab</span>
-          </a></li>
-          <li><a href="https://github.com/scitechlab-dev" target="_blank" rel="noopener">
-            <span class="cc-k">GitHub</span><span class="cc-v">@scitechlab-dev</span>
-          </a></li>
-          <li><a href="https://orcid.org/0000-0002-7686-5065" target="_blank" rel="noopener">
-            <span class="cc-k">ORCID</span><span class="cc-v">0000-0002-7686-5065</span>
-          </a></li>
-        </ul>
+        <div class="contact-actions">
+          <!-- Email is the one action that matters here, so it gets a panel of
+               its own rather than a fourth row in the link list. -->
+          <div class="mail">
+            <a class="mail-link" href="mailto:jaldana.aguilar.tec@gmail.com">
+              <span class="cc-k">Email</span>
+              <span class="mail-addr">jaldana.aguilar.tec@gmail.com</span>
+              <span class="mail-go">Write to me <span aria-hidden="true">→</span></span>
+            </a>
+            <button class="mail-copy" type="button" hidden aria-live="polite"
+                    data-copy="jaldana.aguilar.tec@gmail.com">Copy</button>
+          </div>
+
+          <ul class="contact-links">
+            <li><a href="https://linkedin.com/in/scitechlab" target="_blank" rel="noopener">
+              <span class="cc-k">LinkedIn</span><span class="cc-v">scitechlab</span>
+            </a></li>
+            <li><a href="https://github.com/scitechlab-dev" target="_blank" rel="noopener">
+              <span class="cc-k">GitHub</span><span class="cc-v">@scitechlab-dev</span>
+            </a></li>
+            <li><a href="https://orcid.org/0000-0002-7686-5065" target="_blank" rel="noopener">
+              <span class="cc-k">ORCID</span><span class="cc-v">0000-0002-7686-5065</span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -289,6 +717,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=7"></script>
+<script src="assets/main.js?v=9"></script>
 </body>
 </html>
