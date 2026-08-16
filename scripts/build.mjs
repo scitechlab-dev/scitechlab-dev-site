@@ -131,6 +131,12 @@ function indent(html, pad) {
     .join('\n');
 }
 
+/**
+ * Links and canonical URLs drop the .html: Workers static assets serve
+ * foo.html at /foo and 307-redirect /foo.html to it. Pointing og:url or a link
+ * at the .html form just adds a redirect hop and makes the canonical tag
+ * disagree with the URL that actually serves the page.
+ */
 function articleList(posts, { hrefPrefix, pad }) {
   if (posts.length === 0) {
     return indent('<p class="articles-empty">Nothing published yet.</p>', pad);
@@ -138,7 +144,7 @@ function articleList(posts, { hrefPrefix, pad }) {
   const rows = posts
     .map(
       (p) => `  <li class="article-row">
-    <a href="${hrefPrefix}${p.slug}.html">
+    <a href="${hrefPrefix}${p.slug}">
       <time datetime="${p.date}">${p.date}</time>
       <span class="a-title">${text(p.title)}</span>
       <span class="a-desc">${text(p.summary)}</span>
@@ -299,7 +305,7 @@ async function main() {
     `  <url><loc>${SITE}/articles/</loc></url>`,
     ...posts.map(
       (p) =>
-        `  <url><loc>${SITE}/articles/${p.slug}.html</loc><lastmod>${p.date}</lastmod></url>`
+        `  <url><loc>${SITE}/articles/${p.slug}</loc><lastmod>${p.date}</lastmod></url>`
     ),
   ];
   await writeFile(

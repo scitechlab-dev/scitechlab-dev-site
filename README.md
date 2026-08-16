@@ -183,8 +183,11 @@ Body in normal markdown: headings, lists, links, quotes, code fences, images.
 - `slug` is optional; only needed to keep a URL stable after renaming the file.
 
 The file name becomes the URL: `content/relay-setting-groups.md` publishes at
-`/articles/relay-setting-groups.html`. A `YYYY-MM-DD-` prefix is allowed and
-gets stripped from the slug, if you prefer the folder sorted by date.
+`/articles/relay-setting-groups` — no `.html`, because Workers static assets
+serve `foo.html` at `/foo` and redirect the `.html` form to it. Links, `og:url`,
+`canonical` and the sitemap all use the extensionless URL so nothing points at a
+redirect. A `YYYY-MM-DD-` prefix on the file name is allowed and gets stripped
+from the slug, if you prefer the folder sorted by date.
 
 To preview locally before pushing:
 
