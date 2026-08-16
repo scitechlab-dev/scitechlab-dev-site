@@ -19,6 +19,73 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css?v=11" />
+<style>
+/* ============ SIGNAL-CHAIN DIAGRAM (animated) ============
+   Self-contained on purpose: every selector is scoped under .hd, and
+   every class is prefixed hd-, so this can't collide with or be
+   overridden by anything in assets/style.css. Colors are sampled
+   straight from the site's existing palette (black bg, #ffb000 amber,
+   #2dd4bf teal, #31313a structural gray) so it drops in without
+   touching the stylesheet at all. Sequence: primary spine draws in,
+   breaker 52 closes, recloser 79 rings, a dot travels down to the CT
+   tap, the IED LED blinks, the RTU antenna emits, telemetry flows to
+   the SCADA panel, the curve draws and the threshold marker pops. */
+.signal-diagram{ background:#000; padding:2.4rem 0; overflow:hidden; }
+.signal-diagram .hd{
+  --hd-struct:#31313a;
+  --hd-label:#83838d;
+  --hd-cap:#54545e;
+  --hd-bg:#000;
+  --hd-power:#ffb000;
+  --hd-data:#2dd4bf;
+  display:block;
+  width:min(1200px,94vw);
+  margin-inline:auto;
+}
+.hd path,.hd line{fill:none;stroke-linecap:round}
+.hd circle{fill:none}
+.hd .hd-struct{stroke:var(--hd-struct);stroke-width:1.5}
+.hd .hd-solid{fill:var(--hd-bg)}
+.hd .hd-box{fill:var(--hd-bg);stroke:var(--hd-struct);stroke-width:1.5}
+.hd .hd-ctrl{stroke:var(--hd-struct);stroke-width:1.2;stroke-dasharray:2 5}
+.hd .hd-draw,.hd .hd-energize,.hd .hd-travel{stroke-linecap:butt}
+.hd .hd-draw{stroke-dasharray:1;stroke-dashoffset:1;animation:hd-draw .7s ease-out both;animation-delay:var(--d,0s)}
+.hd .hd-fade{opacity:0;animation:hd-fade .5s ease-out both;animation-delay:var(--d,0s)}
+.hd .hd-energize{stroke:var(--hd-power);stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;animation:hd-draw .9s ease-out both;animation-delay:.9s}
+.hd .hd-breaker{fill:var(--hd-bg);stroke:var(--hd-power);stroke-width:2;animation:hd-close .3s ease-out both;animation-delay:.85s}
+.hd .hd-ring{stroke:var(--hd-power);stroke-width:1.5;opacity:0;transform-box:fill-box;transform-origin:center;animation:hd-ring .7s ease-out both;animation-delay:1.05s}
+.hd .hd-travel{stroke:var(--hd-data);stroke-width:2;stroke-dasharray:.18 .82;stroke-dashoffset:1.18;animation:hd-travel .5s linear both;animation-delay:var(--d,0s)}
+.hd .hd-led{fill:var(--hd-data);opacity:.15;animation:hd-blink 2s linear infinite;animation-delay:1.6s}
+.hd .hd-emit{stroke:var(--hd-data);stroke-width:1.5;opacity:0;animation:hd-emit 2.4s ease-out infinite}
+.hd .hd-e1{animation-delay:2.2s}
+.hd .hd-e2{animation-delay:2.5s}
+.hd .hd-flow{stroke:var(--hd-data);stroke-width:2;stroke-dasharray:3 9;opacity:0;animation:hd-fade .4s ease-out both,hd-flowmove 1s linear infinite;animation-delay:2.2s,2.2s}
+.hd .hd-thresh{stroke:#5a646e;stroke-width:1;stroke-dasharray:4 6}
+.hd .hd-curve{stroke:var(--hd-data);stroke-width:2}
+.hd .hd-marker{fill:var(--hd-data);opacity:0;transform-box:fill-box;transform-origin:center;animation:hd-pop .45s cubic-bezier(.2,1.4,.4,1) both;animation-delay:3.3s}
+.hd .hd-labels text{fill:var(--hd-label);font:11px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.05em}
+.hd .hd-labels .hd-cap{font-size:10px;letter-spacing:.18em;fill:var(--hd-cap)}
+.hd *{animation-play-state:paused}
+.hd.play *{animation-play-state:running}
+@keyframes hd-draw{to{stroke-dashoffset:0}}
+@keyframes hd-fade{to{opacity:1}}
+@keyframes hd-close{to{fill:var(--hd-power)}}
+@keyframes hd-ring{from{opacity:.8;transform:scale(.5)}to{opacity:0;transform:scale(1.8)}}
+@keyframes hd-travel{to{stroke-dashoffset:0}}
+@keyframes hd-blink{0%,100%{opacity:.15}50%{opacity:1}}
+@keyframes hd-emit{0%{opacity:0}15%{opacity:.9}60%,100%{opacity:0}}
+@keyframes hd-flowmove{to{stroke-dashoffset:-12}}
+@keyframes hd-pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion: reduce){
+  .hd *{animation:none !important}
+  .hd .hd-draw,.hd .hd-energize{stroke-dashoffset:0}
+  .hd .hd-fade,.hd .hd-flow,.hd .hd-emit,.hd .hd-marker{opacity:1}
+  .hd .hd-breaker{fill:var(--hd-power)}
+  .hd .hd-led{opacity:.9}
+  .hd .hd-ring,.hd .hd-travel{opacity:0}
+}
+@media (max-width:640px){ .signal-diagram{padding:1.6rem 0} }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -69,77 +136,80 @@
     </div>
   </section>
 
-  <!-- ============ SIGNAL CHAIN ============
-       Full-bleed strip running the three things this site is about, left to
-       right: the distribution feeder that carries the power (bus, breaker 52,
-       recloser 79, load), the instrumentation that measures it (CT, IED, RTU),
-       and what comes out the other end (sampled telemetry, then a load curve).
-       Real symbols throughout.
+  <!-- ============ SIGNAL CHAIN (animated) ============
+       Same story as before — a distribution feeder turned into data — now
+       drawn as a sequenced single-line diagram instead of a static strip.
+       On load/scroll-into-view: the primary spine draws in, breaker 52
+       closes amber, recloser 79 rings, a teal dot travels down to the CT
+       tap, the IED LED blinks, the RTU antenna emits, telemetry flows to
+       the SCADA panel, and the curve draws with its threshold marker.
+       Fully self-contained (see the <style> block in <head>): doesn't
+       depend on assets/style.css, so it can't break anything else on the
+       page. prefers-reduced-motion shows the end state with no motion. -->
+  <div class="signal-diagram">
+    <svg class="hd" viewBox="0 0 1200 260" role="img" aria-labelledby="hd-title hd-desc" xmlns="http://www.w3.org/2000/svg">
+      <title id="hd-title">Single-line diagram of a distribution feeder with telemetry</title>
+      <desc id="hd-desc">The bus energizes the feeder through breaker 52 and recloser 79. A current transformer feeds an IED that reports to an RTU; the RTU sends telemetry to a SCADA panel where the curve crosses a threshold.</desc>
 
-       The strip changes color at the CT, which is exactly where measurement
-       starts: amber for the current on the spine, teal for the telemetry
-       coming down the branch and the model at the end. That is the argument
-       the page makes in words further down, drawn once at the top. Pulses are
-       CSS, so reduced-motion kills them. -->
-  <div class="feeder-strip">
-    <!-- The viewBox is deliberately much taller than the rendered strip so on
-         desktop the width drives the scale and the spine runs edge to edge.
-         Below ~530px the height takes over and the view crops horizontally
-         instead, so every symbol lives inside x 230..1220 and y 74..186 —
-         that box is what survives on a phone. -->
-    <svg class="feeder" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMid slice"
-         role="img" aria-labelledby="feeder-title" fill="none">
-      <title id="feeder-title">A distribution feeder turned into data: substation bus, breaker, recloser and load, measured by a current transformer feeding an IED and an RTU, ending in sampled telemetry and a load curve</title>
+      <!-- ZONE 1 · PRIMARY SYSTEM -->
+      <path class="hd-struct hd-draw" pathLength="1" d="M60 55 V125" style="--d:.05s" />
+      <path class="hd-struct hd-draw" pathLength="1" d="M60 90 H880" style="--d:.15s" />
+      <path class="hd-struct hd-fade" d="M880 90 l-10 -5 m10 5 l-10 5" style="--d:.8s" />
+      <g><title>52 — AC circuit breaker</title>
+        <rect class="hd-breaker" x="162" y="82" width="16" height="16" />
+      </g>
+      <g><title>79 — Reclosing relay</title>
+        <circle class="hd-struct hd-solid" cx="270" cy="90" r="10" />
+        <circle class="hd-ring" cx="270" cy="90" r="10" />
+      </g>
+      <g><title>Feeder — distribution transformer</title>
+        <path class="hd-struct hd-draw" pathLength="1" d="M360 90 V119" style="--d:.5s" />
+        <circle class="hd-struct hd-solid hd-draw" pathLength="1" cx="360" cy="128" r="9" style="--d:.6s" />
+        <circle class="hd-struct hd-solid hd-draw" pathLength="1" cx="360" cy="142" r="9" style="--d:.7s" />
+      </g>
+      <path class="hd-energize" pathLength="1" d="M60 90 H880" />
 
-      <g class="fd-line" stroke="currentColor" stroke-width="1.5">
-        <path d="M0 100H1440" />
-        <path d="M230 74V126" stroke-width="5" />
-        <path d="M500 100V120" />
-        <path d="M620 111V164" />
-        <path d="M620 164H656M734 164H786M864 164H900" />
+      <!-- ZONE 2 · PROTECTION & TELEMETRY -->
+      <g><title>CT — Current transformer</title>
+        <circle class="hd-struct hd-solid" cx="470" cy="90" r="10" />
+      </g>
+      <path class="hd-ctrl hd-fade" d="M470 100 V170 H520" style="--d:1.3s" />
+      <path class="hd-travel" pathLength="1" d="M470 100 V170 H520" style="--d:1.5s" />
+      <g><title>IED — Intelligent electronic device</title>
+        <rect class="hd-box" x="520" y="150" width="90" height="40" />
+        <circle class="hd-led" cx="600" cy="160" r="3" />
+      </g>
+      <path class="hd-ctrl hd-fade" d="M610 170 H660" style="--d:1.8s" />
+      <path class="hd-travel" pathLength="1" d="M610 170 H660" style="--d:1.95s" />
+      <g><title>RTU — Remote terminal unit</title>
+        <rect class="hd-box" x="660" y="150" width="90" height="40" />
+        <line class="hd-struct" x1="705" y1="150" x2="705" y2="128" />
+        <path class="hd-emit hd-e1" d="M695 122 a10 10 0 0 1 20 0" />
+        <path class="hd-emit hd-e2" d="M689 116 a16 16 0 0 1 32 0" />
       </g>
 
-      <g class="fd-load" stroke="currentColor" stroke-width="1.5">
-        <path d="M491 120H509L500 134Z" />
+      <!-- ZONE 3 · DATA & DECISION -->
+      <path class="hd-flow" d="M750 170 H935" />
+      <path class="hd-struct hd-draw" pathLength="1" d="M940 110 V210 H1140" style="--d:2.2s" />
+      <line class="hd-thresh hd-fade" x1="940" y1="150" x2="1140" y2="150" style="--d:2.6s" />
+      <path class="hd-curve hd-draw" pathLength="1" d="M950 195 C1000 185 1030 200 1060 175 S1105 132 1125 126" style="--d:2.6s" />
+      <circle class="hd-marker" cx="1092" cy="150" r="4" />
+
+      <g class="hd-labels" aria-hidden="true">
+        <text x="50" y="45">BUS</text>
+        <text x="162" y="68">52</text>
+        <text x="262" y="68">79</text>
+        <text x="374" y="140">FEEDER</text>
+        <text x="462" y="68">CT</text>
+        <text x="551" y="174">IED</text>
+        <text x="691" y="174">RTU</text>
+        <text x="940" y="100">SCADA</text>
+        <text class="hd-cap" x="60" y="245">PRIMARY SYSTEM</text>
+        <text class="hd-cap" x="470" y="245">PROTECTION &amp; TELEMETRY</text>
+        <text class="hd-cap" x="940" y="245">DATA &amp; DECISION</text>
       </g>
-
-      <g class="fd-dev" stroke="currentColor" stroke-width="1.5">
-        <circle cx="400" cy="100" r="10" />
-        <circle cx="620" cy="100" r="11" />
-        <rect x="656" y="148" width="78" height="32" rx="2" />
-        <rect x="786" y="148" width="78" height="32" rx="2" />
-        <path d="M825 148V130" fill="none" />
-        <path d="M813 128a12 12 0 0 1 24 0" fill="none" />
-      </g>
-
-      <rect class="fd-acc" x="286" y="92" width="16" height="16" stroke-width="2.5" />
-
-      <g class="fd-samp" stroke="currentColor" stroke-width="1.5">
-        <path d="M900 164H1030" />
-        <path d="M910 164v-18M932 164v-26M954 164v-12M976 164v-32M998 164v-20M1020 164v-14" />
-        <path d="M1040 164h30M1064 159l6 5-6 5" />
-      </g>
-      <g fill="currentColor">
-        <circle cx="910" cy="146" r="2.6" /><circle cx="932" cy="138" r="2.6" />
-        <circle cx="954" cy="152" r="2.6" /><circle cx="976" cy="132" r="2.6" />
-        <circle cx="998" cy="144" r="2.6" /><circle cx="1020" cy="150" r="2.6" />
-      </g>
-
-      <path class="fd-line" stroke="currentColor" stroke-width="1.5" d="M1080 120V186H1220" />
-      <path class="fd-model" d="M1086 178c18-2 30-14 46-12s26 14 44 4 32-38 44-42c8-2 12 6 14 12" />
-
-      <g class="fd-label">
-        <text x="312" y="86">52</text>
-        <text x="418" y="86">79</text>
-        <text x="638" y="86">CT</text>
-        <text x="695" y="169" text-anchor="middle">IED</text>
-        <text x="825" y="169" text-anchor="middle">RTU</text>
-      </g>
-
-      <path class="fd-flow fd-flow-grid" d="M0 100H1440" />
-      <path class="fd-flow fd-flow-grid fd-flow-b" d="M0 100H1440" />
-      <path class="fd-flow fd-flow-data" d="M620 100V164H1030" />
     </svg>
+    <noscript><style>.hd *{animation-play-state:running !important}</style></noscript>
   </div>
 
   <!-- ============ STATEMENT ============ -->
@@ -718,5 +788,24 @@
 </footer>
 
 <script src="assets/main.js?v=9"></script>
+<script>
+/* Plays the signal-chain diagram once, the first time it enters the
+   viewport. Kept separate from assets/main.js on purpose. */
+(function () {
+  var hd = document.querySelector('.signal-diagram .hd');
+  if (!hd) return;
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        hd.classList.add('play');
+        io.disconnect();
+      }
+    }, { threshold: .35 });
+    io.observe(hd);
+  } else {
+    hd.classList.add('play');
+  }
+})();
+</script>
 </body>
 </html>
