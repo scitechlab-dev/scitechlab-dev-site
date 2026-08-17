@@ -7,9 +7,10 @@ topic: Grid operations
 
 A distribution feeder is protected by devices in series: a breaker at the
 substation, one or more reclosers down the trunk, fuses on the laterals. Every
-one of them sees the same fault. Protection engineering is mostly the work of
-making sure that only the right one operates, and that it operates before
-anything melts.
+one of them sees the same fault.
+
+> Protection engineering is mostly the work of making sure that only the right
+> one operates — and that it operates before anything melts.
 
 That reduces to two decisions, and everything else — pickup, curve shape, time
 dial, coordination interval — is machinery in service of them:
@@ -50,26 +51,26 @@ the practical floor, not the relay.
 Phase pickup has to fit between two moving limits:
 
 ```
-I_load,max  ×  margin   <   I_pickup   <   I_fault,min  /  reliability
+I_load,max × margin  <  I_pickup  <  I_fault,min / reliability
 ```
 
 The lower bound is not nameplate load. Two effects push it up:
 
 - **Transformer inrush**, several times rated current for a few cycles.
 - **Cold load pickup**, which is the harder one. After an extended outage the
-  natural diversity of thermostats, motors and compressors is gone, and they all
-  restart together. The feeder can draw multiples of its pre-outage load for
-  seconds to minutes — long enough to sit inside an inverse-time curve rather
-  than being ridden through.
+  natural diversity of thermostats, motors and compressors is gone, and they
+  all restart together. The feeder can draw multiples of its pre-outage load
+  for seconds to minutes — long enough to sit inside an inverse-time curve
+  rather than being ridden through.
 
 The upper bound is the *minimum* fault current in the protected zone, which
 usually means a phase-to-phase or high-impedance ground fault at the far end,
-under minimum generation. On a long rural feeder those two bounds converge, and
-on a bad one the window closes entirely: the current drawn by a fault at the end
-of the line is no longer clearly distinguishable from a heavy cold-load restart.
-That is the point at which overcurrent alone stops being sufficient and the
-answer becomes voltage-restrained elements, a mid-line recloser to shorten the
-zone, or impedance-based protection.
+under minimum generation. On a long rural feeder those two bounds converge,
+and on a bad one the window closes entirely: the current drawn by a fault at
+the end of the line is no longer clearly distinguishable from a heavy
+cold-load restart. That is the point at which overcurrent alone stops being
+sufficient and the answer becomes voltage-restrained elements, a mid-line
+recloser to shorten the zone, or impedance-based protection.
 
 ## The curve
 
@@ -83,9 +84,7 @@ Two standards define the shapes, and they are **not** interchangeable.
 **IEC 60255-151:**
 
 ```
-        TMS · k
-t = ─────────────────
-    (I / Is)^α  −  1
+t = TMS · k / ((I/Is)^α − 1)
 ```
 
 | Curve | k | α |
@@ -98,9 +97,7 @@ t = ─────────────────
 **IEEE C37.112:**
 
 ```
-     TD   ⎛       A              ⎞
-t = ──── ·⎜ ───────────────  +  B⎟
-      7   ⎝ (I / Is)^p − 1       ⎠
+t = (TD/7) · ( A / ((I/Is)^p − 1) + B )
 ```
 
 | Curve | A | B | p |
@@ -108,6 +105,10 @@ t = ──── ·⎜ ───────────────  +  B⎟
 | Moderately inverse | 0.0515 | 0.1140 | 0.02 |
 | Very inverse | 19.61 | 0.491 | 2 |
 | Extremely inverse | 28.2 | 0.1217 | 2 |
+
+In both families one parameter does the coordination work in practice — TMS in
+IEC, TD in IEEE. It scales the whole curve vertically without changing its
+shape, so it is the knob you turn when a study says two curves sit too close.
 
 An IEC very-inverse curve and an IEEE very-inverse curve share a name and are
 different curves. Loading one into a relay when the coordination study assumed
@@ -147,18 +148,18 @@ range of currents both devices can see.
 
 ## Fuse saving versus fuse clearing
 
-Most distribution faults — commonly cited as the large majority — are transient:
-a branch, an animal, a flashover that does not survive a de-energized interval.
-Reclosing exists to exploit that, and it forces a policy choice on every fused
-lateral.
+Most distribution faults — commonly cited as the large majority — are
+transient: a branch, an animal, a flashover that does not survive a
+de-energized interval. Reclosing exists to exploit that, and it forces a
+policy choice on every fused lateral.
 
 **Fuse saving** puts a fast curve on the recloser so it operates before the
-lateral fuse melts, then recloses. A transient fault on a lateral costs nobody a
-fuse and nobody a truck. The price is that *every* customer on the feeder sees a
-momentary interruption for a fault on one lateral.
+lateral fuse melts, then recloses. A transient fault on a lateral costs nobody
+a fuse and nobody a truck. The price is that *every* customer on the feeder
+sees a momentary interruption for a fault on one lateral.
 
-**Fuse clearing** lets the fuse blow. Only the lateral is lost, the rest of the
-feeder never blinks — but the outage is sustained until a crew arrives.
+**Fuse clearing** lets the fuse blow. Only the lateral is lost, the rest of
+the feeder never blinks — but the outage is sustained until a crew arrives.
 
 The trade has shifted. Momentary interruptions are far more expensive to
 customers with electronics and variable-speed drives than they were when fuse
@@ -170,19 +171,19 @@ clearing on laterals.
 Everything above assumes one source and unidirectional flow. Add generation
 downstream and specific assumptions fail:
 
-- **Direction stops implying location.** A feeder with generation can push fault
-  current toward the substation, which is what 67 is for.
+- **Direction stops implying location.** A feeder with generation can push
+  fault current toward the substation, which is what 67 is for.
 - **Infeed causes underreach.** For a fault beyond a DER connection point, the
   substation relay sees only part of the total fault current — the DER supplies
   the rest. The relay reads a smaller current than the fault actually is, and
   its inverse curve therefore trips *slower* than the study predicted.
-- **Reclosing can close out of phase.** If DER keeps an island energized through
-  the dead time, the reclose is a closure between two unsynchronized sources.
-  IEEE 1547 requires DER to cease to energize on an abnormal condition, but the
-  timing has to be checked against the actual reclose interval rather than
-  assumed.
-- **Sympathetic tripping.** Generation on a healthy feeder can contribute enough
-  current to a fault on an adjacent one to operate its own protection.
+- **Reclosing can close out of phase.** If DER keeps an island energized
+  through the dead time, the reclose is a closure between two unsynchronized
+  sources. IEEE 1547 requires DER to cease to energize on an abnormal
+  condition, but the timing has to be checked against the actual reclose
+  interval rather than assumed.
+- **Sympathetic tripping.** Generation on a healthy feeder can contribute
+  enough current to a fault on an adjacent one to operate its own protection.
 
 ## Standards worth keeping open
 
@@ -195,8 +196,10 @@ downstream and specific assumptions fail:
 | IEEE Std 242 | Protection and coordination (the Buff Book) |
 | IEEE 1547 | DER interconnection and interoperability |
 
-The thread running through all of it: coordination is a property of the system,
-not a setting on a relay. A device whose settings are individually defensible
-can still be wrong, because correctness is defined by what the device upstream
-and the device downstream are set to do at the same current, at the same
-instant.
+The thread running through all of it is a single idea:
+
+> Coordination is a property of the system, not a setting on a relay.
+
+A device whose settings are individually defensible can still be wrong,
+because correctness is defined by what the device upstream and the device
+downstream are set to do at the same current, at the same instant.
