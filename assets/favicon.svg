@@ -1,14 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- JA monogram at the site's stroke weight: J in ink, A in the signal
-       amber, on the true-black plate with one hairline.
+  <!-- JA monogram: J in ink, A in the signal amber, on the ink plate.
 
-       Nothing here is thinner than 5 units on a 64 grid, which is what
-       survives being scaled down to a 16px browser tab. If you redraw it,
-       check it at 16px first, not at 64. -->
-  <rect width="64" height="64" rx="13" fill="#000000"/>
-  <rect x="1" y="1" width="62" height="62" rx="12" fill="none" stroke="#1d1d21" stroke-width="2"/>
-  <path d="M14 16h13v22a8 8 0 0 1-13 6" fill="none" stroke="#f6f6f8"
-        stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M34 47 44 16l10 31M37.5 38h13" fill="none" stroke="#ffb000"
-        stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+       The plate is the ink token #14161a, not pure black, so it belongs to
+       the drawing-sheet theme rather than to the true-black one it replaced.
+
+       The two letters share a cap height (y19) and a baseline (y45), and the
+       pair is centred on x=32. Strokes are 7.5 units on a 64 grid; the older
+       mark used 5, which is 1.25px in a browser tab, and at that weight the
+       J and the A merged into one smudge. Nothing here is thinner than 7.
+       If you redraw it, check it at 16px first, not at 64.
+
+       Careful: XML forbids a double hyphen inside a comment, so write CSS
+       custom property names without their leading dashes in here. An invalid
+       comment makes the whole file unparseable and every browser silently
+       falls back to the PNG. -->
+  <rect width="64" height="64" rx="13" fill="#14161a"/>
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="none" stroke="#2c3038" stroke-width="2"/>
+  <path d="M26 19v18a8 8 0 0 1-14 5.5" fill="none" stroke="#f7f8f9"
+        stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33 45 42.5 19 52 45M36 38h13" fill="none" stroke="#f0a500"
+        stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

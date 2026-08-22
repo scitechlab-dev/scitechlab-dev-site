@@ -282,8 +282,11 @@ the Post Inspector above.
 ### Favicon
 
 `assets/favicon.svg` is the source of truth: a JA monogram, J in ink and A in
-the signal amber, on the black plate. The two PNGs are generated from it, not
-drawn separately — regenerate both whenever the SVG changes:
+the signal amber, on the **ink** plate (`#14161a`) — not pure black, so it
+belongs to the drawing-sheet theme. The two letters share a cap height (y19)
+and a baseline (y45) and the pair is centred on x=32. The two PNGs are
+generated from it, not drawn separately — regenerate both whenever the SVG
+changes:
 
 - `favicon.png` (64×64, RGBA) is the same artwork, rounded plate and hairline.
 - `apple-touch-icon.png` (180×180, RGB) drops the rounding and the border ring
@@ -297,11 +300,17 @@ chrome --headless=new --disable-gpu --hide-scrollbars \
   --screenshot=favicon.png file:///path/to/wrapper.html
 ```
 
-Nothing thinner than 5 units on the 64 grid — that is what survives being
-scaled to a 16px browser tab. Check any redraw at 16px, not at 64.
+Nothing thinner than **7** units on the 64 grid. The mark used to be drawn at
+5, which is 1.25px in a browser tab, and at that weight the J and the A
+merged into one smudge — that is the whole reason it was redrawn. Check any
+redraw at 16px, not at 64: render it at 16, 20, 24 and 32 on both a light and
+a dark tab strip and judge it there.
 
 The favicon URLs carry `?v=` like everything else under `/assets/`; bump it or
-the year-long immutable cache keeps serving the old icon.
+the year-long immutable cache keeps serving the old icon. Unlike `style.css`,
+this one is **not** injected by the build — it is hand-written in `index.html`
+and in both files under `scripts/templates/`, so a favicon change means
+editing three files. Currently at `?v=3`.
 
 ## Cache busting
 
