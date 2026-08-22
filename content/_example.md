@@ -10,8 +10,8 @@ This file has `draft: true`, so the build skips it and it never reaches the
 site. Copy it to start a real article, drop the `draft` line, and push.
 
 The file name becomes the URL: `content/relay-setting-groups.md` is published at
-`/articles/relay-setting-groups.html`. A `2026-08-16-` prefix on the file name is
-allowed and gets stripped — useful if you want the folder sorted by date.
+`/articles/relay-setting-groups` — no `.html`. A `2026-08-16-` prefix on the file
+name is allowed and gets stripped — useful if you want the folder sorted by date.
 
 ## What you can write
 

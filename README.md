@@ -20,7 +20,7 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 ├── index.html            # single-page site
 │                         #   hero → signal chain → statement → work (one row
 │                         #   per domain) → publications → writing → contact,
-│                         #   divided by label bands
+│                         #   divided by label bands, all on one .sheet
 ├── content/              # SOURCE: one markdown file per article
 │   └── _example.md       #   a draft; copy it to start writing
 ├── dist/                 # GENERATED, gitignored — the deployed site
@@ -30,7 +30,7 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 │       ├── article.html  # shell every article shares
 │       └── archive.html  # the /articles/ index
 ├── assets/
-│   ├── style.css         # minimal dark theme, CSS variables
+│   ├── style.css         # drawing-sheet theme, CSS variables
 │   ├── main.js           # footer year + scroll reveal
 │   ├── portrait.jpg
 │   ├── favicon.svg       # JA monogram (favicon.png / apple-touch-icon.png are fallbacks)
@@ -77,9 +77,26 @@ To add a new top-level file to the site, add it to the `STATIC` array in
 Every color lives in the `:root` block at the top of `assets/style.css`, hex
 values and the matching `--*-rgb` channel triplets that the partial-alpha
 values use. Nothing downstream hard-codes a color, so retheming the whole site
-means editing that one block. If you change `--accent`, change `--accent-rgb`,
-`--accent-hi` and `--on-accent` with it or the glows and buttons drift out of
-sync.
+means editing that one block.
+
+**The amber exists at two lightnesses, and that is the one thing to get right.**
+On black a single `#ffb000` could both carry text and glow; on paper it cannot.
+
+- `--accent` (`#8a5200`) is the **text** amber — links, DOIs, `View live
+  project`, the schematics' one accent stroke. It is 6.4:1 on the plate, so it
+  passes AA at body size. Anything a reader has to *read* uses this.
+- `--accent-mark` (`#f0a500`) is the **mark** amber — the closed breaker, the
+  band squares, the hero ticks, the scroll bar, the corner brackets, and every
+  glow. Never put text on it and never use it for text.
+- `--accent-rgb` tracks `--accent-mark`, because every partial-alpha use in the
+  stylesheet is a glow or a wash.
+
+Change one and you almost always want to change all four, plus `--accent-hi`
+(the hover step) and `--on-accent` (text on a filled `--accent`).
+
+`--ink-dim` and `--ink-faint` are set at the contrast floor for their sizes
+(6.9:1 and 4.8:1). `--ink-faint` carries 10–12px mono labels, so lightening it
+is what breaks accessibility first.
 
 ### Publications
 
@@ -98,8 +115,12 @@ followed by a `<div class="wrap domain-projects">` holding that domain's
 `<li class="project">` cards. Colors and fonts are CSS variables at the top of
 `assets/style.css` (`--accent` is the amber signal color).
 
-**When adding or removing a project, update the count** in its domain row
-(`<span class="domain-count">`). Nothing counts them automatically.
+**When adding or removing a project, update two things by hand:** the count in
+its domain row (`<span class="domain-count">`) and the detail designations
+(`<span class="desig">`) on the cards after it. Nothing renumbers them
+automatically. Designations run `EE-01…`, `DS-01…`, `EL-01…` per domain, in the
+order the cards appear — they are the sheet's way of numbering its detail
+views, and a gap or a duplicate reads as a mistake rather than as a style.
 
 A card is a thumbnail, an `<h4>`, a sentence and a stack list — nothing else.
 There are deliberately no status pills or kind tags on them: labelling every
@@ -120,25 +141,37 @@ from any existing card:
      stroke-width="1.5" stroke-linecap="round">
 ```
 
-Three things are load-bearing:
+Four things are load-bearing:
 
 - **Draw inside the `y 38..106` band.** The viewBox is deliberately much taller
-  than the 84px strip so width always drives the scale (same trick as
-  `.feeder`); anything outside that band gets cropped vertically on wide cards.
+  than the 84px strip so width always drives the scale (same trick as the
+  signal-chain diagram); anything outside that band gets cropped vertically on
+  wide cards.
 - **`currentColor` for structure.** It inherits `--line-2` and brightens on card
   hover. Never hard-code a grey.
 - **One amber idea per thumbnail, `class="th-acc"`** (or `th-acc-f` when it is
   filled rather than stroked); wrap it in a `<g>` if it takes several paths.
   That is what glows on hover. Two unrelated amber things in one thumbnail and
-  neither reads as the point.
+  neither reads as the point. `.th-acc` resolves to the **text** amber, not the
+  mark amber — a hairline in `#f0a500` disappears against a white cell.
+- **Thumbnails whose accent is a measurement or a model output** carry
+  `class="thumb thumb-2"` on the `<svg>` and switch to the teal. That is what
+  makes the work section read warm through Electrical Engineering and cool
+  through Data Science without a single label saying so.
 
 ## Design rules
 
 The layout is deliberately editorial, so a few things are load-bearing:
 
-- **Bands divide the page.** `<div class="band">` is a full-bleed pair of
-  hairlines with a dotted label on the content column. Sections that follow a
-  band carry `sec-flush` and drop their own padding and top border.
+- **The page is one sheet.** Everything lives inside `<div class="sheet">`, a
+  bordered white plate centred on grey paper, with the header sticky inside it.
+  Below 720px the plate loses its border and margin, because on a phone a frame
+  is only wasted width. `.wrap` no longer sets a max-width — the sheet caps it,
+  and `.wrap` only insets the content column.
+- **Bands divide the page.** `<div class="band">` is a full-bleed ruled strip
+  with a mono label on the content column, and it sticks under the header for
+  as long as its own section is on screen. Sections that follow a band carry
+  `sec-flush` and drop their own padding and top border.
 - **Rules go edge to edge, content stays on the column.** That contrast is
   what makes the page read as designed rather than as a centered document.
 - **One loud moment.** The amber underlines in `.statement` are the only
@@ -152,9 +185,14 @@ The layout is deliberately editorial, so a few things are load-bearing:
   structure, exactly one amber element for the point. They are schematics of
   what the project actually produces, not decoration, and never stock imagery.
   See "Adding a thumbnail" below.
-- **The close bookends the hero.** `.contact-body` repeats the hero's dot grid
-  and amber glow from the opposite corner. It is the only other place that
-  texture appears; putting it on a third section would make it wallpaper.
+- **The close bookends the hero.** `.contact-body` repeats the hero's blueprint
+  ruling, faded in from the bottom instead of out towards it. It is the only
+  other place that texture appears; putting it on a third section would make it
+  wallpaper.
+- **The title block is not decoration.** The four cells under the portrait
+  (`Drawn by / Sheet / Location / UTC`) are what make the page read as a drawing
+  rather than as a light theme. If they ever go, the sheet frame goes with them
+  — half the device is worse than neither half.
 - **One primary action in the close.** Email gets its own panel, the other
   profiles stay hairline rows. Promoting a second link flattens it back into
   the four-row list it replaced.
@@ -258,9 +296,13 @@ Cloudflare's edge cache keep serving the old version. Bump the query string
 wherever it's referenced (`style.css?v=2` → `?v=3`) so it counts as a new URL.
 This applies to `index.html` **and** every page in `articles/`.
 
-Currently at `style.css?v=12` and `main.js?v=9`. Versions 8 and 6 were burned by
+Currently at `style.css?v=14` and `main.js?v=9`. Versions 8 and 6 were burned by
 a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
+
+The favicon URLs are the exception to the automatic part below: they carry a
+hand-written `?v=2` in `index.html` **and** in both files under
+`scripts/templates/`, so a favicon change means bumping three files.
 
 Article pages no longer need bumping by hand: `scripts/build.mjs` reads the
 versions out of `index.html` and injects them, so bumping `index.html` is enough

@@ -17,8 +17,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css?v=13" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css?v=14" />
 <style>
 /* ============ SIGNAL-CHAIN DIAGRAM (animated) ============
    Self-contained on purpose: every selector is scoped under .hd, and
@@ -30,14 +30,14 @@
    breaker 52 closes, recloser 79 rings, a dot travels down to the CT
    tap, the IED LED blinks, the RTU antenna emits, telemetry flows to
    the SCADA panel, the curve draws and the threshold marker pops. */
-.signal-diagram{ background:#000; padding:2.4rem 0; overflow:hidden; }
+.signal-diagram{ background:#f7f8f9; padding:2.4rem 0; overflow:hidden; }
 .signal-diagram .hd{
-  --hd-struct:#31313a;
-  --hd-label:#83838d;
-  --hd-cap:#54545e;
-  --hd-bg:#000;
-  --hd-power:#ffb000;
-  --hd-data:#2dd4bf;
+  --hd-struct:#b4b9c2;
+  --hd-label:#565a63;
+  --hd-cap:#6e737e;
+  --hd-bg:#f7f8f9;
+  --hd-power:#8a5200;
+  --hd-data:#0e7490;
   display:block;
   width:min(1200px,94vw);
   margin-inline:auto;
@@ -55,12 +55,12 @@
 .hd .hd-breaker{fill:var(--hd-bg);stroke:var(--hd-power);stroke-width:2;animation:hd-close .3s ease-out both;animation-delay:.85s}
 .hd .hd-ring{stroke:var(--hd-power);stroke-width:1.5;opacity:0;transform-box:fill-box;transform-origin:center;animation:hd-ring .7s ease-out both;animation-delay:1.05s}
 .hd .hd-travel{stroke:var(--hd-data);stroke-width:2;stroke-dasharray:.18 .82;stroke-dashoffset:1.18;animation:hd-travel .5s linear both;animation-delay:var(--d,0s)}
-.hd .hd-led{fill:var(--hd-data);opacity:.15;animation:hd-blink 2s linear infinite;animation-delay:1.6s}
+.hd .hd-led{fill:var(--hd-data);opacity:.2;animation:hd-blink 2s linear infinite;animation-delay:1.6s}
 .hd .hd-emit{stroke:var(--hd-data);stroke-width:1.5;opacity:0;animation:hd-emit 2.4s ease-out infinite}
 .hd .hd-e1{animation-delay:2.2s}
 .hd .hd-e2{animation-delay:2.5s}
 .hd .hd-flow{stroke:var(--hd-data);stroke-width:2;stroke-dasharray:3 9;opacity:0;animation:hd-fade .4s ease-out both,hd-flowmove 1s linear infinite;animation-delay:2.2s,2.2s}
-.hd .hd-thresh{stroke:#5a646e;stroke-width:1;stroke-dasharray:4 6}
+.hd .hd-thresh{stroke:#a6abb5;stroke-width:1;stroke-dasharray:4 6}
 .hd .hd-curve{stroke:var(--hd-data);stroke-width:2}
 .hd .hd-marker{fill:var(--hd-data);opacity:0;transform-box:fill-box;transform-origin:center;animation:hd-pop .45s cubic-bezier(.2,1.4,.4,1) both;animation-delay:3.3s}
 .hd .hd-labels text{fill:var(--hd-label);font:11px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.05em}
@@ -72,7 +72,7 @@
 @keyframes hd-close{to{fill:var(--hd-power)}}
 @keyframes hd-ring{from{opacity:.8;transform:scale(.5)}to{opacity:0;transform:scale(1.8)}}
 @keyframes hd-travel{to{stroke-dashoffset:0}}
-@keyframes hd-blink{0%,100%{opacity:.15}50%{opacity:1}}
+@keyframes hd-blink{0%,100%{opacity:.2}50%{opacity:1}}
 @keyframes hd-emit{0%{opacity:0}15%{opacity:.9}60%,100%{opacity:0}}
 @keyframes hd-flowmove{to{stroke-dashoffset:-12}}
 @keyframes hd-pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
@@ -89,7 +89,10 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="scroll-line" aria-hidden="true"><span id="scroll-bar"></span></div>
+<!-- The whole page is one drawing sheet: a bordered plate on grey paper.
+     The border and the paper margin are dropped below 720px, where a frame is
+     only wasted width. -->
+<div class="sheet">
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -101,6 +104,9 @@
       <a href="#contact">Contact</a>
     </nav>
   </div>
+  <!-- Scroll progress rides the header's bottom rule, so it stays glued to it
+       whether the header is stuck to the viewport or still on the paper. -->
+  <div class="scroll-line" aria-hidden="true"><span id="scroll-bar"></span></div>
 </header>
 
 <main id="main">
@@ -128,11 +134,20 @@
         </div>
       </div>
 
+      <!-- Portrait over a title block — the same corner a real drawing puts
+           its provenance in: who drew it, which sheet, where, what timezone.
+           This is the one piece of chrome on the page that is purely of the
+           trade, and it is what makes the sheet read as a sheet. -->
       <figure class="hero-photo">
         <span class="photo-frame">
-          <img src="assets/portrait.jpg?v=2" alt="Josué Aldana-Aguilar" width="180" height="180" />
+          <img src="assets/portrait.jpg?v=2" alt="Josué Aldana-Aguilar" width="300" height="300" />
         </span>
-        <figcaption>San Salvador, El Salvador</figcaption>
+        <dl class="titleblock">
+          <div class="tb-cell"><dt>Drawn by</dt><dd>J. ALDANA</dd></div>
+          <div class="tb-cell"><dt>Sheet</dt><dd>01 / 01</dd></div>
+          <div class="tb-cell"><dt>Location</dt><dd>SAN SALVADOR</dd></div>
+          <div class="tb-cell"><dt>UTC</dt><dd>&#8722;06:00</dd></div>
+        </dl>
       </figure>
     </div>
   </section>
@@ -285,6 +300,7 @@
                 <path d="M292 103V38" />
               </g>
             </svg>
+            <span class="desig">EE-01</span>
             <h4>Coordination of Protection</h4>
             <p>Predicting the most efficient relay setting groups for IEDs from grid topology, SCADA telemetry, and machine learning.</p>
             <ul class="stack"><li>SCADA</li><li>Topology data</li><li>ML</li><li>IEDs</li></ul>
@@ -315,6 +331,7 @@
                 <path d="M252 60 266 47" />
               </g>
             </svg>
+            <span class="desig">EE-02</span>
             <h4>Grid Operations</h4>
             <p>Designing switching maneuvers by fusing topology, SCADA state, telemetry, and operations history in OpenDSS, with a scoring method that weighs the impact and constraints of each maneuver.</p>
             <ul class="stack"><li>OpenDSS</li><li>ADMS</li><li>SCADA</li><li>Python</li></ul>
@@ -357,6 +374,7 @@
                 <path d="M219 84 226 56 233 84" /><path d="M221 72h10" />
               </g>
             </svg>
+            <span class="desig">EE-03</span>
             <h4>RF Planning</h4>
             <p>A genetic algorithm that places RF concentrators on existing utility poles from GIS data, minimizing tower count while maximizing SCADA coverage of the IED fleet.</p>
             <ul class="stack"><li>Genetic algorithms</li><li>RF coverage</li><li>GIS</li><li>SCADA</li></ul>
@@ -379,6 +397,7 @@
               <path d="M60 48h52l6 11h58l7 13h56l8 12h54l7 10h47" opacity=".62" />
               <path class="th-acc" stroke-width="1.6" stroke-dasharray="6 5" d="M56 98H396" />
             </svg>
+            <span class="desig">EE-04</span>
             <h4>OpenDSS</h4>
             <p>Deepening my command of OpenDSS for distribution modeling, fault studies, and what-if simulation of switching maneuvers.</p>
             <ul class="stack"><li>OpenDSS</li><li>Power flow</li><li>Python</li></ul>
@@ -433,6 +452,7 @@
               <rect x="318" y="80" width="52" height="20" rx="1.5" />
               <path d="M370 48h12M370 56h12M370 67h12M370 75h12M370 86h12M370 94h12" opacity=".7" />
             </svg>
+            <span class="desig">DS-01</span>
             <h4>Local LLM-Based Laboratory</h4>
             <p>Local LLMs that grant on-demand access to development boards, making hands-on STEAM learning easier to set up.</p>
             <ul class="stack"><li>Local LLMs</li><li>STEAM education</li><li>Dev boards</li></ul>
@@ -465,6 +485,7 @@
                 <path d="M190 41v-6M199 50h6M184 44l-4-4M196 44l4-4M184 56l-4 4" />
               </g>
             </svg>
+            <span class="desig">DS-02</span>
             <h4>High-Altitude Balloon Trajectory Simulations</h4>
             <p>Simulating balloon flight through ascent, burst, and descent to plan missions and estimate recovery zones.</p>
             <ul class="stack"><li>Trajectory modeling</li><li>Mission planning</li><li>Python</li></ul>
@@ -489,6 +510,7 @@
               <path class="th-acc" stroke-width="2"
                     d="M62 46C96 64 120 78 154 84c26 5 46 6 62 7c40 3 78 9 112 17" />
             </svg>
+            <span class="desig">DS-03</span>
             <h4>Applied AI &amp; ML</h4>
             <p>Working through applied machine learning, from MSc coursework to models for grid analytics and protection coordination.</p>
             <ul class="stack"><li>ML</li><li>LLMs</li><li>Python</li></ul>
@@ -549,6 +571,7 @@
                 <path d="M186 71v10M178 81h16M180 87h12" />
               </g>
             </svg>
+            <span class="desig">EL-01</span>
             <h4>High-Altitude Balloon Electronics</h4>
             <p>Power system, on-board computer, and payload electronics for a high-altitude balloon mission, built with COTS parts, Li-ion batteries, and Arduino-based TinyML.</p>
             <ul class="stack"><li>EPS</li><li>OBC</li><li>Li-ion</li><li>Arduino</li><li>TinyML</li></ul>
@@ -597,6 +620,7 @@
                 <circle cx="340" cy="70" r="2.8" class="th-acc-f" />
               </g>
             </svg>
+            <span class="desig">EL-02</span>
             <h4>Project-based learning with ZedBoard</h4>
             <p>Building projects with ZedBoard using the Vivado suite, with accompanying lab notes and documentation.</p>
             <ul class="stack"><li>FPGA</li><li>APSoC</li><li>Zynq-7000</li></ul>
@@ -638,6 +662,7 @@
               </g>
               <path class="th-acc" stroke-width="2" stroke-dasharray="9 6" d="M258 73h72" />
             </svg>
+            <span class="desig">EL-03</span>
             <h4>IoT Embedded Systems</h4>
             <p>Exploring sensors, low-power firmware, and telemetry pipelines on COTS development boards.</p>
             <ul class="stack"><li>IoT</li><li>Embedded C</li><li>Telemetry</li></ul>
@@ -811,6 +836,8 @@
     <span class="footer-meta">San Salvador · <span id="year"></span></span>
   </div>
 </footer>
+
+</div><!-- /.sheet -->
 
 <script src="assets/main.js?v=9"></script>
 <script>
