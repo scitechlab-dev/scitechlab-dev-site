@@ -281,22 +281,26 @@ the Post Inspector above.
 
 ### Favicon
 
-`assets/favicon.svg` is the source of truth: a **JA badge** — a rounded teal
+`assets/favicon.svg` is the source of truth: a **JA badge** — a rounded ink
 plate, a white keyline inset from its edge, and the two initials inside it.
 That construction is lifted from the SEL (Schweitzer Engineering Laboratories)
 mark, which is the reference this was designed against.
 
-**The colours are ours, not theirs.** SEL's plate is `#003a5d`, a navy that
-appears nowhere on this site. `--accent-2` (`#0e7490`) is the nearest thing in
-the palette and is already the "measured side" colour, so the badge belongs to
-the page instead of quoting someone else's brand. Everything on top of the
-plate is plain white, 5.2:1 on the teal.
+**Greyscale, and only site tokens.** The plate is `--ink` (`#14161a`) and
+everything on it is `--on-ink` (`#ffffff`), 18.4:1. SEL's own plate is `#003a5d`,
+a navy that appears nowhere on this site, so it was never a candidate, and an
+earlier pass sat on the `--accent-2` teal before this went greyscale.
+
+Of the greys available, ink under white is the only pairing that stays crisp at
+16px. `--ink-dim` (`#565a63`) under white goes muddy, and a plate one step up
+from ink at `#2b2f36` sinks into the background of a dark tab.
 
 **This mark carries the tab by itself** — see *Page titles* below, the title is
-deliberately blank. That is why the plate is a saturated teal chip and not the
-white sheet it replaced: at 16px you recognise it by colour and silhouette long
-before you can read the letters, and a white plate with dark letters reads as a
-generic document. With no title text beside it, being *identifiable* beats being
+deliberately blank. Greyscale gives up the trick of being recognised by hue, so
+the icon leans entirely on silhouette and contrast — which is precisely why the
+plate has to be the darkest token rather than a mid grey. A solid near-black
+block reads as one thing on a light strip and on a dark one; a grey block reads
+as neither. With no title text beside it, being *identifiable* beats being
 *readable*.
 
 Geometry on the 64 grid: plate radius 8; the keyline is inset 3.5 at stroke 4,
@@ -358,7 +362,7 @@ The favicon URLs carry `?v=` like everything else under `/assets/`; bump it or
 the year-long immutable cache keeps serving the old icon. Unlike `style.css`,
 this one is **not** injected by the build — it is hand-written in `index.html`
 and in both files under `scripts/templates/`, so a favicon change means
-editing three files. Currently at `?v=6`.
+editing three files. Currently at `?v=7`.
 
 Chrome also keeps favicons in a separate store that ignores cache headers, so a
 `?v=` bump alone may not refresh what you see locally. Close and reopen the tab,
@@ -377,7 +381,7 @@ a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
 
 The favicon URLs are the exception to the automatic part below: they carry a
-hand-written `?v=6` in `index.html` **and** in both files under
+hand-written `?v=7` in `index.html` **and** in both files under
 `scripts/templates/`, so a favicon change means bumping three files.
 
 Article pages no longer need bumping by hand: `scripts/build.mjs` reads the

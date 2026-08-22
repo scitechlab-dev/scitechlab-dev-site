@@ -3,17 +3,18 @@
        two initials inside it — the construction Schweitzer Engineering Labs
        uses for the SEL mark, which is the reference the owner asked for.
 
-       Colours are style.css tokens, not SEL's. Their plate is #003a5d, a navy
-       that appears nowhere on this site; accent-2 #0e7490 is the nearest thing
-       in the palette and it is already the site's "measured side" colour, so
-       the badge belongs to the page instead of quoting someone else's brand.
-       Everything on top of the plate is plain white at 5.2:1.
+       Greyscale, and only site tokens: the plate is ink #14161a and everything
+       on it is on-ink #ffffff, 18.4:1. It replaced a version on the accent-2
+       teal. Of the greys available this is the only pairing that stays crisp at
+       16px; ink-dim #565a63 under white goes muddy, and a plate one step up
+       from ink at #2b2f36 sinks into the background of a dark tab.
 
        This mark carries the tab alone: the page title is deliberately blank, so
-       nothing but this identifies the tab. That is why the plate is a saturated
-       teal chip rather than the white sheet it replaced — at 16px you recognise
-       it by colour and silhouette long before you can read the letters, and a
-       white plate with dark letters reads as a generic document.
+       nothing but this identifies the tab. Greyscale gives up the trick of being
+       recognised by hue, so it leans entirely on silhouette and contrast — which
+       is exactly why the plate has to be the darkest token and not a mid grey.
+       A solid near-black block reads as one thing on a light strip and on a dark
+       one; a grey block reads as neither.
 
        Geometry on the 64 grid. Plate radius 8. The keyline is inset 3.5 at
        stroke 4, so it occupies 1.5 to 5.5 and still resolves to a clean 1px at
@@ -29,7 +30,7 @@
 
        If you redraw it, judge it at 16px inside a mock tab strip with no title
        text beside it, which is how it actually ships. -->
-  <rect width="64" height="64" rx="8" fill="#0e7490"/>
+  <rect width="64" height="64" rx="8" fill="#14161a"/>
   <rect x="3.5" y="3.5" width="57" height="57" rx="6" fill="none" stroke="#ffffff" stroke-width="4"/>
   <path d="M26.25 18.75V39a6.25 6.25 0 0 1-12.5 0" fill="none" stroke="#ffffff"
         stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
