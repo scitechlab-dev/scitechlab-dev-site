@@ -33,7 +33,7 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 │   ├── style.css         # drawing-sheet theme, CSS variables
 │   ├── main.js           # footer year + scroll reveal
 │   ├── portrait.jpg
-│   ├── favicon.svg       # JA monogram (favicon.png / apple-touch-icon.png are fallbacks)
+│   ├── favicon.svg       # JA monogram on the white sheet (the two PNGs are generated from it)
 │   └── share.png         # 1200x627 og:image used by LinkedIn preview cards
 ├── _headers              # security + cache headers
 ├── robots.txt
@@ -281,36 +281,61 @@ the Post Inspector above.
 
 ### Favicon
 
-`assets/favicon.svg` is the source of truth: a JA monogram, J in ink and A in
-the signal amber, on the **ink** plate (`#14161a`) — not pure black, so it
-belongs to the drawing-sheet theme. The two letters share a cap height (y19)
-and a baseline (y45) and the pair is centred on x=32. The two PNGs are
-generated from it, not drawn separately — regenerate both whenever the SVG
-changes:
+`assets/favicon.svg` is the source of truth: a JA monogram on the site's own
+plate — a **white** sheet with square corners and a hairline frame, J in ink
+(`#14161a`) and A in the **measurement teal** (`--accent-2`, `#0e7490`), frame in
+`--ink-faint` (`#6e737e`). Every colour is a token from `style.css`; the icon has
+no palette of its own.
 
-- `favicon.png` (64×64, RGBA) is the same artwork, rounded plate and hairline.
-- `apple-touch-icon.png` (180×180, RGB) drops the rounding and the border ring
-  and insets the mark, because iOS applies its own mask and would clip a ring.
+Two rules it exists to satisfy:
 
-There is no build step, so they were rasterized with headless Chrome:
+- **It is the sheet, shrunk.** The page is a bordered white plate on grey paper
+  at `--radius: 0`, so the icon is too. No rounded chip, no dark plate — that
+  was the true-black theme, and white-on-black with bright amber read as a
+  warning sign rather than as a drawing.
+- **The accent is teal, not amber.** `--accent-mark` (`#f0a500`) on a dark plate
+  is the one combination in the palette that stops looking technical at small
+  sizes. `--accent-2` is the measured side of the palette and stays legible at
+  16px.
+
+The frame is one step darker than the sheet's own `--line-2` hairline on
+purpose: the sheet sits on paper we control, the icon sits on a browser tab
+strip we do not, and at `#b4b9c2` the plate edge disappears against a light
+strip.
+
+Geometry on the 64 grid: strokes are **8**, which is exactly 2px at 16 so the
+mark lands on whole pixels; the two letters share a baseline at y47, the pair
+is centred on x=32, and there are **4 clear units** between the J's bowl and the
+A's left leg. Nothing may go below 7. The version before this one drew at 7.5
+with the two letters overlapping by half a unit, which fused them into one blob
+in a tab.
+
+The two PNGs are generated from the SVG, not drawn separately — regenerate both
+whenever it changes:
+
+- `favicon.png` (64×64) is the same artwork including the frame. It is now
+  **RGB, not RGBA**: the plate is square and fully opaque, so there is no
+  transparency left to store.
+- `apple-touch-icon.png` (180×180, RGB) drops the frame and scales the mark to
+  0.86, because iOS applies its own rounded mask and would clip a frame.
+
+There is no build step, so they were rasterized with headless Chromium against
+a wrapper page that sizes the SVG to the target box:
 
 ```
-chrome --headless=new --disable-gpu --hide-scrollbars \
-  --force-device-scale-factor=1 --window-size=64,64 \
-  --screenshot=favicon.png file:///path/to/wrapper.html
+chrome --headless=new --disable-gpu --hide-scrollbars   --force-device-scale-factor=1 --window-size=64,64   --screenshot=favicon.png file:///path/to/wrapper.html
 ```
 
-Nothing thinner than **7** units on the 64 grid. The mark used to be drawn at
-5, which is 1.25px in a browser tab, and at that weight the J and the A
-merged into one smudge — that is the whole reason it was redrawn. Check any
-redraw at 16px, not at 64: render it at 16, 20, 24 and 32 on both a light and
-a dark tab strip and judge it there.
+Pass `--default-background-color=00000000` for `favicon.png` and omit it for the
+touch icon. **Judge any redraw at 16px, not at 64** — render it at 16, 20, 24
+and 32 on both a light (`#dee1e6`) and a dark (`#202124`) tab strip, which is
+the only way to tell.
 
 The favicon URLs carry `?v=` like everything else under `/assets/`; bump it or
 the year-long immutable cache keeps serving the old icon. Unlike `style.css`,
 this one is **not** injected by the build — it is hand-written in `index.html`
 and in both files under `scripts/templates/`, so a favicon change means
-editing three files. Currently at `?v=3`.
+editing three files. Currently at `?v=4`.
 
 ## Cache busting
 
@@ -325,7 +350,7 @@ a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
 
 The favicon URLs are the exception to the automatic part below: they carry a
-hand-written `?v=2` in `index.html` **and** in both files under
+hand-written `?v=4` in `index.html` **and** in both files under
 `scripts/templates/`, so a favicon change means bumping three files.
 
 Article pages no longer need bumping by hand: `scripts/build.mjs` reads the

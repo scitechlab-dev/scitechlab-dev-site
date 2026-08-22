@@ -1,23 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- JA monogram: J in ink, A in the signal amber, on the ink plate.
+  <!-- JA monogram on the drawing sheet: J in ink, A in the measurement teal,
+       on a white plate with a square-cornered hairline frame.
 
-       The plate is the ink token #14161a, not pure black, so it belongs to
-       the drawing-sheet theme rather than to the true-black one it replaced.
+       This is the site's own plate, shrunk. index.html draws one bordered
+       white sheet on grey paper, radius 0, hairline border, so the icon does
+       the same: no rounding, no dark chip. The mark it replaced was white and
+       bright amber on near-black, which was left over from the true-black
+       theme and read as a warning sign rather than as a drawing.
 
-       The two letters share a cap height (y19) and a baseline (y45), and the
-       pair is centred on x=32. Strokes are 7.5 units on a 64 grid; the older
-       mark used 5, which is 1.25px in a browser tab, and at that weight the
-       J and the A merged into one smudge. Nothing here is thinner than 7.
-       If you redraw it, check it at 16px first, not at 64.
+       Colors are site tokens and nothing else: ink #14161a for the J, the
+       measurement teal accent-2 #0e7490 for the A, and ink-faint #6e737e for
+       the frame. The frame is one step darker than the sheet's own line-2
+       hairline on purpose. The sheet sits on paper we control; the icon sits
+       on a browser tab strip we do not, and at #b4b9c2 the plate edge vanishes
+       against a light strip. Teal, not the amber: accent-2 is the measured
+       side of the palette, and it is the one accent that stays legible at
+       16px without going the colour of a hazard label.
+
+       Geometry on the 64 grid. Strokes are 8, which is exactly 2px at 16, so
+       the mark lands on whole pixels instead of smearing across two. Nothing
+       here may go below 7. The two letters share a baseline at y47 and are
+       centred as a pair on x=32, and there are 4 clear units between the J's
+       bowl and the A's left leg. The version before this one had them
+       overlapping by half a unit, which is why the pair fused into one blob in
+       a tab.
 
        Careful: XML forbids a double hyphen inside a comment, so write CSS
        custom property names without their leading dashes in here. An invalid
        comment makes the whole file unparseable and every browser silently
-       falls back to the PNG. -->
-  <rect width="64" height="64" rx="13" fill="#14161a"/>
-  <rect x="1" y="1" width="62" height="62" rx="12" fill="none" stroke="#2c3038" stroke-width="2"/>
-  <path d="M26 19v18a8 8 0 0 1-14 5.5" fill="none" stroke="#f7f8f9"
-        stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M33 45 42.5 19 52 45M36 38h13" fill="none" stroke="#f0a500"
-        stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+       falls back to the PNG.
+
+       If you redraw it, judge it at 16px on both a light and a dark tab strip,
+       never at 64. -->
+  <rect width="64" height="64" fill="#ffffff"/>
+  <rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="#6e737e" stroke-width="3"/>
+  <path d="M25 22V36a7 7 0 0 1-14 0" fill="none" stroke="#14161a"
+        stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 43 45 20l8 23M38.7 38h12.6" fill="none" stroke="#0e7490"
+        stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
