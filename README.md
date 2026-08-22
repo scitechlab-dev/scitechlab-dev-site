@@ -33,7 +33,7 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 │   ├── style.css         # drawing-sheet theme, CSS variables
 │   ├── main.js           # footer year + scroll reveal
 │   ├── portrait.jpg
-│   ├── favicon.svg       # JA monogram on the white sheet (the two PNGs are generated from it)
+│   ├── favicon.svg       # JA monogram, full bleed (the two PNGs are generated from it)
 │   └── share.png         # 1200x627 og:image used by LinkedIn preview cards
 ├── _headers              # security + cache headers
 ├── robots.txt
@@ -281,43 +281,42 @@ the Post Inspector above.
 
 ### Favicon
 
-`assets/favicon.svg` is the source of truth: a JA monogram on the site's own
-plate — a **white** sheet with square corners and a hairline frame, J in ink
-(`#14161a`) and A in the **measurement teal** (`--accent-2`, `#0e7490`), frame in
-`--ink-faint` (`#6e737e`). Every colour is a token from `style.css`; the icon has
-no palette of its own.
+`assets/favicon.svg` is the source of truth: a JA monogram **full bleed** on a
+white plate, J in ink (`#14161a`) and A in the measurement teal (`--accent-2`,
+`#0e7490`). Every colour is a token from `style.css`; the icon has no palette of
+its own.
 
-Two rules it exists to satisfy:
+**There is no frame and no margin, and that is the point.** A browser tab gives
+you 16 CSS pixels and nothing more. An earlier version spent them on a 3-unit
+border plus the padding inside it, which left the letters about 7px tall and
+mushed the pair together — they looked cut off because they were squeezed into
+a third of the box. Dropping the border and pushing the mark to the edges takes
+the cap height from 28 units to 41, so the same 16px tab renders letters half
+again as tall.
 
-- **It is the sheet, shrunk.** The page is a bordered white plate on grey paper
-  at `--radius: 0`, so the icon is too. No rounded chip, no dark plate — that
-  was the true-black theme, and white-on-black with bright amber read as a
-  warning sign rather than as a drawing.
-- **The accent is teal, not amber.** `--accent-mark` (`#f0a500`) on a dark plate
-  is the one combination in the palette that stops looking technical at small
-  sizes. `--accent-2` is the measured side of the palette and stays legible at
-  16px.
+The white plate stays and earns its place twice: it is the sheet the whole site
+is built on, and it is the only thing keeping the mark legible on a tab strip
+whose colour we don't control. On a light strip it melts into the strip and you
+simply read the monogram; on a dark strip it reads as a small sheet of paper.
+Both are correct. A plateless mark needs a `prefers-color-scheme` swap that the
+PNG fallbacks can't carry, and when that fails the icon doesn't degrade, it
+disappears.
 
-The frame is one step darker than the sheet's own `--line-2` hairline on
-purpose: the sheet sits on paper we control, the icon sits on a browser tab
-strip we do not, and at `#b4b9c2` the plate edge disappears against a light
-strip.
+Teal rather than the amber because black plus saturated orange stops reading as
+technical at tab size. `--accent-2` is the measured side of the palette and is
+the one accent that survives 16px.
 
-Geometry on the 64 grid: strokes are **8**, which is exactly 2px at 16 so the
-mark lands on whole pixels; the two letters share a baseline at y47, the pair
-is centred on x=32, and there are **4 clear units** between the J's bowl and the
-A's left leg. Nothing may go below 7. The version before this one drew at 7.5
-with the two letters overlapping by half a unit, which fused them into one blob
-in a tab.
+Geometry on the 64 grid: strokes are **9**, the mark sits in x 3..61 and y 7..57
+centred on both axes, with **6 clear units** between the J's bowl and the A's
+left leg. Nothing may go below 7 units or it turns to grey mush at 16px.
 
 The two PNGs are generated from the SVG, not drawn separately — regenerate both
 whenever it changes:
 
-- `favicon.png` (64×64) is the same artwork including the frame. It is now
-  **RGB, not RGBA**: the plate is square and fully opaque, so there is no
-  transparency left to store.
-- `apple-touch-icon.png` (180×180, RGB) drops the frame and scales the mark to
-  0.86, because iOS applies its own rounded mask and would clip a frame.
+- `favicon.png` (64×64) is the artwork unchanged. It is **RGB, not RGBA**: the
+  plate is square and fully opaque, so there is no transparency to store.
+- `apple-touch-icon.png` (180×180, RGB) scales the mark to **0.78**, because iOS
+  applies its own rounded mask and a full-bleed mark would get clipped.
 
 There is no build step, so they were rasterized with headless Chromium against
 a wrapper page that sizes the SVG to the target box:
@@ -326,16 +325,15 @@ a wrapper page that sizes the SVG to the target box:
 chrome --headless=new --disable-gpu --hide-scrollbars   --force-device-scale-factor=1 --window-size=64,64   --screenshot=favicon.png file:///path/to/wrapper.html
 ```
 
-Pass `--default-background-color=00000000` for `favicon.png` and omit it for the
-touch icon. **Judge any redraw at 16px, not at 64** — render it at 16, 20, 24
-and 32 on both a light (`#dee1e6`) and a dark (`#202124`) tab strip, which is
-the only way to tell.
+**Judge any redraw at 16px inside a mock tab strip, never at 64** — light
+(`#dee1e6`) and dark (`#202124`), with a title next to it. Everything looks good
+at 64; the tab is the only honest test.
 
 The favicon URLs carry `?v=` like everything else under `/assets/`; bump it or
 the year-long immutable cache keeps serving the old icon. Unlike `style.css`,
 this one is **not** injected by the build — it is hand-written in `index.html`
 and in both files under `scripts/templates/`, so a favicon change means
-editing three files. Currently at `?v=4`.
+editing three files. Currently at `?v=5`.
 
 ## Cache busting
 
@@ -350,7 +348,7 @@ a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
 
 The favicon URLs are the exception to the automatic part below: they carry a
-hand-written `?v=4` in `index.html` **and** in both files under
+hand-written `?v=5` in `index.html` **and** in both files under
 `scripts/templates/`, so a favicon change means bumping three files.
 
 Article pages no longer need bumping by hand: `scripts/build.mjs` reads the
