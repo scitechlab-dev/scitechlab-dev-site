@@ -281,9 +281,15 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- statement ---------- */
 .statement-inner { padding: 54px 0 58px; }
+/* The measure is wide on purpose. At 32ch this sat in 553px of a 1126px
+   column, so the empty right half read as truncated text rather than as a
+   margin — and it forced six lines with an orphan. 50ch is still a display
+   measure, not body copy: it keeps the block to four lines and leaves a
+   right margin that looks chosen. `ch` scales with the clamped font size, so
+   it narrows with it and stops binding at phone widths. */
 .statement {
   margin: 0; font-size: clamp(1.24rem, 2.5vw, 1.8rem);
-  line-height: 1.45; letter-spacing: -0.018em; max-width: 32ch;
+  line-height: 1.45; letter-spacing: -0.018em; max-width: 50ch;
   font-weight: 400; text-wrap: pretty;
 }
 /* Emphasis lives here, not in the headline, so the page has one loud moment.
