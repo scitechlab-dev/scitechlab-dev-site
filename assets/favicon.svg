@@ -1,41 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- JA monogram, full bleed on the sheet. J in ink, A in the measurement teal.
+  <!-- JA badge. A rounded plate, a white keyline inset from its edge, and the
+       two initials inside it — the construction Schweitzer Engineering Labs
+       uses for the SEL mark, which is the reference the owner asked for.
 
-       There is no frame and no margin, and that is the whole point. A browser
-       tab gives you 16 CSS pixels and nothing more. The version before this one
-       spent them on a 3 unit border plus the padding inside it, which left the
-       letters about 7px tall and mushed them together; the letters looked cut
-       off because they were being squeezed into a third of the box. Dropping
-       the border and pushing the mark to the edges takes the cap height from 28
-       units to 41, so the same 16px tab now renders letters half again as tall.
+       Colours are style.css tokens, not SEL's. Their plate is #003a5d, a navy
+       that appears nowhere on this site; accent-2 #0e7490 is the nearest thing
+       in the palette and it is already the site's "measured side" colour, so
+       the badge belongs to the page instead of quoting someone else's brand.
+       Everything on top of the plate is plain white at 5.2:1.
 
-       The white plate stays, and it is doing real work: it is the sheet the
-       whole site is built on, and it is the only thing that keeps the mark
-       legible on a tab strip whose colour we do not control. On a light strip
-       the plate melts into it and you simply read the monogram; on a dark strip
-       it reads as a small sheet of paper. Both are correct. A plateless mark
-       needs a prefers-color-scheme swap that the PNG fallbacks cannot carry,
-       and when it fails the icon does not degrade, it disappears.
+       This mark carries the tab alone: the page title is deliberately blank, so
+       nothing but this identifies the tab. That is why the plate is a saturated
+       teal chip rather than the white sheet it replaced — at 16px you recognise
+       it by colour and silhouette long before you can read the letters, and a
+       white plate with dark letters reads as a generic document.
 
-       Colors are style.css tokens and nothing else: ink #14161a, accent-2
-       #0e7490. Teal rather than the amber, because black plus saturated orange
-       stops reading as technical at tab size.
-
-       Geometry on the 64 grid. Strokes are 9. The mark sits in x 3..61 and
-       y 7..57, centred on both axes, with 6 clear units between the J's bowl
-       and the A's left leg. Nothing may go below 7 units or it turns to grey
-       mush at 16px.
+       Geometry on the 64 grid. Plate radius 8. The keyline is inset 3.5 at
+       stroke 4, so it occupies 1.5 to 5.5 and still resolves to a clean 1px at
+       16. The letters sit in x 10..54 and y 15..49 at stroke 7.5, which leaves
+       4.5 units of air between the keyline and the J — a badge is the one place
+       the mark may not run full bleed, and crowding the keyline is what makes
+       these look muddy. Nothing may go below 7 units.
 
        Careful: XML forbids a double hyphen inside a comment, so write CSS
        custom property names without their leading dashes in here. An invalid
        comment makes the whole file unparseable and every browser silently
        falls back to the PNG.
 
-       If you redraw it, judge it at 16px inside a mock tab strip, light and
-       dark, never at 64. Everything looks good at 64. -->
-  <rect width="64" height="64" fill="#ffffff"/>
-  <path d="M23.5 11.5V44.5a8 8 0 0 1-16 0" fill="none" stroke="#14161a"
-        stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M38.5 52.5 47.5 13l9 39.5M40.4 44h14.1" fill="none" stroke="#0e7490"
-        stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+       If you redraw it, judge it at 16px inside a mock tab strip with no title
+       text beside it, which is how it actually ships. -->
+  <rect width="64" height="64" rx="8" fill="#0e7490"/>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="6" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <path d="M26.25 18.75V39a6.25 6.25 0 0 1-12.5 0" fill="none" stroke="#ffffff"
+        stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37.75 45.25 44 19l6.25 26.25M39.1 39.5h9.8" fill="none" stroke="#ffffff"
+        stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -33,7 +33,7 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 │   ├── style.css         # drawing-sheet theme, CSS variables
 │   ├── main.js           # footer year + scroll reveal
 │   ├── portrait.jpg
-│   ├── favicon.svg       # JA monogram, full bleed (the two PNGs are generated from it)
+│   ├── favicon.svg       # JA badge, SEL-style (the two PNGs are generated from it)
 │   └── share.png         # 1200x627 og:image used by LinkedIn preview cards
 ├── _headers              # security + cache headers
 ├── robots.txt
@@ -281,42 +281,39 @@ the Post Inspector above.
 
 ### Favicon
 
-`assets/favicon.svg` is the source of truth: a JA monogram **full bleed** on a
-white plate, J in ink (`#14161a`) and A in the measurement teal (`--accent-2`,
-`#0e7490`). Every colour is a token from `style.css`; the icon has no palette of
-its own.
+`assets/favicon.svg` is the source of truth: a **JA badge** — a rounded teal
+plate, a white keyline inset from its edge, and the two initials inside it.
+That construction is lifted from the SEL (Schweitzer Engineering Laboratories)
+mark, which is the reference this was designed against.
 
-**There is no frame and no margin, and that is the point.** A browser tab gives
-you 16 CSS pixels and nothing more. An earlier version spent them on a 3-unit
-border plus the padding inside it, which left the letters about 7px tall and
-mushed the pair together — they looked cut off because they were squeezed into
-a third of the box. Dropping the border and pushing the mark to the edges takes
-the cap height from 28 units to 41, so the same 16px tab renders letters half
-again as tall.
+**The colours are ours, not theirs.** SEL's plate is `#003a5d`, a navy that
+appears nowhere on this site. `--accent-2` (`#0e7490`) is the nearest thing in
+the palette and is already the "measured side" colour, so the badge belongs to
+the page instead of quoting someone else's brand. Everything on top of the
+plate is plain white, 5.2:1 on the teal.
 
-The white plate stays and earns its place twice: it is the sheet the whole site
-is built on, and it is the only thing keeping the mark legible on a tab strip
-whose colour we don't control. On a light strip it melts into the strip and you
-simply read the monogram; on a dark strip it reads as a small sheet of paper.
-Both are correct. A plateless mark needs a `prefers-color-scheme` swap that the
-PNG fallbacks can't carry, and when that fails the icon doesn't degrade, it
-disappears.
+**This mark carries the tab by itself** — see *Page titles* below, the title is
+deliberately blank. That is why the plate is a saturated teal chip and not the
+white sheet it replaced: at 16px you recognise it by colour and silhouette long
+before you can read the letters, and a white plate with dark letters reads as a
+generic document. With no title text beside it, being *identifiable* beats being
+*readable*.
 
-Teal rather than the amber because black plus saturated orange stops reading as
-technical at tab size. `--accent-2` is the measured side of the palette and is
-the one accent that survives 16px.
-
-Geometry on the 64 grid: strokes are **9**, the mark sits in x 3..61 and y 7..57
-centred on both axes, with **6 clear units** between the J's bowl and the A's
-left leg. Nothing may go below 7 units or it turns to grey mush at 16px.
+Geometry on the 64 grid: plate radius 8; the keyline is inset 3.5 at stroke 4,
+so it occupies 1.5–5.5 and still resolves to a clean 1px at 16; the letters sit
+in x 10..54 and y 15..49 at stroke 7.5. That leaves **4.5 units of air between
+the keyline and the J**. A badge is the one place the mark may not run full
+bleed, and crowding the keyline is exactly what makes these go muddy. Nothing
+may go below 7 units.
 
 The two PNGs are generated from the SVG, not drawn separately — regenerate both
 whenever it changes:
 
-- `favicon.png` (64×64) is the artwork unchanged. It is **RGB, not RGBA**: the
-  plate is square and fully opaque, so there is no transparency to store.
-- `apple-touch-icon.png` (180×180, RGB) scales the mark to **0.78**, because iOS
-  applies its own rounded mask and a full-bleed mark would get clipped.
+- `favicon.png` (64×64, RGBA) is the artwork unchanged, rounded plate included,
+  so the corners are transparent.
+- `apple-touch-icon.png` (180×180, RGB) drops the plate's rounding — iOS applies
+  its own mask — and scales the badge to **0.84** so that mask cannot cut
+  through the keyline.
 
 There is no build step, so they were rasterized with headless Chromium against
 a wrapper page that sizes the SVG to the target box:
@@ -325,15 +322,47 @@ a wrapper page that sizes the SVG to the target box:
 chrome --headless=new --disable-gpu --hide-scrollbars   --force-device-scale-factor=1 --window-size=64,64   --screenshot=favicon.png file:///path/to/wrapper.html
 ```
 
-**Judge any redraw at 16px inside a mock tab strip, never at 64** — light
-(`#dee1e6`) and dark (`#202124`), with a title next to it. Everything looks good
-at 64; the tab is the only honest test.
+Pass `--default-background-color=00000000` for `favicon.png` and omit it for the
+touch icon. **Judge any redraw at 16px inside a mock tab strip with no title
+text next to it**, light (`#dee1e6`) and dark (`#202124`), because that is how it
+ships. Everything looks good at 64.
+
+### Page titles
+
+`index.html` ships `<title>&#160;</title>` — a non-breaking space, on purpose.
+The home page's title was nothing but the owner's name, and the tab is meant to
+show the badge alone.
+
+Two things about this that will bite you if you forget them:
+
+- **It cannot be an empty `<title>`, and the tag cannot be removed.** Chrome
+  falls back to displaying the URL when the title is empty or absent, so you get
+  `scitechlab-dev.com` in the tab instead of nothing. The NBSP is what makes it
+  render blank.
+- **It has a real cost, and it was accepted knowingly.** `<title>` is what Google
+  uses as the search-result headline, what names a bookmark and a history entry,
+  and what a screen reader announces on load. The home page gives all of that up;
+  Google now synthesises a headline from the `h1` and the meta description.
+
+Article and archive pages keep real titles — they only dropped the
+`· Josué Aldana-Aguilar` suffix. A blank title on an article would make it
+unfindable, which is not what was asked for.
+
+`og:title` is **untouched** everywhere. It feeds LinkedIn and other share cards,
+not the tab, and blanking it would break the previews described under *Sharing
+on LinkedIn*.
+
+### Cache busting the icon
 
 The favicon URLs carry `?v=` like everything else under `/assets/`; bump it or
 the year-long immutable cache keeps serving the old icon. Unlike `style.css`,
 this one is **not** injected by the build — it is hand-written in `index.html`
 and in both files under `scripts/templates/`, so a favicon change means
-editing three files. Currently at `?v=5`.
+editing three files. Currently at `?v=6`.
+
+Chrome also keeps favicons in a separate store that ignores cache headers, so a
+`?v=` bump alone may not refresh what you see locally. Close and reopen the tab,
+or check in a private window.
 
 ## Cache busting
 
@@ -348,7 +377,7 @@ a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
 
 The favicon URLs are the exception to the automatic part below: they carry a
-hand-written `?v=5` in `index.html` **and** in both files under
+hand-written `?v=6` in `index.html` **and** in both files under
 `scripts/templates/`, so a favicon change means bumping three files.
 
 Article pages no longer need bumping by hand: `scripts/build.mjs` reads the
