@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css?v=15" />
+<link rel="stylesheet" href="assets/style.css?v=16" />
 <style>
 /* ============ SIGNAL-CHAIN DIAGRAM (animated) ============
    Self-contained on purpose: every selector is scoped under .hd, and
@@ -611,8 +611,9 @@
               <path d="M244 78l12 6-12 6" />
               <path d="M258 62h18M282 62h16" opacity=".7" />
               <path d="M310 70h30" />
-              <!-- clock net into the register -->
-              <path d="M270 110v-16M262 110h16" opacity=".75" />
+              <!-- clock net into the register; ends at y=106, the bottom of
+                   the band thumbnails are allowed to draw in -->
+              <path d="M270 106v-12M262 106h16" opacity=".75" />
 
               <g class="th-acc" stroke-width="1.9">
                 <path d="M83 64h17" />

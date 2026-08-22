@@ -143,10 +143,16 @@ from any existing card:
 
 Four things are load-bearing:
 
-- **Draw inside the `y 38..106` band.** The viewBox is deliberately much taller
-  than the 84px strip so width always drives the scale (same trick as the
-  signal-chain diagram); anything outside that band gets cropped vertically on
-  wide cards.
+- **Draw inside the `y 38..106` band.** With `preserveAspectRatio="slice"`,
+  width drives the scale and the strip shows a horizontal band through the
+  middle of the 440x140 box. **Which band is set by the strip's aspect ratio,
+  not by its pixel height** — that is why `.thumb` carries
+  `aspect-ratio: 440 / 80` and `height: auto` rather than a fixed height.
+  440/80 shows `y 30..110` at every card width. A fixed height re-crops every
+  drawing whenever the column width changes, and it fails silently: it once
+  clipped all ten schematics at the same time. `30..110` is the margin that
+  absorbs the handful of existing drawings that stray a little past the
+  `38..106` contract — do not rely on it for new ones.
 - **`currentColor` for structure.** It inherits `--line-2` and brightens on card
   hover. Never hard-code a grey.
 - **One amber idea per thumbnail, `class="th-acc"`** (or `th-acc-f` when it is
@@ -168,6 +174,15 @@ The layout is deliberately editorial, so a few things are load-bearing:
   Below 720px the plate loses its border and margin, because on a phone a frame
   is only wasted width. `.wrap` no longer sets a max-width — the sheet caps it,
   and `.wrap` only insets the content column.
+- **Never use the `padding` shorthand on a `.wrap` element.** `.wrap`'s inline
+  padding *is* the content column, so `padding: 24px 0` silently resets it to
+  zero and that section slides out to the sheet's edge while every other one
+  stays on the column. Use `padding-block`. This already broke five sections
+  once (`.statement-inner`, `.domain-inner`, `.domain-projects`, `.pubs-body`,
+  `.writing-body`) and it fails quietly — the page still looks deliberate,
+  just misaligned. The `.wrap` elements are: `header-inner`, `hero-inner`,
+  `band-inner`, `statement-inner`, `domain-inner`, `domain-projects`,
+  `pubs-body`, `writing-body`, `contact-grid`, `footer-inner`, `post-inner`.
 - **Bands divide the page.** `<div class="band">` is a full-bleed ruled strip
   with a mono label on the content column, and it sticks under the header for
   as long as its own section is on screen. Sections that follow a band carry
@@ -296,7 +311,7 @@ Cloudflare's edge cache keep serving the old version. Bump the query string
 wherever it's referenced (`style.css?v=2` → `?v=3`) so it counts as a new URL.
 This applies to `index.html` **and** every page in `articles/`.
 
-Currently at `style.css?v=14` and `main.js?v=9`. Versions 8 and 6 were burned by
+Currently at `style.css?v=16` and `main.js?v=9`. Versions 8 and 6 were burned by
 a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
 

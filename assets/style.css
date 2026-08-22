@@ -279,8 +279,12 @@ a { color: inherit; text-decoration: none; }
   padding: 30px 0 24px; overflow: hidden;
 }
 
-/* ---------- statement ---------- */
-.statement-inner { padding: 54px 0 58px; }
+/* ---------- statement ----------
+   padding-block, never the `padding` shorthand: these elements also carry
+   .wrap, whose inline padding IS the content column. The shorthand zeroes it
+   and the section slides out to the sheet's edge. Same for every rule below
+   that targets a .wrap element. */
+.statement-inner { padding-block: 54px 58px; }
 /* The measure is wide on purpose. At 32ch this sat in 553px of a 1126px
    column, so the empty right half read as truncated text rather than as a
    margin — and it forced six lines with an orphan. 50ch is still a display
@@ -304,7 +308,7 @@ a { color: inherit; text-decoration: none; }
 .domain-projects + .domain { border-top: 1px solid var(--line); }
 .domain-inner {
   display: grid; grid-template-columns: 64px 1fr auto;
-  gap: 24px; align-items: center; padding: 24px 0;
+  gap: 24px; align-items: center; padding-block: 24px;
 }
 .domain-glyph {
   width: 64px; height: 64px; display: grid; place-items: center;
@@ -346,7 +350,7 @@ a { color: inherit; text-decoration: none; }
 .domain:hover .glyph-caret { animation: caret 1.05s steps(1) infinite; }
 @keyframes caret { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 
-.domain-projects { padding: 24px 0 40px; }
+.domain-projects { padding-block: 24px 40px; }
 
 /* ---------- project grid ----------
    Each card is a bordered detail cell, the way a drawing sheet parks its
@@ -376,11 +380,19 @@ a { color: inherit; text-decoration: none; }
    Full bleed across the top of the cell via negative margins, so the drawing
    meets the cell's own border on three sides.
 
-   Same viewBox trick as the signal chain: the box is far taller than the
-   rendered strip, so width always drives the scale and nothing is ever
-   cropped horizontally. Keep drawing inside the y 38..106 band. */
+   The viewBox is 440x140 with preserveAspectRatio="slice", so width drives the
+   scale and the strip shows a horizontal band through the middle of the box.
+   Which band depends ENTIRELY on the strip's aspect ratio, not on its pixel
+   height — so the height is derived from a ratio rather than fixed. 440/80
+   shows viewBox y 30..110 at every card width; a fixed height re-crops the
+   drawings every time the column changes and silently clips them.
+
+   Keep drawing inside the y 38..106 band: that is the contract, and 30..110
+   is the margin that absorbs the few existing schematics which stray a little
+   past it. */
 .thumb {
-  display: block; width: calc(100% + 36px); height: 84px;
+  display: block; width: calc(100% + 36px);
+  aspect-ratio: 440 / 80; height: auto;
   margin: 0 -18px 0;
   border-bottom: 1px solid var(--line);
   background: var(--bg-3);
@@ -446,7 +458,7 @@ a { color: inherit; text-decoration: none; }
    A real table, because it is real tabular data: the year and DOI columns are
    only useful if they line up down the page. Hairlines are the structure, no
    outer box. */
-.pubs-body { padding: 46px 0 54px; }
+.pubs-body { padding-block: 46px 54px; }
 .pubs-head {
   display: flex; align-items: baseline; justify-content: space-between;
   gap: 24px; flex-wrap: wrap; margin-bottom: 26px;
@@ -512,7 +524,7 @@ a { color: inherit; text-decoration: none; }
    The home page shows the newest few and links out; articles/index.html reuses
    the same list for the full archive. Same rhythm as the publications block so
    the two closing sections read as a pair. */
-.writing-body { padding: 46px 0 54px; }
+.writing-body { padding-block: 46px 54px; }
 .writing-head { margin-bottom: 26px; }
 .writing-title {
   font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.56rem);
@@ -800,11 +812,11 @@ a { color: inherit; text-decoration: none; }
   .now-item { padding: 16px 0 4px; border-top: 1px solid var(--line-2); }
   .now-item + .now-item { padding-left: 0; border-left: none; }
   .now-item + .now-item::before { left: 0; }
-  .domain-inner { grid-template-columns: 44px 1fr auto; gap: 18px; padding: 22px 0; }
+  .domain-inner { grid-template-columns: 44px 1fr auto; gap: 18px; padding-block: 22px; }
   .domain-glyph { width: 44px; height: 44px; }
   .domain-glyph svg { width: 20px; height: 20px; }
-  .domain-projects { padding: 22px 0 34px; }
-  .statement-inner { padding: 42px 0 46px; }
+  .domain-projects { padding-block: 22px 34px; }
+  .statement-inner { padding-block: 42px 46px; }
   .article-row a { grid-template-columns: 1fr; row-gap: 4px; }
   .article-row time, .a-title, .a-desc { grid-column: 1; }
 }
@@ -817,7 +829,7 @@ a { color: inherit; text-decoration: none; }
   .hero { padding: 44px 0 40px; }
   .hero-photo img { width: 120px; height: 120px; }
   .section { padding: 48px 0; }
-  .pubs-body, .writing-body { padding: 40px 0 46px; }
+  .pubs-body, .writing-body { padding-block: 40px 46px; }
   /* stacked label over value, with the arrow parked in the corner instead of
      becoming a third line */
   .contact-links a {
