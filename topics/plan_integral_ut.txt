@@ -1,0 +1,675 @@
+========================================================================================
+PLAN INTEGRAL DE PREPARACIÓN TÉCNICA
+Plaza: Área de Mercado / Programación de la Operación — Unidad de Transacciones (UT)
+Candidato: Josué Aldana — Analista de Operación de la Red, DELSUR (Grupo EPM)
+Horizonte: 14 días | Carga: 40 horas | Estructura: 8 módulos de 5 horas
+========================================================================================
+
+
+----------------------------------------------------------------------------------------
+0. MARCO DEL PLAN
+----------------------------------------------------------------------------------------
+
+0.1 PREMISA
+
+El perfil actual cubre con solvencia el lado técnico-analítico del puesto (modelado de
+red, calidad de datos, pronóstico de demanda, automatización) y presenta una brecha
+concreta y acotada en el lado regulatorio-comercial del mercado mayorista: declaración
+y validación de costos variables, indexación y programación de la operación bajo un
+reglamento basado en costos de producción.
+
+El plan no busca cobertura enciclopédica. Busca que, ante cualquier pregunta del panel,
+exista una respuesta estructurada, honesta y defendible.
+
+0.2 DISTRIBUCIÓN DE ESFUERZO
+
+    Módulos 1–2   Fundamento institucional y económico          10 h     25 %
+    Módulos 3–4   Costos variables (núcleo del puesto)          10 h     25 %
+    Módulos 5–6   Programación de la operación y regional       10 h     25 %
+    Módulos 7–8   Analítica de datos y pronóstico               10 h     25 %
+
+Los módulos 3 y 4 son el corazón funcional de la plaza. Si el tiempo se comprime, se
+recortan los módulos 6 y 8, nunca el 3 ni el 4.
+
+0.3 ESTRUCTURA UNIFORME DE CADA MÓDULO
+
+Todos los módulos tienen idéntico peso y formato:
+
+    Carga         5 horas   →   3 h estudio · 1 h ejercicio · 1 h redacción
+    Componentes   Objetivo de dominio
+                  Contenido nuclear
+                  Fuente primaria obligatoria
+                  Ejercicio de aplicación
+                  Recurso formal (curso)
+                  Artículo derivado (con esquema)
+                  Criterio de dominio (verificable)
+                  Batería de autoevaluación (5 preguntas)
+
+0.4 REGLA DE HONESTIDAD TÉCNICA
+
+Este plan distingue tres niveles de certeza, y esa distinción debe trasladarse tanto a
+los artículos como a la entrevista:
+
+    [T]  Teoría general de mercados eléctricos. Universal y verificable en literatura.
+    [N]  Normativa salvadoreña específica. Exige lectura de fuente primaria; no se
+         asume ni se infiere.
+    [I]  Interpretación propia o práctica inferida. Se enuncia siempre como tal.
+
+En entrevista, decir "eso lo tendría que verificar en el ROBCP antes de afirmarlo" es
+una respuesta profesional. Improvisar un artículo o una fórmula, no.
+
+0.5 ADVERTENCIA SOBRE FUENTES
+
+Buena parte del detalle normativo salvadoreño (estructuras de costos aprobadas,
+fórmulas de indexación, plazos de declaración) no está bien indexado en buscadores. Se
+obtiene de los sitios de la UT y de SIGET, o solicitándolo. Ningún curso ni modelo de
+lenguaje sustituye esa lectura. Todo lo que en este plan aparezca marcado [N] debe
+confirmarse contra el documento antes de repetirse.
+
+
+----------------------------------------------------------------------------------------
+MÓDULO 1 — ARQUITECTURA INSTITUCIONAL Y NORMATIVA DEL MERCADO MAYORISTA
+----------------------------------------------------------------------------------------
+
+OBJETIVO DE DOMINIO
+Explicar en tres minutos, sin notas, quién hace qué en el sector eléctrico salvadoreño
+y bajo qué reglas, ubicando con precisión el rol de la UT y el de la plaza dentro de él.
+
+CONTENIDO NUCLEAR
+  [N] Ley General de Electricidad (1998): origen de la UT como sociedad operadora del
+      sistema de transmisión y administradora del mercado mayorista.
+  [N] Reparto de competencias: UT (operación y administración del mercado), SIGET
+      (regulación y supervisión), Consejo Nacional de Energía (política sectorial).
+  [N] Participantes del mercado: generadores, transmisores, distribuidores,
+      comercializadores y grandes usuarios finales (del orden de cuarenta).
+  [N] Los dos mercados: Mercado de Contratos (bilaterales libres y contratos de
+      licitaciones de libre concurrencia promovidas por distribuidoras, supervisadas por
+      SIGET, con precios indexados a la tarifa del usuario final) y Mercado Regulador
+      del Sistema (MRS), de balance, en tiempo real.
+  [N] Tránsito al Reglamento de Operación Basado en Costos de Producción (ROBCP),
+      vigente desde el 1 de agosto de 2011: remuneración de la energía inyectada según
+      costos de producción, con costo marginal horario fijado con independencia del
+      recurso y la tecnología, más retribución por capacidad (confiabilidad).
+  [T] Diferencia conceptual entre mercado basado en costos declarados y mercado basado
+      en ofertas libres. Por qué un sistema con parque térmico dependiente de
+      combustibles importados adopta el primero.
+  [N] Los tres procesos clave del negocio de la UT: planificación de la operación;
+      operación en tiempo real y estudios; conciliación y liquidación de transacciones.
+
+FUENTE PRIMARIA OBLIGATORIA
+  Ley General de Electricidad y su reglamento; índice y disposiciones generales del
+  ROBCP; sitio institucional de la UT.
+
+EJERCICIO DE APLICACIÓN
+  Construir un diagrama de una página con los actores, los flujos de energía, los flujos
+  de dinero y los flujos de información. Debe poder dibujarse de memoria en una pizarra
+  en menos de cuatro minutos.
+
+RECURSO FORMAL
+  No existe curso que cubra esto. Es lectura directa. No se sustituye.
+
+ARTÍCULO DERIVADO
+  Título: "Quién es quién en el mercado eléctrico salvadoreño"
+  Esquema: 1) Por qué la reforma de 1998 separó actividades. 2) Los cuatro actores
+  institucionales y sus competencias. 3) Mercado de Contratos frente a MRS. 4) Qué
+  cambió con el ROBCP en 2011. 5) Qué queda pendiente de verificar.
+
+CRITERIO DE DOMINIO
+  Poder responder sin vacilación: "¿Cuál es la diferencia entre lo que hace SIGET y lo
+  que hace la UT?" y "¿Por qué El Salvador opera con costos de producción y no con
+  ofertas?".
+
+AUTOEVALUACIÓN
+  1. ¿Qué figura jurídica tiene la UT y de dónde emana su mandato?
+  2. ¿Cómo se forma el precio en el Mercado de Contratos frente al MRS?
+  3. ¿Qué significa que la remuneración sea "basada en costos de producción"?
+  4. ¿Qué se retribuye además de la energía, y por qué?
+  5. ¿En cuál de los tres procesos clave se ubica esta plaza, y qué interfaces tiene con
+     los otros dos?
+
+
+----------------------------------------------------------------------------------------
+MÓDULO 2 — DESPACHO ECONÓMICO Y FORMACIÓN DE PRECIOS
+----------------------------------------------------------------------------------------
+
+OBJETIVO DE DOMINIO
+Resolver a mano un despacho económico de cuatro unidades, identificar la unidad marginal
+y explicar cómo ese resultado se traduce en el precio del MRS.
+
+CONTENIDO NUCLEAR
+  [T] Costo incremental y curva de oferta agregada del sistema.
+  [T] Orden de mérito: construcción, y qué lo altera (restricciones de red, mínimos
+      técnicos, reserva, requerimientos de seguridad).
+  [T] Costo marginal de corto plazo: definición formal como derivada del costo total de
+      operación respecto de la demanda. Unidad marginal.
+  [T] Despacho térmico uninodal; despacho hidrotérmico y valor del agua; despacho
+      multinodal, precios nodales y rentas de congestión.
+  [T] Asignación de unidades (unit commitment): por qué no es lo mismo que el despacho
+      económico, y qué papel juegan los costos de arranque y detención.
+  [N] Cómo el ROBCP fija el costo marginal horario con independencia del recurso y la
+      tecnología. Retribución por capacidad.
+  [T] Servicios complementarios y su relación con el despacho: regulación de frecuencia,
+      reserva, potencia reactiva.
+
+FUENTE PRIMARIA OBLIGATORIA
+  Capítulos del ROBCP referidos a despacho y determinación de precios.
+
+EJERCICIO DE APLICACIÓN
+  Despacho a mano de un sistema de cuatro unidades con costos variables distintos y una
+  demanda dada: determinar el orden de mérito, la unidad marginal, el costo marginal
+  resultante y el costo total de operación. Repetirlo introduciendo (a) un mínimo
+  técnico que fuerza a una unidad cara, y (b) una restricción de transmisión. Comparar y
+  explicar la diferencia de precio.
+
+RECURSO FORMAL
+  INEL — "Despacho Económico y Mercados Eléctricos", 30 h, asíncrono, 195 USD.
+  Módulos III (despacho económico, unit commitment) y IV (costos marginales, rentas de
+  congestión) son los directamente aplicables: aproximadamente 12–15 h. El instructor
+  proviene del operador del sistema peruano, que también opera bajo costos de producción
+  con declaración de precios de combustible, de modo que el paradigma es el correcto.
+  Los módulos I, II, V y VI pueden postergarse hasta después de la entrevista.
+  Verificar antes de pagar: vigencia del acceso y fecha de actualización del contenido.
+
+ARTÍCULO DERIVADO
+  Título: "Del orden de mérito al precio: cómo se forma el costo marginal"
+  Esquema: 1) El problema de optimización. 2) Construcción del orden de mérito.
+  3) Ejemplo numérico completo. 4) Qué rompe el orden de mérito puro. 5) Del costo
+  marginal al precio del MRS.
+
+CRITERIO DE DOMINIO
+  Poder tomar un plumón y resolver el ejercicio anterior frente al panel, explicando en
+  voz alta cada paso.
+
+AUTOEVALUACIÓN
+  1. Defina costo marginal de corto plazo sin usar la palabra "último".
+  2. ¿Por qué el costo marginal puede ser mayor que el costo variable de todas las
+     unidades despachadas?
+  3. ¿Qué es el valor del agua y por qué convierte el despacho en un problema temporal?
+  4. ¿Cómo entra un costo de arranque en un problema que se resuelve hora a hora?
+  5. ¿Qué es una renta de congestión y a quién pertenece?
+
+
+----------------------------------------------------------------------------------------
+MÓDULO 3 — COSTO VARIABLE DE COMBUSTIBLE: ESTRUCTURAS, DECLARACIÓN E INVENTARIOS
+----------------------------------------------------------------------------------------
+
+OBJETIVO DE DOMINIO
+Describir el ciclo completo de una declaración semanal de precio de combustible: qué
+declara el generador, contra qué se valida, con qué documentación de respaldo y con qué
+consecuencia sobre el despacho. Este es el módulo más importante del plan.
+
+CONTENIDO NUCLEAR
+  [N] La cadena anual → semanal. La UT participa en auditorías técnicas a los
+      generadores que determinan la curva de consumo de calor y los costos variables no
+      combustibles; y revisa anualmente las estructuras de combustibles de los
+      generadores térmicos. Esas estructuras son la referencia contra la cual se valida
+      cada semana el costo de combustible usado en la programación. Comprender este
+      encadenamiento es lo que separa a un candidato preparado de uno que memorizó
+      definiciones.
+  [T] Componentes de un costo variable de combustible: precio de referencia del
+      combustible, poder calorífico, consumo específico (heat rate) derivado de la curva
+      de consumo de calor, rendimiento, más los conceptos logísticos aplicables (flete,
+      almacenamiento, mermas, tributos).
+  [T] Aritmética del CVC: conversión de unidades de precio de combustible a unidades
+      monetarias por energía generada. Consistencia dimensional. Poder calorífico
+      superior frente a inferior y por qué la distinción importa.
+  [N] Estructuras de costos aprobadas: qué fija la estructura, qué queda libre a
+      declaración semanal y qué documentación de respaldo se exige.
+  [N] Declaración de inventarios de combustible: contenido, periodicidad, verificación
+      de consistencia contra el despacho realizado, y traducción a autonomía en días.
+  [I] Modos de falla típicos de una validación: incoherencia entre precio declarado y
+      referencia internacional, respaldo incompleto, saltos no explicados entre semanas,
+      inventario incompatible con la generación efectivamente inyectada.
+
+FUENTE PRIMARIA OBLIGATORIA
+  Estructuras de costos vigentes y resoluciones de SIGET que las aprueban; disposiciones
+  del ROBCP sobre declaración de costos variables e inventarios; formatos e instructivos
+  publicados por la UT.
+
+EJERCICIO DE APLICACIÓN
+  Calcular a mano el CVC de una unidad térmica a partir de precio de combustible, poder
+  calorífico y consumo específico, cuidando la consistencia dimensional. Después,
+  construir un checklist de validación de al menos doce puntos verificables sobre una
+  declaración semanal, ordenado por criticidad.
+
+RECURSO FORMAL
+  No existe curso. El módulo III del curso INEL da el marco conceptual (curva de consumo
+  de calor, costos incrementales), pero el procedimiento salvadoreño es lectura directa.
+
+ARTÍCULO DERIVADO
+  Título: "Anatomía de una declaración semanal de precio de combustible"
+  Esquema: 1) Por qué un mercado de costos necesita declaraciones auditables. 2) De la
+  auditoría anual a la validación semanal. 3) Los componentes del CVC, con ejemplo
+  numérico. 4) Checklist de validación. 5) Qué queda pendiente de verificar.
+
+CRITERIO DE DOMINIO
+  Poder explicar, sin notas y en cinco minutos, el recorrido completo de un dato desde la
+  auditoría técnica del generador hasta el precio del MRS de una hora concreta.
+
+AUTOEVALUACIÓN
+  1. ¿Qué determina una auditoría técnica y con qué periodicidad se usa su resultado?
+  2. ¿Por qué se declara un precio semanalmente si la estructura se aprueba anualmente?
+  3. ¿Qué documentación de respaldo haría falta para considerar válida una declaración?
+  4. ¿Cómo se detecta que un inventario declarado es inconsistente con lo despachado?
+  5. Si un generador declara un precio significativamente superior al de la semana
+     previa, ¿qué verifica usted, en qué orden?
+
+
+----------------------------------------------------------------------------------------
+MÓDULO 4 — COSTOS VARIABLES NO COMBUSTIBLES, INDEXACIÓN Y ARRANQUE/DETENCIÓN
+----------------------------------------------------------------------------------------
+
+OBJETIVO DE DOMINIO
+Reproducir el cálculo de una indexación mensual y explicar el proceso completo de
+elaboración, publicación y conformación con los generadores.
+
+CONTENIDO NUCLEAR
+  [T] Qué son los costos variables no combustibles: operación y mantenimiento variable,
+      insumos, tratamiento de agua, reactivos, desgaste asociado a la generación.
+  [N] Determinación de los CVNC mediante auditoría técnica al generador.
+  [T] Mecánica de la indexación: índice base, índice del período, factor de ajuste,
+      encadenamiento. Efecto del tipo de cambio cuando el índice está en otra moneda.
+  [N] Índices de referencia aplicables, periodicidad y fecha de corte.
+  [T] Costos variables de arranque y detención: naturaleza (combustible de arranque,
+      desgaste térmico, horas-hombre), y por qué se tratan aparte del costo variable de
+      operación continua. Su papel en la asignación de unidades.
+  [N] Proceso de elaboración, publicación y conformación con los generadores: plazos,
+      canal, tratamiento de observaciones y discrepancias.
+  [I] Puntos de fricción previsibles: discrepancia sobre el índice aplicable, sobre la
+      fecha de corte, o sobre el alcance de un concepto dentro del CVNC.
+
+FUENTE PRIMARIA OBLIGATORIA
+  Resoluciones de SIGET sobre estructuras de CVNC y su indexación; disposiciones del
+  ROBCP correspondientes; publicaciones mensuales históricas de la UT, que permiten
+  inferir el formato y la mecánica efectiva.
+
+EJERCICIO DE APLICACIÓN
+  Construir una hoja de cálculo que reproduzca una indexación mensual: valor base,
+  índices de dos períodos consecutivos, factor resultante y valor indexado, con
+  verificación de encadenamiento sobre doce meses. Añadir un caso con conversión de
+  moneda. Documentar cada supuesto que no se pudo confirmar en fuente primaria.
+
+RECURSO FORMAL
+  No existe curso. Es aritmética financiera aplicada más lectura normativa. La dificultad
+  no es conceptual sino procedimental.
+
+ARTÍCULO DERIVADO
+  Título: "Indexación de costos variables no combustibles, explicada paso a paso"
+  Esquema: 1) Qué costo se está indexando y por qué. 2) Mecánica general de indexación.
+  3) Ejemplo numérico encadenado a doce meses. 4) El proceso de conformación con los
+  participantes. 5) Qué queda pendiente de verificar.
+
+CRITERIO DE DOMINIO
+  Poder explicar por qué un CVNC cambia mes a mes aunque la planta no haya cambiado, y
+  describir qué se hace cuando un generador no está conforme con la indexación publicada.
+
+AUTOEVALUACIÓN
+  1. ¿Qué conceptos integran un CVNC y cuáles quedan fuera?
+  2. ¿Por qué el CVNC se indexa y el CVC se declara?
+  3. ¿Qué ocurre si el índice de referencia se publica con retraso?
+  4. ¿Por qué los costos de arranque y detención se tratan separadamente?
+  5. ¿Cómo manejaría una discrepancia formal de un generador sobre la indexación
+     publicada?
+
+
+----------------------------------------------------------------------------------------
+MÓDULO 5 — PROGRAMACIÓN DE LA OPERACIÓN EN SUS HORIZONTES
+----------------------------------------------------------------------------------------
+
+OBJETIVO DE DOMINIO
+Describir los cuatro horizontes de programación, qué decide cada uno, con qué insumos, y
+cómo se encadenan entre sí y con la operación en tiempo real.
+
+CONTENIDO NUCLEAR
+  [N] Horizontes anual, mensual, semanal y diario: alcance, periodicidad, productos.
+  [N] Herramientas de la UT: un modelo para el horizonte anual y otro para los horizontes
+      semanal y diario, dentro de un software de planificación especializado. (Los
+      nombres exactos deben verificarse: las transcripciones disponibles los deforman.)
+  [T] Insumos de la programación: proyección de demanda, disponibilidad de unidades,
+      costos variables declarados e indexados, hidrología, mantenimientos programados,
+      restricciones de red, intercambios regionales.
+  [T] Coordinación de mantenimientos: criterio de mínimo costo con seguridad, ventanas,
+      conflictos entre solicitudes.
+  [T] Reserva: primaria, secundaria y rodante. Cómo el requerimiento de reserva modifica
+      el despacho.
+  [N] Predespacho y redespacho: cuándo se ejecuta un redespacho y cómo se notifica a los
+      participantes.
+  [T] Mediano plazo y renovables variables: perfiles solar, eólico e hidráulico;
+      variabilidad e incertidumbre; escenarios de hidrología; efecto sobre los costos
+      operativos y sobre el orden de mérito.
+  [I] Vínculo con el perfil propio: la programación es, en el fondo, un problema de
+      optimización con restricciones sobre un sistema modelado como grafo, con datos de
+      entrada que deben validarse. Ambas cosas son terreno conocido.
+
+FUENTE PRIMARIA OBLIGATORIA
+  Capítulos del ROBCP sobre programación de la operación; procedimientos de la UT sobre
+  predespacho y coordinación de mantenimientos; informes de programación publicados.
+
+EJERCICIO DE APLICACIÓN
+  Elaborar un diagrama de flujo que muestre, para los cuatro horizontes, los insumos, el
+  proceso, el producto y el destinatario de cada uno, con las flechas de realimentación
+  entre horizontes y hacia la operación en tiempo real. Debe caber en una página.
+
+RECURSO FORMAL
+  Módulo III del curso INEL (despacho hidrotérmico, estacionalidad, valor del agua,
+  unit commitment) aporta el fundamento del horizonte anual y semanal. La formación
+  previa en planificación de sistemas de distribución sirve de base metodológica, pero
+  requiere reencuadre: aquí el objeto es el sistema nacional y el criterio es económico.
+
+ARTÍCULO DERIVADO
+  Título: "Los horizontes de la programación de la operación"
+  Esquema: 1) Por qué no basta con programar el día siguiente. 2) Qué decide cada
+  horizonte. 3) El encadenamiento de insumos y productos. 4) Renovables variables y
+  escenarios de hidrología. 5) Del predespacho al redespacho.
+
+CRITERIO DE DOMINIO
+  Poder responder: "¿Qué decisión se toma en el horizonte anual que ya no puede tomarse
+  en el semanal?".
+
+AUTOEVALUACIÓN
+  1. ¿Qué producto concreto entrega cada horizonte y a quién?
+  2. ¿Cómo entra la hidrología en el horizonte anual y cómo en el diario?
+  3. ¿Qué gatilla un redespacho?
+  4. ¿Cómo afecta al costo marginal un requerimiento de reserva más exigente?
+  5. ¿Qué hace con una solicitud de mantenimiento que compromete la seguridad en la
+     semana pico?
+
+
+----------------------------------------------------------------------------------------
+MÓDULO 6 — MERCADO ELÉCTRICO REGIONAL, CONCILIACIÓN Y LIQUIDACIÓN
+----------------------------------------------------------------------------------------
+
+OBJETIVO DE DOMINIO
+Explicar cómo el mercado nacional se acopla al regional y cómo las transacciones
+programadas terminan convertidas en un documento de liquidación mensual.
+
+CONTENIDO NUCLEAR
+  [N] Tratado Marco del Mercado Eléctrico de América Central; Reglamento del Mercado
+      Eléctrico Regional (RMER) y su Procedimiento de Detalle Complementario, vigentes
+      desde el 1 de junio de 2013, cuya entrada requirió adecuar los procesos clave de la
+      UT mediante interfaces regulatorias aprobadas por SIGET.
+  [N] Ente Operador Regional: monitorea la red regional desde Guatemala hasta Panamá, más
+      el enlace extrarregional con México.
+  [N] Interacción en planificación: predespacho regional, registro de contratos
+      regionales con prioridad de suministro, definición de la red de transmisión
+      regional, planeamiento de largo plazo.
+  [T] Contratos firmes frente a transacciones de oportunidad. Efecto de una importación
+      barata sobre el orden de mérito nacional.
+  [N] Ciclo de conciliación y liquidación: factura indicativa diaria a partir de datos de
+      SCADA; factura oficial mensual a partir del sistema de medición comercial;
+      documento de transacciones económicas que consolida operaciones del mercado y
+      cargos del sistema y se remite a cada participante.
+  [I] Por qué esto le importa a esta plaza: los costos variables validados aguas arriba
+      son insumo directo de la valorización aguas abajo. Un error en la validación
+      semanal se propaga hasta la liquidación.
+
+FUENTE PRIMARIA OBLIGATORIA
+  Documentación pública del EOR; RMER; disposiciones del ROBCP sobre conciliación y
+  liquidación; documentos de transacciones económicas publicados.
+
+EJERCICIO DE APLICACIÓN
+  Trazar el recorrido completo de un megavatio-hora: desde su programación en el
+  predespacho, su inyección real, su medición, su valorización y su aparición en el
+  documento de transacciones económicas. Identificar en qué punto interviene cada dato
+  que esta plaza valida.
+
+RECURSO FORMAL
+  No existe curso específico. Lectura directa de documentación regional.
+
+ARTÍCULO DERIVADO
+  Título: "Cómo se conecta El Salvador al mercado eléctrico regional"
+  Esquema: 1) El Tratado Marco y la lógica de un mercado regional. 2) El rol del EOR.
+  3) Contratos firmes y oportunidad. 4) Efecto sobre el despacho nacional. 5) De la
+  transacción a la liquidación.
+
+CRITERIO DE DOMINIO
+  Poder explicar cómo un dato validado en el proceso semanal termina afectando una
+  factura mensual.
+
+AUTOEVALUACIÓN
+  1. ¿Qué diferencia hay entre un contrato firme regional y una transacción de
+     oportunidad?
+  2. ¿Cómo modifica el despacho nacional una importación regional a bajo costo?
+  3. ¿Qué rol cumple el EOR frente al rol de la UT?
+  4. ¿Cuál es la diferencia entre la factura indicativa y la oficial?
+  5. ¿Qué consecuencia tiene un costo variable mal validado sobre la liquidación?
+
+
+----------------------------------------------------------------------------------------
+MÓDULO 7 — ANALÍTICA I: CALIDAD, VALIDACIÓN Y CONCILIACIÓN DE DATOS
+----------------------------------------------------------------------------------------
+
+OBJETIVO DE DOMINIO
+Proponer, con especificidad, cómo automatizaría la validación de las declaraciones y la
+conciliación de información técnica y comercial del proceso de planificación. Esta es la
+respuesta que convierte la experiencia previa en valor inmediato para el puesto.
+
+CONTENIDO NUCLEAR
+  [T] Calidad de datos: dimensiones de completitud, consistencia, exactitud, oportunidad
+      y trazabilidad. Cómo se instrumenta cada una.
+  [T] Validación declarativa: reglas de esquema, de rango, de coherencia entre campos y
+      de coherencia temporal. Bibliotecas de validación de datos tabulares en Python.
+  [T] Conciliación entre fuentes: cómo se contrasta un dato declarado contra una
+      referencia independiente y qué se hace con la discrepancia (tolerancia, alerta,
+      rechazo).
+  [T] Detección de anomalías en series operativas: saltos, valores imposibles, huecos,
+      duplicados, valores congelados.
+  [T] Trazabilidad y auditoría: registro de qué se validó, contra qué versión de la
+      estructura, con qué resultado y quién lo aprobó.
+  [I] Transferencia desde el perfil actual: la validación, depuración y conciliación de
+      datos entre SCADA, base de datos en tiempo real y sistemas auxiliares es
+      estructuralmente el mismo problema que validar declaraciones contra estructuras
+      aprobadas. Cambia el dominio, no el método.
+
+FUENTE PRIMARIA OBLIGATORIA
+  No aplica normativa. Aquí la fuente es la práctica propia, documentada.
+
+EJERCICIO DE APLICACIÓN
+  Implementar en Python un validador que reciba una declaración semanal en formato
+  tabular (datos sintéticos con estructura realista), recalcule el CVC a partir de sus
+  componentes, aplique el checklist del módulo 3 como reglas ejecutables y emita un
+  informe de hallazgos clasificado por severidad. Este es el Proyecto A del plan.
+
+RECURSO FORMAL
+  Platzi: ruta de manipulación y transformación de datos con Pandas y NumPy. Verificar el
+  catálogo vigente, que cambia con frecuencia. Cubierto por la licencia disponible.
+
+ARTÍCULO DERIVADO
+  Título: "Validación automática de datos operativos con Python"
+  Esquema: 1) Por qué la validación manual no escala. 2) Reglas declarativas frente a
+  código imperativo. 3) Arquitectura del validador. 4) Clasificación de hallazgos por
+  severidad. 5) Trazabilidad y auditoría.
+
+CRITERIO DE DOMINIO
+  Poder responder a "¿cómo automatizaría usted esta validación?" con una arquitectura
+  concreta, no con generalidades sobre digitalización.
+
+AUTOEVALUACIÓN
+  1. ¿Qué diferencia hay entre validar y conciliar?
+  2. ¿Qué reglas aplicaría a un campo de precio de combustible declarado?
+  3. ¿Cómo detectaría un valor congelado en una serie de inventarios?
+  4. ¿Qué se registra para que una validación sea auditable?
+  5. ¿Cuándo una discrepancia debe rechazar la declaración y cuándo solo alertar?
+
+
+----------------------------------------------------------------------------------------
+MÓDULO 8 — ANALÍTICA II: PRONÓSTICO DE DEMANDA MULTI-HORIZONTE
+----------------------------------------------------------------------------------------
+
+OBJETIVO DE DOMINIO
+Defender técnicamente una metodología de pronóstico de demanda alineada con los
+horizontes de programación, incluyendo la justificación de por qué se elige un modelo
+sobre otro y cómo se evalúa honestamente.
+
+CONTENIDO NUCLEAR
+  [T] La demanda como serie de tiempo: estacionalidades múltiples (diaria, semanal,
+      anual), efecto de calendario y feriados, sensibilidad a temperatura, quiebres
+      estructurales.
+  [T] Correspondencia entre horizonte de pronóstico y horizonte de programación: qué se
+      pronostica para el anual, el mensual, el semanal y el diario, y por qué el modelo
+      apropiado difiere en cada caso.
+  [T] Línea base: modelos ingenuos y estacionales. Por qué toda comparación empieza aquí.
+  [T] Modelos estadísticos: suavizamiento exponencial, SARIMA y SARIMAX con variables
+      exógenas. Diagnóstico de residuos.
+  [T] Modelos de aprendizaje automático: gradient boosting con ingeniería de rezagos y
+      ventanas móviles. Estrategias directa y recursiva para horizontes múltiples.
+  [T] Evaluación: MAE, RMSE, MAPE y sus patologías; validación con origen móvil;
+      evaluación desagregada por horizonte; intervalos de predicción y pérdida pinball.
+  [I] Criterio de selección defendible: en series de longitud moderada y con estructura
+      estacional fuerte, los modelos estadísticos y de boosting suelen igualar o superar
+      a las arquitecturas recurrentes a una fracción del costo y con mucha mayor
+      interpretabilidad. En una entidad que debe justificar sus decisiones ante
+      participantes del mercado, la interpretabilidad no es un lujo.
+  [T] Redes recurrentes (LSTM y similares): tema secundario. Conocer cuándo tendrían
+      sentido — series largas, múltiples series relacionadas, alta frecuencia — y saber
+      argumentar por qué no se eligieron.
+
+FUENTE PRIMARIA OBLIGATORIA
+  No aplica normativa. Estadísticas oficiales de demanda publicadas, si están
+  disponibles, para dar contexto real al ejercicio.
+
+EJERCICIO DE APLICACIÓN
+  Comparación honesta de tres enfoques (línea base estacional, SARIMAX, gradient
+  boosting) sobre una serie de demanda, con validación de origen móvil y métricas
+  reportadas por horizonte. Ninguna cifra ilustrativa: solo resultados de corridas
+  reales. Este es el Proyecto B del plan.
+
+RECURSO FORMAL
+  Un curso formal de series de tiempo con certificado, dentro del presupuesto disponible.
+  Priorizar aquellos que cubran validación con origen móvil y modelos con variables
+  exógenas, no solo ajuste de modelos. Verificar contenido antes de inscribirse.
+
+ARTÍCULO DERIVADO
+  Título: "Pronóstico de demanda eléctrica: comparación honesta de tres enfoques"
+  Esquema: 1) Qué hace particular a la demanda eléctrica. 2) La línea base que nadie
+  reporta. 3) Los tres modelos y su configuración. 4) Backtesting y métricas por
+  horizonte. 5) Cuál elegiría y por qué.
+
+CRITERIO DE DOMINIO
+  Poder responder a "¿cómo usaría analítica de datos en este puesto?" con una respuesta
+  ligada a las responsabilidades concretas de la plaza, no a la analítica en abstracto.
+
+AUTOEVALUACIÓN
+  1. ¿Por qué el MAPE es problemático en series con valores bajos?
+  2. ¿Qué es la validación con origen móvil y por qué no sirve una partición aleatoria?
+  3. ¿Cómo cambia el modelo apropiado entre el horizonte diario y el anual?
+  4. ¿Qué variables exógenas incorporaría y de dónde las obtendría?
+  5. ¿En qué condiciones justificaría una red recurrente frente a gradient boosting?
+
+
+----------------------------------------------------------------------------------------
+CALENDARIO DE 14 DÍAS
+----------------------------------------------------------------------------------------
+
+    Día  1–2    Módulo 1     Arquitectura institucional y normativa
+    Día  3–4    Módulo 2     Despacho económico y formación de precios
+    Día  5–6    Módulo 3     Costo variable de combustible e inventarios
+    Día  7–8    Módulo 4     CVNC, indexación y arranque/detención
+    Día  9–10   Módulo 5     Programación de la operación
+    Día 11      Módulo 6     Mercado regional, conciliación y liquidación
+    Día 12      Módulo 7     Calidad y validación de datos
+    Día 13      Módulo 8     Pronóstico de demanda
+    Día 14      Consolidación, simulacro y repaso de tarjetas
+
+Los módulos 6, 7 y 8 se comprimen a un día porque los dos últimos se apoyan en
+competencia ya instalada; el módulo 6 es el de menor probabilidad de examen profundo.
+Si aparece holgura, se reinvierte en los módulos 3 y 4.
+
+Regla de disciplina: ningún módulo se cierra sin su ejercicio de aplicación terminado.
+Leer sin producir genera una sensación de dominio que la entrevista desmiente.
+
+
+----------------------------------------------------------------------------------------
+PROYECTOS DEMOSTRABLES
+----------------------------------------------------------------------------------------
+
+PROYECTO A — Validador de declaraciones de costo variable
+    Origen: módulos 3 y 7.
+    Alcance: lectura de declaración tabular, recálculo del CVC, aplicación de reglas de
+    validación, informe de hallazgos por severidad, registro auditable.
+    Datos: sintéticos, estructura realista, sin cifras atribuidas a generadores reales.
+    Valor en entrevista: alto. Reproduce literalmente una responsabilidad del puesto.
+
+PROYECTO B — Pronóstico de demanda multi-horizonte
+    Origen: módulo 8.
+    Alcance: comparación de tres enfoques con backtesting de origen móvil y métricas
+    reportadas por horizonte.
+    Valor en entrevista: alto, porque la analítica fue señalada como diferencial.
+
+Prioridad: si solo hay tiempo para uno, es el Proyecto A. El despliegue en
+infraestructura propia es deseable pero no prioritario antes de la entrevista; primero
+el contenido, después la publicación.
+
+
+----------------------------------------------------------------------------------------
+PROTOCOLO DE SIMULACRO (DÍA 14)
+----------------------------------------------------------------------------------------
+
+Bloque 1 — Técnico duro (30 min)
+    Despacho a mano en pizarra. Cálculo de un CVC. Explicación del encadenamiento
+    anual → semanal. Diferencia entre validar CVC e indexar CVNC.
+
+Bloque 2 — Proceso y normativa (20 min)
+    Horizontes de programación. Qué hace la UT frente a SIGET. Rol del EOR. Recorrido de
+    un megavatio-hora hasta la liquidación.
+
+Bloque 3 — Analítica (20 min)
+    Cómo automatizaría la validación. Cómo diseñaría el pronóstico. Cómo evaluaría si el
+    pronóstico es bueno. Cómo garantizaría la calidad del dato.
+
+Bloque 4 — Preguntas incómodas (20 min)
+    "Usted viene de distribución, ¿por qué cree que puede hacer este trabajo?"
+    "Nunca ha validado una declaración de combustible. ¿Cómo empezaría?"
+    "¿Qué haría si un generador cuestiona formalmente su validación?"
+    "¿Qué parte de este puesto le parece que le costaría más?"
+
+Criterio de aprobación del simulacro: ninguna respuesta improvisada sobre normativa que
+no se haya leído, y al menos una respuesta por bloque que conecte explícitamente con
+experiencia propia verificable.
+
+
+----------------------------------------------------------------------------------------
+NARRATIVAS DE TRANSFERENCIA
+----------------------------------------------------------------------------------------
+
+Cada una se prepara en formato situación → acción → resultado → aplicación al puesto, en
+no más de noventa segundos de exposición.
+
+  1. Validación y conciliación de datos entre SCADA, base de datos en tiempo real y
+     sistemas auxiliares  →  validación de declaraciones contra estructuras aprobadas.
+
+  2. Pronóstico de demanda con aprendizaje automático para análisis prospectivo de la
+     operación  →  diagnósticos de demanda de mediano plazo para la planificación.
+
+  3. Modelado de la red como grafo para validar radialidad, conectividad y secuencia de
+     maniobras  →  verificación automática de consistencia en insumos de programación.
+
+  4. Algoritmos genéticos para ubicación óptima de concentradores, con reducción del
+     tiempo de planificación de semanas a horas  →  optimización aplicada y proyectos de
+     mejora de procesos de planificación operativa.
+
+  5. Automatización de flujos ETL y tableros ejecutivos  →  informes técnicos periódicos
+     y presentaciones para la toma de decisiones.
+
+  6. Simulación en OpenDSS y PowerFactory para verificar cumplimiento normativo ante
+     SIGET  →  familiaridad previa con el regulador y con la lógica de cumplimiento.
+
+
+----------------------------------------------------------------------------------------
+CRITERIO DE CIERRE
+----------------------------------------------------------------------------------------
+
+El plan se considera cumplido cuando se satisfacen simultáneamente:
+
+  ·  Los ocho criterios de dominio, verificados en voz alta y sin notas.
+  ·  Los ocho ejercicios de aplicación, terminados y conservados.
+  ·  El Proyecto A, funcional.
+  ·  El simulacro completo, con evaluación registrada.
+  ·  Una lista explícita y escrita de lo que NO se alcanzó a verificar en fuente
+     primaria, para poder declararlo con naturalidad en la entrevista si surge.
+
+Este último punto no es un residuo del plan: es parte del resultado. En un rol cuya
+función es validar lo que otros declaran, saber exactamente dónde termina el propio
+conocimiento es una competencia del puesto, no una debilidad.
+
+========================================================================================

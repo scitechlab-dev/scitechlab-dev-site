@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+<rect width="1200" height="520" fill="#ffffff" />
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#14161a" /></marker>
+<marker id="ah-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a5200" /></marker>
+<marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0e7490" /></marker>
+</defs>
+<rect x="60" y="170" width="250" height="140" rx="6" fill="#ffffff" stroke="#14161a" stroke-width="1.6" />
+<text x="185" y="212" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="15" font-weight="600" fill="#14161a" text-anchor="middle">Generador</text>
+<text x="185" y="236" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">vende con contrato</text>
+<rect x="890" y="170" width="250" height="140" rx="6" fill="#ffffff" stroke="#14161a" stroke-width="1.6" />
+<text x="1015" y="212" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="15" font-weight="600" fill="#14161a" text-anchor="middle">Distribuidor</text>
+<text x="1015" y="236" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">compra para abastecer</text>
+<line x1="310" y1="205" x2="886" y2="205" stroke="#8a5200" stroke-width="2.4" marker-end="url(#ah-amber)" />
+<text x="600" y="188" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="400" fill="#8a5200" text-anchor="middle">plano financiero · contrato: 100 MWh a precio pactado</text>
+<line x1="310" y1="275" x2="886" y2="275" stroke="#14161a" stroke-width="2.4" marker-end="url(#ah-ink)" />
+<text x="600" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="middle">plano físico · despacho: 80 MWh inyectados</text>
+<rect x="450" y="390" width="300" height="80" rx="6" fill="#ffffff" stroke="#0e7490" stroke-width="1.6" />
+<text x="600" y="424" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="15" font-weight="600" fill="#14161a" text-anchor="middle">MRS</text>
+<text x="600" y="448" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">precio horario</text>
+<line x1="600" y1="312" x2="600" y2="384" stroke="#0e7490" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#ah-teal)" marker-start="url(#ah-teal)" />
+<text x="614" y="338" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#0e7490" text-anchor="start">liquidación: la brecha</text>
+<text x="614" y="356" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#0e7490" text-anchor="start">(20 MWh) se liquida</text>
+<text x="614" y="374" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#0e7490" text-anchor="start">al precio horario</text>
+</svg>

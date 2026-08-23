@@ -138,6 +138,41 @@ consultado 2026-08-22. Es la página de la que salen A.1 y A.2, y **sólo public
 esos dos documentos** más enlaces externos a CRIE. Dato útil por lo que *no*
 tiene: la UT no publica ahí procedimientos ni instructivos propios.
 
+### A.6. Ley General de Electricidad
+
+**Ley General de Electricidad.** Decreto Legislativo No. 843, del 10 de octubre
+de 1996, publicado en el Diario Oficial No. 201, Tomo No. 333, del 25 de octubre
+de 1996, con vigencia ocho días después (art. 127). Copia local leída:
+`normativa/ley-general-electricidad.pdf`, bajada del catálogo de SIGET.
+· 37 páginas · consultado 2026-08-22
+
+Datos de la portada y del listado de reformas, textuales:
+
+- Emitida el **10 de octubre de 1996**, no en 1998: el Decreto No. 355 de julio
+  de 1998 es la segunda de doce reformas. El plan de estudio la fechaba en 1998;
+  queda corregido con fuente primaria.
+- Doce reformas listadas, de la No. 176 (diciembre de 1997) a la **No. 548 del
+  9 de abril de 2026**, Diario Oficial No. 66, Tomo No. 451, del 13 de abril de
+  2026, que agrega la generación distribuida y le suma a la UT la operación del
+  mercado minorista (art. 33 literal c).
+- **La copia no incluye la reforma del 2 de julio de 2026** que traslada la
+  regulación a la DGEHM; en este texto el regulador todavía se llama SIGET. Esa
+  reforma queda cubierta por la fuente de la Asamblea Legislativa del artículo 1.
+
+Lo que la serie usa de la ley:
+
+| Artículo | Qué fija |
+|---|---|
+| 3 | La SIGET (hoy DGEHM) responsable del cumplimiento de la ley |
+| 4 | Definiciones de generador, transmisor, distribuidor, comercializador y usuario final |
+| 10-A y 10-B | Remuneración de costos fijos y de inversión mediante la capacidad firme |
+| 33 | Objeto de la UT: operar la transmisión, el mercado mayorista y, desde 2026, el minorista; prohibición de compraventar energía por cuenta propia |
+| 34 y 35 | La UT como sociedad de capital; sus accionistas son los propios participantes |
+| 51 | Mercado mayorista compuesto, al menos, por el Mercado de Contratos y el MRS |
+| 55 a 60 | Reglas del MRS; sus precios son públicos |
+| 79 | Pliego tarifario basado en contratos de largo plazo por libre concurrencia, contratos de naturaleza pública y precio promedio del MRS |
+| 112-E | Mientras no haya competencia en el MRS, metodología basada en costos marginales de producción, costos fijos y de inversión |
+
 ## B. Existen pero no se pudieron abrir
 
 | Documento | Dónde está | Qué pasó |

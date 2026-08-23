@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460">
+<rect width="1200" height="460" fill="#ffffff" />
+<defs>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#14161a" /></marker>
+<marker id="ah-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a5200" /></marker>
+<marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0e7490" /></marker>
+</defs>
+<line x1="40" y1="250" x2="1160" y2="250" stroke="#b4b9c2" stroke-width="2" />
+<circle cx="70" cy="250" r="4.5" fill="#14161a" />
+<line x1="70" y1="244" x2="70" y2="164" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="70" y="120" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="middle">1996</text>
+<text x="70" y="140" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">Ley General de</text>
+<text x="70" y="156" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">Electricidad (D. 843)</text>
+<circle cx="202.5" cy="250" r="4.5" fill="#14161a" />
+<line x1="202.5" y1="256" x2="202.5" y2="336" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="202.5" y="360" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="middle">1998</text>
+<text x="202.5" y="380" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">La UT entra</text>
+<text x="202.5" y="396" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">en operación</text>
+<circle cx="335" cy="250" r="4.5" fill="#8a5200" />
+<line x1="335" y1="244" x2="335" y2="164" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="335" y="120" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#8a5200" text-anchor="middle">1999</text>
+<text x="335" y="140" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">Primer reglamento</text>
+<text x="335" y="156" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">de operación</text>
+<circle cx="467.5" cy="250" r="4.5" fill="#8a5200" />
+<line x1="467.5" y1="256" x2="467.5" y2="336" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="467.5" y="360" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#8a5200" text-anchor="middle">2008</text>
+<text x="467.5" y="380" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">Se aprueba</text>
+<text x="467.5" y="396" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">el ROBCP</text>
+<circle cx="600" cy="250" r="4.5" fill="#8a5200" />
+<line x1="600" y1="244" x2="600" y2="164" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="600" y="120" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#8a5200" text-anchor="middle">2011</text>
+<text x="600" y="140" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">El ROBCP entra</text>
+<text x="600" y="156" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">en vigencia</text>
+<circle cx="732.5" cy="250" r="4.5" fill="#14161a" />
+<line x1="732.5" y1="256" x2="732.5" y2="336" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="732.5" y="360" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="middle">2021</text>
+<text x="732.5" y="380" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">Se crea la DGEHM;</text>
+<text x="732.5" y="396" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">absorbe al CNE</text>
+<circle cx="865" cy="250" r="4.5" fill="#8a5200" />
+<line x1="865" y1="244" x2="865" y2="164" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="865" y="120" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#8a5200" text-anchor="middle">2024</text>
+<text x="865" y="140" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">La DGEHM reforma</text>
+<text x="865" y="156" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">el ROBCP</text>
+<circle cx="997.5" cy="250" r="4.5" fill="#14161a" />
+<line x1="997.5" y1="256" x2="997.5" y2="336" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="997.5" y="360" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="middle">2026</text>
+<text x="997.5" y="380" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">abr · LGE: generación</text>
+<text x="997.5" y="396" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">distribuida (D. 548)</text>
+<circle cx="1130" cy="250" r="4.5" fill="#0e7490" />
+<line x1="1130" y1="244" x2="1130" y2="164" stroke="#b4b9c2" stroke-width="1.4" />
+<text x="1130" y="120" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#0e7490" text-anchor="middle">2026</text>
+<text x="1130" y="140" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">jul · la regulación</text>
+<text x="1130" y="156" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">pasa a la DGEHM</text>
+<circle cx="70" cy="438" r="4.5" fill="#14161a" />
+<text x="84" y="442" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">instituciones y leyes</text>
+<circle cx="330" cy="438" r="4.5" fill="#8a5200" />
+<text x="344" y="442" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">reglamento de operación</text>
+<circle cx="640" cy="438" r="4.5" fill="#0e7490" />
+<text x="654" y="442" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">cambio de regulador</text>
+</svg>

@@ -44,7 +44,24 @@ escribe ni lo interpreta con autoridad final.
 La UT empezó a operar en 1998 y su forma jurídica llama la atención: es una
 sociedad anónima privada que administra un mercado de interés público. Esa
 mezcla de gobernanza privada y función pública es poco común, y conviene entenderla
-antes de asumir cómo se toman las decisiones adentro.
+antes de asumir cómo se toman las decisiones adentro. La ley explica el diseño:
+la UT se organiza como sociedad de capital cuyo accionariado son los propios
+participantes del mercado (arts. 34 y 35 de la LGE), y tiene prohibido comprar o
+vender energía por cuenta propia (art. 33).
+
+## Las reglas, en orden
+
+El mandato de la UT emana de la Ley General de Electricidad, Decreto Legislativo
+No. 843 del 10 de octubre de 1996, la norma de mayor jerarquía del sector. De
+ahí para abajo, el marco se ordena en tres escalones:
+la ley y su reglamento, los acuerdos del regulador, y el ROBCP con sus anexos,
+que es donde vive la operación día a día. Las transacciones entre países tienen
+una capa aparte: el Tratado Marco del Mercado Eléctrico de América Central y la
+regulación regional, que la serie desarrolla más adelante.
+
+El orden de los escalones no cambió con la reforma de julio de 2026. Lo que
+cambió fue quién ocupa el segundo: los acuerdos que antes emitía SIGET ahora
+los emite la DGEHM.
 
 ## La reforma de julio de 2026
 
@@ -80,14 +97,28 @@ Para quien esté leyendo el corpus regulatorio ahora mismo, la consecuencia
 práctica es sencilla y algo incómoda: **los documentos dicen SIGET y quieren
 decir DGEHM**, y la transición sigue corriendo mientras esto se escribe.
 
+<figure class="fig fig-wide">
+  <img src="../assets/figures/linea-de-tiempo.svg"
+       alt="Línea de tiempo de la reforma eléctrica, 1996 a 2026, con nueve hitos alternados sobre el eje: 1996 Ley General de Electricidad, 1998 la UT entra en operación, 1999 primer reglamento de operación, 2008 se aprueba el ROBCP, 2011 el ROBCP entra en vigencia, 2021 se crea la DGEHM y absorbe al CNE, 2024 la DGEHM reforma el ROBCP, abril de 2026 reforma de generación distribuida, julio de 2026 la regulación pasa a la DGEHM."
+       width="1200" height="460" loading="lazy" />
+  <figcaption>Treinta años de reforma en orden, sin escala: el espaciado es
+  uniforme para que quepan las etiquetas, y lo que importa es la secuencia. El
+  intervalo que el texto comenta es el que separa 2008 de 2011: el ROBCP esperó
+  casi tres años entre su aprobación y su entrada en vigencia.</figcaption>
+</figure>
+
 ## Dos mercados bajo un mismo techo
 
 El mercado mayorista no es un solo lugar de negociación. Son dos, y los
-administra la UT.
+administra la UT: el artículo 51 de la LGE lo compone, al menos, por el Mercado
+de Contratos y el Mercado Regulador del Sistema.
 
 El **Mercado de Contratos** es a plazo. Los participantes negocian
 bilateralmente, con independencia de la UT, y la UT despacha el resultado. La
-cantidad, la duración y el precio son de las partes.
+cantidad, la duración y el precio son de las partes. A esa pieza bilateral la
+ley le suma una que no lo es: los contratos de largo plazo que las
+distribuidoras adjudican por libre concurrencia y están obligadas a suscribir,
+y cuyos precios de energía y capacidad alimentan el pliego tarifario (art. 79).
 
 El **Mercado Regulador del Sistema** es de corto plazo: el mercado spot. Cada
 hora, alguien consumió más o menos de lo que sus contratos cubrían, y algún
@@ -107,6 +138,18 @@ y la física.
 Dicho de otro modo: los contratos y el despacho responden a lógicas distintas y
 se encuentran recién en la liquidación.
 
+<figure class="fig fig-wide">
+  <img src="../assets/figures/contratos-despacho.svg"
+       alt="Dos planos paralelos entre un generador y un distribuidor: el plano financiero, en ámbar, con un contrato de 100 MWh a precio pactado, y el plano físico, en tinta, con un despacho de 80 MWh inyectados. Ambos bajan al MRS, donde la brecha de 20 MWh se liquida al precio horario."
+       width="1200" height="520" loading="lazy" />
+  <figcaption>El contrato es un compromiso financiero y el despacho un hecho
+  físico; los dos viven en planos distintos y se encuentran recién en la
+  liquidación. En el ejemplo el generador quedó corto contra su contrato y
+  compra la diferencia en el MRS; el que queda largo la vende. <strong>Las
+  cifras son ilustrativas</strong>: el mecanismo es el de los artículos 51 a 57
+  de la LGE, no un caso real.</figcaption>
+</figure>
+
 ## Quiénes participan
 
 Los participantes se agrupan en cinco categorías: generadores, transmisores,
@@ -117,6 +160,49 @@ La distribución está concentrada en un puñado de empresas con territorios
 definidos. La generación está más fragmentada, y su composición cambió de manera
 importante en los últimos años con la entrada de capacidad grande a gas natural
 y una participación creciente de solar.
+
+## Los tres procesos de la UT
+
+Todo el trabajo de la UT cae dentro de tres procesos, y el ROBCP los refleja
+casi capítulo por capítulo.
+
+**Planificación de la operación.** La UT programa la operación en sus
+horizontes anual, semanal y diario, buscando el mínimo costo total con los
+recursos disponibles, y coordina los mantenimientos de generación y
+transmisión. En el ROBCP: los capítulos 7 a 10, de la programación anual a la
+diaria, y el 16, coordinación de mantenimientos.
+
+**Operación en tiempo real y estudios.** A partir de la programación diaria,
+la UT opera el sistema de transmisión y el mercado, y después analiza lo que
+pasó: post-operativos, fallas, estudios eléctricos. En el ROBCP: el capítulo
+13, que incluye los redespachos.
+
+**Conciliación y liquidación.** Cada transacción termina convertida en un
+documento de liquidación. La UT concilia la medición comercial, el SIMEC, con
+las transacciones contractuales, las regionales, la capacidad firme, los
+servicios auxiliares y los cargos del sistema. En el ROBCP: el capítulo 18,
+transacciones económicas.
+
+La serie sigue este mapa: los artículos centrales viven en la planificación,
+y el de cierre entra en la conciliación y en la conexión regional.
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/mapa-institucional.svg"
+       alt="Mapa institucional del mercado mayorista salvadoreño. Arriba, la DGEHM aprueba el ROBCP y supervisa a la UT, que administra el Mercado de Contratos y el MRS. En el centro, la red de transmisión de ETESAL. Abajo, los participantes: generadores, distribuidores, comercializadores y grandes usuarios. Tres flujos: la energía cruza la red, en línea sólida; el dinero rodea el mapa por los márgenes, de los compradores a la UT y de la UT a los generadores; la información, punteada, sube de los generadores a la UT como declaraciones de costos y baja como programación y despacho."
+       width="1200" height="800" loading="lazy" />
+  <figcaption>El mapa completo en una página: los actores y tres flujos. La
+  energía se mueve por la red física; el dinero, por los mercados y la
+  liquidación; la información (declaraciones de costos, instrucciones de
+  despacho, medición comercial), entre los participantes y la UT. El mercado
+  regional y el EOR quedan fuera de este mapa: entran en el sexto artículo de
+  la serie.</figcaption>
+</figure>
+
+::: nota El ejercicio de la pizarra
+Este diagrama es el ejercicio del primer módulo: actores, flujos de energía,
+de dinero y de información, todo en una página. La prueba de dominio es poder
+reproducirlo de memoria en una pizarra en menos de cuatro minutos.
+:::
 
 ## Por qué costos y no ofertas
 
@@ -153,6 +239,17 @@ El Salvador opera bajo el **Reglamento de Operación del Sistema de Transmisión
 del Mercado Mayorista Basado en Costos de Producción**, el ROBCP. El nombre
 enuncia el diseño: costos de producción, no ofertas. El precio de la energía en
 el mercado mayorista es variable, y lo fija el costo marginal hora a hora.
+
+Y la energía no es lo único que se paga. El reglamento también retribuye la
+capacidad, es decir, la confiabilidad del parque, mediante la capacidad firme
+(art. 10-A de la LGE); la liquidación además incluye servicios auxiliares y
+cargos del sistema.
+
+Y la propia ley fija ese diseño como estado por defecto: mientras no existan
+condiciones que garanticen competencia en los precios ofertados al MRS, la
+metodología de remuneración se basa en costos marginales de producción, costos
+fijos y de inversión (art. 112-E). El régimen de costos no es una excepción
+regulatoria: es lo que la ley prescribe hasta que haya competencia suficiente.
 
 <figure class="fig fig-wide">
   <img src="../assets/figures/mercado-despacho.gif"
@@ -210,16 +307,25 @@ liquidación mensual, y dónde encaja el mercado regional?
 
 ## Fuentes
 
+- **Ley General de Electricidad (LGE)**, Decreto Legislativo No. 843 del 10 de
+  octubre de 1996, Diario Oficial No. 201, Tomo 333, del 25 de octubre de 1996,
+  con reformas hasta el Decreto No. 548 del 9 de abril de 2026. Objeto y
+  gobierno de la UT (arts. 33 a 38), capacidad firme (art. 10-A), los dos
+  mercados (art. 51), contratos de largo plazo (art. 79) y régimen de costos
+  mientras no haya competencia (art. 112-E). Copia local leída:
+  `normativa/ley-general-electricidad.pdf`. Consultado el 22 de agosto de 2026.
 - **Reglamento de Operación del Sistema de Transmisión y del Mercado Mayorista
   Basado en Costos de Producción (ROBCP)**, versión actualizada a junio de 2026.
   Unidad de Transacciones.
   [PDF](https://www.ut.com.sv/documents/10100/279097/ROBCP.pdf/129acc69-cb01-7ed4-7080-88be586df4ec?t=1729522985515).
-  Portada e introducción: acuerdo de aprobación, publicación en Diario Oficial,
-  fecha de inicio de aplicación y listado de acuerdos modificatorios. Consultado
-  el 22 de agosto de 2026.
+  Portada, introducción y estructura de capítulos: acuerdo de aprobación,
+  publicación en Diario Oficial, fecha de inicio de aplicación y listado de
+  acuerdos modificatorios. Consultado el 22 de agosto de 2026.
 - **Unidad de Transacciones**. [Qué hacemos](https://www.ut.com.sv/que-hacemos)
   y [Marco regulatorio](https://www.ut.com.sv/marcoregulatorio). Funciones de la
-  UT y categorías de participantes. Consultado el 22 de agosto de 2026.
+  UT, categorías de participantes, definición de los dos mercados y jerarquía
+  normativa (LGE, acuerdos del regulador, ROBCP). Consultado el 22 de agosto de
+  2026.
 - **SIGET**. [Gerencia de Electricidad](https://www.siget.gob.sv/gerencias/electricidad/gerencia-de-electricidad/).
   Definición del mercado mayorista, Mercado de Contratos y MRS. Consultado el 22
   de agosto de 2026.
