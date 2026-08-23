@@ -213,13 +213,6 @@ costos declarados, la replicabilidad del despacho es la contraparte operativa
 de la auditoría: el mismo diseño que obliga a declarar obliga a que el
 resultado se pueda verificar desde afuera.
 
-::: nota El ejercicio de la pizarra
-Resolver el despacho de las cuatro unidades en voz alta, primero sin
-restricciones, después con el diésel obligado a 30 MW y después con la línea
-congestionada, es el ejercicio del módulo. La prueba es que los tres precios
-salgan sin notas: 95, 180 y el par 180 con 95. Si hay que mirar la curva, el
-mecanismo todavía no está.
-:::
 
 ## Fuentes
 
