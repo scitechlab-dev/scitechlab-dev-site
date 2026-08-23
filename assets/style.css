@@ -950,7 +950,9 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-dim);
   font-size: 1.05rem;
   max-width: 60ch;
-  margin: 10px 0 0;
+  /* The body starts right after, so the lede needs its own bottom margin or the
+     two run together as one block of text. */
+  margin: 10px 0 26px;
 }
 
 @media (max-width: 560px) {
@@ -1023,4 +1025,37 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 720px) {
   .fig figcaption { font-size: 0.84rem; }
   .post-body figure.fig { margin-block: 26px; }
+}
+
+/* ---------- language chip in the archive ----------
+   The archive lists articles in more than one language and each one exists in
+   exactly one, so the language is a property of the row rather than something a
+   switcher could change. The chip says which before the reader commits to a
+   click.
+
+   It shows on every row, not only on the odd one out: a marker that appears
+   sometimes reads as "this one is special" rather than as "this is the
+   language". */
+.a-lang {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border: 1px solid var(--line-2);
+  padding: 2px 6px;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  /* The date column collapses on a phone, so the chip rides beside the date
+     instead of under it. */
+  .a-lang {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+  }
 }

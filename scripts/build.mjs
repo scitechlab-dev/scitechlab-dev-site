@@ -163,6 +163,49 @@ function indent(html, pad) {
 }
 
 /**
+ * The handful of shell strings that have to follow the page's own language.
+ *
+ * This is not an i18n framework and should not grow into one. Each article
+ * lives in exactly ONE language — there are no translated pairs, no language
+ * switcher and no hreflang, because a switcher implies every article exists
+ * twice and stays in sync forever. What this fixes is narrower and real: a
+ * Spanish page whose chrome says "Skip to content" and "← Writing" reads as a
+ * translation someone abandoned halfway.
+ *
+ * If a language is ever missing here the build falls back to English rather
+ * than emitting an empty nav.
+ */
+const T = {
+  en: {
+    skip: 'Skip to content',
+    work: 'Work',
+    writing: 'Writing',
+    contact: 'Contact',
+    back: '← Writing',
+  },
+  es: {
+    skip: 'Ir al contenido',
+    work: 'Trabajo',
+    writing: 'Escritos',
+    contact: 'Contacto',
+    back: '← Escritos',
+  },
+};
+const t = (lang) => T[lang] ?? T.en;
+
+/** Apply the shell strings and the language attribute to a rendered template. */
+const localise = (html, lang) => {
+  const s = t(lang);
+  return html
+    .replace(/\{\{LANG\}\}/g, attr(lang))
+    .replace(/\{\{T_SKIP\}\}/g, text(s.skip))
+    .replace(/\{\{T_WORK\}\}/g, text(s.work))
+    .replace(/\{\{T_WRITING\}\}/g, text(s.writing))
+    .replace(/\{\{T_CONTACT\}\}/g, text(s.contact))
+    .replace(/\{\{T_BACK\}\}/g, text(s.back));
+};
+
+/**
  * Links and canonical URLs drop the .html: Workers static assets serve
  * foo.html at /foo and 307-redirect /foo.html to it. Pointing og:url or a link
  * at the .html form just adds a redirect hop and makes the canonical tag
@@ -179,6 +222,7 @@ function articleList(posts, { hrefPrefix, pad }) {
       <time datetime="${p.date}">${p.date}</time>
       <span class="a-title">${text(p.title)}</span>
       <span class="a-desc">${text(p.summary)}</span>
+      <span class="a-lang" lang="${attr(p.lang)}">${text(p.lang)}</span>
     </a>
   </li>`
     )
@@ -513,19 +557,19 @@ async function main() {
       .replace(/\{\{SUMMARY\}\}/g, attr(post.summary))
       .replace(/\{\{SLUG\}\}/g, post.slug)
       .replace(/\{\{DATE\}\}/g, post.date)
-      .replace(/\{\{LANG\}\}/g, attr(post.lang))
       .replace(/\{\{MATH_HEAD\}\}/g, katexHead(post, '../'))
       .replace(/\{\{TOPIC\}\}/g, post.topic ? `\n        <span>${text(post.topic)}</span>` : '')
       .replace(/\{\{STYLE_V\}\}/g, v.style)
       .replace(/\{\{MAIN_V\}\}/g, v.main);
 
-    const left = page.match(/\{\{[A-Z_]+\}\}/g);
+    const localised = localise(page, post.lang);
+    const left = localised.match(/\{\{[A-Z_]+\}\}/g);
     if (left) {
       console.error(`Build failed: ${post.file} left ${left.join(', ')} unreplaced.`);
       process.exit(1);
     }
 
-    await writeFile(path.join(OUT_DIR, `${post.slug}.html`), page);
+    await writeFile(path.join(OUT_DIR, `${post.slug}.html`), localised);
     console.log(`  → dist/articles/${post.slug}.html`);
   }
 
@@ -546,12 +590,11 @@ async function main() {
       .replace(/\{\{TITLE\}\}/g, attr(page.title))
       .replace(/\{\{SUMMARY\}\}/g, attr(page.summary))
       .replace(/\{\{SLUG\}\}/g, page.slug)
-      .replace(/\{\{LANG\}\}/g, attr(page.lang))
       .replace(/\{\{MATH_HEAD\}\}/g, katexHead(page, ''))
       .replace(/\{\{UP\}\}/g, '')
       .replace(/\{\{STYLE_V\}\}/g, v.style)
       .replace(/\{\{MAIN_V\}\}/g, v.main);
-    await writeFile(path.join(DIST, `${page.slug}.html`), html);
+    await writeFile(path.join(DIST, `${page.slug}.html`), localise(html, page.lang));
     console.log(`  → dist/${page.slug}.html`);
   }
 
@@ -562,12 +605,11 @@ async function main() {
       .replace(/\{\{TITLE\}\}/g, attr(s.title))
       .replace(/\{\{SUMMARY\}\}/g, attr(s.summary))
       .replace(/\{\{SLUG\}\}/g, `serie/${s.slug}`)
-      .replace(/\{\{LANG\}\}/g, attr(s.lang))
       .replace(/\{\{MATH_HEAD\}\}/g, '')
       .replace(/\{\{UP\}\}/g, '../')
       .replace(/\{\{STYLE_V\}\}/g, v.style)
       .replace(/\{\{MAIN_V\}\}/g, v.main);
-    await writeFile(path.join(DIST, 'serie', `${s.slug}.html`), html);
+    await writeFile(path.join(DIST, 'serie', `${s.slug}.html`), localise(html, s.lang));
     console.log(`  → dist/serie/${s.slug}.html`);
   }
 

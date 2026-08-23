@@ -28,7 +28,7 @@ math: true
 | `title` | sí | Titular del artículo y `<title>` de la pestaña |
 | `summary` | sí | Meta description, `og:description` y la línea del archivo. `excerpt` se acepta como sinónimo |
 | `date` | sí (artículos) | `YYYY-MM-DD`. El build falla con cualquier otro formato |
-| `lang` | no (`en`) | Va a `<html lang>`. **Poné `es` en todo lo de la serie** |
+| `lang` | no (`en`) | Idioma del artículo. **Poné `es` en todo lo de la serie** |
 | `math` | no (`false`) | Enciende `$…$`. Ver abajo — no es opcional si hay fórmulas |
 | `estado` | no | `borrador`, `en-revision` o `publicado`. Lo lee el índice de la serie |
 | `categories` / `tags` | no | Lista YAML, o una cadena suelta si es una sola |
@@ -40,6 +40,25 @@ math: true
 ordene en el disco (`2026-08-22-declaracion-semanal.md`); la URL nunca lo lleva
 (`/articles/declaracion-semanal`). El slug se valida: minúsculas, dígitos y
 guiones.
+
+## Idioma
+
+`lang:` no es solo el atributo `<html lang>`. También **cambia el cascarón**: el
+nav, el enlace de salto y el «volver» salen en el idioma de la página. Por
+defecto `en`; un valor desconocido cae a `en` en vez de dejar el nav vacío.
+
+Cada artículo vive en **un solo idioma**. No hay pares traducidos, ni selector,
+ni `hreflang`, y es deliberado: un selector implica que cada artículo exista dos
+veces y se mantenga sincronizado para siempre, y un botón que a veces no tiene a
+dónde llevarte es peor que no tenerlo.
+
+El archivo muestra un chip con el idioma en cada fila, para que se sepa antes de
+hacer clic. Los strings viven en el objeto `T` de `scripts/build.mjs`; agregar un
+idioma es agregar una entrada ahí.
+
+Para el lector que quiera el otro idioma está la traducción automática del
+navegador, que funciona precisamente porque el `lang` es correcto por página.
+Sirve como respaldo, no como estrategia: destroza la terminología normativa.
 
 ## Matemática
 
