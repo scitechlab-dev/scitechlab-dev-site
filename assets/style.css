@@ -965,3 +965,62 @@ a { color: inherit; text-decoration: none; }
   .serie-estado { justify-self: start; margin-top: 4px; }
   .study-note { padding: 16px 16px 2px; }
 }
+
+/* ---------- wide elements break out of the measure ----------
+   The article column is 660px because that is roughly 66 characters, which is
+   where prose is comfortable to read. Tables, formulas and figures are not
+   prose and 660px starves them — a six-column table wraps into unreadable
+   stacks and a display equation gets a scrollbar it should not need.
+
+   So the measure stays 660px for text and only these three break out of it,
+   symmetrically. The bleed is derived from the sheet, not hardcoded: it is
+   half the slack between the sheet's content width and the measure, floored at
+   0 so it collapses on a phone and capped at 140px so a very wide monitor does
+   not fling a table out to the sheet's edges.
+
+   100vw can include the scrollbar in some browsers, which overestimates the
+   slack by a few pixels. That is safe here: the overshoot is absorbed by the
+   wrap's own padding long before it reaches the viewport edge. */
+.post-body {
+  --bleed: clamp(
+    0px,
+    calc((min(var(--sheet-w), 100vw) - 2 * var(--pad) - 660px) / 2),
+    140px
+  );
+}
+.post-body > .table-scroll,
+.post-body > .katex-display,
+.post-body > figure {
+  width: calc(100% + 2 * var(--bleed));
+  margin-left: calc(-1 * var(--bleed));
+  margin-right: calc(-1 * var(--bleed));
+}
+
+/* ---------- figures ----------
+   The generated SVGs sit on the plate with a hairline, like the sheet itself.
+   The caption keeps the prose measure even when the figure is wider, because a
+   caption is prose and inherits the same reason for the 660px limit. */
+.post-body figure.fig { margin-block: 34px; }
+.fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+}
+.fig figcaption {
+  margin: 12px auto 0;
+  max-width: 62ch;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--ink-faint);
+}
+
+/* A display formula is the one thing on the page that should never be cramped
+   against the text above it. */
+.post-body .katex-display { margin-block: 26px; }
+
+@media (max-width: 720px) {
+  .fig figcaption { font-size: 0.84rem; }
+  .post-body figure.fig { margin-block: 26px; }
+}
