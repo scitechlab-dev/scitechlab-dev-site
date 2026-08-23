@@ -9,18 +9,6 @@ tags: [instituciones, robcp, mrs]
 estado: en-revision
 ---
 
-Hasta julio de este año era la Superintendencia General de
-Electricidad y Telecomunicaciones. Desde el 2 de julio de 2026 es la Dirección
-General de Energía, Hidrocarburos y Minas, y SIGET conserva su sigla mientras
-pierde la palabra que la hacía relevante para este sector.
-
-Eso no es una nota al pie. Invalida cualquier diagrama institucional publicado
-antes de este año, que es casi todo lo que un buscador va a entregar.
-
-> Un diagrama del sector es la fotografía de un arreglo legal, no la
-> descripción de una física. La energía sigue fluyendo igual. La autoridad
-> sobre ella no.
-
 Este es el primer artículo de una serie sobre el mercado mayorista salvadoreño:
 las reglas, el mecanismo de formación de precio y los procesos operativos que
 están debajo. Empieza por el mapa porque todo lo que sigue depende de saber qué
