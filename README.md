@@ -23,12 +23,18 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 │                         #   divided by label bands, all on one .sheet
 ├── content/              # SOURCE: one markdown file per article
 │   └── _example.md       #   a draft; copy it to start writing
+├── pages/                # SOURCE: standalone pages → /<slug>, not articles
+│   └── fuentes.md        #   verified primary sources for the mercado series
+├── series/               # SOURCE: running order of a multi-part series
+│   └── mercado-electrico.yml
 ├── dist/                 # GENERATED, gitignored — the deployed site
 ├── scripts/
-│   ├── build.mjs         # assembles dist/; content/*.md → dist/articles/*.html
+│   ├── build.mjs         # assembles dist/ from all three source dirs
+│   ├── markdown.mjs      # the markdown dialect: math + study-note extensions
 │   └── templates/
 │       ├── article.html  # shell every article shares
-│       └── archive.html  # the /articles/ index
+│       ├── archive.html  # the /articles/ index
+│       └── page.html     # shell for pages/ and series/ output
 ├── assets/
 │   ├── style.css         # drawing-sheet theme, CSS variables
 │   ├── main.js           # footer year + scroll reveal
@@ -38,7 +44,8 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 ├── _headers              # security + cache headers
 ├── robots.txt
 ├── wrangler.jsonc        # Worker config: assets dir + build command
-└── README.md
+├── ESCRITURA.md          # HOW TO WRITE: front matter, math, study notes
+└── README.md             # how the site is built and deployed
 ```
 
 ## Deploy
@@ -356,7 +363,71 @@ unfindable, which is not what was asked for.
 not the tab, and blanking it would break the previews described under *Sharing
 on LinkedIn*.
 
-### Cache busting the icon
+### Math, study notes and the series
+
+Authoring syntax lives in **[ESCRITURA.md](ESCRITURA.md)** — front matter
+fields, LaTeX delimiters, the study-note container, series manifests. This
+section is the infrastructure behind it.
+
+### Math renders at build time, not in the browser
+
+`scripts/markdown.mjs` registers a `marked` extension that claims the math
+delimiters **before** marked's own inline rules run, then hands the raw TeX to
+KaTeX's `renderToString`. That ordering is the whole trick: a pass that renders
+markdown first and hunts for delimiters in the HTML afterwards is why LaTeX comes
+out as plain text on most static sites — by then marked has eaten the
+backslashes and turned the two underscores in a subscripted product into an
+`<em>`.
+
+Consequences worth knowing:
+
+- **The published HTML already contains the composed formula.** No client-side
+  JS, no layout shift, and LinkedIn's scraper sees real content — consistent
+  with the rule `build.mjs` already states about not rendering in the browser.
+- **KaTeX emits MathML alongside the visual HTML**, which is what a screen
+  reader reads. Don't "fix" the apparent duplicate by hiding `.katex-mathml`.
+- **Bad LaTeX fails the build**, with the file and the offending formula in the
+  message. `throwOnError` is on deliberately: a silently mangled formula is
+  worse than no page, because you would study from it.
+- **`math: true` is per-article and enforced both ways.** A file with math and
+  no flag fails the build; a file with the flag and no formulas logs a notice.
+  Without the flag the dollar sign is an ordinary character, which matters in a
+  site that quotes prices in dollars.
+
+KaTeX's stylesheet and fonts are copied out of `node_modules` into
+`dist/assets/katex/` at build time rather than committed, so `npm update katex`
+is the entire upgrade. Only the **woff2** files are copied — KaTeX also ships
+woff and ttf for pre-2020 browsers, which would take the payload from 296 KB to
+1.2 MB — and the stylesheet is rewritten on the way out to drop the `src`
+entries pointing at them. The version query on that stylesheet comes from
+KaTeX's own `package.json`, so it is the one asset version that is **not**
+hand-maintained.
+
+### Front matter is YAML now
+
+It used to be a hand-rolled key-and-value line parser, which was fine while
+every field was a scalar and broke the moment articles needed a list — it stored
+`tags: [a, b]` as that literal string and reported no error. `js-yaml` parses
+`date: 2026-08-22` as a **string**, not a `Date`, so the YYYY-MM-DD check
+downstream still sees what it expects. Don't "fix" that by changing schemas.
+
+### Language is per-article
+
+The site is in English; the mercado-eléctrico series is in Spanish. Rather than
+translate the shell, each article declares `lang:` and the template puts it on
+the `html` element. That is what a screen reader switches voices on and what
+Google reads to decide who to show the page to. Default is `en`.
+
+### Series manifests can't lie
+
+`series/*.yml` defines what a series contains and in what order — including the
+parts that aren't written yet, which is most of its value while the series is in
+progress. The build cross-references each entry's slug against `content/`: a
+match renders as a link plus that article's own `estado`, a miss renders as
+unwritten with no link. **Nothing in the manifest sets a status**, so it cannot
+claim something is published when no file exists.
+
+## Cache busting the icon
 
 The favicon URLs carry `?v=` like everything else under `/assets/`; bump it or
 the year-long immutable cache keeps serving the old icon. Unlike `style.css`,
@@ -376,7 +447,7 @@ Cloudflare's edge cache keep serving the old version. Bump the query string
 wherever it's referenced (`style.css?v=2` → `?v=3`) so it counts as a new URL.
 This applies to `index.html` **and** every page in `articles/`.
 
-Currently at `style.css?v=16` and `main.js?v=9`. Versions 8 and 6 were burned by
+Currently at `style.css?v=17` and `main.js?v=9`. Versions 8 and 6 were burned by
 a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
 

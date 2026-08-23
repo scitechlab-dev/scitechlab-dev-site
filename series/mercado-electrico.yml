@@ -1,0 +1,67 @@
+# Running order for the mercado-eléctrico series.
+#
+# This manifest is the source of truth for WHAT the series contains and in which
+# order. It is not the source of truth for what is WRITTEN: the build matches
+# each `slug` against content/, and an entry with no matching article renders as
+# "sin escribir" with no link. A written article's status comes from its own
+# `estado:` front matter, never from here — so this file cannot claim something
+# is published when the file does not exist.
+#
+# Slugs follow the site convention: lowercase, digits and dashes. The article
+# file may carry a YYYY-MM-DD- prefix for ordering on disk; the slug never does.
+
+slug: mercado-electrico
+title: Mercado eléctrico mayorista de El Salvador
+lang: es
+summary: >-
+  Ocho artículos de estudio sobre cómo se despacha, se cuesta y se liquida la
+  energía en el mercado mayorista salvadoreño. Cuaderno público, no divulgación.
+
+articulos:
+  - slug: quien-es-quien-mercado-electrico-salvadoreno
+    titulo: Quién es quién en el mercado eléctrico salvadoreño
+    resumen: >-
+      Reforma de 1998, separación de actividades, competencias de UT, SIGET y
+      CNE, y qué cambió al pasar a un reglamento basado en costos de producción.
+
+  - slug: orden-de-merito-costo-marginal
+    titulo: Del orden de mérito al precio, cómo se forma el costo marginal
+    resumen: >-
+      Curva de oferta agregada, costo marginal de corto plazo y un despacho de
+      cuatro unidades resuelto, con mínimo técnico y restricción de transmisión.
+
+  - slug: declaracion-semanal-precio-combustible
+    titulo: Anatomía de una declaración semanal de precio de combustible
+    resumen: >-
+      De la auditoría técnica anual a la validación semanal: poder calorífico,
+      consumo específico, conceptos logísticos e inventarios contra generación.
+
+  - slug: indexacion-costos-variables-no-combustibles
+    titulo: Indexación de costos variables no combustibles, paso a paso
+    resumen: >-
+      Índice base, índice del período, encadenamiento y conversión de moneda,
+      con un ejemplo a doce meses resuelto. Costos de arranque y detención.
+
+  - slug: horizontes-programacion-operacion
+    titulo: Los horizontes de la programación de la operación
+    resumen: >-
+      Anual, mensual, semanal y diario: qué decide cada uno y cómo se encadenan.
+      Mantenimientos, reserva, predespacho y redespacho.
+
+  - slug: mercado-electrico-regional
+    titulo: Cómo se conecta El Salvador al mercado eléctrico regional
+    resumen: >-
+      Tratado Marco, rol del EOR frente al de la UT, contratos firmes y
+      transacciones de oportunidad, y el ciclo de conciliación y liquidación.
+
+  - slug: validacion-datos-operativos-python
+    titulo: Validación automática de datos operativos con Python
+    resumen: >-
+      Reglas de esquema, rango y coherencia temporal; conciliación entre fuentes,
+      detección de anomalías y trazabilidad. Con código ejecutable.
+
+  - slug: pronostico-demanda-electrica
+    titulo: Pronóstico de demanda eléctrica, comparación honesta de tres enfoques
+    resumen: >-
+      Línea base estacional, SARIMAX y gradient boosting; validación con origen
+      móvil, intervalos de predicción y por qué pesa la interpretabilidad.

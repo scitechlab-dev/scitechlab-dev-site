@@ -23,8 +23,12 @@
 import { readFile, writeFile, readdir, mkdir, rm, cp } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
+import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
-import { marked } from 'marked';
+import { load as loadYaml } from 'js-yaml';
+import { createMarkdown, looksLikeMath } from './markdown.mjs';
+
+const require = createRequire(import.meta.url);
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT_DIR = path.join(ROOT, 'content');
@@ -33,6 +37,25 @@ const OUT_DIR = path.join(DIST, 'articles');
 const TPL_DIR = path.join(ROOT, 'scripts', 'templates');
 const INDEX = path.join(ROOT, 'index.html');
 const SITE = 'https://scitechlab-dev.com';
+
+/** Standalone pages that are not articles — pages/*.md becomes /<slug>. */
+const PAGES_DIR = path.join(ROOT, 'pages');
+/** Series manifests — series/*.yml becomes /serie/<slug>. */
+const SERIES_DIR = path.join(ROOT, 'series');
+
+/**
+ * KaTeX ships its stylesheet and 20 font files inside node_modules. They are
+ * copied into dist/assets/katex/ at build time rather than committed, so
+ * `npm update katex` is the whole upgrade — nothing in the repo to re-vendor by
+ * hand and get wrong.
+ *
+ * Only the .woff2 files are copied. KaTeX also ships .woff and .ttf for
+ * browsers that predate 2020, which quadruples the payload from 296 KB to
+ * 1.2 MB for a compatibility window nobody here is in. The stylesheet is
+ * rewritten on the way out to drop the src entries that point at them.
+ */
+const KATEX_DIR = path.dirname(require.resolve('katex/package.json'));
+const KATEX_VERSION = require('katex/package.json').version;
 
 /**
  * The only things that reach the public. Adding a file to the site means adding
@@ -46,8 +69,6 @@ const HOME_LIMIT = 4;
 
 const START = '<!-- ARTICLES:START -->';
 const END = '<!-- ARTICLES:END -->';
-
-marked.setOptions({ gfm: true, breaks: false });
 
 const problems = [];
 const fail = (file, msg) => problems.push(`${file}: ${msg}`);
@@ -65,9 +86,16 @@ const text = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 /**
- * Minimal front matter: a `---` fenced block of `key: value` lines at the top
- * of the file. Not YAML — no nesting, no lists. Values may be quoted, and
- * `true`/`false` become booleans so `draft: true` works.
+ * Front matter: a `---` fenced YAML block at the top of the file.
+ *
+ * This used to be a hand-rolled `key: value` line parser, which was fine while
+ * every field was a scalar. It stopped being fine the moment articles needed
+ * `tags: [a, b]` — the old parser stored that as the literal string "[a, b]"
+ * and reported no error, which is the worst way for a build to be wrong.
+ *
+ * js-yaml parses `date: 2026-08-22` as a STRING, not a Date, so the
+ * YYYY-MM-DD check downstream still sees what it expects. Do not "fix" that by
+ * switching schemas.
  */
 function parseFrontMatter(raw, file) {
   const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(raw);
@@ -76,28 +104,31 @@ function parseFrontMatter(raw, file) {
     return { data: {}, body: raw };
   }
 
-  const data = {};
-  for (const line of match[1].split(/\r?\n/)) {
-    if (!line.trim() || line.trimStart().startsWith('#')) continue;
-    const sep = line.indexOf(':');
-    if (sep === -1) {
-      fail(file, `front matter line is not "key: value" — ${line.trim()}`);
-      continue;
-    }
-    const key = line.slice(0, sep).trim();
-    let value = line.slice(sep + 1).trim();
-    if (
-      (value.startsWith('"') && value.endsWith('"') && value.length > 1) ||
-      (value.startsWith("'") && value.endsWith("'") && value.length > 1)
-    ) {
-      value = value.slice(1, -1);
-    }
-    if (value === 'true') value = true;
-    else if (value === 'false') value = false;
-    data[key] = value;
+  let data;
+  try {
+    data = loadYaml(match[1]) ?? {};
+  } catch (err) {
+    fail(file, `front matter is not valid YAML — ${err.message.split('\n')[0]}`);
+    return { data: {}, body: raw.slice(match[0].length) };
+  }
+  if (typeof data !== 'object' || Array.isArray(data)) {
+    fail(file, 'front matter must be a block of key: value pairs');
+    data = {};
   }
 
   return { data, body: raw.slice(match[0].length) };
+}
+
+/**
+ * Read a front matter field that may be written either as a YAML list or as a
+ * bare scalar, so `tags: costos` and `tags: [costos, despacho]` both work.
+ * Empty and missing both come back as [].
+ */
+function asList(value) {
+  if (value == null || value === '') return [];
+  return (Array.isArray(value) ? value : [value])
+    .map((v) => String(v).trim())
+    .filter(Boolean);
 }
 
 /**
@@ -155,6 +186,193 @@ function articleList(posts, { hrefPrefix, pad }) {
   return indent(`<ol class="articles">\n${rows}\n</ol>`, pad);
 }
 
+/**
+ * Copy KaTeX's stylesheet and woff2 fonts into dist/assets/katex/.
+ *
+ * The stylesheet is rewritten, not copied verbatim: every @font-face in KaTeX
+ * lists woff2, woff and ttf, and a browser only downloads the first format it
+ * understands — but shipping all three still puts 900 KB of dead weight in the
+ * repo's deploy for browsers that predate 2020. The rewrite strips the woff and
+ * ttf sources and leaves the woff2 one.
+ *
+ * The version query comes from KaTeX's own package.json, so upgrading the
+ * dependency busts the immutable one-year cache on /assets/* automatically.
+ * This is the one asset version that is NOT hand-maintained.
+ */
+async function vendorKatex() {
+  const outDir = path.join(DIST, 'assets', 'katex');
+  await mkdir(path.join(outDir, 'fonts'), { recursive: true });
+
+  const css = await readFile(path.join(KATEX_DIR, 'dist', 'katex.min.css'), 'utf8');
+  const woff2Only = css.replace(/src:([^;]+);/g, (whole, list) => {
+    const keep = list
+      .split(',')
+      .map((s) => s.trim())
+      .filter((s) => s.includes('.woff2'));
+    return keep.length ? `src:${keep.join(',')};` : whole;
+  });
+  await writeFile(path.join(outDir, 'katex.min.css'), woff2Only);
+
+  const fontsIn = path.join(KATEX_DIR, 'dist', 'fonts');
+  const fonts = (await readdir(fontsIn)).filter((f) => f.endsWith('.woff2'));
+  if (fonts.length === 0) {
+    console.error('Build failed: no .woff2 files in katex/dist/fonts.');
+    process.exit(1);
+  }
+  for (const f of fonts) {
+    await cp(path.join(fontsIn, f), path.join(outDir, 'fonts', f));
+  }
+  console.log(`  → dist/assets/katex/ (katex ${KATEX_VERSION}, ${fonts.length} fonts)`);
+}
+
+/**
+ * The <link> that pulls in KaTeX's stylesheet, or nothing at all. An article
+ * without formulas must not pay for the stylesheet, which is the whole reason
+ * `math:` is a per-article flag rather than a site-wide setting.
+ */
+const katexHead = (post, prefix) =>
+  post.math
+    ? `\n<link rel="stylesheet" href="${prefix}assets/katex/katex.min.css?v=${KATEX_VERSION}" />`
+    : '';
+
+/**
+ * Standalone pages: pages/*.md becomes dist/<slug>.html, served at /<slug>.
+ *
+ * They live in their own directory rather than in content/ because content/ is
+ * the article scanner — anything dropped there becomes a dated, listed article
+ * with a summary and a slot in the archive. A sources page is not an article.
+ * Same front matter minus `date`, same markdown dialect, same math flag.
+ */
+async function readPages() {
+  if (!existsSync(PAGES_DIR)) return [];
+  const files = (await readdir(PAGES_DIR)).filter((f) => f.endsWith('.md')).sort();
+  const pages = [];
+
+  for (const file of files) {
+    const raw = await readFile(path.join(PAGES_DIR, file), 'utf8');
+    const { data, body } = parseFrontMatter(raw, `pages/${file}`);
+    if (!data.summary && data.excerpt) data.summary = data.excerpt;
+    for (const key of ['title', 'summary']) {
+      if (!data[key]) fail(`pages/${file}`, `front matter is missing "${key}"`);
+    }
+    if (!body.trim()) fail(`pages/${file}`, 'has no body below the front matter');
+
+    const slug = data.slug ? String(data.slug) : file.replace(/\.md$/, '');
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+      fail(`pages/${file}`, `slug "${slug}" must be lowercase letters, digits and dashes`);
+    }
+
+    const wantsMath = data.math === true;
+    if (!wantsMath && looksLikeMath(body)) {
+      fail(`pages/${file}`, 'has $...$ math but no `math: true` in its front matter');
+    }
+    const md = createMarkdown({ math: wantsMath, file: `pages/${file}`, onError: fail });
+
+    pages.push({
+      file,
+      slug,
+      title: String(data.title ?? ''),
+      summary: String(data.summary ?? ''),
+      math: wantsMath,
+      lang: data.lang ? String(data.lang) : 'en',
+      html: md
+        .parse(body)
+        .replace(/<table>/g, '<div class="table-scroll"><table>')
+        .replace(/<\/table>/g, '</table></div>'),
+    });
+  }
+  return pages;
+}
+
+/**
+ * Series manifests: series/*.yml becomes dist/serie/<slug>.html.
+ *
+ * A series index has to list articles that DO NOT EXIST YET — that is most of
+ * its value while the series is being written. So the running order lives in a
+ * manifest rather than being derived from content/, and each entry is matched
+ * against the built posts by slug: found means a link plus that article's real
+ * `estado`, missing means it renders as planned-but-unwritten. Nothing here
+ * invents a status; a written article's state always comes from its own front
+ * matter.
+ */
+async function readSeries(posts) {
+  if (!existsSync(SERIES_DIR)) return [];
+  const files = (await readdir(SERIES_DIR)).filter((f) => /\.ya?ml$/.test(f)).sort();
+  const bySlug = new Map(posts.map((p) => [p.slug, p]));
+  const out = [];
+
+  for (const file of files) {
+    const where = `series/${file}`;
+    let data;
+    try {
+      data = loadYaml(await readFile(path.join(SERIES_DIR, file), 'utf8')) ?? {};
+    } catch (err) {
+      fail(where, `not valid YAML — ${err.message.split('\n')[0]}`);
+      continue;
+    }
+    for (const key of ['title', 'summary']) {
+      if (!data[key]) fail(where, `is missing "${key}"`);
+    }
+    if (!Array.isArray(data.articulos) || data.articulos.length === 0) {
+      fail(where, 'needs an `articulos:` list');
+      continue;
+    }
+
+    const entries = data.articulos.map((a, i) => {
+      if (!a || !a.slug || !a.titulo) {
+        fail(where, `articulos[${i}] needs both "slug" and "titulo"`);
+        return null;
+      }
+      const post = bySlug.get(String(a.slug));
+      return {
+        n: i + 1,
+        slug: String(a.slug),
+        titulo: String(a.titulo),
+        resumen: a.resumen ? String(a.resumen) : '',
+        // `escrito` is derived, never declared: it is whether the build found a
+        // matching article, so the manifest cannot claim something is published
+        // when no file exists.
+        escrito: Boolean(post),
+        estado: post ? post.estado || 'publicado' : 'no-escrito',
+      };
+    });
+
+    out.push({
+      slug: data.slug ? String(data.slug) : file.replace(/\.ya?ml$/, ''),
+      title: String(data.title),
+      summary: String(data.summary),
+      lang: data.lang ? String(data.lang) : 'en',
+      entries: entries.filter(Boolean),
+    });
+  }
+  return out;
+}
+
+/** Human labels for the `estado` values, plus the derived not-written-yet one. */
+const ESTADO_LABEL = {
+  borrador: 'Borrador',
+  'en-revision': 'En revisión',
+  publicado: 'Publicado',
+  'no-escrito': 'Sin escribir',
+};
+
+/** The ordered list on a series index page. */
+function seriesList(s, pad) {
+  const rows = s.entries
+    .map((e) => {
+      const label = ESTADO_LABEL[e.estado] ?? e.estado;
+      const inner = `<span class="serie-n">${String(e.n).padStart(2, '0')}</span>
+    <span class="serie-title">${text(e.titulo)}</span>
+    <span class="serie-desc">${text(e.resumen)}</span>
+    <span class="serie-estado" data-estado="${attr(e.estado)}">${text(label)}</span>`;
+      return `  <li class="serie-row">
+    ${e.escrito ? `<a href="../articles/${e.slug}">${inner}</a>` : `<div>${inner}</div>`}
+  </li>`;
+    })
+    .join('\n');
+  return indent(`<ol class="serie">\n${rows}\n</ol>`, pad);
+}
+
 async function main() {
   if (!existsSync(CONTENT_DIR)) {
     console.error(`No content/ directory at ${CONTENT_DIR} — nothing to build.`);
@@ -182,6 +400,11 @@ async function main() {
       continue;
     }
 
+    // `excerpt` is accepted as a synonym for `summary`: the series drafts were
+    // written against that name, and failing a build over which of two words
+    // means the same thing helps nobody.
+    if (!data.summary && data.excerpt) data.summary = data.excerpt;
+
     for (const key of ['title', 'summary', 'date']) {
       if (!data[key]) fail(file, `front matter is missing "${key}"`);
     }
@@ -189,6 +412,28 @@ async function main() {
       fail(file, `date must be YYYY-MM-DD, got "${data.date}"`);
     }
     if (!body.trim()) fail(file, 'has no body below the front matter');
+
+    // The math flag is per-article and load-bearing, so both ways of getting it
+    // wrong are caught here rather than discovered by reading the published
+    // page. Without it, `$` stays an ordinary character — which is what you
+    // want in an article that quotes prices in dollars.
+    const wantsMath = data.math === true;
+    if (!wantsMath && looksLikeMath(body)) {
+      fail(
+        file,
+        'looks like it contains $...$ math but has no `math: true` in its front ' +
+          'matter — the formulas would ship as literal dollar signs'
+      );
+    }
+    if (wantsMath && !looksLikeMath(body)) {
+      console.log(`  · ${file} sets math: true but has no formulas`);
+    }
+
+    const estado = data.estado ? String(data.estado) : '';
+    const ESTADOS = ['borrador', 'en-revision', 'publicado'];
+    if (estado && !ESTADOS.includes(estado)) {
+      fail(file, `estado "${estado}" must be one of ${ESTADOS.join(', ')}`);
+    }
 
     // A filename may carry a date prefix for ordering on disk; the URL never
     // does. `slug:` in the front matter wins if you need to rename the file
@@ -203,6 +448,8 @@ async function main() {
     }
     seen.set(slug, file);
 
+    const md = createMarkdown({ math: wantsMath, file, onError: fail });
+
     posts.push({
       file,
       slug,
@@ -210,15 +457,27 @@ async function main() {
       summary: String(data.summary ?? ''),
       date: String(data.date ?? ''),
       topic: data.topic ? String(data.topic) : '',
+      categories: asList(data.categories),
+      tags: asList(data.tags),
+      estado,
+      math: wantsMath,
+      // The site is in English; the mercado-eléctrico series is in Spanish.
+      // Rather than translate the shell, each article declares its own language
+      // and the template puts it on <html lang>. That is what a screen reader
+      // switches voices on and what Google reads to decide who to show it to.
+      lang: data.lang ? String(data.lang) : 'en',
       // Wrap tables the way the publications table is wrapped: a table wider
       // than the 660px article column scrolls in its own box rather than
       // pushing the page sideways on a phone.
-      html: marked
+      html: md
         .parse(body)
         .replace(/<table>/g, '<div class="table-scroll"><table>')
         .replace(/<\/table>/g, '</table></div>'),
     });
   }
+
+  const pages = await readPages();
+  const series = await readSeries(posts);
 
   if (problems.length) {
     console.error('\nBuild failed:\n' + problems.map((p) => `  ✗ ${p}`).join('\n') + '\n');
@@ -243,6 +502,10 @@ async function main() {
   }
   console.log(`  → dist/ ${STATIC.join(', ')}`);
 
+  // After the static copy, never before: STATIC copies assets/ wholesale, and
+  // KaTeX is written inside it.
+  if (posts.some((p) => p.math) || pages.some((p) => p.math)) await vendorKatex();
+
   for (const post of posts) {
     const page = articleTpl
       .replace(/\{\{CONTENT\}\}/g, indent(post.html, '        '))
@@ -250,6 +513,8 @@ async function main() {
       .replace(/\{\{SUMMARY\}\}/g, attr(post.summary))
       .replace(/\{\{SLUG\}\}/g, post.slug)
       .replace(/\{\{DATE\}\}/g, post.date)
+      .replace(/\{\{LANG\}\}/g, attr(post.lang))
+      .replace(/\{\{MATH_HEAD\}\}/g, katexHead(post, '../'))
       .replace(/\{\{TOPIC\}\}/g, post.topic ? `\n        <span>${text(post.topic)}</span>` : '')
       .replace(/\{\{STYLE_V\}\}/g, v.style)
       .replace(/\{\{MAIN_V\}\}/g, v.main);
@@ -272,6 +537,39 @@ async function main() {
       .replace(/\{\{MAIN_V\}\}/g, v.main)
   );
   console.log('  → dist/articles/index.html');
+
+  const pageTpl = await readFile(path.join(TPL_DIR, 'page.html'), 'utf8');
+
+  for (const page of pages) {
+    const html = pageTpl
+      .replace(/\{\{CONTENT\}\}/g, indent(page.html, '        '))
+      .replace(/\{\{TITLE\}\}/g, attr(page.title))
+      .replace(/\{\{SUMMARY\}\}/g, attr(page.summary))
+      .replace(/\{\{SLUG\}\}/g, page.slug)
+      .replace(/\{\{LANG\}\}/g, attr(page.lang))
+      .replace(/\{\{MATH_HEAD\}\}/g, katexHead(page, ''))
+      .replace(/\{\{UP\}\}/g, '')
+      .replace(/\{\{STYLE_V\}\}/g, v.style)
+      .replace(/\{\{MAIN_V\}\}/g, v.main);
+    await writeFile(path.join(DIST, `${page.slug}.html`), html);
+    console.log(`  → dist/${page.slug}.html`);
+  }
+
+  if (series.length) await mkdir(path.join(DIST, 'serie'), { recursive: true });
+  for (const s of series) {
+    const html = pageTpl
+      .replace(/\{\{CONTENT\}\}/g, seriesList(s, '        '))
+      .replace(/\{\{TITLE\}\}/g, attr(s.title))
+      .replace(/\{\{SUMMARY\}\}/g, attr(s.summary))
+      .replace(/\{\{SLUG\}\}/g, `serie/${s.slug}`)
+      .replace(/\{\{LANG\}\}/g, attr(s.lang))
+      .replace(/\{\{MATH_HEAD\}\}/g, '')
+      .replace(/\{\{UP\}\}/g, '../')
+      .replace(/\{\{STYLE_V\}\}/g, v.style)
+      .replace(/\{\{MAIN_V\}\}/g, v.main);
+    await writeFile(path.join(DIST, 'serie', `${s.slug}.html`), html);
+    console.log(`  → dist/serie/${s.slug}.html`);
+  }
 
   // Home page list, between the markers. The marker's own indentation sets the
   // indentation of everything written between them, so the block lands aligned
