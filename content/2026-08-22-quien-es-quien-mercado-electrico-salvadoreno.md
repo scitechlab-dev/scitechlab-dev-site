@@ -191,6 +191,21 @@ enuncia el diseño: costos de producción, no ofertas. Los precios de la energí
 en el mercado mayorista son variables y el precio final lo fija el costo
 marginal, hora a hora.
 
+<figure class="fig fig-wide">
+  <img src="../assets/figures/mercado-despacho.gif"
+       alt="Curva de oferta agregada de un parque de ejemplo, ordenada por costo variable: solar e hidro a costo cero hasta 150 MW, gas a 70 USD/MWh hasta 300 MW y diésel a 180 USD/MWh hasta 400 MW. Una línea de demanda barre el eje horizontal y un recuadro reporta, para cada nivel, el generador marginal y el costo marginal resultante."
+       width="1455" height="929" loading="lazy" />
+  <figcaption>El orden de mérito en movimiento: la demanda barre la curva de
+  oferta y el costo marginal es el de la última unidad que entra, no el promedio
+  de las despachadas. Mientras la demanda cae sobre solar o hidro el precio es
+  cero; cuando cruza a gas o a diésel salta al costo de esa máquina — y ese
+  precio lo cobran también las unidades más baratas.
+  <strong>Las cifras son ilustrativas y no corresponden a El Salvador</strong>:
+  el parque es un ejemplo de cuatro tecnologías para mostrar el mecanismo. Cómo
+  se construye realmente el orden de mérito, y qué lo rompe, es el artículo
+  siguiente.</figcaption>
+</figure>
+
 [PENDIENTE NORMATIVA: fecha exacta de entrada en vigencia del ROBCP y del
 esquema anterior que sustituyó; verificar también si existen modificaciones
 posteriores y bajo qué instrumento se aprobaron]
