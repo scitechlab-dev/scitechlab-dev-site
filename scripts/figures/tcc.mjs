@@ -72,8 +72,12 @@ const DAMAGE = [
   // pattern is what separates these two from each other. Damage limits are
   // reference lines rather than devices, so being visually subordinate to the
   // relay curves is also the correct hierarchy.
-  { id: 'trunk', label: '266.8 MCM trunk', K: 2.24e8, dash: '8 5' },
-  { id: 'tap', label: '#4 ACSR tap', K: 0.37 * 3855 * 3855, dash: '2 3' },
+  // The tap is the limit that actually binds, so it is the darker of the two.
+  // The trunk never binds in this feeder and stays faint. Both sit lighter than
+  // any relay curve and heavier than the node markers, which puts the four line
+  // weights on the plot into a readable order.
+  { id: 'trunk', label: '266.8 MCM trunk', K: 2.24e8, dash: '3 4', color: LINE_2, w: 1.5 },
+  { id: 'tap', label: '#4 ACSR tap', K: 0.37 * 3855 * 3855, dash: '9 4', color: INK_FAINT, w: 1.9 },
 ];
 
 /** Fault currents at each node, from the article's short-circuit table. */
@@ -196,7 +200,7 @@ function buildTcc() {
     }
     if (!pts.length) continue;
     s.push(
-      `<path d="M${pts.join(' L')}" fill="none" stroke="${LINE_2}" stroke-width="1.6" stroke-dasharray="${dmg.dash}"/>`
+      `<path d="M${pts.join(' L')}" fill="none" stroke="${dmg.color}" stroke-width="${dmg.w}" stroke-dasharray="${dmg.dash}"/>`
     );
   }
 
@@ -234,7 +238,7 @@ function buildTcc() {
   ly0 += 4;
   for (const dmg of DAMAGE) {
     s.push(
-      `<line x1="${M.left + PW + 14}" y1="${ly0}" x2="${M.left + PW + 34}" y2="${ly0}" stroke="${LINE_2}" stroke-width="1.6" stroke-dasharray="${dmg.dash}"/>`
+      `<line x1="${M.left + PW + 14}" y1="${ly0}" x2="${M.left + PW + 34}" y2="${ly0}" stroke="${dmg.color}" stroke-width="${dmg.w}" stroke-dasharray="${dmg.dash}"/>`
     );
     s.push(
       `<text x="${M.left + PW + 14}" y="${ly0 + 17}" font-family="${MONO}" font-size="9.5" fill="${INK_FAINT}">${esc(dmg.label)}</text>`
