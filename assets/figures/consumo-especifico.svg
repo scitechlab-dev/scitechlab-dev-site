@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+<rect width="1200" height="700" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Curva de consumo específico de calor y el costo variable que produce</text>
+<rect x="96" y="118" width="169.65517241379314" height="442" rx="4" fill="#f6f7f9" stroke="none" stroke-width="1.2" />
+<rect x="944.2758620689655" y="118" width="135.72413793103453" height="442" rx="4" fill="#f6f7f9" stroke="none" stroke-width="1.2" />
+<text x="180.82758620689657" y="138" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#6e737e" text-anchor="middle">fuera de</text>
+<text x="180.82758620689657" y="153" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#6e737e" text-anchor="middle">la curva</text>
+<text x="1012.1379310344828" y="138" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#6e737e" text-anchor="middle">fuera de</text>
+<text x="1012.1379310344828" y="153" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#6e737e" text-anchor="middle">la curva</text>
+<line x1="96" y1="118" x2="96" y2="560" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<line x1="96" y1="560" x2="1080" y2="560" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<line x1="96" y1="560" x2="96" y2="566" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="96" y="584" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">10</text>
+<line x1="265.65517241379314" y1="560" x2="265.65517241379314" y2="566" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="265.65517241379314" y="584" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">20</text>
+<line x1="435.3103448275862" y1="560" x2="435.3103448275862" y2="566" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="435.3103448275862" y="584" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">30</text>
+<line x1="604.9655172413793" y1="560" x2="604.9655172413793" y2="566" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="604.9655172413793" y="584" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">40</text>
+<line x1="774.6206896551724" y1="560" x2="774.6206896551724" y2="566" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="774.6206896551724" y="584" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">50</text>
+<line x1="944.2758620689655" y1="560" x2="944.2758620689655" y2="566" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="944.2758620689655" y="584" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">60</text>
+<text x="1080" y="604" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">MW netos</text>
+<line x1="90" y1="560" x2="96" y2="560" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="564" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">8.2</text>
+<line x1="96" y1="560" x2="1080" y2="560" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<line x1="90" y1="504.7499999999998" x2="96" y2="504.7499999999998" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="508.7499999999998" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">8.4</text>
+<line x1="96" y1="504.7499999999998" x2="1080" y2="504.7499999999998" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<line x1="90" y1="449.5" x2="96" y2="449.5" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="453.5" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">8.6</text>
+<line x1="96" y1="449.5" x2="1080" y2="449.5" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<line x1="90" y1="394.2499999999998" x2="96" y2="394.2499999999998" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="398.2499999999998" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">8.8</text>
+<line x1="96" y1="394.2499999999998" x2="1080" y2="394.2499999999998" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<line x1="90" y1="339" x2="96" y2="339" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="343" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">9.0</text>
+<line x1="96" y1="339" x2="1080" y2="339" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<line x1="90" y1="283.7500000000002" x2="96" y2="283.7500000000002" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="287.7500000000002" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">9.2</text>
+<line x1="96" y1="283.7500000000002" x2="1080" y2="283.7500000000002" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<line x1="90" y1="228.5" x2="96" y2="228.5" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="232.5" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">9.4</text>
+<line x1="96" y1="228.5" x2="1080" y2="228.5" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<line x1="90" y1="173.25000000000023" x2="96" y2="173.25000000000023" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="177.25000000000023" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">9.6</text>
+<line x1="96" y1="173.25000000000023" x2="1080" y2="173.25000000000023" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<line x1="90" y1="118" x2="96" y2="118" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="82" y="122" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#6e737e" text-anchor="end">9.8</text>
+<line x1="96" y1="118" x2="1080" y2="118" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="82" y="72" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="600" fill="#0e7490" text-anchor="end">C_ESP</text>
+<text x="82" y="88" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">MMBtu/MWh</text>
+<line x1="1080" y1="118" x2="1080" y2="560" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<line x1="1080" y1="560" x2="1086" y2="560" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="564" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">115.0</text>
+<line x1="1080" y1="504.7499999999998" x2="1086" y2="504.7499999999998" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="508.7499999999998" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">117.8</text>
+<line x1="1080" y1="449.5" x2="1086" y2="449.5" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="453.5" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">120.6</text>
+<line x1="1080" y1="394.2499999999998" x2="1086" y2="394.2499999999998" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="398.2499999999998" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">123.4</text>
+<line x1="1080" y1="339" x2="1086" y2="339" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="343" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">126.2</text>
+<line x1="1080" y1="283.7500000000002" x2="1086" y2="283.7500000000002" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="287.7500000000002" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">129.0</text>
+<line x1="1080" y1="228.5" x2="1086" y2="228.5" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="232.5" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">131.8</text>
+<line x1="1080" y1="173.25000000000023" x2="1086" y2="173.25000000000023" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="177.25000000000023" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">134.6</text>
+<line x1="1080" y1="118" x2="1086" y2="118" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1094" y="122" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="400" fill="#8a5200" text-anchor="start">137.4</text>
+<text x="1094" y="72" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="600" fill="#8a5200" text-anchor="start">CVC</text>
+<text x="1094" y="88" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="start">USD/MWh</text>
+<polyline points="265.66,264.41 274.14,270.99 282.62,277.47 291.1,283.84 299.59,290.1 308.07,296.27 316.55,302.33 325.03,308.28 333.52,314.14 342,319.89 350.48,325.53 358.97,331.08 367.45,336.51 375.93,341.85 384.41,347.08 392.9,352.21 401.38,357.23 409.86,362.15 418.34,366.97 426.83,371.68 435.31,376.29 443.79,380.8 452.28,385.2 460.76,389.5 469.24,393.7 477.72,397.79 486.21,401.78 494.69,405.66 503.17,409.44 511.66,413.12 520.14,416.7 528.62,420.17 537.1,423.53 545.59,426.8 554.07,429.96 562.55,433.01 571.03,435.96 579.52,438.81 588,441.56 596.48,444.2 604.97,446.74 613.45,449.17 621.93,451.5 630.41,453.73 638.9,455.85 647.38,457.87 655.86,459.79 664.34,461.6 672.83,463.31 681.31,464.92 689.79,466.42 698.28,467.82 706.76,469.11 715.24,470.31 723.72,471.39 732.21,472.38 740.69,473.26 749.17,474.03 757.66,474.71 766.14,475.28 774.62,475.74 783.1,476.11 791.59,476.37 800.07,476.52 808.55,476.57 817.03,476.52 825.52,476.37 834,476.11 842.48,475.74 850.97,475.28 859.45,474.71 867.93,474.03 876.41,473.26 884.9,472.38 893.38,471.39 901.86,470.31 910.34,469.11 918.83,467.82 927.31,466.42 935.79,464.92 944.28,463.31" fill="none" stroke="#0e7490" stroke-width="3" />
+<polyline points="96,111.09 104.48,119.74 112.97,128.29 121.45,136.73 129.93,145.07 138.41,153.31 146.9,161.44 155.38,169.47 163.86,177.39 172.34,185.22 180.83,192.93 189.31,200.55 197.79,208.06 206.28,215.46 214.76,222.77 223.24,229.97 231.72,237.06 240.21,244.06 248.69,250.95 257.17,257.73 265.66,264.41" fill="none" stroke="#b4b9c2" stroke-width="2" stroke-dasharray="5 5" />
+<polyline points="944.28,463.31 952.76,461.6 961.24,459.79 969.72,457.87 978.21,455.85 986.69,453.73 995.17,451.5 1003.66,449.17 1012.14,446.74 1020.62,444.2 1029.1,441.56 1037.59,438.81 1046.07,435.96 1054.55,433.01 1063.03,429.96 1071.52,426.8 1080,423.53" fill="none" stroke="#b4b9c2" stroke-width="2" stroke-dasharray="5 5" />
+<circle cx="265.65517241379314" cy="247.8375000000001" r="5.5" fill="#ffffff" />
+<circle cx="265.65517241379314" cy="247.8375000000001" r="5" fill="none" stroke="#14161a" stroke-width="2" />
+<circle cx="435.3103448275862" cy="390.1062500000001" r="5.5" fill="#ffffff" />
+<circle cx="435.3103448275862" cy="390.1062500000001" r="5" fill="none" stroke="#14161a" stroke-width="2" />
+<circle cx="604.9655172413793" cy="435.68749999999983" r="5.5" fill="#ffffff" />
+<circle cx="604.9655172413793" cy="435.68749999999983" r="5" fill="none" stroke="#14161a" stroke-width="2" />
+<circle cx="774.6206896551724" cy="484.03125" r="5.5" fill="#ffffff" />
+<circle cx="774.6206896551724" cy="484.03125" r="5" fill="none" stroke="#14161a" stroke-width="2" />
+<circle cx="944.2758620689655" cy="457.7874999999998" r="5.5" fill="#ffffff" />
+<circle cx="944.2758620689655" cy="457.7874999999998" r="5" fill="none" stroke="#14161a" stroke-width="2" />
+<line x1="265.65517241379314" y1="118" x2="265.65517241379314" y2="560" stroke="#6e737e" stroke-width="1.3" stroke-dasharray="4 4" stroke-linecap="round" />
+<text x="265.65517241379314" y="106" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">mínimo técnico</text>
+<line x1="944.2758620689655" y1="118" x2="944.2758620689655" y2="560" stroke="#6e737e" stroke-width="1.3" stroke-dasharray="4 4" stroke-linecap="round" />
+<text x="944.2758620689655" y="106" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">potencia máxima neta</text>
+<line x1="913.7379310344827" y1="468.6082124999999" x2="913.7379310344827" y2="560" stroke="#8a5200" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round" />
+<line x1="96" y1="468.6082124999999" x2="913.7379310344827" y2="468.6082124999999" stroke="#8a5200" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round" />
+<circle cx="913.7379310344827" cy="468.6082124999999" r="6" fill="#8a5200" />
+<text x="893.7379310344827" y="432.6082124999999" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#8a5200" text-anchor="end">58.2 MW</text>
+<text x="893.7379310344827" y="448.6082124999999" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#8a5200" text-anchor="end">119.64 USD/MWh</text>
+<line x1="96" y1="264.4125000000002" x2="265.65517241379314" y2="264.4125000000002" stroke="#6e737e" stroke-width="1.1" stroke-dasharray="3 4" stroke-linecap="round" />
+<line x1="130" y1="264.4125000000002" x2="130" y2="468.6082124999999" stroke="#14161a" stroke-width="1.4" stroke-linecap="round" />
+<line x1="126" y1="264.4125000000002" x2="134" y2="264.4125000000002" stroke="#14161a" stroke-width="1.4" stroke-linecap="round" />
+<line x1="126" y1="468.6082124999999" x2="134" y2="468.6082124999999" stroke="#14161a" stroke-width="1.4" stroke-linecap="round" />
+<text x="142" y="354.5103562500001" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">10.36 USD/MWh</text>
+<text x="142" y="370.5103562500001" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">de diferencia</text>
+<text x="142" y="385.5103562500001" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">en el mismo rango</text>
+<line x1="60" y1="612" x2="1140" y2="612" stroke="#d7dae0" stroke-width="1.4" stroke-linecap="round" />
+<text x="60" y="638" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="13" font-weight="400" fill="#14161a" text-anchor="start">C_ESP(58.2) = 8.53 MMBtu/MWh   ×   PCpep = 14.024 USD/MMBtu   =   CVC 119.64 USD/MWh   +   CVNC 6.80   =   CV 126.44 USD/MWh</text>
+<text x="60" y="662" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">los cinco círculos son los puntos de ensayo que exige el procedimiento; la curva es el polinomio de segundo grado ajustado por mínimos cuadrados</text>
+</svg>

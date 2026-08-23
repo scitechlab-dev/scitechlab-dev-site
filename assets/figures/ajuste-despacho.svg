@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620">
+<rect width="1200" height="620" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Dos causas mueven el CVNC, y la más grande no es la inflación</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="400" fill="#6e737e" text-anchor="start">la misma máquina, el mismo año base, y un régimen de despacho distinto</text>
+<rect x="60" y="96" width="340" height="128" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="96" width="340" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="78" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Año base</text>
+<text x="78" y="143" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="start">sobre el que se calculó el CVNC</text>
+<text x="78" y="172" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="start">energía neta   320 GWh</text>
+<text x="78" y="191" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="start">horas de operación   6400 h</text>
+<text x="78" y="212" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#0e7490" text-anchor="start">carga media   50 MW</text>
+<rect x="440" y="96" width="340" height="128" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="440" y="96" width="340" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="458" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Últimos doce meses</text>
+<text x="458" y="143" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="start">medidos por el SIMEC</text>
+<text x="458" y="172" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="start">energía neta   248 GWh</text>
+<text x="458" y="191" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="start">horas de operación   6900 h</text>
+<text x="458" y="212" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#8a5200" text-anchor="start">carga media   35.9 MW</text>
+<rect x="820" y="96" width="320" height="128" rx="6" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" />
+<text x="838" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">El factor de ajuste</text>
+<text x="838" y="152" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="13" font-weight="400" fill="#565a63" text-anchor="start">Ea/E12 · HO12/HOa</text>
+<text x="838" y="176" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">1.2903 · 1.0781 = 1.3911</text>
+<text x="838" y="202" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="start">más horas por cada MWh entregado</text>
+<text x="838" y="217" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="start">es más mantenimiento por MWh</text>
+<line x1="200" y1="500" x2="1140" y2="500" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="190" y="504" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">0</text>
+<line x1="200" y1="426.6666666666667" x2="1140" y2="426.6666666666667" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="190" y="430.6666666666667" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">3</text>
+<line x1="200" y1="353.33333333333337" x2="1140" y2="353.33333333333337" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="190" y="357.33333333333337" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">6</text>
+<line x1="200" y1="280" x2="1140" y2="280" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="190" y="284" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">9</text>
+<text x="190" y="258" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">USD/MWh</text>
+<rect x="234" y="440.1111111111111" width="132" height="59.888888888888914" rx="0" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<rect x="234" y="419.3333333333333" width="132" height="20.77777777777777" rx="0" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<rect x="234" y="333.77777777777777" width="132" height="85.55555555555554" rx="0" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="300" y="319.77777777777777" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="16" font-weight="600" fill="#14161a" text-anchor="middle">6.80</text>
+<text x="300" y="526" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="middle">CVNC del año base</text>
+<text x="300" y="544" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">al 31 de diciembre</text>
+<rect x="554" y="437.9002236286983" width="132" height="62.09977637130169" rx="0" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<rect x="554" y="416.3554032549814" width="132" height="21.544820373716902" rx="0" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<rect x="554" y="327.6414370102648" width="132" height="88.71396624471663" rx="0" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="620" y="313.6414370102648" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="16" font-weight="600" fill="#14161a" text-anchor="middle">7.05</text>
+<text x="620" y="526" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="middle">Indexado al mes 12</text>
+<text x="620" y="544" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">fórmula 9.1.5.3</text>
+<rect x="874" y="437.9002236286983" width="132" height="62.09977637130169" rx="0" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<rect x="874" y="416.3554032549814" width="132" height="21.544820373716902" rx="0" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<rect x="874" y="292.9428292451941" width="132" height="123.4125740097873" rx="0" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="940" y="278.9428292451941" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="16" font-weight="600" fill="#14161a" text-anchor="middle">8.47</text>
+<text x="940" y="526" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="middle">Ajustado por despacho</text>
+<text x="940" y="544" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">fórmula 9.3.4</text>
+<line x1="370" y1="264" x2="550" y2="264" stroke="#6e737e" stroke-width="1.2" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<text x="460" y="232" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="middle">+0.25 USD/MWh</text>
+<text x="460" y="248" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">inflación de insumos</text>
+<line x1="690" y1="264" x2="870" y2="264" stroke="#6e737e" stroke-width="1.2" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<text x="780" y="232" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="middle">+1.42 USD/MWh</text>
+<text x="780" y="248" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">el despacho real de los últimos doce meses</text>
+<rect x="300" y="556" width="13" height="13" rx="2" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="320" y="567" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">CVONC</text>
+<rect x="391" y="556" width="13" height="13" rx="2" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<text x="411" y="567" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">parte variable de los costos híbridos</text>
+<rect x="680.4" y="556" width="13" height="13" rx="2" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="700.4" y="567" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">CVM, mantenimiento programado</text>
+<text x="60" y="596" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Solo el mantenimiento se reescala: es el único componente cuyo costo por MWh depende de cuántas horas se operó para entregar esa energía.</text>
+</svg>

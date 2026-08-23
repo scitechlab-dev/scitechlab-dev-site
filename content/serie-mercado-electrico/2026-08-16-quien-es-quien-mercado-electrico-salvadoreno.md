@@ -1,7 +1,7 @@
 ---
 title: "Mercado mayorista I. Quién decide qué en El Salvador"
 summary: El mapa institucional del sector eléctrico salvadoreño, y por qué la respuesta a "quién regula esto" cambió el 2 de julio de 2026. Cuatro funciones, cuatro titulares, dos mercados, y la razón por la que el país valoriza la energía a costo de producción declarado y no a ofertas.
-date: 2026-08-22
+date: 2026-08-16
 lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]

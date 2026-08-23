@@ -1,7 +1,7 @@
 ---
 title: "Mercado mayorista II. Del orden de mérito al precio"
 summary: "Cómo se construye la curva de oferta agregada y qué la rompe: un despacho de cuatro unidades resuelto a mano, con mínimo técnico y restricción de transmisión, y el salto del costo marginal al precio del MRS según el Anexo 09 del ROBCP."
-date: 2026-09-05
+date: 2026-08-17
 lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
@@ -105,16 +105,53 @@ descripción.
 ## Qué rompe el orden de mérito puro
 
 **La generación obligada.** Supongamos que U4 debe inyectar al menos 30 MW
-por razones de seguridad, reserva o pruebas, aunque su costo sea el más alto.
-El despacho pasa a ser U1 con 100, U2 con 130 y U4 con 30: la unidad marginal
+por razones de seguridad o pruebas, aunque su costo sea el más alto. El
+despacho pasa a ser U1 con 100, U2 con 130 y U4 con 30: la unidad marginal
 ahora es el diésel, el precio salta de 95 a 180 y el costo total sube a
 14 500 USD/h. Romper el orden cuesta 3 050 USD/h en este ejemplo, y ese costo
-lo paga la demanda en el precio. El ROBCP conoce el caso espejo, el de la
-unidad obligada a operar cuyo costo queda por encima del precio: no se la
-deja perder, se le compensa la diferencia entre su costo variable y el costo
-marginal, prorrateada entre la demanda (Anexo 09, 3.1.6 y 3.2.2.9). Y si lo
-que falta es reserva, el costo marginal se determina con el precio de la
-unidad de racionamiento forzado correspondiente al faltante (3.6).
+lo paga la demanda en el precio.
+
+El caso espejo es el de la unidad que queda en línea con un costo por encima
+del precio. El reglamento no la deja perder: todo generador en línea cuyo
+costo variable, incluida la parte variable de arranque y detención, resulte
+mayor que el costo marginal de operación recibe una compensación por la
+diferencia, que viaja a la demanda como cargo del sistema (Anexo 09, 3.1.6 y
+3.2.2.9). A las hidroeléctricas se las compensa sobre el costo de oportunidad
+del agua. Y hay tres exclusiones que conviene retener porque son
+contraintuitivas: los generadores térmicos que venden únicamente excedentes,
+los retiros regionales a cargo de participantes, y las unidades despachadas
+como generación obligada para suplir déficit de reserva secundaria. Esa
+última merece leerse dos veces. La unidad que se enciende precisamente porque
+falta reserva no cobra compensación por el diferencial.
+
+Hay además un efecto de segundo orden que el ejemplo esconde. Cuando el modelo
+opera sin restricciones activadas, la unidad marginal es identificable y puede
+ser térmica, geotérmica, hidroeléctrica, cogeneradora, no convencional, una
+oferta de retiro de oportunidad o la propia unidad de racionamiento forzado
+(3.1.2). Cuando hay restricciones activadas que impiden señalarla, el
+reglamento no abandona el cálculo: se identifica la unidad cuyo costo variable
+queda inmediatamente por debajo del costo marginal que arrojó el modelo, y la
+UT informa las causas en el posdespacho (3.1.3). De ahí sale la respuesta a
+una pregunta que suena imposible, la de cómo el costo marginal puede superar
+el costo variable de todas las unidades despachadas: con una restricción
+activa, el precio ya no es el costo de ninguna máquina en operación sino el de
+servir un megavatio más bajo esa restricción.
+
+**La reserva.** El despacho no programa solo energía. Toda unidad que opera en
+el mercado mayorista debe aportar un 3 % de reserva de potencia activa
+respecto de su propia inyección, destinada a la regulación primaria de
+frecuencia (Anexo 11, 2.1). Eso se cuela dentro de la definición misma del
+costo variable: el de una unidad térmica se calcula con el consumo de
+combustible correspondiente a la generación a potencia máxima neta **menos**
+el porcentaje de reserva rodante requerida para servicios auxiliares, más los
+costos variables no combustibles (Anexo 09, 3.1.5). Un requerimiento de
+reserva más exigente encarece el sistema por dos vías a la vez: obliga a
+mantener máquinas operando fuera de su punto económico y desplaza el punto de
+la curva de consumo en el que cada unidad declara su costo. Y si la reserva
+programada queda por debajo de la requerida, el reglamento no la ignora: asigna
+la reserva faltante a la unidad de racionamiento forzado y determina el costo
+marginal a partir del costo de la URF para esa energía (3.6). Escasez de
+reserva y escasez de energía terminan en el mismo lugar.
 
 **La transmisión.** Partamos el mismo sistema en dos nodos. Al norte, U1 y U4,
 con demanda de 120 MW; al sur, U2 y U3, con demanda de 140 MW; entre ambos,
@@ -140,7 +177,19 @@ con congestión, el sistema se divide en tantos MRS como haga falta para que
 dentro de cada uno no la haya, y cada MRS tiene su propio costo marginal
 (10.6.3.1); sin congestión, un solo MRS y un solo precio (10.6.3.2). La Ley
 General de Electricidad ya lo anticipa en su artículo 58, y la diferencia de
-precios entre MRS da lugar al cobro de cargos por congestión.
+precios entre MRS da lugar al cobro de cargos por congestión. El anexo
+convierte eso en cuatro cálculos por intervalo: el costo marginal de cada MRS,
+el precio de cada MRS, el flujo en cada línea que conecta dos de ellos y el
+cargo por congestión de esa línea (3.5.2).
+
+Vale preguntarse de quién es ese dinero, porque la respuesta no es obvia y no
+la da el reglamento sino la ley. Los ingresos netos que obtiene la UT por el
+manejo de los cargos por congestión se distribuyen entre los usuarios del
+sistema, según el método que fije el regulador (art. 59). La renta de
+congestión no le pertenece ni al transmisor cuya línea se saturó ni al
+generador que quedó del lado caro: es de la demanda. Eso deja al operador sin
+incentivo económico propio en una línea congestionada, que es exactamente la
+neutralidad que su papel exige.
 
 **El agua.** En un sistema con embalses, el costo variable de una hidro no es
 cero: es el valor marginal del agua, que los modelos determinan como costo
@@ -181,8 +230,14 @@ $$
 el precio del MRS es el costo marginal de operación más los cargos del
 sistema (3.3.1). Los Csis son el traslado directo a la demanda de lo que el
 mercado cuesta por fuera de la energía: el uso del sistema de transmisión, la
-administración del mercado, las pérdidas, los servicios auxiliares, las
-compensaciones y los cargos regionales (3.2). La energía se paga al costo
+administración del mercado, el monto remanente, las pérdidas, los servicios
+auxiliares (regulación de voltaje y reactivo, arranque en cero voltaje,
+reserva fría por confiabilidad), las compensaciones relacionadas con la
+determinación del costo marginal y el cargo complementario de transmisión
+regional (3.2.1). Hay uno más, y es una curiosidad institucional que vale como
+recordatorio: la lista abre con el cargo por actualización del registro en la
+SIGET, el mismo regulador que desde julio de 2026 dejó de serlo. El texto
+todavía dice SIGET y hoy quiere decir DGEHM. La energía se paga al costo
 marginal; el resto, prorrateado.
 
 Tampoco es el mismo número antes y después de la hora. El costo marginal del
@@ -213,6 +268,12 @@ costos declarados, la replicabilidad del despacho es la contraparte operativa
 de la auditoría: el mismo diseño que obliga a declarar obliga a que el
 resultado se pueda verificar desde afuera.
 
+Y ahí queda abierta la pregunta que ordena el resto de la serie. Todo este
+mecanismo toma los costos variables como dato de entrada, y ese dato no lo
+mide nadie en tiempo real: lo declara el generador y lo valida la UT contra
+una estructura aprobada. Cómo llega ese número, con qué respaldo y contra qué
+referencia se contrasta, es el artículo siguiente.
+
 
 ## Fuentes
 
@@ -230,12 +291,17 @@ resultado se pueda verificar desde afuera.
   marginal más cargos del sistema (3.3.1), congestión (3.5), reserva faltante
   (3.6) y emergencia (3.7). Copia local: `normativa/robcp-anexos.pdf`.
   Consultado el 22 de agosto de 2026.
+- **ROBCP, Anexos**, misma versión. Anexo 11, Servicios Auxiliares: aporte
+  obligatorio del 3 % de reserva de potencia activa para regulación primaria de
+  frecuencia (2.1). Copia local: `normativa/robcp-anexos.pdf`. Consultado el 22
+  de agosto de 2026.
 - **Ley General de Electricidad (LGE)**, Decreto Legislativo No. 843 del 10 de
   octubre de 1996, con reformas hasta el Decreto No. 548 de abril de 2026.
-  Artículos 55 a 58 (MRS, desvíos y congestión), 10-A (capacidad firme) y
-  112-E (metodología basada en costos mientras no haya competencia). Copia
-  local: `normativa/ley-general-electricidad.pdf`. Consultado el 22 de agosto
-  de 2026.
+  Artículos 55 a 58 (MRS, desvíos y congestión), 59 (destino de los ingresos
+  netos por cargos por congestión), 60 (publicidad de los precios), 10-A
+  (capacidad firme) y 112-E (metodología basada en costos mientras no haya
+  competencia). Copia local: `normativa/ley-general-electricidad.pdf`.
+  Consultado el 22 de agosto de 2026.
 
 El registro completo de documentos primarios de la serie, con su estado de
 verificación, está en [Fuentes primarias](../fuentes).

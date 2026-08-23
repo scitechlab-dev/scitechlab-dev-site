@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640">
+<rect width="1200" height="640" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Doce meses de indexación, referidos siempre a la misma base</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="400" fill="#6e737e" text-anchor="start">la fórmula no encadena mes contra mes: cada mes se compara contra diciembre del año base</text>
+<line x1="96" y1="439.27272727272725" x2="1040" y2="439.27272727272725" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="84" y="443.27272727272725" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">1.00</text>
+<line x1="96" y1="377.8181818181818" x2="1040" y2="377.8181818181818" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="84" y="381.8181818181818" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">1.01</text>
+<line x1="96" y1="316.3636363636364" x2="1040" y2="316.3636363636364" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="84" y="320.3636363636364" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">1.02</text>
+<line x1="96" y1="254.9090909090909" x2="1040" y2="254.9090909090909" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="84" y="258.9090909090909" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">1.03</text>
+<line x1="96" y1="193.45454545454544" x2="1040" y2="193.45454545454544" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="84" y="197.45454545454544" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">1.04</text>
+<line x1="96" y1="132" x2="1040" y2="132" stroke="#d7dae0" stroke-width="0.8" stroke-linecap="round" />
+<text x="84" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">1.05</text>
+<line x1="96" y1="439.27272727272725" x2="1040" y2="439.27272727272725" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<line x1="96" y1="132" x2="96" y2="470" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<line x1="96" y1="470" x2="96" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="96" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">dic</text>
+<line x1="174.66666666666666" y1="470" x2="174.66666666666666" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="174.66666666666666" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">ene</text>
+<line x1="253.33333333333331" y1="470" x2="253.33333333333331" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="253.33333333333331" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">feb</text>
+<line x1="332" y1="470" x2="332" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="332" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">mar</text>
+<line x1="410.66666666666663" y1="470" x2="410.66666666666663" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="410.66666666666663" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">abr</text>
+<line x1="489.33333333333337" y1="470" x2="489.33333333333337" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="489.33333333333337" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">may</text>
+<line x1="568" y1="470" x2="568" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="568" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">jun</text>
+<line x1="646.6666666666667" y1="470" x2="646.6666666666667" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="646.6666666666667" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">jul</text>
+<line x1="725.3333333333333" y1="470" x2="725.3333333333333" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="725.3333333333333" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">ago</text>
+<line x1="804" y1="470" x2="804" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="804" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">sep</text>
+<line x1="882.6666666666667" y1="470" x2="882.6666666666667" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="882.6666666666667" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">oct</text>
+<line x1="961.3333333333333" y1="470" x2="961.3333333333333" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="961.3333333333333" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">nov</text>
+<line x1="1040" y1="470" x2="1040" y2="476" stroke="#b4b9c2" stroke-width="1.4" stroke-linecap="round" />
+<text x="1040" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="middle">dic</text>
+<text x="84" y="82" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">índice</text>
+<text x="84" y="98" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="end">relativo</text>
+<polyline points="96,439.27 174.67,427.85 253.33,415.92 332,402.94 410.67,385.29 489.33,371.28 568,358.82 646.67,342.73 725.33,326.12 804,314.18 882.67,299.65 961.33,283.56 1040,270.07" fill="none" stroke="#0e7490" stroke-width="2" stroke-dasharray="5 4" />
+<polyline points="96,439.27 174.67,417 253.33,390.03 332,368.93 410.67,378.31 489.33,350.17 568,317.35 646.67,290.38 725.33,275.14 804,252.87 882.67,225.91 961.33,198.94 1040,181.36" fill="none" stroke="#8a5200" stroke-width="2" stroke-dasharray="5 4" />
+<polyline points="96,439.27 174.67,420.8 253.33,399.09 332,380.83 410.67,380.75 489.33,357.56 568,331.86 646.67,308.71 725.33,292.99 804,274.33 882.67,251.72 961.33,228.56 1040,212.4" fill="none" stroke="#14161a" stroke-width="3.2" />
+<circle cx="96" cy="439.27272727272725" r="3.6" fill="#14161a" />
+<circle cx="174.66666666666666" cy="420.79759293909376" r="3.6" fill="#14161a" />
+<circle cx="253.33333333333331" cy="399.092686046926" r="3.6" fill="#14161a" />
+<circle cx="332" cy="380.8345848406418" r="3.6" fill="#14161a" />
+<circle cx="410.66666666666663" cy="380.75420366778684" r="3.6" fill="#14161a" />
+<circle cx="489.33333333333337" cy="357.5606113141179" r="3.6" fill="#14161a" />
+<circle cx="568" cy="331.86390487857005" r="3.6" fill="#14161a" />
+<circle cx="646.6666666666667" cy="308.70568103308494" r="3.6" fill="#14161a" />
+<circle cx="725.3333333333333" cy="292.9860624168622" r="3.6" fill="#14161a" />
+<circle cx="804" cy="274.32926346406447" r="3.6" fill="#14161a" />
+<circle cx="882.6666666666667" cy="251.7160334760732" r="3.6" fill="#14161a" />
+<circle cx="961.3333333333333" cy="228.55780963058675" r="3.6" fill="#14161a" />
+<circle cx="1040" cy="212.40412475966662" r="3.6" fill="#14161a" />
+<text x="1052" y="274.06511056511135" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="600" fill="#0e7490" text-anchor="start">IPC  1.0275</text>
+<text x="1052" y="185.3559016336581" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="600" fill="#8a5200" text-anchor="start">PPI  1.042</text>
+<text x="1052" y="200.40412475966662" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">factor  1.0369</text>
+<rect x="120" y="144" width="300" height="68" rx="6" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<text x="136" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#14161a" text-anchor="start">factor = 0.35 · IPC(i)/IPC(0)</text>
+<text x="136" y="186" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#14161a" text-anchor="start">        + 0.65 · PPI(i)/PPI(0)</text>
+<text x="136" y="204" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#6e737e" text-anchor="start">la ponderación la valida el auditor</text>
+<line x1="60" y1="520" x2="1140" y2="520" stroke="#d7dae0" stroke-width="1.4" stroke-linecap="round" />
+<text x="60" y="548" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="13.5" font-weight="400" fill="#14161a" text-anchor="start">CVNC(0) = 6.80 USD/MWh   ×   factor 1.0369   =   CVNC(12) = 7.05 USD/MWh</text>
+<text x="60" y="574" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Veinticinco centavos en un año. El PPI pesa el doble que el IPC porque los repuestos son importados, y por eso el factor se</text>
+<text x="60" y="592" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">pega a la curva ámbar y no a la de en medio. Cambiar esa ponderación mueve más el resultado que cambiar los índices.</text>
+<text x="60" y="618" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Índices ilustrativos. Las fuentes reales son la DIGESTYC para el IPC y la serie PCUOMFG del Bureau of Labor Statistics para el PPI.</text>
+</svg>

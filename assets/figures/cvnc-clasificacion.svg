@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" width="1200" height="690">
+<rect width="1200" height="690" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Cómo un rubro de costo termina siendo variable, híbrido o fijo</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="400" fill="#6e737e" text-anchor="start">Anexo 17: método analítico para clasificar, método estadístico para segregar lo que quedó en el medio</text>
+<rect x="60" y="96" width="300" height="96" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="96" width="300" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="76" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Rubro de costo de operación</text>
+<text x="76" y="146" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">listado de la central en el formato</text>
+<text x="76" y="162" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">F.01, sin los costos especiales</text>
+<text x="344" y="180" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">17, 7.3.1.1 a</text>
+<line x1="360" y1="144" x2="418" y2="144" stroke="#b4b9c2" stroke-width="1.6" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="420" y="96" width="340" height="152" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="420" y="96" width="340" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="436" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Método analítico: el ICVNC</text>
+<text x="436" y="146" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">¿solo se genera con la unidad en marcha? 25 %</text>
+<text x="436" y="162" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">¿es proporcional a la energía o a las horas? 25 %</text>
+<text x="436" y="178" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">¿es un ítem de operación o mantenimiento? 25 %</text>
+<text x="436" y="194" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">¿modifica el estado o condición del equipo? 25 %</text>
+<text x="744" y="236" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">17, 4.4.8</text>
+<text x="436" y="232" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#6e737e" text-anchor="start">cada respuesta vale de 0 a 10 puntos</text>
+<line x1="590" y1="248" x2="590" y2="340" stroke="#b4b9c2" stroke-width="1.4" stroke-dasharray="4 4" stroke-linecap="round" />
+<line x1="590" y1="340" x2="636" y2="340" stroke="#b4b9c2" stroke-width="1.4" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<text x="584" y="332" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="end">ICVNC ≥ 7</text>
+<rect x="640" y="300" width="268" height="88" rx="6" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="640" y="300" width="268" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="656" y="328" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Candidato a CVONC</text>
+<text x="656" y="350" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">condición necesaria, no suficiente:</text>
+<text x="656" y="366" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">falta justificar la función consumo</text>
+<line x1="590" y1="248" x2="590" y2="464" stroke="#b4b9c2" stroke-width="1.4" stroke-dasharray="4 4" stroke-linecap="round" />
+<line x1="590" y1="464" x2="636" y2="464" stroke="#b4b9c2" stroke-width="1.4" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<text x="584" y="456" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="600" fill="#0e7490" text-anchor="end">4 ≤ ICVNC &lt; 7</text>
+<rect x="640" y="424" width="268" height="88" rx="6" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="640" y="424" width="268" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="656" y="452" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Costo híbrido</text>
+<text x="656" y="474" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">ni claramente fijo ni claramente</text>
+<text x="656" y="490" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">variable, va al método estadístico</text>
+<line x1="590" y1="248" x2="590" y2="588" stroke="#b4b9c2" stroke-width="1.4" stroke-dasharray="4 4" stroke-linecap="round" />
+<line x1="590" y1="588" x2="636" y2="588" stroke="#b4b9c2" stroke-width="1.4" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<text x="584" y="580" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="600" fill="#6e737e" text-anchor="end">ICVNC &lt; 4</text>
+<rect x="640" y="548" width="268" height="88" rx="6" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="640" y="548" width="268" height="3" rx="1.5" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<text x="656" y="576" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Costo fijo</text>
+<text x="656" y="598" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">no entra al CVNC por ninguna vía</text>
+<rect x="940" y="300" width="200" height="88" rx="6" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="940" y="300" width="200" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="956" y="328" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Función consumo</text>
+<text x="956" y="350" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">el agregado consumible que</text>
+<text x="956" y="366" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">explica el gasto</text>
+<text x="1124" y="376" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">17, 4.3.1</text>
+<line x1="908" y1="344" x2="936" y2="344" stroke="#b4b9c2" stroke-width="1.4" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="940" y="424" width="200" height="88" rx="6" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="940" y="424" width="200" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="956" y="452" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">Regresión y = ax + b</text>
+<text x="956" y="474" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">x es la energía generada,</text>
+<text x="956" y="490" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">y el costo híbrido</text>
+<text x="1124" y="500" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">17, 4.5.4</text>
+<line x1="908" y1="468" x2="936" y2="468" stroke="#b4b9c2" stroke-width="1.4" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="940" y="524" width="200" height="108" rx="6" fill="#f6f7f9" stroke="#b4b9c2" stroke-width="1.2" />
+<text x="956" y="552" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">El filtro</text>
+<text x="956" y="572" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">R² &gt; 0.9  y  t &gt; 2</text>
+<text x="956" y="592" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">si se cumple, el coeficiente a</text>
+<text x="956" y="607" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">es la parte variable; si no,</text>
+<text x="956" y="622" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="start">la parte variable es cero</text>
+<line x1="1040" y1="512" x2="1040" y2="524" stroke="#b4b9c2" stroke-width="1.4" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<text x="1124" y="640" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">17, 4.5.6 y 4.5.7</text>
+<rect x="60" y="404" width="300" height="108" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="404" width="300" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="76" y="432" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13.5" font-weight="600" fill="#14161a" text-anchor="start">La otra rama: el CVM</text>
+<text x="76" y="454" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">mantenimiento programado, por valor</text>
+<text x="76" y="470" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">presente del flujo del ciclo. No pasa</text>
+<text x="76" y="486" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">por el ICVNC: es variable por diseño</text>
+<text x="344" y="500" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">17, 4.2</text>
+<rect x="60" y="540" width="300" height="96" rx="6" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" />
+<text x="76" y="566" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Lo que se suma al final</text>
+<text x="76" y="590" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#14161a" text-anchor="start">CVNC = CVONC</text>
+<text x="76" y="608" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#14161a" text-anchor="start">     + parte variable de CH</text>
+<text x="76" y="626" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#14161a" text-anchor="start">     + CVM</text>
+</svg>

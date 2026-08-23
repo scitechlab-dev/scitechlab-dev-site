@@ -1,7 +1,7 @@
 ---
 title: Coordinating protection without time grading
 summary: Time is the discriminant every coordination study reaches for first, and the only one that gets paid for in damage, arc energy and interrupted customers. Four alternatives, what each one costs, and how to tell which the feeder actually needs.
-date: 2026-08-22
+date: 2026-08-15
 topic: Grid operations
 lang: en
 math: true

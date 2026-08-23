@@ -106,6 +106,75 @@ Los **formatos de declaración** que buscabas como documento aparte son el
 Apéndice 1 del Anexo 17 (p. 426) y su codificación en el Apéndice 2 (p. 449). No
 existen como publicación independiente: viven dentro de este PDF.
 
+Para los artículos 3 y 4 quedaron leídos completos otros tres anexos, y de esa
+lectura salieron varias correcciones al plan de estudio original:
+
+**Anexo 04, Precios de los Combustibles.** Responsabilidad de la UT en el
+cálculo del costo variable de combustible (3.1); estructura de costos con su
+desglose de FOB a costo puesto en tanques (4.1 y 4.2); **revisión de la
+estructura cada dos años, no anual** (4.3), con continuidad de la estructura
+vencida hasta que se apruebe la nueva (4.7); fórmula en función del volumen de
+compra y referenciación de inventarios a 60 °F o a ISO 13443 (4.12);
+actualización semanal del FOB, vigente los siete días de la programación
+semanal (7.1); inventarios cada lunes (8.2); disponibilidad mínima por cota de
+Cerrón Grande, de diez a tres días según cota y factor de planta (9.1), y
+penalización en la tasa de salida forzada por incumplimiento (9.4); declaración
+del PCpep **cada jueves antes de las 10:00** (10.1); publicaciones diaria y
+semanal de la UT (11); irregularidades tipificadas (12).
+
+**Anexo 16, Curvas de Consumo Específico de Calor.** **Vigencia de dos años, no
+anual** (2.2), con aviso de la UT cuatro meses antes (2.3); auditor externo del
+registro de la UT, contratado y pagado por el generador, con la UT como
+observador en sitio (2.8 a 2.10); perfil exigido al auditor (5.2.1); plazos de
+revisión del informe (6.6.8). Apéndice 3: el polinomio es de segundo grado
+ajustado por mínimos cuadrados (2.2 y 2.3.1), **vale solo entre el mínimo
+técnico y la potencia máxima ensayada** (2.3.3), y exige cinco puntos de ensayo
+o más, seis en ciclo combinado con recuperación de calor (3.4).
+
+**Anexo 17, CVNC y Costos de Arranque y Detención.** Definiciones de costo fijo,
+variable, híbrido, CVONC y CVM, con el mantenimiento correctivo explícitamente
+excluido (2.1); vigencia bienal de la auditoría con actualización mensual (3.1 a
+3.4); informe reproducible en hoja electrónica con fórmulas y macros (3.10);
+**prevalencia de la auditoría sobre el generador en caso de discrepancia**
+(3.16); CVNC en USD/MWh y CAyD por evento (3.19); matriz del ICVNC y umbrales de
+7 y 4 (4.4); método estadístico con la regla dura de **parte variable igual a
+cero si el ajuste no supera R² de 0.9 y t de 2** (4.5.6 y 4.5.7); fórmulas de
+indexación mensual de CVNC (9.1.5.3) y de CAyD (9.2.5.3), esta última con el
+precio del combustible adentro; **ajuste por el despacho real de los últimos
+doce meses** (9.3.4), que es el mecanismo que más mueve el CVNC; auditoría,
+responsabilidades y los 55 días hábiles del procedimiento (10).
+
+**Anexo 11, Servicios Auxiliares.** Aporte obligatorio del 3 % de reserva de
+potencia activa de cada unidad para regulación primaria de frecuencia (2.1), que
+es el porcentaje que descuenta el numeral 3.1.5 del Anexo 09 al fijar el punto
+donde se evalúa el costo variable de una térmica.
+
+**Anexo 06, Transacciones del Mercado.** Publicación diaria entre las 8 y las 9
+horas de los precios de combustibles puestos en planta reportados por los
+generadores térmicos (5.2), y el formulario "Precios de los Combustibles"
+(7.4.3.7). De acá salió el hallazgo que más cambia el artículo 3.
+
+Dos correcciones que valen por sí solas:
+
+**El precio que declara el generador no es el que despacha.** El numeral
+7.4.3.7.1 del Anexo 06 dice, al pie del formulario, que *el precio declarado en
+este formulario no será utilizado para la programación de la operación, sino que
+obedece al literal c) del artículo 60 de la Ley General de Electricidad*. Es
+decir que la declaración semanal es una obligación de transparencia con fuerza
+legal, y que el insumo del despacho es el precio que **calcula** la UT aplicando
+la fórmula aprobada sobre la referencia internacional (Anexo 04, 3.1 y 7.1).
+Ambas cifras se publican. Todo el material que da por sentado lo contrario, el
+plan de estudio incluido, está describiendo mal el proceso.
+
+Queda un punto abierto: el artículo 60 literal c de la LGE habla de un reporte
+**diario** y el Anexo 04, 12.1 a) sanciona no proporcionar "los PCpep diarios",
+mientras el Anexo 04, 10.1 fija la obligación el jueves antes de las 10:00. Hay
+que confirmar con la UT cómo se concilian las dos periodicidades.
+
+**La fórmula de indexación del Anexo 17 no es encadenada.** Cada mes se refiere
+a diciembre del año base, no al mes anterior (9.1.5.5). El plan de estudio la
+describía como un encadenamiento y no lo es.
+
 ### A.3. Propuesta de modificaciones al Anexo 17
 
 **Propuesta de Modificaciones al Anexo 17 del ROBCP.** Alojado por SIGET, 2021.
@@ -208,25 +277,34 @@ bloque A.
 Esta es la lista para pedir directamente a la UT, a SIGET o al CNE.
 
 1. **Instructivos y formatos de la UT para la declaración semanal de precio de
-   combustible, como documento publicado.** No existen separados. Los formatos
-   están dentro del Anexo 17 (Apéndices 1 y 2) y del Anexo 04. Si la UT usa
-   además una guía operativa o una plantilla de envío, no está publicada.
-2. **Publicación periódica de costos variables por generador.** No la encontré.
-   El ROBCP obliga a los PM a reportar a la UT, pero no localicé dónde ,ni si,
-   la UT publica el resultado.
-3. **Tratado Marco del Mercado Eléctrico de América Central.** No lo localicé
+   combustible, como documento publicado.** No existen separados. El formulario
+   "Precios de los Combustibles" y el de "Variación de Inventarios de
+   Combustibles" viven dentro del Anexo 06, este último en su numeral 7.5.3
+   según remite el Anexo 04, 8.2; los formatos de CVNC y CAyD están en los
+   Apéndices 1 y 2 del Anexo 17. Si la UT usa además una guía operativa o una
+   plantilla de envío, no está publicada.
+2. **Publicación periódica de costos variables por generador.** Acá hay que
+   separar dos cosas, porque el reglamento no las trata igual. Para el
+   combustible la publicación está mandada, con hora: los PCpep declarados,
+   entre las 8 y las 9 de cada día, y el PCpep calculado cada jueves (Anexo 04,
+   11.1 y 11.2). **Para los CVNC indexados no encontré la disposición
+   equivalente** ni el archivo público, pese a que la UT los recalcula todos los
+   meses. Verificar si existe y, si no existe, es un hallazgo en sí mismo.
+3. **Registro de auditores aprobados por la UT.** El Anexo 16, 2.8 y el Anexo
+   17, 10.4.1.1 dicen que la UT lo publica en su sitio web. No lo localicé.
+4. **Tratado Marco del Mercado Eléctrico de América Central.** No lo localicé
    como documento ni en CRIE ni en EOR. Es el instrumento fundacional del MER y
    debería estar publicado; probablemente está, y no di con él.
-4. **Procedimiento de Detalle Complementario (PDC).** Referenciado
-   repetidamente ,entró en vigencia en 2013 junto al RMER, pero no localicé el
+5. **Procedimiento de Detalle Complementario (PDC).** Referenciado
+   repetidamente, entró en vigencia en 2013 junto al RMER, pero no localicé el
    documento.
-5. **Acuerdos individuales de SIGET y de la DGEHM.** Tengo los **números y
+6. **Acuerdos individuales de SIGET y de la DGEHM.** Tengo los **números y
    fechas exactas de los ~30 acuerdos** desde la introducción del ROBCP, pero no
    encontré un repositorio público donde abrirlos uno por uno. Para citar la
    redacción de una reforma concreta hay que solicitarlos.
-6. **Ejemplos de Documento de Transacciones Económicas (DTE).** El numeral 18.7
+7. **Ejemplos de Documento de Transacciones Económicas (DTE).** El numeral 18.7
    lo define; no hay ejemplos públicos.
-7. **Resoluciones de SIGET sobre estructuras de costos variables como acto
+8. **Resoluciones de SIGET sobre estructuras de costos variables como acto
    resolutivo.** Encontré propuestas de modificación (A.3 y B), no las
    resoluciones que las aprobaron.
 

@@ -21,8 +21,9 @@ articulos:
   - slug: quien-es-quien-mercado-electrico-salvadoreno
     titulo: Quién es quién en el mercado eléctrico salvadoreño
     resumen: >-
-      Reforma de 1998, separación de actividades, competencias de UT, SIGET y
-      CNE, y qué cambió al pasar a un reglamento basado en costos de producción.
+      Separación de actividades, competencias de la UT frente a las del
+      regulador, el traslado de SIGET a la DGEHM en 2026, y por qué el país
+      valoriza a costos de producción y no a ofertas.
 
   - slug: orden-de-merito-costo-marginal
     titulo: Del orden de mérito al precio, cómo se forma el costo marginal
@@ -33,14 +34,16 @@ articulos:
   - slug: declaracion-semanal-precio-combustible
     titulo: Anatomía de una declaración semanal de precio de combustible
     resumen: >-
-      De la auditoría técnica anual a la validación semanal: poder calorífico,
-      consumo específico, conceptos logísticos e inventarios contra generación.
+      De la auditoría bienal de consumo de calor a la declaración del jueves:
+      curva de consumo específico, precio puesto en planta armado componente
+      por componente, e inventarios atados a la cota del embalse.
 
   - slug: indexacion-costos-variables-no-combustibles
     titulo: Indexación de costos variables no combustibles, paso a paso
     resumen: >-
-      Índice base, índice del período, encadenamiento y conversión de moneda,
-      con un ejemplo a doce meses resuelto. Costos de arranque y detención.
+      Cómo se separa un costo fijo de uno variable, la fórmula mensual de IPC
+      y PPI resuelta a doce meses, y el ajuste por despacho real que mueve el
+      CVNC más que la inflación. Costos de arranque y detención.
 
   - slug: horizontes-programacion-operacion
     titulo: Los horizontes de la programación de la operación
