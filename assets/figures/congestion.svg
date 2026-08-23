@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640">
+<rect width="1200" height="640" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#14161a" /></marker></defs>
+<rect x="70" y="110" width="430" height="300" rx="6" fill="#ffffff" stroke="#14161a" stroke-width="1.6" />
+<text x="285" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="15" font-weight="600" fill="#14161a" text-anchor="middle">Nodo Norte</text>
+<text x="285" y="186" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="14" font-weight="600" fill="#8a5200" text-anchor="middle">precio 180 USD/MWh</text>
+<text x="285" y="226" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="middle">U1 hidro · 100 MW · 0</text>
+<text x="285" y="250" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="middle">U4 diésel · 10 MW · 180 (marginal)</text>
+<text x="285" y="274" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6e737e" text-anchor="middle">demanda 120 MW</text>
+<text x="285" y="330" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">la línea llena no deja bajar</text>
+<text x="285" y="348" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">el diésel: el norte paga 180</text>
+<rect x="700" y="110" width="430" height="300" rx="6" fill="#ffffff" stroke="#14161a" stroke-width="1.6" />
+<text x="915" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="15" font-weight="600" fill="#14161a" text-anchor="middle">Nodo Sur</text>
+<text x="915" y="186" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="14" font-weight="600" fill="#8a5200" text-anchor="middle">precio 95 USD/MWh</text>
+<text x="915" y="226" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="middle">U2 gas · 150 MW · 70 (al tope)</text>
+<text x="915" y="250" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#565a63" text-anchor="middle">U3 gas · 0 MW · 95 (fija el precio)</text>
+<text x="915" y="274" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6e737e" text-anchor="middle">demanda 140 MW + 10 exportados</text>
+<text x="915" y="330" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">con el gas barato lleno, el próximo</text>
+<text x="915" y="348" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">megavatio del sur costaría 95</text>
+<line x1="700" y1="240" x2="506" y2="240" stroke="#14161a" stroke-width="2.4" marker-end="url(#ah-ink)" />
+<line x1="592" y1="228" x2="608" y2="252" stroke="#8a5200" stroke-width="3" />
+<line x1="600" y1="228" x2="616" y2="252" stroke="#8a5200" stroke-width="3" />
+<text x="600" y="210" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="400" fill="#14161a" text-anchor="middle">línea N-S · 10 MW, al límite</text>
+<text x="600" y="282" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">flujo sur a norte</text>
+<text x="600" y="470" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="13" font-weight="400" fill="#565a63" text-anchor="middle">costo total 12 300 USD/h, contra 11 450 sin congestión</text>
+<text x="600" y="500" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#8a5200" text-anchor="middle">cargo por congestión: 10 MW × (180 − 95) = 850 USD/h</text>
+<text x="600" y="540" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="middle">Cifras ilustrativas: el mecanismo es el del ROBCP (10.6.3 y Anexo 09, num. 3.5), no un caso real.</text>
+</svg>

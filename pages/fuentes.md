@@ -16,7 +16,14 @@ son del **22 de agosto de 2026**.
 **Reglamento de Operación del Sistema de Transmisión y del Mercado Mayorista
 Basado en Costos de Producción.** Unidad de Transacciones.
 [PDF en ut.com.sv](https://www.ut.com.sv/documents/10100/279097/ROBCP.pdf/129acc69-cb01-7ed4-7080-88be586df4ec?t=1729522985515)
-· 293 páginas · consultado 2026-08-22
+· 293 páginas · consultado 2026-08-22 · copia local `normativa/robcp.pdf`
+
+Para el artículo 2 quedó leído completo el capítulo 10, Programación Diaria o
+Predespacho: el predespacho minimiza el costo total de operación (10.1.1), el
+SAM programa a mínimo costo y determina los costos marginales de cada MRS
+(10.2.1), cualquier PM puede replicar el predespacho con la información
+publicada (10.3.7), y con congestión el sistema se desdobla en MRS con costo
+marginal propio (10.6.3).
 
 Datos de la portada y la introducción, textuales:
 
@@ -61,7 +68,14 @@ Estructura: 21 capítulos. Los que sirven a la serie:
 
 **Reglamento … Basado en Costos de Producción, ANEXOS.** Unidad de Transacciones.
 [PDF en ut.com.sv](https://www.ut.com.sv/documents/10100/279097/ROBCP-Anexos.pdf/f5ec6c02-8426-4cb6-5a61-e7cba80ff34b?t=1679083382997)
-· ~500 páginas · misma aprobación y misma actualización a junio 2026 · consultado 2026-08-22
+· ~500 páginas · misma aprobación y misma actualización a junio 2026 · consultado 2026-08-22 · copia local `normativa/robcp-anexos.pdf`
+
+Para el artículo 2 quedó leído completo el Anexo 09, Cálculo del Precio en el
+MRS: la definición del costo marginal (3.1.1), los costos variables por
+tecnología, incluido el valor del agua (3.1.5 a 3.1.13), las premisas del
+cálculo y el tope de la URF (3.1.15), el precio como costo marginal más Csis
+(3.3.1), congestión (3.5), reserva faltante (3.6), emergencia (3.7) y el
+posdespacho diario (3.8).
 
 **Este es el hallazgo que más cambia el plan de la serie.** El cuerpo del ROBCP
 termina en el capítulo 21 y **no contiene ningún capítulo sobre costos variables
