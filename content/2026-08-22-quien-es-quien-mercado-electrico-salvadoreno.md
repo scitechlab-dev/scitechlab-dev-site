@@ -9,8 +9,7 @@ tags: [instituciones, robcp, mrs]
 estado: en-revision
 ---
 
-Preguntá quién regula la electricidad en El Salvador y la respuesta depende de
-cuándo preguntaste. Hasta julio de este año era la Superintendencia General de
+Hasta julio de este año era la Superintendencia General de
 Electricidad y Telecomunicaciones. Desde el 2 de julio de 2026 es la Dirección
 General de Energía, Hidrocarburos y Minas, y SIGET conserva su sigla mientras
 pierde la palabra que la hacía relevante para este sector.
