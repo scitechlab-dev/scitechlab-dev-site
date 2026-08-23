@@ -1,0 +1,152 @@
+INFORME DE VALIDACIÓN DE DECLARACIONES SEMANALES
+==============================================================================
+
+corrida            2026-08-23T16:06:51+00:00
+catálogo           v2026.08.1  (12 reglas)
+insumo sha256      876d7f5a7c17244865495f3dd6edcce5…
+declaraciones      48
+evaluaciones       576  (OK 538, falla 22, no evaluable 16)
+tasa de aceptación 64.6%
+
+
+── RECHAZO  (17)
+──────────────────────────────────────────────────────────────────────────────
+R01  PM-GAMMA/CT-Talnique/gas_natural/S01
+      Vigencia de la estructura de costos   [CRUCE]   Anexo 04, 4.3 y 4.7
+      observado: 1   esperado: 6 a 52
+      declaración fuera de la vigencia registrada de la estructura
+
+R01  PM-GAMMA/CT-Talnique/gas_natural/S02
+      Vigencia de la estructura de costos   [CRUCE]   Anexo 04, 4.3 y 4.7
+      observado: 2   esperado: 6 a 52
+      declaración fuera de la vigencia registrada de la estructura
+
+R01  PM-GAMMA/CT-Talnique/gas_natural/S03
+      Vigencia de la estructura de costos   [CRUCE]   Anexo 04, 4.3 y 4.7
+      observado: 3   esperado: 6 a 52
+      declaración fuera de la vigencia registrada de la estructura
+
+R01  PM-GAMMA/CT-Talnique/gas_natural/S04
+      Vigencia de la estructura de costos   [CRUCE]   Anexo 04, 4.3 y 4.7
+      observado: 4   esperado: 6 a 52
+      declaración fuera de la vigencia registrada de la estructura
+
+R01  PM-GAMMA/CT-Talnique/gas_natural/S05
+      Vigencia de la estructura de costos   [CRUCE]   Anexo 04, 4.3 y 4.7
+      observado: 5   esperado: 6 a 52
+      declaración fuera de la vigencia registrada de la estructura
+
+R02  PM-BETA/CT-Nejapa/diesel/S04
+      Fuente internacional aprobada   [CRUCE]   Anexo 04, 4.9
+      observado: FUENTE-NO-APROBADA   esperado: PLATTS-USGC-ULSD
+
+R03  PM-DELTA/CT-Soyapango/fuel_oil/S05
+      Ventana de promedio del FOB   [CRUCE]   Anexo 04, 4.1 b
+      observado: 15   esperado: 7
+      mover la ventana de promedio mueve el precio sin cambiar ningún dato
+
+R04  PM-GAMMA/CT-Talnique/gas_natural/S07
+      Plazo y canal de envío   [CAMPO]   Anexo 04, 10.1 y 12.1 a
+      observado: viernes 08:40   esperado: jueves <= 10:00
+
+R05  PM-ALFA/CT-Acajutla/fuel_oil/S06
+      Actualización de costos de internación por fórmula   [CRUCE]   Anexo 04, 7.2
+      observado: 9.3699   esperado: 8.6358
+      cambiar un componente comprobable es un cambio de estructura, no una actualización
+
+R05  PM-ALFA/CT-Acajutla/fuel_oil/S07
+      Actualización de costos de internación por fórmula   [CRUCE]   Anexo 04, 7.2
+      observado: 8.6531   esperado: 9.3886
+      cambiar un componente comprobable es un cambio de estructura, no una actualización
+
+R06  PM-ALFA/CT-Acajutla/fuel_oil/S03
+      Aritmética del precio puesto en planta   [REGISTRO]   Anexo 04, 4.2
+      observado: 13.8471   esperado: 14.0725
+      (FOB + internación) / poder calorífico inferior
+
+R06  PM-ALFA/CT-Acajutla/fuel_oil/S04
+      Aritmética del precio puesto en planta   [REGISTRO]   Anexo 04, 4.2
+      observado: 13.8471   esperado: 14.2504
+      (FOB + internación) / poder calorífico inferior
+
+R06  PM-DELTA/CT-Soyapango/fuel_oil/S03
+      Aritmética del precio puesto en planta   [REGISTRO]   Anexo 04, 4.2
+      observado: 17.1428   esperado: 14.0515
+      (FOB + internación) / poder calorífico inferior
+
+R06  PM-DELTA/CT-Soyapango/fuel_oil/S08
+      Aritmética del precio puesto en planta   [REGISTRO]   Anexo 04, 4.2
+      observado: 14.4341   esperado: 14.0001
+      (FOB + internación) / poder calorífico inferior
+
+R07  PM-BETA/CT-Nejapa/diesel/S09
+      Referenciación del inventario   [CAMPO]   Anexo 04, 4.12.3 d
+      observado: sin_referenciar, certificados=False   esperado: 60F, certificados=True
+
+R08  PM-ALFA/CT-Acajutla/fuel_oil/S10
+      Balance de inventario   [REGISTRO]   Anexo 04, 8.2
+      observado: 66867.08   esperado: 64967.08
+      inicial + compras - consumo
+
+R08  PM-BETA/CT-Nejapa/diesel/S12
+      Balance de inventario   [REGISTRO]   Anexo 04, 8.2
+      observado: 10400.0   esperado: 66504.31
+      inicial + compras - consumo
+
+
+── ALERTA  (5)
+──────────────────────────────────────────────────────────────────────────────
+R09  PM-GAMMA/CT-Talnique/gas_natural/S11
+      Consumo declarado contra generación medida   [CRUCE]   Anexo 04, 8.3 con Anexo 16
+      observado: 90108.58   esperado: 75721.5
+      único cruce que no depende de ningún documento del declarante
+
+R10  PM-BETA/CT-Nejapa/diesel/S12
+      Piso de inventario por cota del embalse   [CRUCE]   Anexo 04, 9.1 y 9.4
+      observado: 10400.0   esperado: 26000.0
+      el incumplimiento se penaliza en la tasa de salida forzada
+
+R11  PM-DELTA/CT-Soyapango/fuel_oil/S03
+      Salto de precio contra la referencia internacional   [SERIE]   Anexo 04, 7.1
+      observado: 0.2319   esperado: 0.0106
+      la pregunta no es cuánto subió sino si la referencia subió lo mismo
+
+R11  PM-DELTA/CT-Soyapango/fuel_oil/S04
+      Salto de precio contra la referencia internacional   [SERIE]   Anexo 04, 7.1
+      observado: 0.1987   esperado: 0.025
+      la pregunta no es cuánto subió sino si la referencia subió lo mismo
+
+R12  PM-ALFA/CT-Acajutla/fuel_oil/S04
+      Valor congelado   [SERIE]   criterio propio de calidad de datos
+      observado: 3 semanas idénticas   esperado: variación acorde a la referencia
+      valor congelado: la referencia se movió y el declarado no
+
+
+── NO EVALUABLES  (16)
+──────────────────────────────────────────────────────────────────────────────
+R05  sin semana anterior o sin estructura  (4)
+R11  primera semana de la serie  (4)
+R12  serie más corta que la ventana  (8)
+
+
+── DECLARACIONES RECHAZADAS
+──────────────────────────────────────────────────────────────────────────────
+  PM-ALFA/CT-Acajutla/fuel_oil/S03
+  PM-ALFA/CT-Acajutla/fuel_oil/S04
+  PM-ALFA/CT-Acajutla/fuel_oil/S06
+  PM-ALFA/CT-Acajutla/fuel_oil/S07
+  PM-ALFA/CT-Acajutla/fuel_oil/S10
+  PM-BETA/CT-Nejapa/diesel/S04
+  PM-BETA/CT-Nejapa/diesel/S09
+  PM-BETA/CT-Nejapa/diesel/S12
+  PM-DELTA/CT-Soyapango/fuel_oil/S03
+  PM-DELTA/CT-Soyapango/fuel_oil/S05
+  PM-DELTA/CT-Soyapango/fuel_oil/S08
+  PM-GAMMA/CT-Talnique/gas_natural/S01
+  PM-GAMMA/CT-Talnique/gas_natural/S02
+  PM-GAMMA/CT-Talnique/gas_natural/S03
+  PM-GAMMA/CT-Talnique/gas_natural/S04
+  PM-GAMMA/CT-Talnique/gas_natural/S05
+  PM-GAMMA/CT-Talnique/gas_natural/S07
+
+JSON escrito en informe.json

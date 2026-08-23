@@ -11,3 +11,7 @@ node_modules/
 !.dev.vars.example
 .env*
 !.env.example
+
+# Python bytecode de los proyectos
+__pycache__/
+*.pyc

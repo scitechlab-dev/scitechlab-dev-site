@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660">
+<rect width="1200" height="660" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Un validador es un catálogo de reglas, no una función larga</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">el motor no sabe de combustibles; las reglas no saben de recorridos. Agregar una regla no toca el motor</text>
+<rect x="60" y="96" width="168" height="104" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="96" width="168" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="74" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Entrada</text>
+<text x="74" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">declaraciones de la</text>
+<text x="74" y="166" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">semana, tipadas</text>
+<line x1="230" y1="148" x2="242" y2="148" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="244" y="96" width="168" height="104" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="244" y="96" width="168" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="258" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Contexto</text>
+<text x="258" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">estructuras aprobadas,</text>
+<text x="258" y="166" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">SIMEC, serie histórica</text>
+<line x1="414" y1="148" x2="426" y2="148" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="428" y="96" width="168" height="104" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="428" y="96" width="168" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="442" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Catálogo</text>
+<text x="442" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">12 reglas declarativas,</text>
+<text x="442" y="166" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">versionado</text>
+<line x1="598" y1="148" x2="610" y2="148" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="612" y="96" width="168" height="104" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="612" y="96" width="168" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="626" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Motor</text>
+<text x="626" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">evalúa cada regla contra</text>
+<text x="626" y="166" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">cada declaración</text>
+<line x1="782" y1="148" x2="794" y2="148" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="796" y="96" width="168" height="104" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="796" y="96" width="168" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="810" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Hallazgos</text>
+<text x="810" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">OK, FALLA o</text>
+<text x="810" y="166" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">NO EVALUABLE</text>
+<line x1="966" y1="148" x2="978" y2="148" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="980" y="96" width="168" height="104" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="980" y="96" width="168" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="994" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Registro</text>
+<text x="994" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">hash del insumo, versión,</text>
+<text x="994" y="166" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">resultado de todo</text>
+<text x="60" y="254" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#14161a" text-anchor="start">El ámbito de una regla dice qué necesita para decidir, y qué pasa si eso falta</text>
+<rect x="60" y="280" width="262" height="176" rx="7" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<text x="76" y="308" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#0e7490" text-anchor="start" letter-spacing="0.08em">CAMPO</text>
+<text x="76" y="330" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">un solo valor del registro</text>
+<line x1="76" y1="344" x2="306" y2="344" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<text x="76" y="366" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#14161a" text-anchor="start">R04 plazo de envío</text>
+<text x="76" y="382" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#14161a" text-anchor="start">R07 referenciación del inventario</text>
+<text x="76" y="414" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">si falta el insumo</text>
+<text x="76" y="432" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="start">siempre evaluable</text>
+<rect x="340" y="280" width="262" height="176" rx="7" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<text x="356" y="308" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#0e7490" text-anchor="start" letter-spacing="0.08em">REGISTRO</text>
+<text x="356" y="330" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">varios campos entre sí</text>
+<line x1="356" y1="344" x2="586" y2="344" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<text x="356" y="366" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#14161a" text-anchor="start">R06 aritmética del PCpep</text>
+<text x="356" y="382" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#14161a" text-anchor="start">R08 balance de inventario</text>
+<text x="356" y="414" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">si falta el insumo</text>
+<text x="356" y="432" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="start">siempre evaluable</text>
+<rect x="620" y="280" width="262" height="176" rx="7" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<text x="636" y="308" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#0e7490" text-anchor="start" letter-spacing="0.08em">SERIE</text>
+<text x="636" y="330" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">el mismo declarante en el tiempo</text>
+<line x1="636" y1="344" x2="866" y2="344" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<text x="636" y="366" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#14161a" text-anchor="start">R11 salto contra referencia</text>
+<text x="636" y="382" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#14161a" text-anchor="start">R12 valor congelado</text>
+<text x="636" y="414" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">si falta el insumo</text>
+<text x="636" y="432" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="start">NO EVALUABLE al inicio de</text>
+<text x="636" y="447" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="start">la serie</text>
+<rect x="900" y="280" width="262" height="176" rx="7" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<text x="916" y="308" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#0e7490" text-anchor="start" letter-spacing="0.08em">CRUCE</text>
+<text x="916" y="330" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">contra una fuente independiente</text>
+<line x1="916" y1="344" x2="1146" y2="344" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<text x="916" y="366" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#14161a" text-anchor="start">R01 estructura vigente</text>
+<text x="916" y="382" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#14161a" text-anchor="start">R09 consumo contra SIMEC</text>
+<text x="916" y="414" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">si falta el insumo</text>
+<text x="916" y="432" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="start">NO EVALUABLE si falta la</text>
+<text x="916" y="447" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="start">contraparte</text>
+<line x1="60" y1="494" x2="1140" y2="494" stroke="#d7dae0" stroke-width="1.4" stroke-linecap="round" />
+<text x="60" y="520" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">NO EVALUABLE no es un silencio: es un resultado. Un validador que calla cuando le falta la contraparte no distingue entre "esto pasó" y</text>
+<text x="60" y="538" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">"esto no se revisó", y esa distinción es justamente la que después hay que poder demostrar.</text>
+<text x="60" y="570" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Por eso el registro guarda también las reglas que pasaron. Sin las que pasaron no se puede probar que se revisaron: un informe que solo</text>
+<text x="60" y="588" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">lista fallas es indistinguible de un informe de una corrida que nunca se hizo.</text>
+<text x="60" y="620" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Cada hallazgo carga su referencia normativa. La respuesta a "¿por qué me rechazaron esto?" no puede ser "lo dijo el sistema".</text>
+</svg>

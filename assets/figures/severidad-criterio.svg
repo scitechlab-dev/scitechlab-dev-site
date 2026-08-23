@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560">
+<rect width="1200" height="560" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Cuándo rechazar y cuándo solo alertar</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">una sola pregunta decide: ¿la discrepancia admite una explicación legítima?</text>
+<rect x="60" y="96" width="520" height="380" rx="8" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="96" width="520" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="84" y="128" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#14161a" text-anchor="start" letter-spacing="0.08em">RECHAZO</text>
+<text x="84" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">el valor no entra a la programación</text>
+<text x="84" y="184" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">No admite explicación legítima.</text>
+<text x="84" y="201" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">O el declarante se equivocó o el dato</text>
+<text x="84" y="218" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">está mal, y en cualquier caso el número</text>
+<text x="84" y="235" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">no sirve para calcular un costo.</text>
+<line x1="84" y1="264" x2="556" y2="264" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<circle cx="90" cy="284" r="2.5" fill="#14161a" />
+<text x="104" y="288" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R01  la estructura no estaba vigente</text>
+<circle cx="90" cy="306" r="2.5" fill="#14161a" />
+<text x="104" y="310" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R02  la fuente no es la aprobada</text>
+<circle cx="90" cy="328" r="2.5" fill="#14161a" />
+<text x="104" y="332" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R03  la ventana de promedio cambió</text>
+<circle cx="90" cy="350" r="2.5" fill="#14161a" />
+<text x="104" y="354" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R04  llegó fuera de plazo</text>
+<circle cx="90" cy="372" r="2.5" fill="#14161a" />
+<text x="104" y="376" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R05  la internación no siguió la fórmula</text>
+<circle cx="90" cy="394" r="2.5" fill="#14161a" />
+<text x="104" y="398" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R06  la aritmética no cierra</text>
+<circle cx="90" cy="416" r="2.5" fill="#14161a" />
+<text x="104" y="420" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R07  el inventario no está referenciado</text>
+<circle cx="90" cy="438" r="2.5" fill="#14161a" />
+<text x="104" y="442" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R08  el balance no cuadra</text>
+<rect x="620" y="96" width="520" height="380" rx="8" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="620" y="96" width="520" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="644" y="128" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#8a5200" text-anchor="start" letter-spacing="0.08em">ALERTA</text>
+<text x="644" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">el valor entra, pero alguien lo mira</text>
+<text x="644" y="184" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">Sí admite explicación legítima.</text>
+<text x="644" y="201" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">El mercado se movió, la máquina operó</text>
+<text x="644" y="218" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">distinto, el embalse bajó. Hay que</text>
+<text x="644" y="235" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">preguntar, no bloquear.</text>
+<line x1="644" y1="264" x2="1116" y2="264" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<circle cx="650" cy="284" r="2.5" fill="#8a5200" />
+<text x="664" y="288" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R09  el consumo no cuadra con lo generado</text>
+<circle cx="650" cy="306" r="2.5" fill="#8a5200" />
+<text x="664" y="310" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R10  el inventario quedó bajo el piso</text>
+<circle cx="650" cy="328" r="2.5" fill="#8a5200" />
+<text x="664" y="332" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R11  el precio saltó más que la referencia</text>
+<circle cx="650" cy="350" r="2.5" fill="#8a5200" />
+<text x="664" y="354" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">R12  el precio lleva semanas congelado</text>
+<text x="60" y="512" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">La regla práctica: una identidad que no cierra rechaza; una magnitud que sorprende alerta. Y todo lo que rechaza tiene que poder señalar</text>
+<text x="60" y="530" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">el numeral que lo obliga, porque un rechazo sin fundamento normativo es una opinión del que programó el validador.</text>
+</svg>
