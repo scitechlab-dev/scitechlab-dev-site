@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+<rect width="1200" height="700" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">El predespacho se corre dos veces, y la segunda ya tiene al MER adentro</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">ROBCP 10.1.3 y 11.5: primero un predespacho nacional inicial sin transacciones regionales, después el definitivo con lo que el EOR casó</text>
+<rect x="60" y="96" width="244" height="160" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="96" width="244" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<circle cx="80" cy="124" r="11" fill="#0e7490" />
+<text x="80" y="129" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">1</text>
+<text x="98" y="129" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">Predespacho inicial</text>
+<text x="76" y="154" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">sin transacciones regionales.</text>
+<text x="76" y="169" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">Sale un despacho, un costo</text>
+<text x="76" y="184" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">marginal y, unidad por unidad,</text>
+<text x="76" y="199" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">cuánta energía queda sin</text>
+<text x="76" y="214" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">requerir</text>
+<text x="290" y="246" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 10.1.3</text>
+<line x1="308" y1="176" x2="334" y2="176" stroke="#b4b9c2" stroke-width="1.6" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="338" y="96" width="244" height="160" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="338" y="96" width="244" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<circle cx="358" cy="124" r="11" fill="#8a5200" />
+<text x="358" y="129" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">2</text>
+<text x="376" y="129" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">Ofertas al MER</text>
+<text x="354" y="154" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">los participantes ofertan lo</text>
+<text x="354" y="169" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">no requerido, con piso de</text>
+<text x="354" y="184" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">precio, y la UT las traslada al</text>
+<text x="354" y="199" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">EOR. Lo hidráulico, solo si</text>
+<text x="354" y="214" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">está vertiendo</text>
+<text x="568" y="246" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 11.4.4.1</text>
+<line x1="586" y1="176" x2="612" y2="176" stroke="#b4b9c2" stroke-width="1.6" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="616" y="96" width="244" height="160" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="616" y="96" width="244" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<circle cx="636" cy="124" r="11" fill="#8a5200" />
+<text x="636" y="129" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">3</text>
+<text x="654" y="129" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">El EOR casa el MER</text>
+<text x="632" y="154" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">devuelve, por enlace, el</text>
+<text x="632" y="169" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">programa de importación o</text>
+<text x="632" y="184" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">exportación. Primero los</text>
+<text x="632" y="199" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">contratos firmes, después los</text>
+<text x="632" y="214" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">flexibles, al final oportunidad</text>
+<text x="846" y="246" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 11.3.4</text>
+<line x1="864" y1="176" x2="890" y2="176" stroke="#b4b9c2" stroke-width="1.6" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<rect x="894" y="96" width="244" height="160" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="894" y="96" width="244" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<circle cx="914" cy="124" r="11" fill="#14161a" />
+<text x="914" y="129" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">4</text>
+<text x="932" y="129" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">Predespacho definitivo</text>
+<text x="910" y="154" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">la UT vuelve a correr el SAM</text>
+<text x="910" y="169" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">con los enlaces adentro y</text>
+<text x="910" y="184" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">verifica las restricciones</text>
+<text x="910" y="199" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">técnicas que la inclusión</text>
+<text x="910" y="214" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">provoque</text>
+<text x="1124" y="246" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 11.5.6</text>
+<text x="60" y="300" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#14161a" text-anchor="start">Y una vez casado, un enlace deja de ser una frontera y pasa a ser un elemento más del modelo</text>
+<text x="60" y="322" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">esta es la parte que hace que la importación afecte al orden de mérito nacional sin ninguna regla especial</text>
+<rect x="60" y="348" width="520" height="214" rx="8" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="348" width="520" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="82" y="378" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="start" letter-spacing="0.08em">ENLACE EXPORTADOR</text>
+<text x="558" y="378" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 11.5.4</text>
+<rect x="278" y="407" width="84" height="34" rx="5" fill="#f6f7f9" stroke="#b4b9c2" stroke-width="1.2" />
+<text x="320" y="429" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="middle">nodo RTR</text>
+<line x1="368" y1="424" x2="424" y2="424" stroke="#8a5200" stroke-width="2.2" marker-end="url(#ah-amber)" stroke-linecap="round" />
+<rect x="430" y="406" width="32" height="36" rx="4" fill="none" stroke="#8a5200" stroke-width="2" stroke-dasharray="4 3" />
+<text x="446" y="460" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#8a5200" text-anchor="middle">demanda inflexible</text>
+<text x="396" y="412" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="middle">exporta</text>
+<text x="82" y="486" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">se modela como una demanda inflexible en el nodo de enlace</text>
+<text x="82" y="510" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">La demanda nacional sube. El despacho tiene que subir por la curva</text>
+<text x="82" y="527" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">de oferta, así que el costo marginal nacional sube con ella.</text>
+<text x="82" y="552" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#6e737e" text-anchor="start">el valor programado por el EOR entra tal cual: no se re-optimiza</text>
+<rect x="620" y="348" width="520" height="214" rx="8" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="620" y="348" width="520" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="642" y="378" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#0e7490" text-anchor="start" letter-spacing="0.08em">ENLACE IMPORTADOR</text>
+<text x="1118" y="378" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 11.5.5</text>
+<rect x="838" y="407" width="84" height="34" rx="5" fill="#f6f7f9" stroke="#b4b9c2" stroke-width="1.2" />
+<text x="880" y="429" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="middle">nodo RTR</text>
+<circle cx="754" cy="424" r="17" fill="none" stroke="#0e7490" stroke-width="2" stroke-dasharray="4 3" />
+<text x="754" y="460" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#0e7490" text-anchor="middle">generador inflexible</text>
+<line x1="776" y1="424" x2="832" y2="424" stroke="#0e7490" stroke-width="2.2" marker-end="url(#ah-teal)" stroke-linecap="round" />
+<text x="804" y="412" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#0e7490" text-anchor="middle">importa</text>
+<text x="642" y="486" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">se modela como un generador inflexible en el nodo de enlace</text>
+<text x="642" y="510" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Entra generación que el orden de mérito no tiene que despachar.</text>
+<text x="642" y="527" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Desplaza a la unidad más cara en línea y el costo marginal baja.</text>
+<text x="642" y="552" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#6e737e" text-anchor="start">el valor programado por el EOR entra tal cual: no se re-optimiza</text>
+<line x1="60" y1="596" x2="1140" y2="596" stroke="#d7dae0" stroke-width="1.4" stroke-linecap="round" />
+<text x="60" y="622" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Cuando el sistema nacional queda en déficit, la UT presenta a nombre de quienes retiran una oferta de Retiro Regional para sustitución de déficit,</text>
+<text x="60" y="640" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">y su precio es el del último escalón despachado de la unidad de racionamiento forzado (11.4.6). Importar para no racionar se paga al precio del</text>
+<text x="60" y="658" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">racionamiento que se evitó, que es el único precio que hace la comparación honesta.</text>
+</svg>

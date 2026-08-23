@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640">
+<rect width="1200" height="640" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">El recorrido de un megavatio hora, de la programación a la factura</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">y dónde interviene cada dato que se declara, se valida o se mide</text>
+<rect x="70" y="100" width="165" height="150" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="70" y="100" width="165" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="84" y="128" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Predespacho</text>
+<text x="84" y="152" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">el SAM programa la</text>
+<text x="84" y="167" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">inyección de la unidad</text>
+<text x="84" y="182" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">para cada intervalo</text>
+<text x="221" y="238" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">10.1.1</text>
+<line x1="236" y1="175" x2="247" y2="175" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<line x1="152.5" y1="254" x2="152.5" y2="288" stroke="#b4b9c2" stroke-width="1" stroke-dasharray="3 3" stroke-linecap="round" />
+<text x="152.5" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">costo variable</text>
+<text x="152.5" y="316" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">declarado y validado</text>
+<rect x="249" y="100" width="165" height="150" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="249" y="100" width="165" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="263" y="128" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Inyección real</text>
+<text x="263" y="152" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">la unidad opera. Lo</text>
+<text x="263" y="167" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">que hace no es lo que</text>
+<text x="263" y="182" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">se programó</text>
+<text x="400" y="238" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">13</text>
+<line x1="415" y1="175" x2="426" y2="175" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<line x1="331.5" y1="254" x2="331.5" y2="288" stroke="#b4b9c2" stroke-width="1" stroke-dasharray="3 3" stroke-linecap="round" />
+<text x="331.5" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">desviación contra el</text>
+<text x="331.5" y="316" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">programa</text>
+<rect x="428" y="100" width="165" height="150" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="428" y="100" width="165" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="442" y="128" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Medición</text>
+<text x="442" y="152" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">el SIMEC registra. La</text>
+<text x="442" y="167" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">UT no puede alterar</text>
+<text x="442" y="182" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">los valores medidos</text>
+<text x="579" y="238" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">18.2.5.3</text>
+<line x1="594" y1="175" x2="605" y2="175" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<line x1="510.5" y1="254" x2="510.5" y2="288" stroke="#b4b9c2" stroke-width="1" stroke-dasharray="3 3" stroke-linecap="round" />
+<text x="510.5" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">energía medida en el</text>
+<text x="510.5" y="316" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">punto</text>
+<rect x="607" y="100" width="165" height="150" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="607" y="100" width="165" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="621" y="128" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Posdespacho</text>
+<text x="621" y="152" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">se recalcula el costo</text>
+<text x="621" y="167" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">marginal ex post con</text>
+<text x="621" y="182" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">las lecturas reales</text>
+<text x="758" y="238" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">A09 3.8</text>
+<line x1="773" y1="175" x2="784" y2="175" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<line x1="689.5" y1="254" x2="689.5" y2="288" stroke="#b4b9c2" stroke-width="1" stroke-dasharray="3 3" stroke-linecap="round" />
+<text x="689.5" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">precio que sí liquida</text>
+<rect x="786" y="100" width="165" height="150" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="786" y="100" width="165" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="800" y="128" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Conciliación</text>
+<text x="800" y="152" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">contratos, MRS,</text>
+<text x="800" y="167" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">regional, servicios</text>
+<text x="800" y="182" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">auxiliares y cargos</text>
+<text x="800" y="197" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">del sistema</text>
+<text x="937" y="238" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">18.6</text>
+<line x1="952" y1="175" x2="963" y2="175" stroke="#b4b9c2" stroke-width="1.5" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<line x1="868.5" y1="254" x2="868.5" y2="288" stroke="#b4b9c2" stroke-width="1" stroke-dasharray="3 3" stroke-linecap="round" />
+<text x="868.5" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">posición neta mensual</text>
+<rect x="965" y="100" width="165" height="150" rx="7" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="965" y="100" width="165" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="979" y="128" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">DTE</text>
+<text x="979" y="152" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">memoria de cálculo</text>
+<text x="979" y="167" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">de los documentos de</text>
+<text x="979" y="182" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">cobro y pago que</text>
+<text x="979" y="197" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">emite la UT</text>
+<text x="1116" y="238" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">18.7</text>
+<line x1="1047.5" y1="254" x2="1047.5" y2="288" stroke="#b4b9c2" stroke-width="1" stroke-dasharray="3 3" stroke-linecap="round" />
+<text x="1047.5" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">deudor o acreedor</text>
+<rect x="60" y="380" width="1080" height="92" rx="8" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="380" width="3" height="92" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="84" y="406" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#0e7490" text-anchor="start" letter-spacing="0.08em">CADA DÍA HÁBIL</text>
+<text x="240" y="406" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Estimación indicativa</text>
+<text x="1116" y="406" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 18.4.2</text>
+<text x="84" y="432" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">La UT pone a disposición una estimación de la energía comprada y vendida y de los cargos que surjan, como los de</text>
+<text x="84" y="449" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">congestión y pérdidas, del día anterior. Es indicativa: sirve para que cada participante vea su posición, no para cobrar.</text>
+<rect x="60" y="490" width="1080" height="92" rx="8" fill="#ffffff" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="490" width="3" height="92" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="84" y="516" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#14161a" text-anchor="start" letter-spacing="0.08em">CADA MES</text>
+<text x="240" y="516" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Liquidación oficial</text>
+<text x="1116" y="516" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 18.4.1, 18.9.1</text>
+<text x="84" y="542" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Las transacciones se liquidan mensualmente. Al cierre, la UT determina el resultado neto de cada participante, emite el</text>
+<text x="84" y="559" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">DTE y con él los documentos de cobro y pago, por cuenta y orden de acreedores y deudores.</text>
+<text x="60" y="614" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Un costo variable mal validado en la semana no se detiene en su casilla: ordena mal el parque, produce un costo marginal que no correspondía y</text>
+<text x="60" y="632" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">sale por el otro extremo como un monto equivocado en el DTE de alguien. Ese es el recorrido completo.</text>
+</svg>
