@@ -16,7 +16,7 @@ It works. It is also the only discriminant available that is paid for in
 conductor damage, arc energy and customers who felt the sag.
 
 > Time is a finite resource on a feeder, and the conventional scheme spends it
-> in exactly the wrong place — the device with the longest delay is the one
+> in exactly the wrong place. The device with the longest delay is the one
 > standing where the fault current is highest.
 
 This is about the alternatives: what else can carry the discrimination, what
@@ -44,7 +44,7 @@ constants that fix the curve shape:
 
 Three degrees of freedom per element and no more: $I_{\text{pickup}}$ positions the
 curve horizontally, $\text{TD}$ scales it vertically, and the constant set fixes its
-shape. $B$ is worth noticing on its own — it is a horizontal asymptote, the
+shape. $B$ is worth noticing on its own: it is a horizontal asymptote, the
 floor the curve approaches as $M$ grows. IEC 60255-151 has no equivalent term,
 which is why an IEC very-inverse and an IEEE very-inverse diverge at high
 current despite sharing a name.
@@ -59,7 +59,7 @@ $$
 
 It emulates the mechanical inertia of an induction disc. On a feeder with
 reclosing, the reset mode decides whether an upstream device keeps or loses its
-integration between successive trips — and that turns out to be the root of a
+integration between successive trips, and that turns out to be the root of a
 failure mode we will get to.
 
 ## Why time runs out
@@ -89,7 +89,7 @@ Four distinct limits show up in practice:
    multiple and only $\text{TD}$ can separate them.
 3. **Identical curves in series.** The normal condition for line reclosers
    shipped with the same default configuration. Two identical curves do not
-   coordinate at all — they operate together.
+   coordinate at all: they operate together.
 4. **Reclosing sequences.** Fast and slow curves, operation counters and dead
    times introduce state that a curve pair does not describe. Two devices in
    series can drift out of sequence with each other.
@@ -117,7 +117,7 @@ For a 266.8 MCM ACSR trunk that gives $I^{2}t = 2.24\times10^{8}\ \text{A}^2\tex
 a 10 500 A bus fault. A 20 MVA substation transformer at 8 % impedance, checked
 against IEEE C57.109, gives essentially the same answer: 1.98 s.
 
-So roughly two seconds — and that number is almost never the binding
+So roughly two seconds, and that number is almost never the binding
 constraint. Two others are far tighter:
 
 - **Incident energy** scales linearly with clearing time. Going from 0.4 s to
@@ -131,7 +131,7 @@ The ceiling permits two seconds. Safety and power quality ask for less than
 
 There is also a trap in the thermal check itself: the limit that matters is the
 *smallest conductor inside the device's zone*, not the trunk. The same
-formula gives a #4 ACSR tap only 0.37 s at 3 855 A — a limit a head-end
+formula gives a #4 ACSR tap only 0.37 s at 3 855 A, a limit a head-end
 setting of 0.41 s already violates, while the trunk sits comfortably at 15 s.
 
 ## A reference feeder
@@ -140,7 +140,7 @@ setting of 0.41 s already violates, while the trunk sits comfortably at 15 s.
   <img src="../assets/figures/reference-feeder.svg" alt="Radial 13.8 kV feeder: R1 at the substation with 10 500 A available, R2 at 3 km with 3 855 A, R3 at 8 km with 1 839 A, and a fuse at 12 km with 1 295 A. Ratios between adjacent nodes are 2.72, 2.10 and 1.42." />
   <figcaption>The reference feeder. The ratio under each section is the only test
   that decides, before any setting is computed, whether current grading is
-  available there — and the last section already fails it.</figcaption>
+  available there, and the last section already fails it.</figcaption>
 </figure>
 
 Concrete numbers make the comparisons meaningful. A 13.8 kV radial, 250 MVA at
@@ -148,7 +148,7 @@ the bus, 266.8 MCM ACSR trunk at $z = 0.22 + j0.40\ \Omega/\text{km}$:
 
 | Node | Distance | Device | I_cc (3φ) | Ratio to previous |
 |---|---|---|---|---|
-| A | 0 km | R1 (head) | 10 500 A | — |
+| A | 0 km | R1 (head) | 10 500 A | n/a |
 | B | 3 km | R2 | 3 855 A | 2.72 |
 | C | 8 km | R3 | 1 839 A | 2.10 |
 | D | 12 km | Fuse | 1 295 A | **1.42** |
@@ -157,13 +157,13 @@ Conventional settings, extremely inverse throughout, $\text{CTI} = 0.25\ \text{s
 
 | Device | I_pickup | TD fast | TD slow |
 |---|---|---|---|
-| R1 | 400 A | — | 6.7 |
+| R1 | 400 A | n/a | 6.7 |
 | R2 | 200 A | 1.0 | 5.6 |
 | R3 | 100 A | 1.0 | 4.0 |
 
 Margins verify cleanly: 0.250 s at node C, 0.252 s at node B. The study passes.
 
-Now evaluate the same settings at a 1 000 A fault — a high-impedance ground
+Now evaluate the same settings at a 1 000 A fault: a high-impedance ground
 fault, or a fault near the end of the line under minimum generation:
 
 | Device | t at 1 000 A |
@@ -179,7 +179,7 @@ violations. The CTI check verifies selectivity. It says nothing about speed.
   <img src="../assets/figures/tcc-coordination.svg" alt="Log-log time-current plot. The R1, R2 and R3 extremely-inverse curves are well separated at high current but R1 reaches 5.26 seconds at 1000 A. Two dashed conductor damage curves cross the relay curves at the left." />
   <figcaption>The same three settings that pass the coordination table. Read the
   plot at 10 500 A and the scheme looks fast; read it at 1 000 A and R1 sits at
-  5.26 s. The dashed curves are conductor damage — note where R1 crosses the #4
+  5.26 s. The dashed curves are conductor damage. Note where R1 crosses the #4
   tap limit, which is the trap described above and not something the CTI check
   would ever report.</figcaption>
 </figure>
@@ -197,7 +197,7 @@ I_{\text{pickup}}^{(50)} = k_s \cdot I_{\text{fault},3\phi}\big|_{\text{downstre
 $$
 
 For R2 in the reference feeder that is 2 300 A. Solving $I_{cc}(d) = 2\,300$
-places the reach at 6.09 km from the substation — 3.09 km past R2, covering
+places the reach at 6.09 km from the substation, 3.09 km past R2, covering
 62 % of the R2–R3 section. A fault at 4 km clears in 0.030 s instead of 0.188 s,
 cutting $I^{2}t$ by a factor of 6.
 
@@ -234,7 +234,7 @@ takes out everything upstream for a fault that belonged to R3.
 The fix is for the upstream device to detect fault current followed by its
 extinction, and advance its own sequence counter without tripping. Both devices
 then reach operation 3 on their slow curves, and the margin becomes +0.364 s.
-No communications, no curve changes — the discriminant is the operation count.
+No communications, no curve changes: the discriminant is the operation count.
 Vendors name this differently; NOJA Power calls it Zone Sequence Coordination.
 
 **Temporary time addition** attacks accumulation from the other side. Instead
@@ -253,7 +253,7 @@ $$
 2\,I_{\text{load}} \;\le\; I_{\text{pickup}} \;\le\; 0.8\,I_{\text{fault,min}}
 $$
 
-For the C–D section — the one whose current ratio ruled out current grading —
+For the C–D section, the one whose current ratio ruled out current grading,
 that gives 120 A ≤ $I_{\text{pickup}}$ ≤ 680 A, so 160 A with two counts. A new
 sectionalising point that consumes no time step at all.
 
@@ -276,13 +276,13 @@ t_{\text{curve}}(I), & \text{blocked (time-delayed backup)}
 $$
 
 Time still exists, but it stops scaling with the number of levels. For a fault
-at node B — between R1 and R2 — a 60 ms window (25 ms pickup + 5 ms GOOSE
+at node B, between R1 and R2, a 60 ms window (25 ms pickup + 5 ms GOOSE
 transmission + 30 ms margin) plus interrupting time clears in 0.13 s against
 0.410 s on the curve. Incident energy falls by a factor of three.
 
 **The communications question deserves a straight answer**, because it decides
 whether this is available at all. The criterion is not inside or outside the
-substation — it is a latency budget:
+substation. It is a latency budget:
 
 $$
 t_{\text{wait}} \;>\; t_{\text{pickup}} + \text{latency}_{p99.9} + \text{jitter} + \text{margin}
@@ -293,7 +293,7 @@ A 60–100 ms window needs tail latency below roughly 50 ms. That leaves:
 | Medium | Typical latency | Verdict |
 |---|---|---|
 | Fibre (OPGW/ADSS) + GOOSE | 1–4 ms | Works, in the substation and on the line |
-| Dedicated licensed point-to-point radio | 10–40 ms, load-dependent jitter | Marginal — measure it, do not trust the datasheet |
+| Dedicated licensed point-to-point radio | 10–40 ms, load-dependent jitter | Marginal. Measure it, do not trust the datasheet |
 | Cellular, DNP3 over private APN, multipoint SCADA radio | 100 ms to seconds | **No.** That is telemetry, not teleprotection |
 
 Reusing the SCADA telemetry path for a blocking scheme is the failure mode to
@@ -302,8 +302,8 @@ degrades by over-tripping upstream. Safe for plant, destructive to reliability
 indices. Channel supervision and automatic reversion to the time-delayed curve
 are mandatory, not optional.
 
-Schemes that operate on a scale of seconds — loop automation, automatic
-transfer — tolerate slow channels precisely because they are restoration
+Schemes that operate on a scale of seconds, such as loop automation and
+automatic transfer, tolerate slow channels precisely because they are restoration
 schemes rather than protection.
 
 ### 4. Direction and topology
@@ -321,7 +321,8 @@ $$
 
 For a fault at node B, R3 sees 837 A in the reverse direction against a 100 A
 pickup, and trips for a fault outside its zone. No value of $\text{TD}$ prevents this
-— the reverse current legitimately exceeds pickup. Directional supervision, or
+because the reverse current legitimately exceeds pickup. Directional
+supervision, or
 setting groups switched by topology state, are the answer.
 
 ## Choosing
@@ -346,7 +347,7 @@ weighted score. Thermal damage of every element in zone, interrupting duty and
 minimum-fault sensitivity are hard constraints. Incident energy is next.
 Coordination interval after that. Sag duration and reliability indices become
 the objective function. And the infeasibility of the coordination problem is
-itself the most valuable signal a study produces — it is the point at which the
+itself the most valuable signal a study produces: it is the point at which the
 answer stops being a different $\text{TD}$ and starts being a different scheme.
 
 ## Standards worth keeping open

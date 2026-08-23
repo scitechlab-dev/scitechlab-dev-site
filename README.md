@@ -22,7 +22,9 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 │                         #   per domain) → publications → writing → contact,
 │                         #   divided by label bands, all on one .sheet
 ├── content/              # SOURCE: one markdown file per article
-│   └── _example.md       #   a draft; copy it to start writing
+│   ├── _plantilla.md     #   ignored by the build; copy it to start
+│   ├── articulos/        #   standalone technical pieces
+│   └── serie-mercado-electrico/
 ├── pages/                # SOURCE: standalone pages → /<slug>, not articles
 │   └── fuentes.md        #   verified primary sources for the mercado series
 ├── series/               # SOURCE: running order of a multi-part series
@@ -44,7 +46,7 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 ├── _headers              # security + cache headers
 ├── robots.txt
 ├── wrangler.jsonc        # Worker config: assets dir + build command
-├── ESCRITURA.md          # HOW TO WRITE: front matter, math, study notes
+├── creacion_articulos.md # HOW TO WRITE: the complete authoring spec
 └── README.md             # how the site is built and deployed
 ```
 
@@ -365,7 +367,7 @@ on LinkedIn*.
 
 ### Math, study notes and the series
 
-Authoring syntax lives in **[ESCRITURA.md](ESCRITURA.md)** — front matter
+Authoring syntax lives in **[creacion_articulos.md](creacion_articulos.md)** — front matter
 fields, LaTeX delimiters, the study-note container, series manifests. This
 section is the infrastructure behind it.
 

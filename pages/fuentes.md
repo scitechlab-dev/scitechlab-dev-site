@@ -11,7 +11,7 @@ son del **22 de agosto de 2026**.
 
 ## A. Localizados y verificados
 
-### A.1 — ROBCP, cuerpo del reglamento
+### A.1. ROBCP, cuerpo del reglamento
 
 **Reglamento de Operación del Sistema de Transmisión y del Mercado Mayorista
 Basado en Costos de Producción.** Unidad de Transacciones.
@@ -34,7 +34,7 @@ Datos de la portada y la introducción, textuales:
 La introducción lista **todos los acuerdos modificatorios**, de SIGET (desde el
 No. 222-E-2009 hasta el No. JDO-004-E-2025 del 13 de octubre de 2025) y de la
 **DGEHM** (Nos. 25/2024/DE, 27/2024/DE, 13/2025/DE y 73/2026/DE). Ese cambio de
-emisor — de SIGET a la DGEHM a partir de 2024 — es un dato institucional que el
+emisor, de SIGET a la DGEHM a partir de 2024, es un dato institucional que el
 artículo 1 tiene que explicar.
 
 Estructura: 21 capítulos. Los que sirven a la serie:
@@ -57,9 +57,9 @@ Estructura: 21 capítulos. Los que sirven a la serie:
 | 18. Transacciones Económicas (**18.7 Documento de Transacciones Económicas**) | 253 | 6 |
 | 21. Régimen Transitorio de Seguridad de Combustibles para Generación Térmica | 282 | 3 |
 
-### A.2 — ROBCP, Anexos
+### A.2. ROBCP, Anexos
 
-**Reglamento … Basado en Costos de Producción — ANEXOS.** Unidad de Transacciones.
+**Reglamento … Basado en Costos de Producción, ANEXOS.** Unidad de Transacciones.
 [PDF en ut.com.sv](https://www.ut.com.sv/documents/10100/279097/ROBCP-Anexos.pdf/f5ec6c02-8426-4cb6-5a61-e7cba80ff34b?t=1679083382997)
 · ~500 páginas · misma aprobación y misma actualización a junio 2026 · consultado 2026-08-22
 
@@ -69,30 +69,30 @@ ni sobre la declaración de combustible**. Toda esa maquinaria está en los anex
 
 | Anexo | Página | Para qué |
 |---|---|---|
-| **04 — Precios de los Combustibles** | 68 | Artículo 3, núcleo |
-| **09 — Cálculo del Precio en el MRS** | 140 | Artículo 2 |
-| 11 — Servicios Auxiliares | 159 | Artículo 5 |
-| 13 — Medición Comercial | 184 | Artículo 6 |
-| 14 — Administración de los Procesos de Facturación y Liquidación | 226 | Artículo 6 |
-| 15 — Determinación de la Capacidad Firme | 240 | Artículo 1 |
-| **16 — Curvas de Consumo Específico de Calor** | 280 | Artículo 3, núcleo |
-| ↳ Apéndice 1 — Norma de procedimiento para la determinación del consumo de calor | 300 | Artículo 3 |
-| ↳ Apéndice 2 — Modelos de actas y formatos de auditorías | 338 | Artículo 3 |
-| ↳ Apéndice 3 — Determinación de los polinomios de consumo específico de calor y consumo específico de combustible | 351 | Artículo 3 |
-| ↳ Apéndice 4 — Procedimiento para la determinación del consumo de combustible en el arranque y detención | 355 | Artículos 3 y 4 |
-| **17 — Costos Variables de Operación y Mantenimiento No Combustibles (CVNC) y Costos de Arranque y Detención** | 364 | Artículo 4, núcleo |
-| ↳ Apéndice 1 — Formatos | 426 | Artículo 3 y 4 |
-| ↳ Apéndice 2 — Codificación de formatos | 449 | Artículo 4 |
-| ↳ Apéndice 3 — Datos técnicos operativos | 451 | Artículo 4 |
-| 18 — Tratamiento de la Hidrología | 461 | Artículo 5 |
-| 19 — Determinación de Curvas de Alerta de los Embalses | 467 | Artículo 5 |
-| 20 — Prueba de Potencia Máxima Neta de las Unidades Generadoras | 474 | Artículo 1 |
+| **04. Precios de los Combustibles** | 68 | Artículo 3, núcleo |
+| **09. Cálculo del Precio en el MRS** | 140 | Artículo 2 |
+| 11. Servicios Auxiliares | 159 | Artículo 5 |
+| 13. Medición Comercial | 184 | Artículo 6 |
+| 14. Administración de los Procesos de Facturación y Liquidación | 226 | Artículo 6 |
+| 15. Determinación de la Capacidad Firme | 240 | Artículo 1 |
+| **16. Curvas de Consumo Específico de Calor** | 280 | Artículo 3, núcleo |
+| ↳ Apéndice 1. Norma de procedimiento para la determinación del consumo de calor | 300 | Artículo 3 |
+| ↳ Apéndice 2. Modelos de actas y formatos de auditorías | 338 | Artículo 3 |
+| ↳ Apéndice 3. Determinación de los polinomios de consumo específico de calor y consumo específico de combustible | 351 | Artículo 3 |
+| ↳ Apéndice 4. Procedimiento para la determinación del consumo de combustible en el arranque y detención | 355 | Artículos 3 y 4 |
+| **17. Costos Variables de Operación y Mantenimiento No Combustibles (CVNC) y Costos de Arranque y Detención** | 364 | Artículo 4, núcleo |
+| ↳ Apéndice 1. Formatos | 426 | Artículo 3 y 4 |
+| ↳ Apéndice 2. Codificación de formatos | 449 | Artículo 4 |
+| ↳ Apéndice 3. Datos técnicos operativos | 451 | Artículo 4 |
+| 18. Tratamiento de la Hidrología | 461 | Artículo 5 |
+| 19. Determinación de Curvas de Alerta de los Embalses | 467 | Artículo 5 |
+| 20. Prueba de Potencia Máxima Neta de las Unidades Generadoras | 474 | Artículo 1 |
 
 Los **formatos de declaración** que buscabas como documento aparte son el
 Apéndice 1 del Anexo 17 (p. 426) y su codificación en el Apéndice 2 (p. 449). No
 existen como publicación independiente: viven dentro de este PDF.
 
-### A.3 — Propuesta de modificaciones al Anexo 17
+### A.3. Propuesta de modificaciones al Anexo 17
 
 **Propuesta de Modificaciones al Anexo 17 del ROBCP.** Alojado por SIGET, 2021.
 [PDF en siget.gob.sv](https://www.siget.gob.sv/wp-content/uploads/2021/11/Propuesta-de-modificaciones-al-Anexo-17-del-ROBCP.pdf)
@@ -111,11 +111,11 @@ cuales los PM sustentarán los CVNC y CAyD para su aplicación en la programaci�
 del despacho **de acuerdo con lo indicado en el numeral 3.1.4 del Anexo 09**; y
 establecer las irregularidades, causales de sanciones y mecanismos de auditoría.
 
-Esa referencia cruzada —Anexo 17 → numeral 3.1.4 del Anexo 09— es el eslabón
+Esa referencia cruzada, del Anexo 17 al numeral 3.1.4 del Anexo 09, es el eslabón
 entre el CVNC declarado y el precio del MRS. Es el enlace que une los artículos
 2 y 4 de la serie.
 
-### A.4 — RMER
+### A.4. RMER
 
 **Reglamento del Mercado Eléctrico Regional (RMER).** CRIE.
 [PDF en crie.org.gt](https://crie.org.gt/wp-content/uploads/2025/11/RMER-PDF-05092025.pdf)
@@ -131,7 +131,7 @@ La [página de marco regulatorio de CRIE](https://crie.org.gt/marco-regulatorio/
 mantiene además las versiones anteriores fechadas, lo que permite citar la
 versión que estaba vigente en una fecha dada.
 
-### A.5 — Marco regulatorio publicado por la UT
+### A.5. Marco regulatorio publicado por la UT
 
 [ut.com.sv/marcoregulatorio](https://www.ut.com.sv/marcoregulatorio) ·
 consultado 2026-08-22. Es la página de la que salen A.1 y A.2, y **sólo publica
@@ -163,13 +163,13 @@ Esta es la lista para pedir directamente a la UT, a SIGET o al CNE.
    están dentro del Anexo 17 (Apéndices 1 y 2) y del Anexo 04. Si la UT usa
    además una guía operativa o una plantilla de envío, no está publicada.
 2. **Publicación periódica de costos variables por generador.** No la encontré.
-   El ROBCP obliga a los PM a reportar a la UT, pero no localicé dónde —ni si—
+   El ROBCP obliga a los PM a reportar a la UT, pero no localicé dónde ,ni si,
    la UT publica el resultado.
 3. **Tratado Marco del Mercado Eléctrico de América Central.** No lo localicé
    como documento ni en CRIE ni en EOR. Es el instrumento fundacional del MER y
    debería estar publicado; probablemente está, y no di con él.
 4. **Procedimiento de Detalle Complementario (PDC).** Referenciado
-   repetidamente —entró en vigencia en 2013 junto al RMER— pero no localicé el
+   repetidamente ,entró en vigencia en 2013 junto al RMER, pero no localicé el
    documento.
 5. **Acuerdos individuales de SIGET y de la DGEHM.** Tengo los **números y
    fechas exactas de los ~30 acuerdos** desde la introducción del ROBCP, pero no
@@ -184,7 +184,7 @@ Esta es la lista para pedir directamente a la UT, a SIGET o al CNE.
 ::: nota Cómo mantener esto
 Una entrada sin fecha de consulta es inútil dentro de seis meses: la normativa se
 reforma y los sitios reorganizan sus URL. Si un enlace del bloque A deja de
-abrir, se mueve al B con la fecha en que se cayó en vez de borrarlo — que un
+abrir, se mueve al B con la fecha en que se cayó en vez de borrarlo, que un
 documento haya estado publicado y ya no lo esté es información.
 
 Los dos PDF del ROBCP llevan un parámetro `?t=` en la URL. Es la marca de tiempo

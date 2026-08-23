@@ -163,6 +163,34 @@ function indent(html, pad) {
 }
 
 /**
+ * Every .md under content/, at any depth, as paths relative to content/.
+ *
+ * The subdirectories are for humans, not for the build: content/articulos/ and
+ * content/serie-mercado-electrico/ exist so the folder listing matches how the
+ * work is actually grouped, but nothing about a file's behaviour depends on
+ * which one it sits in. A post's grouping comes from `categories:` and its URL
+ * from its filename, both of which stay true if you move the file. That is
+ * deliberate: a folder that silently sets metadata is a folder you cannot
+ * reorganise later without changing published URLs.
+ *
+ * Anything whose name starts with an underscore is skipped, file or directory.
+ * That is what makes _plantilla.md able to sit in content/ without front matter
+ * the build would reject, and it gives a place to park work in progress that is
+ * not ready to be a draft yet.
+ */
+async function walkMarkdown(dir, prefix = '') {
+  const entries = await readdir(dir, { withFileTypes: true });
+  const out = [];
+  for (const e of entries.sort((a, b) => a.name.localeCompare(b.name))) {
+    if (e.name.startsWith('_') || e.name.startsWith('.')) continue;
+    const rel = prefix ? `${prefix}/${e.name}` : e.name;
+    if (e.isDirectory()) out.push(...(await walkMarkdown(path.join(dir, e.name), rel)));
+    else if (e.name.endsWith('.md')) out.push(rel);
+  }
+  return out;
+}
+
+/**
  * The handful of shell strings that have to follow the page's own language.
  *
  * This is not an i18n framework and should not grow into one. Each article
@@ -428,9 +456,7 @@ async function main() {
   const articleTpl = await readFile(path.join(TPL_DIR, 'article.html'), 'utf8');
   const archiveTpl = await readFile(path.join(TPL_DIR, 'archive.html'), 'utf8');
 
-  const files = (await readdir(CONTENT_DIR))
-    .filter((f) => f.endsWith('.md'))
-    .sort();
+  const files = await walkMarkdown(CONTENT_DIR);
 
   const posts = [];
   const seen = new Map();
@@ -483,7 +509,8 @@ async function main() {
     // does. `slug:` in the front matter wins if you need to rename the file
     // without breaking a link you already shared.
     const slug =
-      data.slug || file.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+      data.slug ||
+      path.basename(file, '.md').replace(/^\d{4}-\d{2}-\d{2}-/, '');
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
       fail(file, `slug "${slug}" must be lowercase letters, digits and dashes`);
     }

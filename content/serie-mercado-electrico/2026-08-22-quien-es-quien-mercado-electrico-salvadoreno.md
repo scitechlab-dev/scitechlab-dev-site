@@ -1,5 +1,5 @@
 ---
-title: "Mercado mayorista I — Quién decide qué en El Salvador"
+title: "Mercado mayorista I. Quién decide qué en El Salvador"
 summary: El mapa institucional del sector eléctrico salvadoreño, y por qué la respuesta a "quién regula esto" cambió el 2 de julio de 2026. Cuatro funciones, cuatro titulares, dos mercados, y la razón por la que el país valoriza la energía a costo de producción declarado y no a ofertas.
 date: 2026-08-22
 lang: es
@@ -19,8 +19,8 @@ entidad emite qué.
 La idea ordenadora es la separación de actividades. Antes de la reforma de
 finales de los noventa, una sola entidad estatal generaba, transmitía,
 distribuía y fijaba las condiciones. La reforma partió eso en dos grupos: las
-actividades que pueden ser competitivas —generación y comercialización— y las
-que son monopolios naturales —transmisión y distribución—. Después creó
+actividades que pueden ser competitivas (generación y comercialización) y las
+que son monopolios naturales (transmisión y distribución). Después creó
 instituciones para vigilar la frontera entre ambos.
 
 De ahí salen cuatro funciones que alguien tiene que ejercer:
@@ -43,7 +43,7 @@ escribe ni lo interpreta con autoridad final.
 
 La UT empezó a operar en 1998 y su forma jurídica llama la atención: es una
 sociedad anónima privada que administra un mercado de interés público. Esa
-mezcla —gobernanza privada, función pública— es poco común y conviene entenderla
+mezcla de gobernanza privada y función pública es poco común, y conviene entenderla
 antes de asumir cómo se toman las decisiones adentro.
 
 ## La reforma de julio de 2026
@@ -126,12 +126,12 @@ más conviene entender como principio antes que como regla.
 **En un mercado por ofertas**, los generadores presentan precios libremente. El
 operador apila las ofertas de menor a mayor y la intersección con la demanda fija
 el precio. La disciplina viene de la competencia: si ofertás demasiado alto, no
-te despachan. Eso funciona con dos condiciones — que haya suficientes
+te despachan. Eso funciona bajo dos condiciones: que haya suficientes
 competidores independientes para que ninguno mueva el precio por sí solo, y que
 la tecnología marginal tenga costos difíciles de ocultar.
 
 **En un mercado por costos**, los generadores no ofertan un precio. Declaran sus
-costos —precio del combustible, eficiencia, costos variables no combustibles— y
+costos (precio del combustible, eficiencia, costos variables no combustibles) y
 el operador construye el orden de mérito con esos costos declarados. La
 disciplina ya no viene de la competencia sino de la verificación: la declaración
 tiene que estar documentada, ser auditable, y el operador la valida contra
@@ -139,8 +139,8 @@ referencias aprobadas.
 
 El intercambio entre ambos esquemas es directo. Un mercado por ofertas es barato
 de administrar y le confía la disciplina a la competencia. Un mercado por costos
-es caro de administrar —alguien tiene que auditar a cada generador y validar cada
-declaración— y le confía la disciplina a la verificación.
+es caro de administrar, porque alguien tiene que auditar a cada generador y
+validar cada declaración, y le confía la disciplina a la verificación.
 
 Los sistemas pequeños, con generación concentrada y una tecnología marginal que
 quema combustible importado, tienden al segundo esquema, y por dos razones que se
@@ -150,7 +150,7 @@ desde afuera, lo que vuelve factible la verificación de un modo que no lo serí
 para, digamos, una hidro con embalse.
 
 El Salvador opera bajo el **Reglamento de Operación del Sistema de Transmisión y
-del Mercado Mayorista Basado en Costos de Producción** — el ROBCP. El nombre
+del Mercado Mayorista Basado en Costos de Producción**, el ROBCP. El nombre
 enuncia el diseño: costos de producción, no ofertas. El precio de la energía en
 el mercado mayorista es variable, y lo fija el costo marginal hora a hora.
 
@@ -161,7 +161,7 @@ el mercado mayorista es variable, y lo fija el costo marginal hora a hora.
   <figcaption>El orden de mérito en movimiento: la demanda barre la curva de
   oferta y el costo marginal es el de la última unidad que entra, no el promedio
   de las despachadas. Mientras la demanda cae sobre solar o hidro el precio es
-  cero; cuando cruza a gas o a diésel salta al costo de esa máquina — y ese
+  cero; cuando cruza a gas o a diésel salta al costo de esa máquina, y ese
   precio lo cobran también las unidades más baratas.
   <strong>Las cifras son ilustrativas y no corresponden a El Salvador</strong>:
   el parque es un ejemplo de cuatro tecnologías para mostrar el mecanismo. Cómo
@@ -172,7 +172,7 @@ el mercado mayorista es variable, y lo fija el costo marginal hora a hora.
 El reglamento no es nuevo ni es estable. Fue aprobado por el **Acuerdo SIGET
 No. 232-E-2008** del 23 de octubre de 2008 y publicado por primera vez en el
 Diario Oficial No. 144, Tomo 384, del 31 de julio de 2009, pero **su aplicación
-empezó hasta el 1 de agosto de 2011** — casi tres años después de aprobado. Al
+empezó hasta el 1 de agosto de 2011**, casi tres años después de aprobado. Al
 entrar en vigencia desplazó al reglamento anterior, el del Acuerdo No. E-13-99
 de 1999, que era el esquema con el que arrancó el mercado tras la reforma.
 
@@ -217,19 +217,19 @@ liquidación mensual, y dónde encaja el mercado regional?
   Portada e introducción: acuerdo de aprobación, publicación en Diario Oficial,
   fecha de inicio de aplicación y listado de acuerdos modificatorios. Consultado
   el 22 de agosto de 2026.
-- **Unidad de Transacciones** — [Qué hacemos](https://www.ut.com.sv/que-hacemos)
+- **Unidad de Transacciones**. [Qué hacemos](https://www.ut.com.sv/que-hacemos)
   y [Marco regulatorio](https://www.ut.com.sv/marcoregulatorio). Funciones de la
   UT y categorías de participantes. Consultado el 22 de agosto de 2026.
-- **SIGET** — [Gerencia de Electricidad](https://www.siget.gob.sv/gerencias/electricidad/gerencia-de-electricidad/).
+- **SIGET**. [Gerencia de Electricidad](https://www.siget.gob.sv/gerencias/electricidad/gerencia-de-electricidad/).
   Definición del mercado mayorista, Mercado de Contratos y MRS. Consultado el 22
   de agosto de 2026.
-- **Asamblea Legislativa de El Salvador** — [reforma que traslada las
+- **Asamblea Legislativa de El Salvador**. [Reforma que traslada las
   competencias eléctricas a la DGEHM](https://www.asamblea.gob.sv/node/14035).
   Aprobada el 2 de julio de 2026. Consultado el 22 de agosto de 2026.
 - **Decreto Legislativo No. 190** del 26 de octubre de 2021, Diario Oficial
-  No. 212, Tomo 433, del 8 de noviembre de 2021 — creación de la DGEHM y
+  No. 212, Tomo 433, del 8 de noviembre de 2021. Creación de la DGEHM y
   disolución del Consejo Nacional de Energía.
-- **ETESAL** — [sitio institucional](https://www.etesal.com.sv/). Propiedad de
+- **ETESAL**. [Sitio institucional](https://www.etesal.com.sv/). Propiedad de
   la transmisión y niveles de tensión.
 
 El registro completo de documentos primarios de la serie, con su estado de
