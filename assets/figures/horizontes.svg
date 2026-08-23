@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" width="1200" height="740">
+<rect width="1200" height="740" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Tres horizontes, no cuatro, y cada uno decide algo que el siguiente ya no puede</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">ROBCP 7.1.2: la UT efectúa una programación anual, una semanal y una diaria. Lo mensual no es un horizonte: es la cadencia con que se actualiza la anual</text>
+<rect x="150" y="120" width="290" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="150" y="144" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#0e7490" text-anchor="start" letter-spacing="0.08em">ANUAL</text>
+<text x="150" y="164" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">52 semanas, detalle semanal</text>
+<text x="440" y="144" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 7.2, 8</text>
+<rect x="505" y="120" width="290" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="505" y="144" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="start" letter-spacing="0.08em">SEMANAL</text>
+<text x="505" y="164" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">7 días, lunes a domingo, detalle horario</text>
+<text x="795" y="144" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 7.3, 9</text>
+<rect x="860" y="120" width="290" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="860" y="144" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#14161a" text-anchor="start" letter-spacing="0.08em">DIARIA (PREDESPACHO)</text>
+<text x="860" y="164" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">24 horas del día siguiente, detalle horario</text>
+<text x="1150" y="144" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">ROBCP 7.4, 10</text>
+<line x1="40" y1="182" x2="1160" y2="182" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<rect x="138" y="184" width="314" height="90" rx="5" fill="#f6f7f9" stroke="none" stroke-width="1.2" />
+<rect x="493" y="184" width="314" height="90" rx="5" fill="#f6f7f9" stroke="none" stroke-width="1.2" />
+<rect x="848" y="184" width="314" height="90" rx="5" fill="#f6f7f9" stroke="none" stroke-width="1.2" />
+<text x="60" y="206" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#6e737e" text-anchor="start" letter-spacing="0.08em">DECIDE</text>
+<text x="150" y="222" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">la política de operación de los</text>
+<text x="150" y="239" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">embalses y el programa anual de</text>
+<text x="150" y="256" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">mantenimientos mayores</text>
+<text x="505" y="222" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">el valor del agua de la semana y</text>
+<text x="505" y="239" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">qué unidades se comprometen,</text>
+<text x="505" y="256" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">con arranques y mínimos técnicos</text>
+<text x="860" y="222" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">la inyección de cada unidad hora</text>
+<text x="860" y="239" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">por hora y los servicios auxiliares</text>
+<text x="860" y="256" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="500" fill="#14161a" text-anchor="start">que acompañan al despacho</text>
+<line x1="40" y1="278" x2="1160" y2="278" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<text x="60" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#6e737e" text-anchor="start" letter-spacing="0.08em">INSUMOS</text>
+<text x="150" y="318" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">hidrología histórica y pronóstico de</text>
+<text x="150" y="335" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">caudales, proyección de demanda,</text>
+<text x="150" y="352" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">datos técnicos, PAMM aprobado,</text>
+<text x="150" y="369" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">precios de combustible constantes</text>
+<text x="150" y="386" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">para todo el horizonte</text>
+<text x="505" y="318" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">pronóstico determinístico de</text>
+<text x="505" y="335" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">caudales, vientos e irradiación,</text>
+<text x="505" y="352" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">demanda horaria por barra,</text>
+<text x="505" y="369" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">costos variables vigentes,</text>
+<text x="505" y="386" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">costos de arranque</text>
+<text x="860" y="318" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">la programación semanal del día,</text>
+<text x="860" y="335" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">actualizada con la información</text>
+<text x="860" y="352" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">más reciente, ofertas de retiro de</text>
+<text x="860" y="369" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">oportunidad y transacciones</text>
+<text x="860" y="386" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">regionales coordinadas con el EOR</text>
+<line x1="40" y1="406" x2="1160" y2="406" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<rect x="138" y="408" width="314" height="122" rx="5" fill="#f6f7f9" stroke="none" stroke-width="1.2" />
+<rect x="493" y="408" width="314" height="122" rx="5" fill="#f6f7f9" stroke="none" stroke-width="1.2" />
+<rect x="848" y="408" width="314" height="122" rx="5" fill="#f6f7f9" stroke="none" stroke-width="1.2" />
+<text x="60" y="430" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#6e737e" text-anchor="start" letter-spacing="0.08em">PRODUCTO</text>
+<text x="150" y="446" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">generación por central, cotas de</text>
+<text x="150" y="463" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">embalse, riesgos de déficit y una</text>
+<text x="150" y="480" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">proyección de costo marginal en</text>
+<text x="150" y="497" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">tres hidrologías: 20 %, 50 % y 90 %</text>
+<text x="150" y="514" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">de probabilidad de excedencia</text>
+<text x="505" y="446" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">despacho horario, costos</text>
+<text x="505" y="463" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">marginales horarios por MRS,</text>
+<text x="505" y="480" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">líneas congestionadas con su</text>
+<text x="505" y="497" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">costo asociado y políticas ante</text>
+<text x="505" y="514" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">contingencias</text>
+<text x="860" y="446" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">programa de inyección y retiro por</text>
+<text x="860" y="463" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">intervalo, costo marginal ex ante</text>
+<text x="860" y="480" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">de carácter indicativo, y los</text>
+<text x="860" y="497" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">programas de racionamiento</text>
+<text x="860" y="514" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">forzado previstos, de existir</text>
+<line x1="40" y1="534" x2="1160" y2="534" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<text x="60" y="558" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#6e737e" text-anchor="start" letter-spacing="0.08em">CUÁNDO</text>
+<text x="150" y="574" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">informe anual al 1 de mayo, de la</text>
+<text x="150" y="591" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">semana 20 a la 19 del año</text>
+<text x="150" y="608" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">siguiente. Actualización mensual</text>
+<text x="150" y="625" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">el viernes previo a cada mes</text>
+<text x="505" y="574" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">cada semana, con reprogramación</text>
+<text x="505" y="591" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">si cambian de forma significativa</text>
+<text x="505" y="608" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">los caudales, la disponibilidad o</text>
+<text x="505" y="625" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">las transacciones regionales</text>
+<text x="860" y="574" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">cada día, con redespacho si se</text>
+<text x="860" y="591" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">rompen las condiciones previstas</text>
+<text x="860" y="608" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">en el predespacho definitivo</text>
+<line x1="40" y1="642" x2="1160" y2="642" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<line x1="456" y1="144" x2="489" y2="144" stroke="#b4b9c2" stroke-width="1.6" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<line x1="811" y1="144" x2="844" y2="144" stroke="#b4b9c2" stroke-width="1.6" marker-end="url(#ah-dim)" stroke-linecap="round" />
+<line x1="1005" y1="658" x2="295" y2="658" stroke="#0e7490" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#ah-teal)" stroke-linecap="round" />
+<text x="620" y="684" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">La operación real vuelve al principio: los caudales medidos, las cotas alcanzadas y las salidas forzadas entran a la siguiente actualización</text>
+<text x="620" y="702" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="middle">mensual de la anual, y un vertimiento no previsto obliga a reprogramar la semana en curso (13.10.2).</text>
+</svg>
