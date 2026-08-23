@@ -198,11 +198,6 @@ y el de cierre entra en la conciliación y en la conexión regional.
   la serie.</figcaption>
 </figure>
 
-::: nota El ejercicio de la pizarra
-Este diagrama es el ejercicio del primer módulo: actores, flujos de energía,
-de dinero y de información, todo en una página. La prueba de dominio es poder
-reproducirlo de memoria en una pizarra en menos de cuatro minutos.
-:::
 
 ## Por qué costos y no ofertas
 
