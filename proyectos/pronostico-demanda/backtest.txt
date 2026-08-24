@@ -1,0 +1,38 @@
+BACKTESTING CON ORIGEN MÓVIL
+==============================================================================
+serie                 sintética, energía diaria en MWh
+observaciones         1461  (2022-01-01 a 2025-12-31)
+orígenes              26, uno por semana, de 2025-07-03 a 2025-12-25
+horizonte             7 días
+pronósticos por modelo 182
+segundos por modelo   {'Línea base estacional': 0.0, 'SARIMAX': 67.3, 'Gradient boosting': 415.4}
+
+── MÉTRICAS GLOBALES (MWh/día, salvo MAPE en %)
+──────────────────────────────────────────────────────────────────────────────
+                          MAE     RMSE  MAPE   sesgo  mejora vs base
+modelo                                                              
+Gradient boosting      429.10   618.29  1.33  164.62           43.10
+Línea base estacional  754.17  1003.74  2.33 -151.91            0.00
+SARIMAX                205.82   264.37  0.64  -35.61           72.71
+
+── MAE POR HORIZONTE (MWh/día)
+──────────────────────────────────────────────────────────────────────────────
+modelo     Gradient boosting  Línea base estacional  SARIMAX
+horizonte                                                   
+1                      301.7                  667.8    179.6
+2                      317.3                  900.0    192.2
+3                      368.5                  754.3    175.1
+4                      467.9                  853.8    194.1
+5                      517.8                  623.8    196.3
+6                      388.2                  638.7    240.0
+7                      642.4                  840.7    263.5
+
+── INTERVALOS DEL BOOSTING
+──────────────────────────────────────────────────────────────────────────────
+cobertura_p10_p90        58.8
+cobertura_nominal        80.0
+pinball_p10              113.5
+pinball_p90              119.4
+ancho_medio              876.5
+
+JSON escrito en resultados.json

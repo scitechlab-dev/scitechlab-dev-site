@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "serie": "sintética, energía diaria en MWh",
+    "observaciones": 1461,
+    "primer_dia": "2022-01-01",
+    "ultimo_dia": "2025-12-31",
+    "origenes": 26,
+    "horizonte": 7,
+    "pronosticos_evaluados": 182,
+    "primer_origen": "2025-07-03",
+    "ultimo_origen": "2025-12-25",
+    "segundos_por_modelo": {
+      "Línea base estacional": 0.0,
+      "SARIMAX": 67.3,
+      "Gradient boosting": 415.4
+    }
+  },
+  "global": [
+    {
+      "modelo": "Gradient boosting",
+      "MAE": 429.1,
+      "RMSE": 618.29,
+      "MAPE": 1.33,
+      "sesgo": 164.62,
+      "mejora vs base": 43.1
+    },
+    {
+      "modelo": "Línea base estacional",
+      "MAE": 754.17,
+      "RMSE": 1003.74,
+      "MAPE": 2.33,
+      "sesgo": -151.91,
+      "mejora vs base": 0.0
+    },
+    {
+      "modelo": "SARIMAX",
+      "MAE": 205.82,
+      "RMSE": 264.37,
+      "MAPE": 0.64,
+      "sesgo": -35.61,
+      "mejora vs base": 72.71
+    }
+  ],
+  "por_horizonte": [
+    {
+      "horizonte": 1,
+      "Gradient boosting": 301.7,
+      "Línea base estacional": 667.8,
+      "SARIMAX": 179.6
+    },
+    {
+      "horizonte": 2,
+      "Gradient boosting": 317.3,
+      "Línea base estacional": 900.0,
+      "SARIMAX": 192.2
+    },
+    {
+      "horizonte": 3,
+      "Gradient boosting": 368.5,
+      "Línea base estacional": 754.3,
+      "SARIMAX": 175.1
+    },
+    {
+      "horizonte": 4,
+      "Gradient boosting": 467.9,
+      "Línea base estacional": 853.8,
+      "SARIMAX": 194.1
+    },
+    {
+      "horizonte": 5,
+      "Gradient boosting": 517.8,
+      "Línea base estacional": 623.8,
+      "SARIMAX": 196.3
+    },
+    {
+      "horizonte": 6,
+      "Gradient boosting": 388.2,
+      "Línea base estacional": 638.7,
+      "SARIMAX": 240.0
+    },
+    {
+      "horizonte": 7,
+      "Gradient boosting": 642.4,
+      "Línea base estacional": 840.7,
+      "SARIMAX": 263.5
+    }
+  ],
+  "intervalos": {
+    "cobertura_p10_p90": 58.8,
+    "cobertura_nominal": 80.0,
+    "pinball_p10": 113.5,
+    "pinball_p90": 119.4,
+    "ancho_medio": 876.5
+  }
+}

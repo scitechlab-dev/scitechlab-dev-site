@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+<rect width="1200" height="600" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">La ley, leída desde la distribuidora: cuatro frentes abiertos a la vez</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">la misma empresa responde por la red, por sus compras, por sus usuarios y por su información, y cada frente tiene su propio artículo</text>
+<rect x="60" y="96" width="262" height="404" rx="8" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="96" width="262" height="3" rx="1.5" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="76" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#0e7490" text-anchor="start" letter-spacing="0.08em">HACIA LA RED</text>
+<text x="76" y="146" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">Interconectar es obligación, no favor</text>
+<rect x="76" y="167" width="46" height="16" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="99" y="178" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">27</text>
+<text x="76" y="198" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">permitir la interconexión y el transporte,</text>
+<text x="76" y="212" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">salvo peligro para la operación</text>
+<rect x="76" y="231" width="46" height="16" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="99" y="242" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">28</text>
+<text x="76" y="262" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">las condiciones necesitan visto bueno</text>
+<text x="76" y="276" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">previo y expreso de la DGEHM</text>
+<rect x="76" y="295" width="46" height="16" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="99" y="306" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">30</text>
+<text x="76" y="326" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">salvo pacto en contrario, los costos de</text>
+<text x="76" y="340" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">la interconexión los paga el solicitante</text>
+<rect x="76" y="359" width="46" height="16" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="99" y="370" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">31</text>
+<text x="76" y="390" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">responsabilidad por los daños que las</text>
+<text x="76" y="404" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">propias instalaciones causen a terceros</text>
+<rect x="340" y="96" width="262" height="404" rx="8" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="340" y="96" width="262" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="356" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#8a5200" text-anchor="start" letter-spacing="0.08em">HACIA EL MERCADO</text>
+<text x="356" y="146" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">Lo que compra define lo que cobra</text>
+<rect x="356" y="167" width="46" height="16" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="379" y="178" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">79</text>
+<text x="356" y="198" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">el pliego se basa en contratos de largo</text>
+<text x="356" y="212" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">plazo adjudicados por libre concurrencia</text>
+<text x="356" y="226" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">y en contratos de naturaleza pública</text>
+<rect x="356" y="245" width="46" height="16" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="379" y="256" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">78</text>
+<text x="356" y="276" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">presentar anualmente el pliego tarifario</text>
+<text x="356" y="290" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">a aprobación del regulador</text>
+<rect x="356" y="309" width="46" height="16" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="379" y="320" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">80</text>
+<text x="356" y="340" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">el pliego debe incluir una fórmula de</text>
+<text x="356" y="354" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">ajuste</text>
+<rect x="356" y="373" width="46" height="16" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="379" y="384" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">67</text>
+<text x="356" y="404" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">los cargos de red se calculan sobre una</text>
+<text x="356" y="418" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">distribuidora eficiente, no sobre la real</text>
+<rect x="620" y="96" width="262" height="404" rx="8" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="620" y="96" width="262" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="636" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#14161a" text-anchor="start" letter-spacing="0.08em">HACIA EL USUARIO</text>
+<text x="636" y="146" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">Obligaciones con plazo y con metro</text>
+<rect x="636" y="167" width="46" height="16" rx="3" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="659" y="178" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">77-C</text>
+<text x="636" y="198" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">expandir hasta cien metros a costa propia;</text>
+<text x="636" y="212" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">más allá, a costa del usuario, con</text>
+<text x="636" y="226" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">financiamiento de doce cuotas sin interés</text>
+<rect x="636" y="245" width="46" height="16" rx="3" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="659" y="256" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">76</text>
+<text x="636" y="276" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">separar en la factura el cargo de red del</text>
+<text x="636" y="290" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">cargo por energía</text>
+<rect x="636" y="309" width="46" height="16" rx="3" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="659" y="320" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">77</text>
+<text x="636" y="340" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">se tiene por no escrito cualquier cargo</text>
+<text x="636" y="354" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">por cambio de comercializador</text>
+<rect x="636" y="373" width="46" height="16" rx="3" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="659" y="384" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">83</text>
+<text x="636" y="404" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">el corte procede solo en los cinco casos</text>
+<text x="636" y="418" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">que la ley enumera</text>
+<rect x="900" y="96" width="262" height="404" rx="8" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="900" y="96" width="262" height="3" rx="1.5" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<text x="916" y="124" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#6e737e" text-anchor="start" letter-spacing="0.08em">HACIA EL REGULADOR</text>
+<text x="916" y="146" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">Informar es obligación tipificada</text>
+<rect x="916" y="167" width="46" height="16" rx="3" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<text x="939" y="178" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">32</text>
+<text x="916" y="198" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">informe semestral: energía por tipo de</text>
+<text x="916" y="212" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">consumidor, fallas, compensaciones</text>
+<text x="916" y="226" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">pagadas y calidad del servicio</text>
+<rect x="916" y="245" width="46" height="16" rx="3" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<text x="939" y="256" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">67-bis</text>
+<text x="916" y="276" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">sistema auditable de medición de calidad,</text>
+<text x="916" y="290" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">informar incumplimientos y pagar las</text>
+<text x="916" y="304" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">compensaciones reguladas</text>
+<rect x="916" y="323" width="46" height="16" rx="3" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<text x="939" y="334" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">29-A</text>
+<text x="916" y="354" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">remitir a la DGEHM copia de solicitudes y</text>
+<text x="916" y="368" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">resoluciones de interconexión, en cinco</text>
+<text x="916" y="382" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">días hábiles</text>
+<rect x="916" y="401" width="46" height="16" rx="3" fill="#6e737e" stroke="none" stroke-width="1.2" />
+<text x="939" y="412" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">8</text>
+<text x="916" y="432" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">contabilidad separada por actividad y</text>
+<text x="916" y="446" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#565a63" text-anchor="start">registrada ante el regulador</text>
+<text x="60" y="536" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Los cuatro frentes no son independientes. El artículo 67 dice que los cargos de red se calculan sobre una empresa eficiente y dimensionada al</text>
+<text x="60" y="554" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">mercado actual, no sobre la red que la distribuidora efectivamente tiene: la diferencia entre las dos la absorbe la empresa, y por eso la eficiencia</text>
+<text x="60" y="572" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">operativa del frente de red aparece como margen en el frente de mercado.</text>
+</svg>

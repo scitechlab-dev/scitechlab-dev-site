@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640">
+<rect width="1200" height="640" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Por qué se sanciona a una distribuidora</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">la ley tipifica; no deja la calificación al criterio del inspector. Lo que cambia entre grave y muy grave suele ser una sola palabra: reiterada</text>
+<rect x="60" y="96" width="520" height="340" rx="8" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="60" y="96" width="520" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="82" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#8a5200" text-anchor="start" letter-spacing="0.08em">GRAVES</text>
+<text x="558" y="126" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">art. 104-bis</text>
+<text x="82" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">hasta 50 000 colones</text>
+<line x1="82" y1="162" x2="558" y2="162" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<circle cx="88" cy="182" r="2.5" fill="#8a5200" />
+<text x="102" y="186" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">No inscribir en plazo los contratos de transmisión y</text>
+<text x="102" y="200" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">distribución</text>
+<circle cx="88" cy="216" r="2.5" fill="#8a5200" />
+<text x="102" y="220" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">La negativa ocasional y aislada a facilitar información al</text>
+<text x="102" y="234" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">regulador</text>
+<circle cx="88" cy="250" r="2.5" fill="#8a5200" />
+<text x="102" y="254" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Proporcionar información incompleta, inexacta o en forma</text>
+<text x="102" y="268" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">distinta a la establecida</text>
+<circle cx="88" cy="284" r="2.5" fill="#8a5200" />
+<text x="102" y="288" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Contabilidad de distribución que no cumple las normas del</text>
+<text x="102" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">regulador</text>
+<circle cx="88" cy="318" r="2.5" fill="#8a5200" />
+<text x="102" y="322" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Aplicación irregular, intencionada o negligente, de las normas</text>
+<text x="102" y="336" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">de calidad de servicio</text>
+<circle cx="88" cy="352" r="2.5" fill="#8a5200" />
+<text x="102" y="356" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Aplicar cargos por conexión y reconexión que no cumplen el</text>
+<text x="102" y="370" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">método aprobado</text>
+<rect x="620" y="96" width="520" height="340" rx="8" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<rect x="620" y="96" width="520" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
+<text x="642" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start" letter-spacing="0.08em">MUY GRAVES</text>
+<text x="1118" y="126" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">art. 105</text>
+<text x="642" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">hasta 500 000 colones</text>
+<line x1="642" y1="162" x2="1118" y2="162" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
+<circle cx="648" cy="182" r="2.5" fill="#14161a" />
+<text x="662" y="186" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Negarse a interconectar la red sin justa causa, o no permitir</text>
+<text x="662" y="200" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">su uso</text>
+<circle cx="648" cy="216" r="2.5" fill="#14161a" />
+<text x="662" y="220" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Desconectar las instalaciones de un operador sin causa</text>
+<text x="662" y="234" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">justificada</text>
+<circle cx="648" cy="250" r="2.5" fill="#14161a" />
+<text x="662" y="254" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Aplicar cargos por uso de redes que no cumplen el método del</text>
+<text x="662" y="268" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">regulador</text>
+<circle cx="648" cy="284" r="2.5" fill="#14161a" />
+<text x="662" y="288" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">La negativa reiterada a facilitar información que hay</text>
+<text x="662" y="302" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">obligación de suministrar</text>
+<circle cx="648" cy="318" r="2.5" fill="#14161a" />
+<text x="662" y="322" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">El suministro de datos falsos o indebidamente manipulados</text>
+<circle cx="648" cy="352" r="2.5" fill="#14161a" />
+<text x="662" y="356" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">La aplicación irregular reiterada de los pliegos tarifarios</text>
+<text x="662" y="370" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">autorizados</text>
+<circle cx="648" cy="386" r="2.5" fill="#14161a" />
+<text x="662" y="390" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">No separar los sistemas de contabilidad entre actividades</text>
+<rect x="60" y="456" width="1080" height="116" rx="8" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" />
+<text x="82" y="484" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start">Y la reincidencia escala sola</text>
+<text x="82" y="512" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="start">2.ª infracción</text>
+<text x="82" y="530" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">+10 % sobre el monto</text>
+<text x="82" y="548" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">art. 107</text>
+<text x="350" y="512" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="start">3.ª infracción</text>
+<text x="350" y="530" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">+25 % sobre el monto</text>
+<text x="350" y="548" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">art. 107</text>
+<text x="618" y="512" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="start">4.ª reincidencia</text>
+<text x="618" y="530" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">se inicia el proceso para declarar la terminación</text>
+<text x="618" y="548" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">art. 107</text>
+<text x="886" y="512" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="start">incumplir una resolución firme</text>
+<text x="886" y="530" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">hasta 150 000 colones diarios</text>
+<text x="886" y="548" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">art. 106</text>
+<text x="60" y="606" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">La lista de agravantes del artículo 106 incluye el peligro para la vida y la salud, el daño causado, los perjuicios a la continuidad del suministro,</text>
+<text x="60" y="624" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">el beneficio obtenido, la intencionalidad, la reincidencia en tres años y el efecto sobre terceros.</text>
+</svg>
