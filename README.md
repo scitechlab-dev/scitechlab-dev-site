@@ -508,7 +508,16 @@ Cloudflare's edge cache keep serving the old version. Bump the query string
 wherever it's referenced (`style.css?v=2` → `?v=3`) so it counts as a new URL.
 This applies to `index.html` **and** every page in `articles/`.
 
-Currently at `style.css?v=17` and `main.js?v=9`. Versions 8 and 6 were burned by
+The article pages take their version FROM `index.html`: `assetVersions()` in
+`build.mjs` greps it out of there, so bumping it in one place is enough. But it
+does have to be bumped — editing `style.css` without touching `index.html`
+produces a build that looks correct locally (the dev server ignores the cache
+header) and serves stale CSS in production. That failure mode has bitten this
+repo: the code-block copy bar shipped once with its stylesheet still cached, so
+the language label rendered as loose text above the block and the button stayed
+invisible.
+
+Currently at `style.css?v=21` and `main.js?v=10`. Versions 8 and 6 were burned by
 a deploy that has since been reverted; don't reuse them, the edge still has
 that content cached as immutable.
 
