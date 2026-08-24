@@ -26,3 +26,10 @@ internet y da el mismo resultado en cualquier máquina.
     graficas.py    la misma figura con pandas, matplotlib, seaborn y plotly
     salida.txt     la corrida que cita el artículo
     salida/        las cuatro figuras generadas
+
+## Figuras
+
+`graficas.py` produce las cuatro figuras comparativas en `salida/`. Los tres
+diagramas conceptuales del artículo (ventanas, merge, largo contra ancho) los
+genera `scripts/figures/pandas-lab.mjs`: son diagramas de estructura, no
+gráficas de datos, y por eso van dibujados en SVG y no salen de matplotlib.

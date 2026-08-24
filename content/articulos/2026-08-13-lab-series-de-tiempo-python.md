@@ -110,6 +110,17 @@ $S_t$ el componente estacional. Da entre 0, ausente, y 1, dominante. Con CO2 las
 dos están cerca de 1, que es lo que uno esperaría de la serie más ordenada de la
 climatología.
 
+<figure class="fig fig-wide">
+  <img src="../assets/figures/ts-descomposicion.png"
+       alt="Cuatro paneles apilados con el mismo eje temporal de 1958 a 2001. Arriba, la serie observada de CO2 subiendo de 315 a 370 ppm con una ondulación anual visible. Debajo, la tendencia extraída, una curva suave y creciente. Después, la estacionalidad, una oscilación regular de unos 6 ppm que se repite cada año. Abajo, el residuo, ruido sin estructura visible alrededor de cero y con desviación de 0.255 ppm."
+       width="1043" height="746" loading="lazy" />
+  <figcaption>Los cuatro paneles comparten el eje horizontal pero no el
+  vertical, y ahí está la información. La tendencia recorre 55 ppm, la
+  estacionalidad oscila 6, y el residuo se mueve en menos de uno. Esa jerarquía
+  de escalas es lo que dicen los números de fuerza de arriba, y es la razón por
+  la que esta serie es fácil de pronosticar.</figcaption>
+</figure>
+
 El patrón estacional medio, en ppm sobre la tendencia:
 
 ```
@@ -161,6 +172,16 @@ ciclo solar medido sobre los 28 picos del dataset:
   intervalo entre picos: mínimo 7, máximo 17 años
   media 10.9, mediana 11
 ```
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/ts-acf.png"
+       alt="Cuatro paneles. Arriba, la ACF y la PACF del CO2 diferenciado: la ACF decae despacio con muchos rezagos fuera de la banda de significancia y la PACF se corta pronto. Abajo, la ACF y la PACF de las manchas solares: la ACF ondula con período cercano a diez rezagos, cruzando el cero y volviendo, mientras la PACF se apaga rápido. Una banda gris marca el umbral de más menos 1.96 sobre raíz de n."
+       width="1062" height="606" loading="lazy" />
+  <figcaption>Las dos formas no se parecen, y eso es el punto. Una ACF que decae
+  despacio dice que queda estructura en muchos rezagos; una que ondula dice que
+  hay un ciclo. La segunda es la que engaña, porque parece estacionalidad y no
+  cumple la condición que SARIMA necesita.</figcaption>
+</figure>
 
 La media da 10.9 años, que es el número que uno esperaba. Pero **el período
 varía entre 7 y 17 años**, o sea un rango de una década entera. SARIMA exige un
@@ -221,6 +242,17 @@ Ingenuo estacional  1.882  2.066  1.450                0.000
 Fourier + OLS       3.062  3.074  2.358              -62.693
 ```
 
+<figure class="fig fig-wide">
+  <img src="../assets/figures/ts-pronosticos.png"
+       alt="Dos paneles. A la izquierda, cuatro años de CO2 observado en negro y, a partir del inicio del pronóstico, las seis curvas pronosticadas superpuestas sobre los 24 meses de prueba. A la derecha, el error mes a mes de cada modelo, con el MASE de cada uno anotado al final de su curva: Fourier queda muy por encima con error positivo creciente, el ingenuo estacional se aleja de forma progresiva, y Holt-Winters y SARIMA se mantienen pegados a cero."
+       width="1199" height="440" loading="lazy" />
+  <figcaption>El panel izquierdo muestra que las seis curvas se parecen bastante
+  a simple vista, y el derecho muestra que no. Graficar el error en vez del
+  pronóstico es lo que hace visible la diferencia entre modelos: en la escala de
+  la serie, 3 ppm de sesgo se pierden; en la escala del error, saltan.
+  </figcaption>
+</figure>
+
 Tres lecturas.
 
 **Holt-Winters gana**, con un MASE de 0.182. Conviene leer ese número con
@@ -254,6 +286,17 @@ global y seguir la serie.
 pero cualquier modelo que quede por debajo de él, como el de Fourier, es un
 modelo que hay que descartar. Es el control que dice si el trabajo sirvió, y por
 eso está en la tabla.
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/ts-horizonte.gif"
+       alt="Animación en la que el pronóstico avanza mes a mes desde el origen. Al principio las seis curvas coinciden casi exactamente con la serie observada; al avanzar los 24 meses se van separando, y las de Fourier y el ingenuo estacional se despegan mucho antes y más lejos que las de Holt-Winters y SARIMA. El título va reportando qué modelo acumula el peor error en cada mes."
+       width="960" height="440" loading="lazy" />
+  <figcaption>Lo que la animación agrega sobre la figura anterior es
+  <em>cuándo</em> se despega cada modelo. Los seis empiezan casi indistinguibles
+  y el orden final no se decide en el mes uno: se decide entre el seis y el
+  doce, que es justo el rango que importa para una programación semanal
+  encadenada.</figcaption>
+</figure>
 
 ## 5. Un modelo no está terminado hasta que sus residuos son ruido
 
@@ -311,6 +354,16 @@ El método encuentra 1899 sin que nadie le diga nada del mundo real. La presa
 baja de Asuán se terminó en 1902, y el dato la ve. El caudal medio cae de 1098
 a 850, y admitir dos niveles en vez de uno explica el **43.7 %** de la suma de
 cuadrados.
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/ts-quiebre.png"
+       alt="Dos paneles. Arriba, el caudal anual del Nilo de 1871 a 1970 con una línea punteada vertical en 1899; a la izquierda de ella una línea azul marca el nivel medio de 1098 y a la derecha una ámbar marca 850, mientras una línea gris discontinua muestra el único nivel de 919 que resultaría de ignorar el quiebre. Abajo, la suma de cuadrados en función del año donde se proponga el corte, con un mínimo claro en 1899."
+       width="1140" height="558" loading="lazy" />
+  <figcaption>El panel de abajo es el que importa metodológicamente: no muestra
+  el quiebre, muestra la búsqueda. La curva tiene un mínimo bien definido, y eso
+  es lo que distingue un quiebre real de uno que uno quiso ver. Si fuera plana,
+  cualquier año serviría igual y no habría quiebre que reportar.</figcaption>
+</figure>
 
 Hasta acá, el titular se escribe solo: hay un quiebre, hay que tirar los datos
 viejos. Ahora la parte que no salió como esperaba.

@@ -205,6 +205,17 @@ v["acumulada"] = x["unemp"].expanding().mean()
 v["exponencial"] = x["unemp"].ewm(span=4, adjust=False).mean()
 ```
 
+<figure class="fig fig-wide">
+  <img src="../assets/figures/pd-ventanas.svg"
+       alt="Cuatro filas de celdas, una por tipo de ventana, sobre el mismo eje temporal que va de t menos 8 a t más 3. En rolling de 4, se sombrean las cuatro celdas que terminan en t. En rolling centrado, se sombrean dos celdas anteriores y dos posteriores a t, incluidas t más 1 y t más 2, en color ámbar de advertencia. En expanding, todas las celdas hasta t. En ewm, también todas hasta t, pero con el color desvaneciéndose hacia el pasado para representar el peso decreciente."
+       width="1200" height="500" loading="lazy" />
+  <figcaption>La pregunta que la figura responde no es qué calcula cada ventana
+  sino <em>qué celdas lee</em>, que es lo que decide si la transformación se
+  puede usar para pronosticar. En la fila de ewm el degradado del color es
+  literalmente el peso: mismas celdas que expanding, distinta
+  ponderación.</figcaption>
+</figure>
+
 `rolling` toma una ventana fija; `expanding` acumula desde el inicio; `ewm`
 pondera el pasado con decaimiento exponencial, así que reacciona más rápido que
 la móvil simple sin perder tanta memoria.
@@ -239,6 +250,16 @@ largo = (
 ancho = largo.pivot(index="trimestre", columns="serie", values="valor")
 ```
 
+<figure class="fig fig-wide">
+  <img src="../assets/figures/pd-largo-ancho.svg"
+       alt="A la izquierda, una tabla ancha de tres filas por tres columnas, con una columna de trimestre y dos columnas de serie coloreadas. A la derecha, la misma información en formato largo: seis filas por tres columnas, donde cada fila lleva el trimestre, el nombre de la serie y su valor. Entre las dos, dos flechas etiquetadas melt y pivot indican la conversión en cada sentido."
+       width="1200" height="480" loading="lazy" />
+  <figcaption>La misma información en las dos formas, celda por celda. Tres
+  filas por dos series en ancho son seis filas en largo: el largo crece con el
+  producto y por eso es el formato natural de una base de datos, donde agregar
+  una serie es insertar filas y no alterar el esquema.</figcaption>
+</figure>
+
 `melt` va de ancho a largo y `pivot` de vuelta. Once trimestres por tres series
 dan 33 filas en largo y una tabla de 11×3 en ancho.
 
@@ -253,6 +274,16 @@ falla.
 ```python
 izq.merge(der, on="trimestre", how="left", validate="one_to_one")
 ```
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/pd-merge.svg"
+       alt="A la izquierda, las dos tablas de entrada con sus claves, donde dos trimestres aparecen en ambas y se destacan en color. A la derecha, cuatro tarjetas con el resultado de inner, left, right y outer, cada una mostrando sus filas concretas y los huecos NaN con borde punteado, más el conteo de filas y de nulos. Abajo, un recuadro destacado explica que un solo duplicado en la tabla derecha convierte cuatro filas en cinco sin ningún aviso, y que validate igual a one_to_one lo convierte en excepción."
+       width="1200" height="620" loading="lazy" />
+  <figcaption>Un diagrama de Venn diría lo mismo peor, porque lo que hay que ver
+  no son conjuntos sino <em>cuántas filas salen</em> y dónde quedan los huecos.
+  El recuadro de abajo es el modo de falla que importa: un merge mal hecho no
+  explota, devuelve filas de más.</figcaption>
+</figure>
 
 `validate=` es el argumento que más errores previene y que casi nadie usa. Si la
 relación no es la declarada, **falla en vez de duplicar filas en silencio**. Con

@@ -1,0 +1,1702 @@
+{
+  "phillips": {
+    "global": {
+      "r": 0.065,
+      "p": 0.3567,
+      "n": 203
+    },
+    "decadas": [
+      {
+        "decada": 1960,
+        "n": 40,
+        "r": -0.7439,
+        "p": 0.0,
+        "puntos": [
+          {
+            "unemp": 5.2,
+            "infl": 2.31
+          },
+          {
+            "unemp": 5.2,
+            "infl": 0.14
+          },
+          {
+            "unemp": 5.6,
+            "infl": 2.7
+          },
+          {
+            "unemp": 6.3,
+            "infl": 1.21
+          },
+          {
+            "unemp": 6.8,
+            "infl": -0.4
+          },
+          {
+            "unemp": 7.0,
+            "infl": 1.47
+          },
+          {
+            "unemp": 6.8,
+            "infl": 0.8
+          },
+          {
+            "unemp": 6.2,
+            "infl": 0.8
+          },
+          {
+            "unemp": 5.6,
+            "infl": 2.26
+          },
+          {
+            "unemp": 5.5,
+            "infl": 0.13
+          },
+          {
+            "unemp": 5.6,
+            "infl": 2.11
+          },
+          {
+            "unemp": 5.5,
+            "infl": 0.79
+          },
+          {
+            "unemp": 5.8,
+            "infl": 0.53
+          },
+          {
+            "unemp": 5.7,
+            "infl": 2.75
+          },
+          {
+            "unemp": 5.5,
+            "infl": 0.78
+          },
+          {
+            "unemp": 5.6,
+            "infl": 2.46
+          },
+          {
+            "unemp": 5.5,
+            "infl": 0.13
+          },
+          {
+            "unemp": 5.2,
+            "infl": 0.9
+          },
+          {
+            "unemp": 5.0,
+            "infl": 1.29
+          },
+          {
+            "unemp": 5.0,
+            "infl": 2.05
+          },
+          {
+            "unemp": 4.9,
+            "infl": 1.28
+          },
+          {
+            "unemp": 4.7,
+            "infl": 2.54
+          },
+          {
+            "unemp": 4.4,
+            "infl": 0.89
+          },
+          {
+            "unemp": 4.1,
+            "infl": 2.9
+          },
+          {
+            "unemp": 3.9,
+            "infl": 4.99
+          },
+          {
+            "unemp": 3.8,
+            "infl": 2.1
+          },
+          {
+            "unemp": 3.8,
+            "infl": 4.9
+          },
+          {
+            "unemp": 3.7,
+            "infl": 0.61
+          },
+          {
+            "unemp": 3.8,
+            "infl": 2.42
+          },
+          {
+            "unemp": 3.8,
+            "infl": 3.61
+          },
+          {
+            "unemp": 3.8,
+            "infl": 3.58
+          },
+          {
+            "unemp": 3.9,
+            "infl": 4.72
+          },
+          {
+            "unemp": 3.7,
+            "infl": 3.5
+          },
+          {
+            "unemp": 3.5,
+            "infl": 5.77
+          },
+          {
+            "unemp": 3.5,
+            "infl": 4.56
+          },
+          {
+            "unemp": 3.4,
+            "infl": 4.51
+          },
+          {
+            "unemp": 3.4,
+            "infl": 6.67
+          },
+          {
+            "unemp": 3.4,
+            "infl": 5.47
+          },
+          {
+            "unemp": 3.6,
+            "infl": 5.4
+          },
+          {
+            "unemp": 3.6,
+            "infl": 6.38
+          }
+        ]
+      },
+      {
+        "decada": 1970,
+        "n": 40,
+        "r": -0.1831,
+        "p": 0.258067,
+        "puntos": [
+          {
+            "unemp": 4.2,
+            "infl": 6.28
+          },
+          {
+            "unemp": 4.8,
+            "infl": 4.13
+          },
+          {
+            "unemp": 5.2,
+            "infl": 5.11
+          },
+          {
+            "unemp": 5.8,
+            "infl": 5.04
+          },
+          {
+            "unemp": 5.9,
+            "infl": 2.0
+          },
+          {
+            "unemp": 5.9,
+            "infl": 4.96
+          },
+          {
+            "unemp": 6.0,
+            "infl": 2.94
+          },
+          {
+            "unemp": 6.0,
+            "infl": 2.92
+          },
+          {
+            "unemp": 5.8,
+            "infl": 2.9
+          },
+          {
+            "unemp": 5.7,
+            "infl": 2.88
+          },
+          {
+            "unemp": 5.6,
+            "infl": 3.81
+          },
+          {
+            "unemp": 5.3,
+            "infl": 4.71
+          },
+          {
+            "unemp": 5.0,
+            "infl": 9.26
+          },
+          {
+            "unemp": 4.9,
+            "infl": 4.55
+          },
+          {
+            "unemp": 4.8,
+            "infl": 12.47
+          },
+          {
+            "unemp": 4.8,
+            "infl": 10.39
+          },
+          {
+            "unemp": 5.1,
+            "infl": 10.96
+          },
+          {
+            "unemp": 5.2,
+            "infl": 9.86
+          },
+          {
+            "unemp": 5.6,
+            "infl": 13.56
+          },
+          {
+            "unemp": 6.6,
+            "infl": 10.07
+          },
+          {
+            "unemp": 8.2,
+            "infl": 5.32
+          },
+          {
+            "unemp": 8.9,
+            "infl": 7.48
+          },
+          {
+            "unemp": 8.5,
+            "infl": 6.61
+          },
+          {
+            "unemp": 8.3,
+            "infl": 6.5
+          },
+          {
+            "unemp": 7.7,
+            "infl": 2.14
+          },
+          {
+            "unemp": 7.6,
+            "infl": 6.37
+          },
+          {
+            "unemp": 7.7,
+            "infl": 6.27
+          },
+          {
+            "unemp": 7.8,
+            "infl": 5.49
+          },
+          {
+            "unemp": 7.5,
+            "infl": 8.76
+          },
+          {
+            "unemp": 7.1,
+            "infl": 5.3
+          },
+          {
+            "unemp": 6.9,
+            "infl": 5.23
+          },
+          {
+            "unemp": 6.6,
+            "infl": 7.08
+          },
+          {
+            "unemp": 6.3,
+            "infl": 7.58
+          },
+          {
+            "unemp": 6.0,
+            "infl": 9.89
+          },
+          {
+            "unemp": 6.0,
+            "infl": 9.65
+          },
+          {
+            "unemp": 5.9,
+            "infl": 8.26
+          },
+          {
+            "unemp": 5.9,
+            "infl": 12.08
+          },
+          {
+            "unemp": 5.7,
+            "infl": 13.37
+          },
+          {
+            "unemp": 5.9,
+            "infl": 11.88
+          },
+          {
+            "unemp": 5.9,
+            "infl": 14.62
+          }
+        ]
+      },
+      {
+        "decada": 1980,
+        "n": 40,
+        "r": -0.1126,
+        "p": 0.489033,
+        "puntos": [
+          {
+            "unemp": 6.3,
+            "infl": 14.6
+          },
+          {
+            "unemp": 7.3,
+            "infl": 8.32
+          },
+          {
+            "unemp": 7.7,
+            "infl": 10.04
+          },
+          {
+            "unemp": 7.4,
+            "infl": 11.64
+          },
+          {
+            "unemp": 7.4,
+            "infl": 8.62
+          },
+          {
+            "unemp": 7.4,
+            "infl": 10.63
+          },
+          {
+            "unemp": 7.4,
+            "infl": 8.22
+          },
+          {
+            "unemp": 8.2,
+            "infl": 4.26
+          },
+          {
+            "unemp": 8.8,
+            "infl": 2.53
+          },
+          {
+            "unemp": 9.4,
+            "infl": 10.39
+          },
+          {
+            "unemp": 9.9,
+            "infl": 2.45
+          },
+          {
+            "unemp": 10.7,
+            "infl": -0.82
+          },
+          {
+            "unemp": 10.4,
+            "infl": 3.66
+          },
+          {
+            "unemp": 10.1,
+            "infl": 4.03
+          },
+          {
+            "unemp": 9.4,
+            "infl": 3.99
+          },
+          {
+            "unemp": 8.5,
+            "infl": 5.13
+          },
+          {
+            "unemp": 7.9,
+            "infl": 4.67
+          },
+          {
+            "unemp": 7.5,
+            "infl": 3.09
+          },
+          {
+            "unemp": 7.4,
+            "infl": 3.82
+          },
+          {
+            "unemp": 7.3,
+            "infl": 2.28
+          },
+          {
+            "unemp": 7.3,
+            "infl": 4.89
+          },
+          {
+            "unemp": 7.3,
+            "infl": 2.61
+          },
+          {
+            "unemp": 7.2,
+            "infl": 2.96
+          },
+          {
+            "unemp": 7.0,
+            "infl": 5.13
+          },
+          {
+            "unemp": 7.0,
+            "infl": -4.39
+          },
+          {
+            "unemp": 7.2,
+            "infl": 2.93
+          },
+          {
+            "unemp": 7.0,
+            "infl": 2.55
+          },
+          {
+            "unemp": 6.8,
+            "infl": 4.33
+          },
+          {
+            "unemp": 6.6,
+            "infl": 4.64
+          },
+          {
+            "unemp": 6.3,
+            "infl": 3.89
+          },
+          {
+            "unemp": 6.0,
+            "infl": 4.2
+          },
+          {
+            "unemp": 5.9,
+            "infl": 3.46
+          },
+          {
+            "unemp": 5.7,
+            "infl": 4.12
+          },
+          {
+            "unemp": 5.5,
+            "infl": 4.41
+          },
+          {
+            "unemp": 5.5,
+            "infl": 4.7
+          },
+          {
+            "unemp": 5.3,
+            "infl": 4.31
+          },
+          {
+            "unemp": 5.2,
+            "infl": 6.22
+          },
+          {
+            "unemp": 5.2,
+            "infl": 4.52
+          },
+          {
+            "unemp": 5.3,
+            "infl": 2.88
+          },
+          {
+            "unemp": 5.4,
+            "infl": 6.64
+          }
+        ]
+      },
+      {
+        "decada": 1990,
+        "n": 40,
+        "r": 0.1522,
+        "p": 0.348509,
+        "puntos": [
+          {
+            "unemp": 5.3,
+            "infl": 4.37
+          },
+          {
+            "unemp": 5.3,
+            "infl": 4.93
+          },
+          {
+            "unemp": 5.7,
+            "infl": 8.79
+          },
+          {
+            "unemp": 6.1,
+            "infl": 3.88
+          },
+          {
+            "unemp": 6.6,
+            "infl": 1.19
+          },
+          {
+            "unemp": 6.8,
+            "infl": 3.24
+          },
+          {
+            "unemp": 6.9,
+            "infl": 2.93
+          },
+          {
+            "unemp": 7.1,
+            "infl": 3.19
+          },
+          {
+            "unemp": 7.4,
+            "infl": 3.17
+          },
+          {
+            "unemp": 7.6,
+            "infl": 3.14
+          },
+          {
+            "unemp": 7.6,
+            "infl": 3.4
+          },
+          {
+            "unemp": 7.4,
+            "infl": 3.09
+          },
+          {
+            "unemp": 7.2,
+            "infl": 2.79
+          },
+          {
+            "unemp": 7.1,
+            "infl": 1.94
+          },
+          {
+            "unemp": 6.8,
+            "infl": 3.03
+          },
+          {
+            "unemp": 6.6,
+            "infl": 1.92
+          },
+          {
+            "unemp": 6.6,
+            "infl": 2.45
+          },
+          {
+            "unemp": 6.2,
+            "infl": 3.25
+          },
+          {
+            "unemp": 6.0,
+            "infl": 2.69
+          },
+          {
+            "unemp": 5.6,
+            "infl": 2.93
+          },
+          {
+            "unemp": 5.5,
+            "infl": 3.44
+          },
+          {
+            "unemp": 5.7,
+            "infl": 2.1
+          },
+          {
+            "unemp": 5.7,
+            "infl": 2.35
+          },
+          {
+            "unemp": 5.6,
+            "infl": 3.11
+          },
+          {
+            "unemp": 5.5,
+            "infl": 3.6
+          },
+          {
+            "unemp": 5.5,
+            "infl": 2.3
+          },
+          {
+            "unemp": 5.3,
+            "infl": 3.05
+          },
+          {
+            "unemp": 5.3,
+            "infl": 3.02
+          },
+          {
+            "unemp": 5.2,
+            "infl": 1.25
+          },
+          {
+            "unemp": 5.0,
+            "infl": 1.25
+          },
+          {
+            "unemp": 4.9,
+            "infl": 2.73
+          },
+          {
+            "unemp": 4.7,
+            "infl": 1.24
+          },
+          {
+            "unemp": 4.6,
+            "infl": 0.49
+          },
+          {
+            "unemp": 4.4,
+            "infl": 2.46
+          },
+          {
+            "unemp": 4.5,
+            "infl": 1.71
+          },
+          {
+            "unemp": 4.4,
+            "infl": 1.95
+          },
+          {
+            "unemp": 4.3,
+            "infl": 2.9
+          },
+          {
+            "unemp": 4.3,
+            "infl": 1.92
+          },
+          {
+            "unemp": 4.2,
+            "infl": 3.35
+          },
+          {
+            "unemp": 4.1,
+            "infl": 2.85
+          }
+        ]
+      },
+      {
+        "decada": 2000,
+        "n": 39,
+        "r": -0.2042,
+        "p": 0.212363,
+        "puntos": [
+          {
+            "unemp": 4.0,
+            "infl": 3.76
+          },
+          {
+            "unemp": 3.9,
+            "infl": 4.19
+          },
+          {
+            "unemp": 4.0,
+            "infl": 2.77
+          },
+          {
+            "unemp": 3.9,
+            "infl": 3.89
+          },
+          {
+            "unemp": 4.2,
+            "infl": 1.82
+          },
+          {
+            "unemp": 4.4,
+            "infl": 2.26
+          },
+          {
+            "unemp": 4.8,
+            "infl": 0.45
+          },
+          {
+            "unemp": 5.5,
+            "infl": 0.23
+          },
+          {
+            "unemp": 5.7,
+            "infl": 3.59
+          },
+          {
+            "unemp": 5.8,
+            "infl": 1.56
+          },
+          {
+            "unemp": 5.7,
+            "infl": 2.66
+          },
+          {
+            "unemp": 5.8,
+            "infl": 3.08
+          },
+          {
+            "unemp": 5.9,
+            "infl": 1.31
+          },
+          {
+            "unemp": 6.2,
+            "infl": 1.09
+          },
+          {
+            "unemp": 6.1,
+            "infl": 2.6
+          },
+          {
+            "unemp": 5.8,
+            "infl": 3.02
+          },
+          {
+            "unemp": 5.7,
+            "infl": 2.35
+          },
+          {
+            "unemp": 5.6,
+            "infl": 3.61
+          },
+          {
+            "unemp": 5.4,
+            "infl": 3.58
+          },
+          {
+            "unemp": 5.4,
+            "infl": 2.09
+          },
+          {
+            "unemp": 5.3,
+            "infl": 4.15
+          },
+          {
+            "unemp": 5.1,
+            "infl": 1.85
+          },
+          {
+            "unemp": 5.0,
+            "infl": 9.14
+          },
+          {
+            "unemp": 4.9,
+            "infl": 0.4
+          },
+          {
+            "unemp": 4.7,
+            "infl": 2.6
+          },
+          {
+            "unemp": 4.7,
+            "infl": 3.97
+          },
+          {
+            "unemp": 4.7,
+            "infl": -1.58
+          },
+          {
+            "unemp": 4.4,
+            "infl": 3.3
+          },
+          {
+            "unemp": 4.5,
+            "infl": 4.58
+          },
+          {
+            "unemp": 4.5,
+            "infl": 2.75
+          },
+          {
+            "unemp": 4.7,
+            "infl": 3.45
+          },
+          {
+            "unemp": 4.8,
+            "infl": 6.38
+          },
+          {
+            "unemp": 4.9,
+            "infl": 2.82
+          },
+          {
+            "unemp": 5.4,
+            "infl": 8.53
+          },
+          {
+            "unemp": 6.0,
+            "infl": -3.16
+          },
+          {
+            "unemp": 6.9,
+            "infl": -8.79
+          },
+          {
+            "unemp": 8.1,
+            "infl": 0.94
+          },
+          {
+            "unemp": 9.2,
+            "infl": 3.37
+          },
+          {
+            "unemp": 9.6,
+            "infl": 3.56
+          }
+        ]
+      }
+    ],
+    "puntos": [
+      {
+        "unemp": 5.8,
+        "infl": 0.0
+      },
+      {
+        "unemp": 5.1,
+        "infl": 2.34
+      },
+      {
+        "unemp": 5.3,
+        "infl": 2.74
+      },
+      {
+        "unemp": 5.6,
+        "infl": 0.27
+      },
+      {
+        "unemp": 5.2,
+        "infl": 2.31
+      },
+      {
+        "unemp": 5.2,
+        "infl": 0.14
+      },
+      {
+        "unemp": 5.6,
+        "infl": 2.7
+      },
+      {
+        "unemp": 6.3,
+        "infl": 1.21
+      },
+      {
+        "unemp": 6.8,
+        "infl": -0.4
+      },
+      {
+        "unemp": 7.0,
+        "infl": 1.47
+      },
+      {
+        "unemp": 6.8,
+        "infl": 0.8
+      },
+      {
+        "unemp": 6.2,
+        "infl": 0.8
+      },
+      {
+        "unemp": 5.6,
+        "infl": 2.26
+      },
+      {
+        "unemp": 5.5,
+        "infl": 0.13
+      },
+      {
+        "unemp": 5.6,
+        "infl": 2.11
+      },
+      {
+        "unemp": 5.5,
+        "infl": 0.79
+      },
+      {
+        "unemp": 5.8,
+        "infl": 0.53
+      },
+      {
+        "unemp": 5.7,
+        "infl": 2.75
+      },
+      {
+        "unemp": 5.5,
+        "infl": 0.78
+      },
+      {
+        "unemp": 5.6,
+        "infl": 2.46
+      },
+      {
+        "unemp": 5.5,
+        "infl": 0.13
+      },
+      {
+        "unemp": 5.2,
+        "infl": 0.9
+      },
+      {
+        "unemp": 5.0,
+        "infl": 1.29
+      },
+      {
+        "unemp": 5.0,
+        "infl": 2.05
+      },
+      {
+        "unemp": 4.9,
+        "infl": 1.28
+      },
+      {
+        "unemp": 4.7,
+        "infl": 2.54
+      },
+      {
+        "unemp": 4.4,
+        "infl": 0.89
+      },
+      {
+        "unemp": 4.1,
+        "infl": 2.9
+      },
+      {
+        "unemp": 3.9,
+        "infl": 4.99
+      },
+      {
+        "unemp": 3.8,
+        "infl": 2.1
+      },
+      {
+        "unemp": 3.8,
+        "infl": 4.9
+      },
+      {
+        "unemp": 3.7,
+        "infl": 0.61
+      },
+      {
+        "unemp": 3.8,
+        "infl": 2.42
+      },
+      {
+        "unemp": 3.8,
+        "infl": 3.61
+      },
+      {
+        "unemp": 3.8,
+        "infl": 3.58
+      },
+      {
+        "unemp": 3.9,
+        "infl": 4.72
+      },
+      {
+        "unemp": 3.7,
+        "infl": 3.5
+      },
+      {
+        "unemp": 3.5,
+        "infl": 5.77
+      },
+      {
+        "unemp": 3.5,
+        "infl": 4.56
+      },
+      {
+        "unemp": 3.4,
+        "infl": 4.51
+      },
+      {
+        "unemp": 3.4,
+        "infl": 6.67
+      },
+      {
+        "unemp": 3.4,
+        "infl": 5.47
+      },
+      {
+        "unemp": 3.6,
+        "infl": 5.4
+      },
+      {
+        "unemp": 3.6,
+        "infl": 6.38
+      },
+      {
+        "unemp": 4.2,
+        "infl": 6.28
+      },
+      {
+        "unemp": 4.8,
+        "infl": 4.13
+      },
+      {
+        "unemp": 5.2,
+        "infl": 5.11
+      },
+      {
+        "unemp": 5.8,
+        "infl": 5.04
+      },
+      {
+        "unemp": 5.9,
+        "infl": 2.0
+      },
+      {
+        "unemp": 5.9,
+        "infl": 4.96
+      },
+      {
+        "unemp": 6.0,
+        "infl": 2.94
+      },
+      {
+        "unemp": 6.0,
+        "infl": 2.92
+      },
+      {
+        "unemp": 5.8,
+        "infl": 2.9
+      },
+      {
+        "unemp": 5.7,
+        "infl": 2.88
+      },
+      {
+        "unemp": 5.6,
+        "infl": 3.81
+      },
+      {
+        "unemp": 5.3,
+        "infl": 4.71
+      },
+      {
+        "unemp": 5.0,
+        "infl": 9.26
+      },
+      {
+        "unemp": 4.9,
+        "infl": 4.55
+      },
+      {
+        "unemp": 4.8,
+        "infl": 12.47
+      },
+      {
+        "unemp": 4.8,
+        "infl": 10.39
+      },
+      {
+        "unemp": 5.1,
+        "infl": 10.96
+      },
+      {
+        "unemp": 5.2,
+        "infl": 9.86
+      },
+      {
+        "unemp": 5.6,
+        "infl": 13.56
+      },
+      {
+        "unemp": 6.6,
+        "infl": 10.07
+      },
+      {
+        "unemp": 8.2,
+        "infl": 5.32
+      },
+      {
+        "unemp": 8.9,
+        "infl": 7.48
+      },
+      {
+        "unemp": 8.5,
+        "infl": 6.61
+      },
+      {
+        "unemp": 8.3,
+        "infl": 6.5
+      },
+      {
+        "unemp": 7.7,
+        "infl": 2.14
+      },
+      {
+        "unemp": 7.6,
+        "infl": 6.37
+      },
+      {
+        "unemp": 7.7,
+        "infl": 6.27
+      },
+      {
+        "unemp": 7.8,
+        "infl": 5.49
+      },
+      {
+        "unemp": 7.5,
+        "infl": 8.76
+      },
+      {
+        "unemp": 7.1,
+        "infl": 5.3
+      },
+      {
+        "unemp": 6.9,
+        "infl": 5.23
+      },
+      {
+        "unemp": 6.6,
+        "infl": 7.08
+      },
+      {
+        "unemp": 6.3,
+        "infl": 7.58
+      },
+      {
+        "unemp": 6.0,
+        "infl": 9.89
+      },
+      {
+        "unemp": 6.0,
+        "infl": 9.65
+      },
+      {
+        "unemp": 5.9,
+        "infl": 8.26
+      },
+      {
+        "unemp": 5.9,
+        "infl": 12.08
+      },
+      {
+        "unemp": 5.7,
+        "infl": 13.37
+      },
+      {
+        "unemp": 5.9,
+        "infl": 11.88
+      },
+      {
+        "unemp": 5.9,
+        "infl": 14.62
+      },
+      {
+        "unemp": 6.3,
+        "infl": 14.6
+      },
+      {
+        "unemp": 7.3,
+        "infl": 8.32
+      },
+      {
+        "unemp": 7.7,
+        "infl": 10.04
+      },
+      {
+        "unemp": 7.4,
+        "infl": 11.64
+      },
+      {
+        "unemp": 7.4,
+        "infl": 8.62
+      },
+      {
+        "unemp": 7.4,
+        "infl": 10.63
+      },
+      {
+        "unemp": 7.4,
+        "infl": 8.22
+      },
+      {
+        "unemp": 8.2,
+        "infl": 4.26
+      },
+      {
+        "unemp": 8.8,
+        "infl": 2.53
+      },
+      {
+        "unemp": 9.4,
+        "infl": 10.39
+      },
+      {
+        "unemp": 9.9,
+        "infl": 2.45
+      },
+      {
+        "unemp": 10.7,
+        "infl": -0.82
+      },
+      {
+        "unemp": 10.4,
+        "infl": 3.66
+      },
+      {
+        "unemp": 10.1,
+        "infl": 4.03
+      },
+      {
+        "unemp": 9.4,
+        "infl": 3.99
+      },
+      {
+        "unemp": 8.5,
+        "infl": 5.13
+      },
+      {
+        "unemp": 7.9,
+        "infl": 4.67
+      },
+      {
+        "unemp": 7.5,
+        "infl": 3.09
+      },
+      {
+        "unemp": 7.4,
+        "infl": 3.82
+      },
+      {
+        "unemp": 7.3,
+        "infl": 2.28
+      },
+      {
+        "unemp": 7.3,
+        "infl": 4.89
+      },
+      {
+        "unemp": 7.3,
+        "infl": 2.61
+      },
+      {
+        "unemp": 7.2,
+        "infl": 2.96
+      },
+      {
+        "unemp": 7.0,
+        "infl": 5.13
+      },
+      {
+        "unemp": 7.0,
+        "infl": -4.39
+      },
+      {
+        "unemp": 7.2,
+        "infl": 2.93
+      },
+      {
+        "unemp": 7.0,
+        "infl": 2.55
+      },
+      {
+        "unemp": 6.8,
+        "infl": 4.33
+      },
+      {
+        "unemp": 6.6,
+        "infl": 4.64
+      },
+      {
+        "unemp": 6.3,
+        "infl": 3.89
+      },
+      {
+        "unemp": 6.0,
+        "infl": 4.2
+      },
+      {
+        "unemp": 5.9,
+        "infl": 3.46
+      },
+      {
+        "unemp": 5.7,
+        "infl": 4.12
+      },
+      {
+        "unemp": 5.5,
+        "infl": 4.41
+      },
+      {
+        "unemp": 5.5,
+        "infl": 4.7
+      },
+      {
+        "unemp": 5.3,
+        "infl": 4.31
+      },
+      {
+        "unemp": 5.2,
+        "infl": 6.22
+      },
+      {
+        "unemp": 5.2,
+        "infl": 4.52
+      },
+      {
+        "unemp": 5.3,
+        "infl": 2.88
+      },
+      {
+        "unemp": 5.4,
+        "infl": 6.64
+      },
+      {
+        "unemp": 5.3,
+        "infl": 4.37
+      },
+      {
+        "unemp": 5.3,
+        "infl": 4.93
+      },
+      {
+        "unemp": 5.7,
+        "infl": 8.79
+      },
+      {
+        "unemp": 6.1,
+        "infl": 3.88
+      },
+      {
+        "unemp": 6.6,
+        "infl": 1.19
+      },
+      {
+        "unemp": 6.8,
+        "infl": 3.24
+      },
+      {
+        "unemp": 6.9,
+        "infl": 2.93
+      },
+      {
+        "unemp": 7.1,
+        "infl": 3.19
+      },
+      {
+        "unemp": 7.4,
+        "infl": 3.17
+      },
+      {
+        "unemp": 7.6,
+        "infl": 3.14
+      },
+      {
+        "unemp": 7.6,
+        "infl": 3.4
+      },
+      {
+        "unemp": 7.4,
+        "infl": 3.09
+      },
+      {
+        "unemp": 7.2,
+        "infl": 2.79
+      },
+      {
+        "unemp": 7.1,
+        "infl": 1.94
+      },
+      {
+        "unemp": 6.8,
+        "infl": 3.03
+      },
+      {
+        "unemp": 6.6,
+        "infl": 1.92
+      },
+      {
+        "unemp": 6.6,
+        "infl": 2.45
+      },
+      {
+        "unemp": 6.2,
+        "infl": 3.25
+      },
+      {
+        "unemp": 6.0,
+        "infl": 2.69
+      },
+      {
+        "unemp": 5.6,
+        "infl": 2.93
+      },
+      {
+        "unemp": 5.5,
+        "infl": 3.44
+      },
+      {
+        "unemp": 5.7,
+        "infl": 2.1
+      },
+      {
+        "unemp": 5.7,
+        "infl": 2.35
+      },
+      {
+        "unemp": 5.6,
+        "infl": 3.11
+      },
+      {
+        "unemp": 5.5,
+        "infl": 3.6
+      },
+      {
+        "unemp": 5.5,
+        "infl": 2.3
+      },
+      {
+        "unemp": 5.3,
+        "infl": 3.05
+      },
+      {
+        "unemp": 5.3,
+        "infl": 3.02
+      },
+      {
+        "unemp": 5.2,
+        "infl": 1.25
+      },
+      {
+        "unemp": 5.0,
+        "infl": 1.25
+      },
+      {
+        "unemp": 4.9,
+        "infl": 2.73
+      },
+      {
+        "unemp": 4.7,
+        "infl": 1.24
+      },
+      {
+        "unemp": 4.6,
+        "infl": 0.49
+      },
+      {
+        "unemp": 4.4,
+        "infl": 2.46
+      },
+      {
+        "unemp": 4.5,
+        "infl": 1.71
+      },
+      {
+        "unemp": 4.4,
+        "infl": 1.95
+      },
+      {
+        "unemp": 4.3,
+        "infl": 2.9
+      },
+      {
+        "unemp": 4.3,
+        "infl": 1.92
+      },
+      {
+        "unemp": 4.2,
+        "infl": 3.35
+      },
+      {
+        "unemp": 4.1,
+        "infl": 2.85
+      },
+      {
+        "unemp": 4.0,
+        "infl": 3.76
+      },
+      {
+        "unemp": 3.9,
+        "infl": 4.19
+      },
+      {
+        "unemp": 4.0,
+        "infl": 2.77
+      },
+      {
+        "unemp": 3.9,
+        "infl": 3.89
+      },
+      {
+        "unemp": 4.2,
+        "infl": 1.82
+      },
+      {
+        "unemp": 4.4,
+        "infl": 2.26
+      },
+      {
+        "unemp": 4.8,
+        "infl": 0.45
+      },
+      {
+        "unemp": 5.5,
+        "infl": 0.23
+      },
+      {
+        "unemp": 5.7,
+        "infl": 3.59
+      },
+      {
+        "unemp": 5.8,
+        "infl": 1.56
+      },
+      {
+        "unemp": 5.7,
+        "infl": 2.66
+      },
+      {
+        "unemp": 5.8,
+        "infl": 3.08
+      },
+      {
+        "unemp": 5.9,
+        "infl": 1.31
+      },
+      {
+        "unemp": 6.2,
+        "infl": 1.09
+      },
+      {
+        "unemp": 6.1,
+        "infl": 2.6
+      },
+      {
+        "unemp": 5.8,
+        "infl": 3.02
+      },
+      {
+        "unemp": 5.7,
+        "infl": 2.35
+      },
+      {
+        "unemp": 5.6,
+        "infl": 3.61
+      },
+      {
+        "unemp": 5.4,
+        "infl": 3.58
+      },
+      {
+        "unemp": 5.4,
+        "infl": 2.09
+      },
+      {
+        "unemp": 5.3,
+        "infl": 4.15
+      },
+      {
+        "unemp": 5.1,
+        "infl": 1.85
+      },
+      {
+        "unemp": 5.0,
+        "infl": 9.14
+      },
+      {
+        "unemp": 4.9,
+        "infl": 0.4
+      },
+      {
+        "unemp": 4.7,
+        "infl": 2.6
+      },
+      {
+        "unemp": 4.7,
+        "infl": 3.97
+      },
+      {
+        "unemp": 4.7,
+        "infl": -1.58
+      },
+      {
+        "unemp": 4.4,
+        "infl": 3.3
+      },
+      {
+        "unemp": 4.5,
+        "infl": 4.58
+      },
+      {
+        "unemp": 4.5,
+        "infl": 2.75
+      },
+      {
+        "unemp": 4.7,
+        "infl": 3.45
+      },
+      {
+        "unemp": 4.8,
+        "infl": 6.38
+      },
+      {
+        "unemp": 4.9,
+        "infl": 2.82
+      },
+      {
+        "unemp": 5.4,
+        "infl": 8.53
+      },
+      {
+        "unemp": 6.0,
+        "infl": -3.16
+      },
+      {
+        "unemp": 6.9,
+        "infl": -8.79
+      },
+      {
+        "unemp": 8.1,
+        "infl": 0.94
+      },
+      {
+        "unemp": 9.2,
+        "infl": 3.37
+      },
+      {
+        "unemp": 9.6,
+        "infl": 3.56
+      }
+    ]
+  },
+  "efecto": {
+    "cohen": 1.174,
+    "p": 1.5401142655871794e-06,
+    "media_a": 7.278,
+    "media_b": 5.765,
+    "sd": 1.289
+  },
+  "multiples": {
+    "n_pruebas": 10,
+    "prob_falso": 0.4013
+  },
+  "cobertura": {
+    "en_la_animacion": 88.3,
+    "convergencia": [
+      {
+        "repeticiones": 60,
+        "cobertura": 95.0,
+        "margen": 5.5
+      },
+      {
+        "repeticiones": 200,
+        "cobertura": 98.0,
+        "margen": 1.9
+      },
+      {
+        "repeticiones": 1000,
+        "cobertura": 93.9,
+        "margen": 1.5
+      },
+      {
+        "repeticiones": 5000,
+        "cobertura": 94.6,
+        "margen": 0.6
+      },
+      {
+        "repeticiones": 20000,
+        "cobertura": 94.5,
+        "margen": 0.3
+      }
+    ]
+  }
+}

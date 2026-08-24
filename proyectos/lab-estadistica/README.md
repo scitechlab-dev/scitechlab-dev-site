@@ -28,3 +28,18 @@ Requiere numpy, pandas, scipy y statsmodels. Sin descarga: corre sin internet.
 
 La sección 6 es el resultado que ordena el artículo: la curva de Phillips da
 r = -0.744 dentro de los sesenta y r = +0.065 al agregar los 203 trimestres.
+
+## Figuras
+
+```
+python figuras.py
+```
+
+Escribe `datos-figuras.json`, que alimenta a `scripts/figures/estadistica.mjs`, y
+dos animaciones en `assets/figures/`:
+
+    est-tlc.gif         el teorema central del límite, al crecer n
+    est-cobertura.gif   sesenta muestras y sus intervalos del 95 %
+
+Son los dos únicos conceptos del artículo donde animar enseña algo que una
+figura quieta no puede. El resto va en SVG estático.

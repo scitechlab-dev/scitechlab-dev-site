@@ -109,6 +109,18 @@ for n in (2, 5, 10, 30, 50, 100):
     print(f"{n:>4d}  {sk:>+8.3f}  {ks:>8.4f}  {abs(sk)/sk0:>6.0%}")
 ```
 
+<figure class="fig fig-wide">
+  <img src="../assets/figures/est-tlc.gif"
+       alt="Animación de dos paneles. A la izquierda, fijo, el histograma de la inflación trimestral con su cola derecha larga y asimetría de más 0.74. A la derecha, el histograma de la media muestral, que cambia en cada cuadro al crecer el tamaño de muestra de 1 a 100: parte con la misma forma asimétrica y se va volviendo simétrico y angosto alrededor de la media real."
+       width="960" height="390" loading="lazy" />
+  <figcaption>La población de la izquierda no cambia nunca: es la misma
+  distribución asimétrica en todos los cuadros. Lo que cambia es el tamaño de
+  muestra sobre el que se promedia, y con él la forma de la derecha. Animo el
+  tamaño de muestra y no el número de repeticiones a propósito: animar
+  repeticiones mostraría el histograma llenándose, que es otra cosa y se
+  confunde con esta.</figcaption>
+</figure>
+
 ```
 población: n=203  asimetría=+0.74
 
@@ -177,6 +189,48 @@ La distinción parece pedante hasta que alguien la usa para decidir. "Hay 95 % d
 probabilidad de que el costo esté entre X e Y" es una afirmación bayesiana que
 este intervalo no autoriza.
 
+La única forma en que esa definición deja de sonar a trampa verbal es verla
+correr. El experimento que la define es este: conocer la media verdadera de la
+población, sacar una muestra, construir su intervalo, y contar cuántos la
+atrapan.
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/est-cobertura.gif"
+       alt="Animación en la que se van dibujando, una por cuadro, sesenta líneas horizontales. Cada línea es el intervalo de confianza del 95 por ciento de una muestra distinta de tamaño 20, con un punto en su media. Una línea vertical negra marca la media verdadera de la población, 5.88 por ciento. Los intervalos que la contienen se dibujan en azul y los que no, en ámbar. El título va contando cuántos aciertan."
+       width="960" height="440" loading="lazy" />
+  <figcaption>La media verdadera, la línea vertical, no se mueve nunca. Lo que
+  se mueve es el intervalo, que cambia con cada muestra. Los ámbar son los que
+  fallan, y tienen que existir: un procedimiento que acertara siempre no sería
+  del 95 %.</figcaption>
+</figure>
+
+**Y acá el laboratorio se contradice a sí mismo de una manera instructiva.** Al
+terminar la animación, 53 de esas 60 muestras atrapan la media: **88.3 %**, no
+95 %. Con eso a la vista sería tentador escribir que el intervalo t subcubre
+porque la población es asimétrica, que es una afirmación plausible y que encaja
+con la sección 2.
+
+Sería falso, y la manera de descubrirlo es repetir el experimento más veces:
+
+```
+cobertura estimada según cuántas veces se repita el experimento:
+      60 repeticiones → 95.0 % ± 5.5
+     200 repeticiones → 98.0 % ± 1.9
+    1000 repeticiones → 93.9 % ± 1.5
+    5000 repeticiones → 94.6 % ± 0.6
+   20000 repeticiones → 94.5 % ± 0.3
+```
+
+La cobertura real es **94.5 %**, o sea nominal. El 88.3 % de la animación es
+ruido de muestreo: estimar una proporción cercana a 0.95 con 60 repeticiones
+tiene un margen de ±5.5 puntos, así que cualquier valor entre 89 y 100 es
+compatible con un procedimiento perfecto.
+
+Nótese que es la misma aritmética de la raíz de n de dos párrafos más abajo,
+aplicada a sí misma: **para medir una cobertura del 95 % con un margen de un
+punto hacen falta unas dos mil repeticiones.** Sesenta líneas alcanzan para
+mostrar la idea, y no para medirla.
+
 Y una aritmética que arruina presupuestos:
 
 ```
@@ -206,6 +260,16 @@ desempleo 1980s (n=40, media 7.28) contra 1990s (n=40, media 5.77)
   Mann-Whitney   U=1264   p=8.21e-06
   d de Cohen     +1.174  (grande)
 ```
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/est-significancia.svg"
+       alt="Un plano dividido en cuatro cuadrantes por dos líneas punteadas, una en p igual a 0.05 y otra en d de Cohen igual a 0.5. Los cuadrantes se etiquetan como detectable y grande, grande pero no detectable, detectable pero chico, y ni detectable ni grande, cada uno con la acción que corresponde. El caso medido de los ochenta contra los noventa cae en el cuadrante superior izquierdo. A la derecha, dos curvas normales superpuestas que ilustran qué separación implica una d de 1.17."
+       width="1200" height="600" loading="lazy" />
+  <figcaption>El cuadrante que más daño hace es el superior derecho, porque se
+  reporta como "no hay diferencia" cuando lo correcto es "esta muestra no
+  alcanza para detectarla". Ausencia de evidencia no es evidencia de
+  ausencia.</figcaption>
+</figure>
 
 Tres cosas para llevarse.
 
@@ -267,6 +331,16 @@ correlación dentro de cada década:
 
 **En los sesenta la correlación es −0.744, fuerte y con p < 0.0001.** Al mezclar
 las décadas, se evapora.
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/est-phillips-decadas.svg"
+       alt="Cinco paneles pequeños arriba, uno por década, con la dispersión de inflación contra desempleo y su recta ajustada. Solo el panel de los sesenta muestra una recta claramente descendente, dibujada en azul intenso, con r igual a menos 0.744; los otros cuatro tienen rectas casi planas en gris. Abajo, un panel grande con los 203 trimestres juntos, cuya recta es levemente ascendente con r igual a más 0.065 y no significativa."
+       width="1200" height="660" loading="lazy" />
+  <figcaption>Los cinco paneles de arriba usan la misma escala en los dos ejes,
+  así que se pueden comparar entre sí. Cada década ocupa una región distinta del
+  plano, y al superponerlas la nube resultante no hereda la pendiente de
+  ninguna: hereda el desplazamiento entre todas.</figcaption>
+</figure>
 
 Esto no es una curiosidad estadística: es el modo de falla más caro del análisis
 de datos aplicado. Agregar períodos con regímenes distintos no promedia la

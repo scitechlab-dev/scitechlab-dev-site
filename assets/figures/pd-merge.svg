@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620">
+<rect width="1200" height="620" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Los cuatro how de un merge, sobre las mismas dos tablas</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">cuatro trimestres a la izquierda, cuatro a la derecha, dos en común. Lo que cambia es cuántas filas salen y cuántos nulos</text>
+<text x="114" y="86" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#0e7490" text-anchor="middle">izquierda</text>
+<rect x="60" y="96" width="108" height="26" rx="3" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<text x="114" y="114" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#565a63" text-anchor="middle">2008Q1</text>
+<rect x="60" y="126" width="108" height="26" rx="3" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<text x="114" y="144" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#565a63" text-anchor="middle">2008Q2</text>
+<rect x="60" y="156" width="108" height="26" rx="3" fill="#0e7490" stroke="#d7dae0" stroke-width="1.2" />
+<text x="114" y="174" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">2008Q3</text>
+<rect x="60" y="186" width="108" height="26" rx="3" fill="#0e7490" stroke="#d7dae0" stroke-width="1.2" />
+<text x="114" y="204" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">2008Q4</text>
+<text x="264" y="86" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="middle">derecha</text>
+<rect x="210" y="96" width="108" height="26" rx="3" fill="#8a5200" stroke="#d7dae0" stroke-width="1.2" />
+<text x="264" y="114" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">2008Q3</text>
+<rect x="210" y="126" width="108" height="26" rx="3" fill="#8a5200" stroke="#d7dae0" stroke-width="1.2" />
+<text x="264" y="144" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">2008Q4</text>
+<rect x="210" y="156" width="108" height="26" rx="3" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<text x="264" y="174" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#565a63" text-anchor="middle">2009Q1</text>
+<rect x="210" y="186" width="108" height="26" rx="3" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<text x="264" y="204" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#565a63" text-anchor="middle">2009Q2</text>
+<text x="60" y="236" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">en color, las claves</text>
+<text x="60" y="252" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">que están en las dos</text>
+<rect x="400" y="68" width="178" height="166" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<text x="414" y="88" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">how="inner"</text>
+<text x="414" y="104" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">solo lo que está en ambas</text>
+<rect x="414" y="118" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="447" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q3</text>
+<rect x="484" y="118" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="517" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<rect x="414" y="148" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="447" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q4</text>
+<rect x="484" y="148" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="517" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<text x="414" y="194" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="600" fill="#14161a" text-anchor="start">2 filas</text>
+<text x="414" y="210" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#6e737e" text-anchor="start">0 con nulos</text>
+<rect x="598" y="68" width="178" height="226" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<text x="612" y="88" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">how="left"</text>
+<text x="612" y="104" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">todo lo de la izquierda</text>
+<rect x="612" y="118" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="645" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q1</text>
+<rect x="682" y="118" width="66" height="26" rx="3" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" stroke-dasharray="3 2" />
+<text x="715" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#6e737e" text-anchor="middle">NaN</text>
+<rect x="612" y="148" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="645" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q2</text>
+<rect x="682" y="148" width="66" height="26" rx="3" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" stroke-dasharray="3 2" />
+<text x="715" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#6e737e" text-anchor="middle">NaN</text>
+<rect x="612" y="178" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="645" y="196" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q3</text>
+<rect x="682" y="178" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="715" y="196" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<rect x="612" y="208" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="645" y="226" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q4</text>
+<rect x="682" y="208" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="715" y="226" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<text x="612" y="254" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="600" fill="#14161a" text-anchor="start">4 filas</text>
+<text x="612" y="270" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#8a5200" text-anchor="start">2 con nulos</text>
+<rect x="796" y="68" width="178" height="226" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<text x="810" y="88" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">how="right"</text>
+<text x="810" y="104" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">todo lo de la derecha</text>
+<rect x="810" y="118" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="843" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q3</text>
+<rect x="880" y="118" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="913" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<rect x="810" y="148" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="843" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q4</text>
+<rect x="880" y="148" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="913" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<rect x="810" y="178" width="66" height="26" rx="3" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" stroke-dasharray="3 2" />
+<text x="843" y="196" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#6e737e" text-anchor="middle">NaN</text>
+<rect x="880" y="178" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="913" y="196" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<rect x="810" y="208" width="66" height="26" rx="3" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" stroke-dasharray="3 2" />
+<text x="843" y="226" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#6e737e" text-anchor="middle">NaN</text>
+<rect x="880" y="208" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="913" y="226" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<text x="810" y="254" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="600" fill="#14161a" text-anchor="start">4 filas</text>
+<text x="810" y="270" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#8a5200" text-anchor="start">2 con nulos</text>
+<rect x="994" y="68" width="178" height="286" rx="6" fill="#f6f7f9" stroke="#d7dae0" stroke-width="1.2" />
+<text x="1008" y="88" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">how="outer"</text>
+<text x="1008" y="104" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">la unión de las dos</text>
+<rect x="1008" y="118" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="1041" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q1</text>
+<rect x="1078" y="118" width="66" height="26" rx="3" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" stroke-dasharray="3 2" />
+<text x="1111" y="136" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#6e737e" text-anchor="middle">NaN</text>
+<rect x="1008" y="148" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="1041" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q2</text>
+<rect x="1078" y="148" width="66" height="26" rx="3" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" stroke-dasharray="3 2" />
+<text x="1111" y="166" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#6e737e" text-anchor="middle">NaN</text>
+<rect x="1008" y="178" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="1041" y="196" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q3</text>
+<rect x="1078" y="178" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="1111" y="196" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<rect x="1008" y="208" width="66" height="26" rx="3" fill="#0e7490" stroke="none" stroke-width="1.2" />
+<text x="1041" y="226" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">2008Q4</text>
+<rect x="1078" y="208" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="1111" y="226" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<rect x="1008" y="238" width="66" height="26" rx="3" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" stroke-dasharray="3 2" />
+<text x="1041" y="256" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#6e737e" text-anchor="middle">NaN</text>
+<rect x="1078" y="238" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="1111" y="256" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<rect x="1008" y="268" width="66" height="26" rx="3" fill="#ffffff" stroke="#b4b9c2" stroke-width="1.2" stroke-dasharray="3 2" />
+<text x="1041" y="286" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#6e737e" text-anchor="middle">NaN</text>
+<rect x="1078" y="268" width="66" height="26" rx="3" fill="#8a5200" stroke="none" stroke-width="1.2" />
+<text x="1111" y="286" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle">evento</text>
+<text x="1008" y="314" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="12" font-weight="600" fill="#14161a" text-anchor="start">6 filas</text>
+<text x="1008" y="330" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="400" fill="#8a5200" text-anchor="start">4 con nulos</text>
+<rect x="60" y="360" width="1080" height="132" rx="8" fill="#ffffff" stroke="#8a5200" stroke-width="1.6" />
+<text x="82" y="388" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#8a5200" text-anchor="start">Y el argumento que evita el error más caro: validate=</text>
+<text x="82" y="414" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">Si en la tabla derecha se cuela UN duplicado de 2008Q3, el merge no falla: devuelve 5 filas en vez de 4.</text>
+<text x="82" y="434" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">La fila extra no se ve, no rompe nada, y cualquier suma posterior queda inflada. El error aparece tres pasos después,</text>
+<text x="82" y="454" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">como un total que no cuadra y que ya nadie asocia con el merge.</text>
+<text x="82" y="478" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="11.5" font-weight="600" fill="#14161a" text-anchor="start">izq.merge(der, on="trimestre", how="left", validate="one_to_one")   →   MergeError, en vez de una fila de más</text>
+<text x="60" y="540" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">Los cuatro valores admitidos son one_to_one, one_to_many, many_to_one y many_to_many. Declarar cuál se espera cuesta doce</text>
+<text x="60" y="558" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">caracteres y convierte un error silencioso en una excepción. Es el mismo criterio que gobierna el validador de la serie del</text>
+<text x="60" y="576" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">mercado eléctrico: si el sistema puede detectar que un supuesto se violó, tiene que fallar, no adivinar.</text>
+</svg>

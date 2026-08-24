@@ -36,3 +36,17 @@ statsmodels: **no hay descarga**.
 La sección 6 contradice el titular esperado: el quiebre de 1899 es real y
 explica el 43.7 % de la suma de cuadrados, pero entrenar solo con el régimen
 vigente gana en 4 de 6 ventanas, no en las seis.
+
+## Figuras
+
+```
+python figuras.py
+```
+
+Escribe cinco archivos en `assets/figures/`: la descomposición STL, la ACF y
+PACF de dos series, los seis pronósticos contra lo observado, el quiebre del
+Nilo con su curva de búsqueda, y `ts-horizonte.gif`, que muestra cuándo se
+despega cada modelo a lo largo de los 24 meses.
+
+Se recalcula todo con los mismos datos y modelos que `lab.py`, así que las
+figuras no pueden desincronizarse de las cifras del artículo.

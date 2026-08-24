@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<rect width="1200" height="500" fill="#ffffff" />
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
+<text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Qué pasado lee cada ventana, y cuál mira al futuro</text>
+<text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">cada fila es la misma serie; lo sombreado es lo que se usa para calcular el valor del período marcado</text>
+<text x="323" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t−8</text>
+<text x="369" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t−7</text>
+<text x="415" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t−6</text>
+<text x="461" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t−5</text>
+<text x="507" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t−4</text>
+<text x="553" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t−3</text>
+<text x="599" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t−2</text>
+<text x="645" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t−1</text>
+<text x="691" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="600" fill="#14161a" text-anchor="middle">t</text>
+<text x="737" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t+1</text>
+<text x="783" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t+2</text>
+<text x="829" y="90" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="middle">t+3</text>
+<text x="60" y="120" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">rolling(4)</text>
+<text x="60" y="136" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">los 4 últimos, incluido t</text>
+<rect x="300" y="100" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="346" y="100" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="392" y="100" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="438" y="100" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="484" y="100" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="530" y="100" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="576" y="100" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="622" y="100" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="668" y="100" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="668" y="100" width="43" height="30" rx="3" fill="none" stroke="#14161a" stroke-width="2.2" />
+<rect x="714" y="100" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="760" y="100" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="806" y="100" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<text x="60" y="176" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">rolling(4, center=True)</text>
+<text x="60" y="192" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#8a5200" text-anchor="start">incluye t+1 y t+2: mira al futuro</text>
+<rect x="300" y="156" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="346" y="156" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="392" y="156" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="438" y="156" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="484" y="156" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="530" y="156" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="576" y="156" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="622" y="156" width="43" height="30" rx="3" fill="#8a5200" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="668" y="156" width="43" height="30" rx="3" fill="#8a5200" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="668" y="156" width="43" height="30" rx="3" fill="none" stroke="#14161a" stroke-width="2.2" />
+<rect x="714" y="156" width="43" height="30" rx="3" fill="#8a5200" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="760" y="156" width="43" height="30" rx="3" fill="#8a5200" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="806" y="156" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<text x="60" y="232" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">expanding()</text>
+<text x="60" y="248" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">todo el pasado, sin olvidar nada</text>
+<rect x="300" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="346" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="392" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="438" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="484" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="530" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="576" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="622" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="668" y="212" width="43" height="30" rx="3" fill="#0e7490" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="668" y="212" width="43" height="30" rx="3" fill="none" stroke="#14161a" stroke-width="2.2" />
+<rect x="714" y="212" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="760" y="212" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="806" y="212" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<text x="60" y="288" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#14161a" text-anchor="start">ewm(span=4)</text>
+<text x="60" y="304" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">todo el pasado, con peso decreciente</text>
+<rect x="300" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="0.14" stroke="#d7dae0" stroke-width="1" />
+<rect x="346" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="0.14" stroke="#d7dae0" stroke-width="1" />
+<rect x="392" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="0.14" stroke="#d7dae0" stroke-width="1" />
+<rect x="438" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="0.14" stroke="#d7dae0" stroke-width="1" />
+<rect x="484" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="0.14" stroke="#d7dae0" stroke-width="1" />
+<rect x="530" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="0.17" stroke="#d7dae0" stroke-width="1" />
+<rect x="576" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="0.30" stroke="#d7dae0" stroke-width="1" />
+<rect x="622" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="0.55" stroke="#d7dae0" stroke-width="1" />
+<rect x="668" y="268" width="43" height="30" rx="3" fill="#0e7490" opacity="1.00" stroke="#d7dae0" stroke-width="1" />
+<rect x="668" y="268" width="43" height="30" rx="3" fill="none" stroke="#14161a" stroke-width="2.2" />
+<rect x="714" y="268" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="760" y="268" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<rect x="806" y="268" width="43" height="30" rx="3" fill="#f6f7f9" opacity="1" stroke="#d7dae0" stroke-width="1" />
+<line x1="60" y1="340" x2="1140" y2="340" stroke="#d7dae0" stroke-width="1.4" stroke-linecap="round" />
+<rect x="60" y="358" width="16" height="16" rx="3" fill="#8a5200" />
+<text x="84" y="371" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#14161a" text-anchor="start">La fila ámbar es la única que no se puede usar para pronosticar: para calcular el valor de t necesita datos de t+1 y t+2,</text>
+<text x="84" y="389" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">que en producción todavía no existen. Para describir el pasado en una gráfica está bien, y de hecho es lo correcto porque no</text>
+<text x="84" y="407" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">desfasa la curva.</text>
+<text x="60" y="436" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">expanding y ewm leen las mismas celdas: la diferencia es el peso. En ewm el degradado del color ES el peso, y por eso reacciona</text>
+<text x="60" y="454" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">más rápido a un cambio reciente sin perder del todo la memoria de lo viejo.</text>
+</svg>
