@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640">
-<rect width="1200" height="640" fill="#ffffff" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+<rect width="1200" height="700" fill="#ffffff" />
 <defs><marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14161a" /></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5200" /></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0e7490" /></marker><marker id="ah-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6e737e" /></marker></defs>
 <text x="60" y="38" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="17" font-weight="600" fill="#14161a" text-anchor="start">Por qué se sanciona a una distribuidora</text>
 <text x="60" y="60" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">la ley tipifica; no deja la calificación al criterio del inspector. Lo que cambia entre grave y muy grave suele ser una sola palabra: reiterada</text>
@@ -7,7 +7,7 @@
 <rect x="60" y="96" width="520" height="3" rx="1.5" fill="#8a5200" stroke="none" stroke-width="1.2" />
 <text x="82" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#8a5200" text-anchor="start" letter-spacing="0.08em">GRAVES</text>
 <text x="558" y="126" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">art. 104-bis</text>
-<text x="82" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">hasta 50 000 colones</text>
+<text x="82" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">hasta 5 714.29 USD</text>
 <line x1="82" y1="162" x2="558" y2="162" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
 <circle cx="88" cy="182" r="2.5" fill="#8a5200" />
 <text x="102" y="186" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">No inscribir en plazo los contratos de transmisión y</text>
@@ -31,7 +31,7 @@
 <rect x="620" y="96" width="520" height="3" rx="1.5" fill="#14161a" stroke="none" stroke-width="1.2" />
 <text x="642" y="126" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#14161a" text-anchor="start" letter-spacing="0.08em">MUY GRAVES</text>
 <text x="1118" y="126" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="end">art. 105</text>
-<text x="642" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">hasta 500 000 colones</text>
+<text x="642" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#565a63" text-anchor="start">hasta 57 142.86 USD</text>
 <line x1="642" y1="162" x2="1118" y2="162" stroke="#d7dae0" stroke-width="1" stroke-linecap="round" />
 <circle cx="648" cy="182" r="2.5" fill="#14161a" />
 <text x="662" y="186" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#565a63" text-anchor="start">Negarse a interconectar la red sin justa causa, o no permitir</text>
@@ -64,8 +64,10 @@
 <text x="618" y="530" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">se inicia el proceso para declarar la terminación</text>
 <text x="618" y="548" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">art. 107</text>
 <text x="886" y="512" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#8a5200" text-anchor="start">incumplir una resolución firme</text>
-<text x="886" y="530" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">hasta 150 000 colones diarios</text>
+<text x="886" y="530" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#565a63" text-anchor="start">hasta 17 142.86 USD diarios</text>
 <text x="886" y="548" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10.5" font-weight="400" fill="#6e737e" text-anchor="start">art. 106</text>
 <text x="60" y="606" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">La lista de agravantes del artículo 106 incluye el peligro para la vida y la salud, el daño causado, los perjuicios a la continuidad del suministro,</text>
 <text x="60" y="624" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" font-weight="400" fill="#6e737e" text-anchor="start">el beneficio obtenido, la intencionalidad, la reincidencia en tres años y el efecto sobre terceros.</text>
+<text x="60" y="652" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="start">La ley fija los montos en colones: 50 000, 500 000 y 150 000. Convertidos a la tasa fija de 8.75 colones por dólar de la Ley de Integración Monetaria.</text>
+<text x="60" y="670" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11.5" font-weight="400" fill="#6e737e" text-anchor="start">Son montos nominales de 1996 que nadie indexó: lo disuasivo del régimen no es el monto sino la multa diaria, la escala por reincidencia y la terminación.</text>
 </svg>

@@ -49,8 +49,8 @@ personas.
 Vale detenerse en lo estrecha que es esa excepción. No dice "cuando no sea
 conveniente" ni "cuando comprometa la calidad": dice peligro. Y el artículo 105
 literal h convierte en infracción **muy grave** negarse a interconectar sin
-justa causa, con multa de hasta quinientos mil colones. Una negativa técnica
-tiene que poder sostenerse como riesgo demostrable, no como criterio.
+justa causa, con multa de hasta 57 142.86 USD. Una negativa técnica tiene que
+poder sostenerse como riesgo demostrable, no como criterio.
 
 Las condiciones de la interconexión se sujetan a la normativa aplicable y
 **necesitan visto bueno previo y expreso de la DGEHM** (art. 28), lo cual es
@@ -230,8 +230,8 @@ porque varias conductas aparecen en los dos: lo que cambia es una palabra.
 
 <figure class="fig fig-wide">
   <img src="../assets/figures/lge-infracciones.svg"
-       alt="Dos columnas. Infracciones graves del artículo 104-bis con multa de hasta cincuenta mil colones: no inscribir contratos en plazo, negativa ocasional y aislada a facilitar información, información incompleta o inexacta, contabilidad que no cumple normas, aplicación irregular de normas de calidad y cargos de conexión que no cumplen el método. Infracciones muy graves del artículo 105 con multa de hasta quinientos mil colones: negarse a interconectar sin justa causa, desconectar sin causa justificada, cargos de red fuera del método, negativa reiterada a informar, datos falsos o manipulados, aplicación irregular reiterada de pliegos y no separar contabilidades. Abajo, la escala por reincidencia."
-       width="1200" height="640" loading="lazy" />
+       alt="Dos columnas. Infracciones graves del artículo 104-bis con multa de hasta 5714.29 dólares: no inscribir contratos en plazo, negativa ocasional y aislada a facilitar información, información incompleta o inexacta, contabilidad que no cumple normas, aplicación irregular de normas de calidad y cargos de conexión que no cumplen el método. Infracciones muy graves del artículo 105 con multa de hasta 57142.86 dólares: negarse a interconectar sin justa causa, desconectar sin causa justificada, cargos de red fuera del método, negativa reiterada a informar, datos falsos o manipulados, aplicación irregular reiterada de pliegos y no separar contabilidades. Abajo, la escala por reincidencia, con hasta 17142.86 dólares diarios por incumplir una resolución firme."
+       width="1200" height="700" loading="lazy" />
   <figcaption>La negativa a informar es grave si es ocasional y aislada, y muy
   grave si es reiterada. La aplicación irregular de los pliegos, lo mismo. El
   legislador no distinguió por la conducta sino por su persistencia, y eso
@@ -252,14 +252,26 @@ aislada a facilitar información, proporcionar información incompleta o inexact
 en forma distinta a la establecida, y la aplicación irregular, intencionada o
 negligente, de las normas de calidad de servicio.
 
-Las multas son de hasta cincuenta mil colones para las graves y hasta quinientos
-mil para las muy graves (art. 106). Y hay dos escaleras que suben solas. La
-reincidencia incrementa el monto en 10 % para la segunda infracción y 25 % para
-la tercera, y a la **cuarta reincidencia en el mismo incumplimiento** se inicia
-el proceso para declarar la terminación (art. 107). Y si existe una resolución
-firme que ordena hacer o dejar de hacer algo y no se cumple en plazo, la multa
-puede llegar a ciento cincuenta mil colones **diarios** hasta que se cumpla
-(art. 106).
+Las multas son de hasta 5 714.29 USD para las graves y hasta 57 142.86 USD para
+las muy graves (art. 106). Y hay dos escaleras que suben solas. La reincidencia
+incrementa el monto en 10 % para la segunda infracción y 25 % para la tercera, y
+a la **cuarta reincidencia en el mismo incumplimiento** se inicia el proceso para
+declarar la terminación (art. 107). Y si existe una resolución firme que ordena
+hacer o dejar de hacer algo y no se cumple en plazo, la multa puede llegar a
+17 142.86 USD **diarios** hasta que se cumpla (art. 106).
+
+Una aclaración sobre esas cifras, porque el texto de la ley no las dice así. La
+LGE está redactada en colones, y fija cincuenta mil, quinientos mil y ciento
+cincuenta mil respectivamente. La conversión que uso acá es la tasa fija e
+inalterable de **8.75 colones por dólar** que estableció la Ley de Integración
+Monetaria en 2001. El colón sigue siendo moneda de curso legal y por eso la ley
+nunca se reescribió, pero como la moneda de uso es el dólar, dejar los montos en
+colones hace que uno no dimensione la sanción. Conviene tener presente lo otro
+que implica: **son montos nominales de 1996 que nadie indexó en treinta años.**
+Cincuenta mil colones eran bastante dinero entonces; 5 714.29 USD hoy, para una
+distribuidora, no lo son. Eso explica por qué la parte disuasiva del régimen no
+está tanto en el monto como en la multa diaria, en la escala por reincidencia y
+en la posibilidad de terminar la concesión.
 
 Los criterios de graduación del artículo 106 incluyen el peligro para la vida y
 la salud, el daño causado, los perjuicios a la continuidad y regularidad del
@@ -355,6 +367,13 @@ cosas del día a día que desde adentro parecen simple presión presupuestaria.
   (infracciones muy graves), 106 y 107 (sanciones y reincidencia), 121 (uso de
   redes de terceros) y 125 (prevalencia de la ley). Consultado el 22 de agosto
   de 2026.
+- **Ley de Integración Monetaria**, Decreto Legislativo No. 201 del 30 de
+  noviembre de 2000, vigente desde el 1 de enero de 2001. Artículo 1: tipo de
+  cambio fijo e inalterable de **8.75 colones por dólar**. Es la tasa con la que
+  convertí los montos de las multas, que la LGE fija en colones porque nunca se
+  reescribió. **No abrí el texto de esta ley**: la tasa es de conocimiento
+  general y verificable en cualquier factura salvadoreña, pero por consistencia
+  con el resto de la serie lo digo en vez de presentarla como fuente leída.
 
 Este artículo es previo a la [serie sobre el mercado mayorista](../serie/mercado-electrico),
 que entra en el lado de la generación y el despacho. El registro de fuentes

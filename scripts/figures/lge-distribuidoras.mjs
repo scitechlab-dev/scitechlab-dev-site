@@ -223,14 +223,14 @@ await mkdir(OUT, { recursive: true });
 // lge-infracciones.svg
 
 {
-  const W = 1200, H = 640;
+  const W = 1200, H = 700;
   const g = canvas(W, H);
   g.text(60, 38, 'Por qué se sanciona a una distribuidora', { size: 17, weight: 600, fill: INK, anchor: 'start' });
   g.text(60, 60, 'la ley tipifica; no deja la calificación al criterio del inspector. Lo que cambia entre grave y muy grave suele ser una sola palabra: reiterada', { size: 12, fill: INK_FAINT, anchor: 'start' });
 
   const NIVELES = [
     {
-      x: 60, color: AMBER, tag: 'GRAVES', art: 'art. 104-bis', multa: 'hasta 50 000 colones',
+      x: 60, color: AMBER, tag: 'GRAVES', art: 'art. 104-bis', multa: 'hasta 5 714.29 USD',
       items: [
         'No inscribir en plazo los contratos de transmisión y distribución',
         'La negativa ocasional y aislada a facilitar información al regulador',
@@ -241,7 +241,7 @@ await mkdir(OUT, { recursive: true });
       ],
     },
     {
-      x: 620, color: INK, tag: 'MUY GRAVES', art: 'art. 105', multa: 'hasta 500 000 colones',
+      x: 620, color: INK, tag: 'MUY GRAVES', art: 'art. 105', multa: 'hasta 57 142.86 USD',
       items: [
         'Negarse a interconectar la red sin justa causa, o no permitir su uso',
         'Desconectar las instalaciones de un operador sin causa justificada',
@@ -275,7 +275,7 @@ await mkdir(OUT, { recursive: true });
     ['2.ª infracción', '+10 % sobre el monto', 'art. 107'],
     ['3.ª infracción', '+25 % sobre el monto', 'art. 107'],
     ['4.ª reincidencia', 'se inicia el proceso para declarar la terminación', 'art. 107'],
-    ['incumplir una resolución firme', 'hasta 150 000 colones diarios', 'art. 106'],
+    ['incumplir una resolución firme', 'hasta 17 142.86 USD diarios', 'art. 106'],
   ];
   ESC.forEach((e, i) => {
     const ex = 82 + i * 268;
@@ -286,6 +286,10 @@ await mkdir(OUT, { recursive: true });
 
   g.text(60, 606, 'La lista de agravantes del artículo 106 incluye el peligro para la vida y la salud, el daño causado, los perjuicios a la continuidad del suministro,', { size: 12, fill: INK_FAINT, anchor: 'start' });
   g.text(60, 624, 'el beneficio obtenido, la intencionalidad, la reincidencia en tres años y el efecto sobre terceros.', { size: 12, fill: INK_FAINT, anchor: 'start' });
+  // La ley está redactada en colones; se convierte a la tasa fija de la Ley de
+  // Integración Monetaria para que la magnitud de la sanción se pueda dimensionar.
+  g.text(60, 652, 'La ley fija los montos en colones: 50 000, 500 000 y 150 000. Convertidos a la tasa fija de 8.75 colones por dólar de la Ley de Integración Monetaria.', { size: 11.5, fill: INK_FAINT, anchor: 'start' });
+  g.text(60, 670, 'Son montos nominales de 1996 que nadie indexó: lo disuasivo del régimen no es el monto sino la multa diaria, la escala por reincidencia y la terminación.', { size: 11.5, fill: INK_FAINT, anchor: 'start' });
 
   await writeFile(path.join(OUT, 'lge-infracciones.svg'), g.done());
 }
