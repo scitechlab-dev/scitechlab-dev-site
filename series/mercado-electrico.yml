@@ -48,23 +48,28 @@ articulos:
   - slug: horizontes-programacion-operacion
     titulo: Los horizontes de la programación de la operación
     resumen: >-
-      Anual, mensual, semanal y diario: qué decide cada uno y cómo se encadenan.
-      Mantenimientos, reserva, predespacho y redespacho.
+      Son tres, no cuatro: qué decide cada uno y qué ya no puede decidir el
+      siguiente, el valor del agua calculado en dos fases, y qué rompe un
+      programa ya publicado.
 
   - slug: mercado-electrico-regional
     titulo: Cómo se conecta El Salvador al mercado eléctrico regional
     resumen: >-
-      Tratado Marco, rol del EOR frente al de la UT, contratos firmes y
-      transacciones de oportunidad, y el ciclo de conciliación y liquidación.
+      Un enlace exportador se modela como demanda inflexible y uno importador
+      como generador inflexible. Además, el piso que impide exportar bajo costo
+      y el recorrido de un MWh hasta el documento de transacciones económicas.
 
   - slug: validacion-datos-operativos-python
     titulo: Validación automática de datos operativos con Python
     resumen: >-
-      Reglas de esquema, rango y coherencia temporal; conciliación entre fuentes,
-      detección de anomalías y trazabilidad. Con código ejecutable.
+      Doce reglas atadas a su numeral del ROBCP, cuatro ámbitos, un criterio
+      para separar rechazo de alerta, y la corrida real sobre 48 declaraciones
+      sintéticas con doce defectos sembrados. Con código que corre.
 
   - slug: pronostico-demanda-electrica
     titulo: Pronóstico de demanda eléctrica, comparación honesta de tres enfoques
     resumen: >-
-      Línea base estacional, SARIMAX y gradient boosting; validación con origen
-      móvil, intervalos de predicción y por qué pesa la interpretabilidad.
+      Validación con origen móvil sobre 182 pronósticos por modelo. El boosting
+      perdió contra la línea base hasta encontrar un error de alineación, el
+      SARIMAX ganó por una razón que sesga la comparación, y los intervalos
+      cubren 59 % cuando deberían cubrir 80 %.

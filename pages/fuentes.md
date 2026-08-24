@@ -144,6 +144,36 @@ precio del combustible adentro; **ajuste por el despacho real de los últimos
 doce meses** (9.3.4), que es el mecanismo que más mueve el CVNC; auditoría,
 responsabilidades y los 55 días hábiles del procedimiento (10).
 
+**Capítulos 7 a 10, Programación de la Operación** (artículo 5). Son **tres**
+horizontes, no cuatro: anual, semanal y diaria (7.1.2); lo mensual es la cadencia
+de actualización de la anual (8.1.3 y 8.5.1). Horizonte de simulación de la anual
+extendido dos años hidrológicos (8.2.2); precios de combustible constantes para
+toda la anual (8.3.1.9); las dos fases de la semanal (9.4.2 y 9.4.3); valor del
+agua solo a embalses que puedan generar siete días a plena capacidad (9.5.5);
+potencia despachable neta de reserva rodante (9.8.1 y 9.8.3).
+
+**Capítulos 12, 13 y 16** (artículo 5). Reserva rodante y la reducción del
+requerimiento hasta niveles de emergencia cuando el parque no da (12.4.3.6 y
+12.4.3.7); la Reserva Fría por Confiabilidad como régimen en extinción, sin
+nuevas licitaciones ni renovaciones (12.7.1.2); causales tasadas de redespacho
+(13.10.1), vertimiento no previsto con valor del agua a cero (13.10.2) y
+desviaciones de caudal que no obligan a redespachar (13.10.3); coordinación de
+mantenimientos, con las **distribuidoras obligadas a reportar** los que afecten
+la capacidad de transporte en su punto de conexión (16.2.1.2 c) y criterio
+probabilístico de aprobación (16.2.1.4).
+
+**Capítulos 11 y 18** (artículo 6). Piso de la oferta de inyección regional igual
+al costo variable que la UT usó en el predespacho inicial más los Csis
+(11.4.4.1.1), con la inyección hidráulica limitada a centrales en vertimiento
+(11.4.4.1.3); oferta de sustitución de déficit al precio del último escalón de la
+URF (11.4.6.1); **enlace exportador modelado como demanda inflexible y enlace
+importador como generador inflexible** (11.5.4 y 11.5.5). Del capítulo 18: ni el
+participante ni la UT pueden alterar valores medidos (18.2.6.1 y 18.2.5.3);
+liquidación mensual con estimación indicativa diaria (18.4.1 y 18.4.2); **monto
+remanente** como el mecanismo por el que la renta de congestión llega a la
+demanda, sumando o restando Csis (18.5); DTE como memoria de cálculo (18.7) y
+aceptación tácita de lo no observado en plazo (18.8.2).
+
 **Anexo 11, Servicios Auxiliares.** Aporte obligatorio del 3 % de reserva de
 potencia activa de cada unidad para regulación primaria de frecuencia (2.1), que
 es el porcentaje que descuenta el numeral 3.1.5 del Anexo 09 al fijar el punto
