@@ -139,6 +139,39 @@ const studyNote = {
 };
 
 /**
+ * Fenced code blocks, wrapped so they can carry a copy button.
+ *
+ * The button ships in the HTML but starts `hidden`; main.js reveals it only
+ * where `navigator.clipboard` exists. That ordering matters: a visitor without
+ * JS, or on a browser that blocks the clipboard, never sees a dead control, and
+ * the code is still selectable by hand. Same progressive-enhancement shape as
+ * the email copy button on the home page.
+ *
+ * The language, when the fence declares one, is printed as a label. It is
+ * decoration for the reader, not a hook for a highlighter: this site does not
+ * ship one, because syntax colouring in a study notebook is the kind of weight
+ * that buys very little.
+ */
+function codeBlock() {
+  return {
+    name: 'code',
+    level: 'block',
+    renderer(token) {
+      const lang = (token.lang || '').trim().split(/\s+/)[0];
+      const label = lang ? `<span class="code-lang">${text(lang)}</span>` : '';
+      const cls = lang ? ` class="language-${text(lang)}"` : '';
+      return (
+        `<div class="code-wrap">\n` +
+        `<div class="code-bar">${label}` +
+        `<button type="button" class="code-copy" hidden>Copiar</button></div>\n` +
+        `<pre><code${cls}>${text(token.text)}\n</code></pre>\n` +
+        `</div>\n`
+      );
+    },
+  };
+}
+
+/**
  * Build a markdown renderer.
  *
  * `math` is per-file on purpose, driven by `math: true` in the front matter.
@@ -151,7 +184,7 @@ export function createMarkdown({ math = false, file = '', onError } = {}) {
   const md = new Marked({ gfm: true, breaks: false });
   const ctx = { file, onError };
 
-  const extensions = [studyNote];
+  const extensions = [studyNote, codeBlock()];
   if (math) extensions.push(mathBlock(ctx), mathInline(ctx));
   md.use({ extensions });
 

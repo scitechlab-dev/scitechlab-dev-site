@@ -31,6 +31,12 @@ such as `hab.scitechlab-dev.com`, with this site linking out to it.
 │   └── mercado-electrico.yml
 ├── dist/                 # GENERATED, gitignored — the deployed site
 ├── normativa/            # local copies of the primary sources the series cites
+├── proyectos/            # runnable code the articles are built on, not snippets
+│   ├── lab-pandas/       #   pandas + the four plotting libraries
+│   ├── lab-estadistica/  #   applied statistics
+│   ├── lab-series-tiempo/#   six forecasting algorithms on three unlike series
+│   ├── validador-cvc/    #   rule-catalogue validator for fuel declarations
+│   └── pronostico-demanda/ # rolling-origin backtest of three approaches
 ├── scripts/
 │   ├── build.mjs         # assembles dist/ from all three source dirs
 │   ├── markdown.mjs      # the markdown dialect: math + study-note extensions
@@ -176,6 +182,20 @@ Four things are load-bearing:
   `class="thumb thumb-2"` on the `<svg>` and switch to the teal. That is what
   makes the work section read warm through Electrical Engineering and cool
   through Data Science without a single label saying so.
+
+### Code blocks carry a copy button
+
+Fenced blocks render through a custom `marked` extension in `markdown.mjs` that
+wraps them in `.code-wrap`, with a bar showing the language and a copy button.
+
+The button ships in the HTML **with `hidden` set**, and `main.js` reveals it only
+where `navigator.clipboard` exists. Without JS, or on a browser that blocks the
+clipboard, the reader never sees a dead control and the code is still selectable
+by hand. Same progressive-enhancement shape as the email button on the home page.
+
+What gets copied is the `<code>` element's `textContent`, so the entities the
+build escaped (`&lt;`, `&amp;`) come back as the characters that belong in an
+editor.
 
 ### Figures are generated, not drawn
 

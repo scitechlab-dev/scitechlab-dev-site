@@ -1,0 +1,139 @@
+
+==============================================================================
+1. EXPLORAR Y PROBAR ESTACIONARIEDAD
+==============================================================================
+serie           n   frecuencia      media      desv  tendencia
+co2           526      mensual     339.62     17.12    +0.1112
+nile          100        anual     919.35    169.23    -2.7143
+sunspots      309        anual      49.75     40.45    +0.0988
+
+co2: 5 meses sin lectura fueron interpolados antes de modelar
+
+prueba de Dickey-Fuller aumentada (H0: raíz unitaria, no estacionaria)
+  co2          ADF=  2.233  p=0.9989  NO estacionaria
+  co2 d1       ADF= -4.752  p=0.0001  estacionaria
+  nile         ADF= -4.049  p=0.0012  estacionaria
+  nile d1      ADF= -4.680  p=0.0001  estacionaria
+  sunspots     ADF= -2.838  p=0.0531  NO estacionaria
+  sunspots d1  ADF=-14.862  p=0.0000  estacionaria
+
+Lectura: co2 en nivel es inequívocamente no estacionaria (p≈1.00) y
+una diferencia la arregla. nile ya es estacionaria en nivel, lo que
+tiene sentido para un caudal que oscila alrededor de una media.
+
+sunspots queda en p=0.0531, o sea justo del lado de no rechazar por
+dos milésimas. Ese es el caso incómodo y el más instructivo: la
+decisión no se toma con el p solo. Sobrediferenciar una serie ya
+estacionaria introduce autocorrelación negativa artificial en el
+rezago 1 y ensancha los intervalos del pronóstico, así que ante la
+duda conviene mirar también la ACF y probar las dos opciones.
+
+==============================================================================
+2. DESCOMPONER
+==============================================================================
+clásica        residuo: desv= 0.283  máx |r|= 1.106
+STL robusta    residuo: desv= 0.255  máx |r|= 1.157
+
+fuerza de la tendencia      1.000
+fuerza de la estacionalidad 0.984
+(0 = ausente, 1 = domina por completo)
+
+patrón estacional medio, en ppm sobre la tendencia:
+   1:-0.03   2:+0.61   3:+1.42   4:+2.46   5:+2.86   6:+2.34   7:+0.74   8:-1.34   9:-3.04  10:-3.15  11:-2.04  12:-0.87
+
+STL es robusta a atípicos y admite estacionalidad que cambia despacio;
+la clásica supone que el patrón es idéntico todos los años. Con 43
+años de datos, esa diferencia deja de ser teórica.
+
+==============================================================================
+3. AUTOCORRELACIÓN
+==============================================================================
+co2 (diferenciada): n=525, banda ±0.086
+  rezagos con ACF significativa: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] …
+  primer pico de PACF fuera de banda: 1
+  ACF máxima entre rezagos 8 y 14: rezago 12
+
+sunspots: n=309, banda ±0.112
+  rezagos con ACF significativa: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] …
+  primer pico de PACF fuera de banda: 1
+  ACF máxima entre rezagos 8 y 14: rezago 10
+
+En sunspots la ACF marca el ciclo de once años. No es estacionalidad
+en el sentido de SARIMA, porque el período no es fijo ni entero: por
+eso un SARIMA con m=11 ajusta peor de lo que la intuición sugiere.
+
+==============================================================================
+4. COMPARAR SEIS ALGORITMOS
+==============================================================================
+entrenamiento 502 meses (1958-03 a 1999-12)
+prueba        24 meses (2000-01 a 2001-12)
+
+                      MAE   RMSE   MASE  mejora_vs_ingenuo_%
+modelo                                                      
+Holt-Winters        0.236  0.307  0.182               87.479
+SARIMA              0.351  0.425  0.270               81.377
+Deriva estacional   0.590  0.663  0.454               68.662
+Theta               0.663  0.800  0.510               64.783
+Ingenuo estacional  1.882  2.066  1.450                0.000
+Fourier + OLS       3.062  3.074  2.358              -62.693
+
+por qué pierde Fourier + OLS: la tendencia no es recta
+  coeficiente cuadrático +8.703e-05 (convexa)
+  admitir curvatura reduce la SCE de la tendencia en 87.1%
+  al extrapolar 24 meses, recta y parábola se separan +4.20 ppm
+
+MASE < 1 significa mejor que repetir el mismo mes del año anterior.
+Es adimensional, así que estos valores se pueden comparar contra los
+de cualquier otra serie; el MAE en ppm, no.
+
+==============================================================================
+5. DIAGNÓSTICO DE RESIDUOS
+==============================================================================
+SARIMA(1,1,1)(1,1,1,12) sobre co2
+  media del residuo +0.0625  (debería ser ~0)
+  desv. estándar    1.0251
+
+Ljung-Box (H0: los residuos son ruido blanco)
+    lb_stat  lb_pvalue
+12   5.5730     0.9361
+24   7.5132     0.9995
+
+  veredicto: compatibles con ruido blanco
+
+Es la prueba que separa un modelo terminado de uno que todavía tiene
+señal en la basura. Si Ljung-Box rechaza, el pronóstico puede mejorar
+sin datos nuevos, solo especificando mejor.
+
+==============================================================================
+6. QUIEBRE ESTRUCTURAL
+==============================================================================
+quiebre más probable: 1899
+  media antes    1097.8  (n=28)
+  media después   850.0  (n=72)
+  SCE con un solo nivel        2835157
+  SCE con dos niveles          1597457  (43.7 % menos)
+
+La presa baja de Asuán se terminó en 1902, y el dato la ve.
+
+ ventana   entrena con todo   solo post-quiebre  gana
+       5              159.9               113.9  post
+      10              118.0               121.8  todo
+      15              102.7               110.5  todo
+      20              108.0               107.0  post
+      25              101.7               100.4  post
+      30              118.6                93.7  post
+
+Entrenar solo con el régimen vigente gana en 4 de 6 ventanas.
+No en todas, y las diferencias son chicas frente a una serie con
+desviación estándar de 169.
+
+Ese es el resultado honesto, y es más útil que el titular que uno
+esperaría. El quiebre es real y grande: explica el 44 % de la suma de
+cuadrados. Pero de ahí no se sigue automáticamente que descartar el
+pasado mejore el pronóstico, porque descartar también reduce la
+muestra, y con menos datos la media estimada tiene más varianza.
+Hay un intercambio entre sesgo y varianza, y una sola ventana de
+prueba no lo resuelve: elegir h=10 habría dado el veredicto contrario
+al de h=30.
+
+JSON escrito en resultados.json

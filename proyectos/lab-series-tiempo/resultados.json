@@ -1,0 +1,91 @@
+{
+  "descomposicion": {
+    "fuerza_tendencia": 0.9998,
+    "fuerza_estacionalidad": 0.9844
+  },
+  "comparacion_co2": [
+    {
+      "modelo": "Holt-Winters",
+      "MAE": 0.2357,
+      "RMSE": 0.307,
+      "MASE": 0.1815,
+      "mejora_vs_ingenuo_%": 87.4787
+    },
+    {
+      "modelo": "SARIMA",
+      "MAE": 0.3505,
+      "RMSE": 0.425,
+      "MASE": 0.27,
+      "mejora_vs_ingenuo_%": 81.3767
+    },
+    {
+      "modelo": "Deriva estacional",
+      "MAE": 0.5899,
+      "RMSE": 0.6633,
+      "MASE": 0.4543,
+      "mejora_vs_ingenuo_%": 68.6618
+    },
+    {
+      "modelo": "Theta",
+      "MAE": 0.6629,
+      "RMSE": 0.8001,
+      "MASE": 0.5105,
+      "mejora_vs_ingenuo_%": 64.7831
+    },
+    {
+      "modelo": "Ingenuo estacional",
+      "MAE": 1.8823,
+      "RMSE": 2.0665,
+      "MASE": 1.4496,
+      "mejora_vs_ingenuo_%": 0.0
+    },
+    {
+      "modelo": "Fourier + OLS",
+      "MAE": 3.0624,
+      "RMSE": 3.0742,
+      "MASE": 2.3584,
+      "mejora_vs_ingenuo_%": -62.6928
+    }
+  ],
+  "ljung_box": {
+    "p_12": 0.9360592285275888,
+    "p_24": 0.999463831901328
+  },
+  "quiebre_nilo": {
+    "anio": 1899,
+    "reduccion_sce_%": 43.7,
+    "ventanas": [
+      {
+        "h": 5,
+        "mae_todo": 159.9,
+        "mae_post": 113.9
+      },
+      {
+        "h": 10,
+        "mae_todo": 118.0,
+        "mae_post": 121.8
+      },
+      {
+        "h": 15,
+        "mae_todo": 102.7,
+        "mae_post": 110.5
+      },
+      {
+        "h": 20,
+        "mae_todo": 108.0,
+        "mae_post": 107.0
+      },
+      {
+        "h": 25,
+        "mae_todo": 101.7,
+        "mae_post": 100.4
+      },
+      {
+        "h": 30,
+        "mae_todo": 118.6,
+        "mae_post": 93.7
+      }
+    ],
+    "ventanas_gana_post": 4
+  }
+}

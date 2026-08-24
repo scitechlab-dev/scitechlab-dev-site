@@ -1,0 +1,127 @@
+
+==============================================================================
+1. CENTRO Y DISPERSIÓN
+==============================================================================
+inflación:
+  media     3.96   mediana     3.24   desv. est.    3.25
+  MAD robusta   1.96   asimetría  +0.74   curtosis  +2.23
+  media podada al 10 %: 3.65
+
+PIB real:
+  media  7221.17   mediana  6559.59   desv. est. 3214.96
+  MAD robusta 3432.96   asimetría  +0.44   curtosis  -1.02
+  media podada al 10 %: 7036.01
+
+Lectura: la inflación tiene asimetría positiva y curtosis alta, o sea
+cola derecha larga. Su media supera a su mediana, y usar la media
+como 'inflación típica' sobreestima lo que pasó en un trimestre normal.
+
+==============================================================================
+2. ¿ES NORMAL?
+==============================================================================
+inflación  Shapiro W=0.9109 p=1.06e-09   Jarque-Bera=  60.66 p=6.71e-14   NO normal
+desempleo  Shapiro W=0.9574 p=8.93e-06   Jarque-Bera=  22.71 p=1.17e-05   NO normal
+
+Un p pequeño rechaza la normalidad. Importa porque la prueba t y el
+intervalo clásico la suponen; con n grande el TLC los rescata, con n
+chico no. La sección siguiente muestra dónde está esa frontera.
+
+==============================================================================
+3. TEOREMA CENTRAL DEL LÍMITE
+==============================================================================
+población: n=203  asimetría=+0.74
+
+   n   asimetría residual   distancia KS   % de la asimetría inicial
+   2               +0.483         0.0909                        65%
+   5               +0.386         0.0399                        52%
+  10               +0.199         0.0205                        27%
+  30               +0.166         0.0169                        22%
+  50               +0.155         0.0167                        21%
+ 100               +0.111         0.0182                        15%
+
+La asimetría cae con la raíz de n, que es exactamente lo que el
+teorema promete. La regla de 'n = 30' es una convención, no un
+teorema: con esta población, a n = 30 todavía queda un 20 % de la
+asimetría original. Cuánto es tolerable depende de para qué se use.
+
+==============================================================================
+4. INTERVALOS DE CONFIANZA
+==============================================================================
+desempleo en los 2000: n=39  media=5.415  error estándar=0.203
+  IC 95 % por t          [5.004, 5.826]  ancho 0.822
+  IC 95 % por bootstrap  [5.090, 5.910]  ancho 0.821
+
+Qué significa: si repitiéramos el muestreo muchas veces, el 95 % de
+los intervalos construidos así contendría la media verdadera.
+Qué NO significa: que haya 95 % de probabilidad de que la media esté
+en ESTE intervalo. La media es fija; lo aleatorio es el intervalo.
+
+Cuánta muestra hace falta para partir el ancho a la mitad:
+  n×1  → ancho relativo 1.000
+  n×2  → ancho relativo 0.707
+  n×4  → ancho relativo 0.500
+  n×8  → ancho relativo 0.354
+
+==============================================================================
+5. PRUEBAS DE HIPÓTESIS
+==============================================================================
+desempleo 1980s (n=40, media 7.28) contra 1990s (n=40, media 5.77)
+  t de Welch     t=+5.249  p=1.54e-06
+  Mann-Whitney   U=1264   p=8.21e-06
+  d de Cohen     +1.174  (grande)
+
+El p dice si la diferencia es distinguible del ruido. El tamaño del
+efecto dice si importa. Con n grande, un p diminuto puede acompañar a
+una diferencia irrelevante; reportar solo el p oculta esa distinción.
+
+comparando las 5 décadas de a pares: 10 pruebas
+  significativas a 0.05 sin corregir:        8
+  con Bonferroni (0.05/10 = 0.0050):  7
+  probabilidad de al menos un falso positivo sin corregir: 40.1%
+
+==============================================================================
+6. CORRELACIÓN Y CONFUSIÓN
+==============================================================================
+agregando los 203 trimestres:
+  Pearson  r=+0.065  p=0.3567   no significativa
+  Spearman ρ=+0.104  p=0.1409
+
+dentro de cada década:
+    década    n        r         p
+      1960   40   -0.744    0.0000  ←
+      1970   40   -0.183    0.2581
+      1980   40   -0.113    0.4890
+      1990   40   +0.152    0.3485
+      2000   39   -0.204    0.2124
+
+La relación existe DENTRO de un régimen y desaparece al mezclar
+regímenes. Agregar períodos con políticas distintas no promedia la
+relación: la borra. Es confusión por régimen, y en un mercado
+eléctrico pasa igual al mezclar años con parques de generación
+distintos o marcos regulatorios distintos.
+
+==============================================================================
+7. REGRESIÓN Y SUS SUPUESTOS
+==============================================================================
+inflación ~ desempleo, solo 1960s (n=40)
+  pendiente   -1.3235  IC 95 % [-1.7139, -0.9331]
+  p           3.77e-08
+  R²          0.553   R² ajustado 0.542
+
+diagnóstico de residuos:
+  Durbin-Watson 1.905  (sin autocorrelación evidente)
+  Breusch-Pagan p=0.1318  (varianza estable)
+
+con errores estándar HAC (Newey-West, 4 rezagos):
+  coeficiente -1.3235 (idéntico: HAC no toca la estimación)
+  p pasa de 3.77e-08 a 8.16e-06
+
+Acá los residuos se portan bien, y por eso HAC casi no cambia nada.
+Ese es justamente el uso del diagnóstico: no es que HAC sobre, es
+que confirma por otra vía que la inferencia clásica era válida.
+Con series de tiempo lo habitual es lo contrario, y entonces el
+p sin corregir es demasiado optimista.
+
+Y el R² de 0.553 no valida nada por sí solo: mide ajuste dentro de la
+muestra. La sección anterior mostró que esta misma relación se evapora
+fuera de esta década, y ningún R² alto habría avisado de eso.

@@ -40,6 +40,34 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
     .forEach(el => { el.classList.add('reveal'); io.observe(el); });
 }
 
+// ---- Copy a code block ----
+// The buttons ship in the HTML with `hidden` set, so they only appear where the
+// clipboard API actually exists. Without JS the code is still there and still
+// selectable; nothing depends on this running.
+//
+// The text copied is the <code> textContent, which is the decoded source: the
+// entities the build escaped (&lt;, &amp;) come back as the characters the
+// reader wants to paste into an editor.
+if (navigator.clipboard) {
+  for (const btn of document.querySelectorAll('.code-copy')) {
+    const code = btn.closest('.code-wrap')?.querySelector('code');
+    if (!code) continue;
+    btn.hidden = false;
+    let reset;
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(code.textContent.replace(/\n$/, '')).then(() => {
+        btn.textContent = 'Copiado';
+        btn.dataset.done = '';
+        clearTimeout(reset);
+        reset = setTimeout(() => {
+          btn.textContent = 'Copiar';
+          delete btn.dataset.done;
+        }, 1800);
+      }).catch(() => { /* clipboard blocked; selecting the text still works */ });
+    });
+  }
+}
+
 // ---- Copy the email address ----
 // Progressive enhancement: the button ships hidden and is only revealed where
 // the clipboard API exists, so no-JS visitors never see a dead control. The
