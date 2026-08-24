@@ -350,7 +350,30 @@ the objective function. And the infeasibility of the coordination problem is
 itself the most valuable signal a study produces: it is the point at which the
 answer stops being a different $\text{TD}$ and starts being a different scheme.
 
-## Standards worth keeping open
+## Closing
+
+The habit worth breaking is reaching for the time dial first. It is the most
+visible knob and the one every study is built around, but it is also the only
+discriminant whose price is paid in damage, in arc energy and in customers who
+noticed.
+
+> Selectivity bought with current, with counting or with logic costs
+> essentially nothing. Selectivity bought with time is charged to the feeder.
+
+## Sources
+
+**On the numbers in this article.** Every value in the reference feeder is
+computed, not quoted: the operating times come from the IEEE C37.112 equation
+printed above, the thermal limits from the ICEA formula printed above, and the
+coordination margins are their differences. They can be reproduced with a
+calculator from the tables given. Spot-checking a few: R1 at 10 500 A gives
+0.156 s and at 1 000 A gives 5.26 s; the 266.8 MCM trunk gives
+$I^2t = 2.24\times10^{8}\ \text{A}^2\text{s}$, or 2.03 s at the bus fault, while
+the #4 tap gives 0.37 s at 3 855 A.
+
+**On the standards.** The following are the documents that govern this material,
+and where the curve constants, the through-fault limits and the arc-flash
+method come from:
 
 | Standard | Covers |
 |---|---|
@@ -362,12 +385,23 @@ answer stops being a different $\text{TD}$ and starts being a different scheme.
 | IEEE 1584 | Arc-flash hazard calculation |
 | IEEE C37.2 | Device function numbers |
 
----
+**I did not open these standards while writing this.** They are paywalled and I
+do not hold current copies. The constants in the curve table, the ICEA
+coefficient and the ITIC envelope figures are quoted from working knowledge, and
+anyone using them for an actual setting calculation should take them from the
+standard itself rather than from this page. What this article does stand behind
+is the arithmetic built on top of them and the argument about which discriminant
+costs what.
 
-The habit worth breaking is reaching for the time dial first. It is the most
-visible knob and the one every study is built around, but it is also the only
-discriminant whose price is paid in damage, in arc energy and in customers who
-noticed.
+**On the vendor feature named in the text.** Zone Sequence Coordination is NOJA
+Power's name for the operation-counting scheme described in section 2; other
+vendors implement the same idea under other names. I did not consult that
+vendor's documentation for this article, and the behaviour described is the
+generic mechanism, not a specification of any particular product.
 
-> Selectivity bought with current, with counting or with logic costs
-> essentially nothing. Selectivity bought with time is charged to the feeder.
+**Unstated inputs, declared.** Two figures in the text depend on inputs the
+article does not give: the sectionaliser window of 120 A to 680 A implies a load
+current and a minimum fault current for the C–D section that are not listed in
+the feeder table, and the 6.09 km reach depends on solving the impedance model
+for distance. Both are internally consistent with the stated feeder, but a
+reader cannot re-derive them from the tables alone.

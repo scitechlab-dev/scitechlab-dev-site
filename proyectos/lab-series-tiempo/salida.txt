@@ -58,9 +58,15 @@ sunspots: n=309, banda ±0.112
   primer pico de PACF fuera de banda: 1
   ACF máxima entre rezagos 8 y 14: rezago 10
 
-En sunspots la ACF marca el ciclo de once años. No es estacionalidad
-en el sentido de SARIMA, porque el período no es fijo ni entero: por
-eso un SARIMA con m=11 ajusta peor de lo que la intuición sugiere.
+ciclo solar medido sobre los 28 picos del dataset:
+  intervalo entre picos: mínimo 7, máximo 17 años
+  media 10.9, mediana 11
+
+La ACF marca el ciclo alrededor del rezago 10, pero el período NO es
+fijo ni entero: varía en un rango de una década entera. Eso lo
+descalifica como estacionalidad en el sentido de SARIMA, que exige un
+m constante, y por eso un SARIMA con m=11 ajusta peor de lo que la
+intuición sugiere.
 
 ==============================================================================
 4. COMPARAR SEIS ALGORITMOS

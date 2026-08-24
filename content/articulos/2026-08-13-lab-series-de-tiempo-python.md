@@ -117,8 +117,11 @@ El patrón estacional medio, en ppm sobre la tendencia:
  7:+0.74   8:-1.34   9:-3.04  10:-3.15  11:-2.04  12:-0.87
 ```
 
-Máximo en mayo, mínimo en septiembre y octubre: es la vegetación del hemisferio
-norte respirando. Una amplitud de casi 6 ppm pico a pico.
+Máximo en mayo, mínimo en septiembre y octubre. La explicación estándar es el
+ciclo de la vegetación del hemisferio norte, que absorbe carbono durante el
+verano boreal; la cito como interpretación, no como algo que este laboratorio
+demuestre. Una amplitud de 6.01 ppm entre el pico de mayo y el valle
+de octubre.
 
 **STL contra la descomposición clásica.** La clásica supone que el patrón
 estacional es idéntico todos los años; STL permite que evolucione despacio y,
@@ -144,15 +147,31 @@ co2 (diferenciada): n=525, banda ±0.086
   rezagos con ACF significativa: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] …
   primer pico de PACF fuera de banda: 1
 
-sunspots: n=309, banda ±0.111
+sunspots: n=309, banda ±0.112
   ACF máxima entre rezagos 8 y 14: rezago 10
 ```
 
-En `sunspots` la ACF marca el ciclo solar alrededor del rezago 10. **No es
-estacionalidad en el sentido de SARIMA**, porque el período ni es fijo ni es
-entero: el ciclo solar promedia unos once años pero varía entre nueve y catorce.
-Por eso un SARIMA con m = 11 ajusta peor de lo que la intuición sugiere, y por
-eso esta serie está en el laboratorio.
+En `sunspots` la ACF marca el ciclo solar alrededor del rezago 10. Que **no es
+estacionalidad en el sentido de SARIMA** conviene demostrarlo en vez de
+afirmarlo, así que el laboratorio detecta los picos de la serie y mide los
+intervalos entre ellos:
+
+```
+ciclo solar medido sobre los 28 picos del dataset:
+  intervalo entre picos: mínimo 7, máximo 17 años
+  media 10.9, mediana 11
+```
+
+La media da 10.9 años, que es el número que uno esperaba. Pero **el período
+varía entre 7 y 17 años**, o sea un rango de una década entera. SARIMA exige un
+`m` constante y entero, y acá no lo hay: por eso un SARIMA con m = 11 ajusta
+peor de lo que la intuición sugiere, y por eso esta serie está en el
+laboratorio.
+
+Vale señalar cómo llegué a ese párrafo, porque es el método más que el dato.
+Había escrito de memoria que el ciclo "varía entre nueve y catorce años". Al
+medirlo sobre el propio dataset, el rango real resultó bastante más ancho. La
+cifra que uno recuerda suele ser el rango típico, no el observado.
 
 ## 4. Seis algoritmos, la misma partición, las mismas métricas
 
@@ -173,7 +192,7 @@ sarima = sm.tsa.SARIMAX(tr, order=(1, 1, 1), seasonal_order=(1, 1, 1, 12),
                         enforce_stationarity=False,
                         enforce_invertibility=False).fit(disp=False)
 
-# 6. Theta: ganó la competencia M3 y casi nadie lo prueba
+# 6. Theta: método simple con muy buen desempeño en competencias, poco usado
 from statsmodels.tsa.forecasting.theta import ThetaModel
 theta = ThetaModel(tr, period=12).fit()
 ```
@@ -204,7 +223,12 @@ Fourier + OLS       3.062  3.074  2.358              -62.693
 
 Tres lecturas.
 
-**Holt-Winters gana**, con un MASE de 0.182: seis veces mejor que la referencia.
+**Holt-Winters gana**, con un MASE de 0.182. Conviene leer ese número con
+cuidado, porque admite dos comparaciones distintas: es 5.5 veces mejor que la
+predicción ingenua calculada **dentro del entrenamiento**, que es lo que el
+denominador del MASE mide, y 8.0 veces mejor que la fila del ingenuo estacional
+de esta tabla, que se evaluó sobre el período de prueba. Las dos lecturas son
+correctas y no son la misma.
 No hizo falta ningún diagnóstico previo para ajustarlo, lo cual es parte de su
 atractivo. Una serie con tendencia limpia y estacionalidad estable es
 exactamente su caso.
@@ -371,12 +395,21 @@ Este artículo es un laboratorio. Cada cifra que cita es la salida real de corre
   `statsmodels.datasets.sunspots` (actividad solar anual, 1700 a 2008).
   La procedencia y las unidades de cada uno están en el atributo `NOTE` del
   dataset, que es lo que leí para describirlos.
-- **Sobre la presa de Asuán**: la fecha de 1902 para la terminación de la presa
-  baja es contexto histórico ampliamente documentado, pero **no la verifiqué en
-  una fuente primaria** para este artículo. Lo que sí está verificado es lo que
-  el método encuentra sin ayuda: un quiebre en 1899 que reduce la suma de
-  cuadrados en 43.7 %. La atribución histórica es interpretación, y va marcada
-  como tal.
+- **Tres afirmaciones que NO verifiqué y que van marcadas como interpretación**,
+  para que no se confundan con lo que el laboratorio demuestra:
+  1. *La presa baja de Asuán se terminó en 1902.* Contexto histórico
+     ampliamente documentado, pero no lo contrasté con una fuente primaria. Lo
+     que sí está verificado es lo que el método encuentra sin ayuda: un quiebre
+     en 1899 que reduce la suma de cuadrados en 43.7 %. La atribución histórica
+     es mía.
+  2. *El ciclo estacional del CO2 se explica por la vegetación del hemisferio
+     norte.* Es la explicación estándar en climatología y no la verifiqué acá.
+     Lo que el laboratorio muestra es el patrón, con su pico en mayo y su valle
+     en octubre; la causa es interpretación.
+  3. *El método Theta tuvo un desempeño destacado en las competencias de
+     pronóstico M.* Lo menciono como contexto de por qué vale la pena probarlo,
+     no como resultado verificado en esta sesión. Lo que sí está medido acá es
+     su MASE de 0.510 sobre esta serie, que lo deja cuarto de seis.
 - **Versiones**: Python 3.13.9, numpy 2.3.5, pandas 2.3.3, statsmodels 0.14.5.
   `ThetaModel` vive en `statsmodels.tsa.forecasting.theta` y no está expuesto en
   `sm.tsa`, cosa que descubrí porque el primer intento falló.

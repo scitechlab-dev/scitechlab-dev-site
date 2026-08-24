@@ -182,9 +182,22 @@ def s3_acf(_) -> None:
         print(f"  ACF máxima entre rezagos 8 y 14: "
               f"rezago {8 + int(np.argmax(np.abs(acf[8:15])))}")
         print()
-    print("En sunspots la ACF marca el ciclo de once años. No es estacionalidad")
-    print("en el sentido de SARIMA, porque el período no es fijo ni entero: por")
-    print("eso un SARIMA con m=11 ajusta peor de lo que la intuición sugiere.")
+    # El período del ciclo solar se MIDE sobre el propio dataset en vez de
+    # citarse de memoria: se detectan los picos y se miran los intervalos.
+    from scipy.signal import find_peaks
+    y = sunspots().to_numpy()
+    anios = np.array([int(str(a)) for a in sunspots().index])
+    picos, _ = find_peaks(y, distance=7, prominence=20)
+    gaps = np.diff(anios[picos])
+    print(f"ciclo solar medido sobre los {len(picos)} picos del dataset:")
+    print(f"  intervalo entre picos: mínimo {gaps.min()}, máximo {gaps.max()} años")
+    print(f"  media {gaps.mean():.1f}, mediana {np.median(gaps):.0f}")
+    print()
+    print("La ACF marca el ciclo alrededor del rezago 10, pero el período NO es")
+    print("fijo ni entero: varía en un rango de una década entera. Eso lo")
+    print("descalifica como estacionalidad en el sentido de SARIMA, que exige un")
+    print("m constante, y por eso un SARIMA con m=11 ajusta peor de lo que la")
+    print("intuición sugiere.")
 
 
 def s4_comparar(_) -> dict:
@@ -232,9 +245,9 @@ def s4_comparar(_) -> dict:
     modelos["Fourier + OLS"] = ols.predict(
         fourier(np.arange(len(tr), len(tr) + h)))
 
-    # 6. Theta, el método que ganó la competencia M3 y que casi nadie prueba
-    # pese a ser casi tan simple como una línea base. No está expuesto en
-    # sm.tsa: hay que importarlo de su módulo.
+    # 6. Theta: método simple, con buen desempeño reportado en las competencias
+    # de pronóstico M, y aun así poco usado. No está expuesto en sm.tsa: hay que
+    # importarlo de su módulo.
     from statsmodels.tsa.forecasting.theta import ThetaModel
     theta = ThetaModel(tr, period=12).fit()
     modelos["Theta"] = theta.forecast(h).to_numpy()
