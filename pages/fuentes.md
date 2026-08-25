@@ -279,12 +279,18 @@ Lo que la serie usa de la ley:
 | 3 | La SIGET (hoy DGEHM) responsable del cumplimiento de la ley |
 | 4 | Definiciones de generador, transmisor, distribuidor, comercializador y usuario final |
 | 10-A y 10-B | Remuneración de costos fijos y de inversión mediante la capacidad firme |
-| 33 | Objeto de la UT: operar la transmisión, el mercado mayorista y, desde 2026, el minorista; prohibición de compraventar energía por cuenta propia |
-| 34 y 35 | La UT como sociedad de capital; sus accionistas son los propios participantes |
+| 32-A a 32-K | Generación distribuida y mercado minorista: venta exclusiva a distribuidoras por contrato de abastecimiento, incompatibilidad entre mayorista y minorista (32-A), lineamientos y precios fijados por la DGEHM (32-B), estudios de integración y capacidad máxima por circuito (32-C), señales de monitoreo (32-D), obligación de reserva de frecuencia (32-E), exclusión de la capacidad firme (32-G), almacenamiento (32-H) y medición comercial (32-I) |
+| 33 | Objeto de la UT: operar la transmisión, el mercado mayorista y, desde 2026, el minorista; prohibición de compraventar energía por cuenta propia; el Reglamento de Operación lo **elabora la UT** y lo aprueba el regulador, con visto bueno de la DGEHM, que además puede modificarlo de manera directa |
+| 34 y 35 | La UT como sociedad de capital; sus accionistas son los propios participantes, con umbrales de capacidad y de energía transada |
+| 36 | Series de acciones por categoría; dos votos por serie salvo transmisores con uno; un voto por accionista dentro de la serie sin importar cuántas acciones tenga; aumentos de capital obligatorios para admitir nuevos participantes |
+| 37 | Administrador único por cinco años; la elección exige visto bueno de la DGEHM y sin él no tiene efecto jurídico; incompatibilidades; la junta general no puede limitar sus facultades |
+| 38 | Suscripción de acciones proporcional al valor en libros de los bienes del sector |
+| 39 y 40 | Los cargos de la UT los fija el regulador por método, y deben cubrir costos operativos razonables, impuestos y amortizaciones; puede prestar otros servicios |
+| 42 | Las decisiones de operación de la UT son de cumplimiento obligatorio |
 | 51 | Mercado mayorista compuesto, al menos, por el Mercado de Contratos y el MRS |
-| 55 a 60 | Reglas del MRS; sus precios son públicos |
+| 55 a 60 | Reglas del MRS; participación sin contrato de venta con despacho programado igual a cero (56); valoración asimétrica de las desviaciones respecto del despacho programado, con la falta cargada al costo de reposición y la falla de red trasladada al transmisor (57); sus precios son públicos |
 | 79 | Pliego tarifario basado en contratos de largo plazo por libre concurrencia, contratos de naturaleza pública y precio promedio del MRS |
-| 112-E | Mientras no haya competencia en el MRS, metodología basada en costos marginales de producción, costos fijos y de inversión |
+| 112-E | Mientras no haya competencia en el MRS, metodología basada en costos marginales de producción, costos fijos y de inversión, y en el valor de reemplazo del agua; la condición del mercado la establecen conjuntamente el Superintendente de Electricidad y Telecomunicaciones y el Superintendente de Competencia |
 
 ## B. Existen pero no se pudieron abrir
 

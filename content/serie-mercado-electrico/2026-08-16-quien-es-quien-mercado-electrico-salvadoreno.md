@@ -1,6 +1,6 @@
 ---
 title: "Mercado mayorista I. Quién decide qué en El Salvador"
-summary: El mapa institucional del sector eléctrico salvadoreño, y por qué la respuesta a "quién regula esto" cambió el 2 de julio de 2026. Cuatro funciones, cuatro titulares, dos mercados, y la razón por la que el país valoriza la energía a costo de producción declarado y no a ofertas.
+summary: El mapa institucional del sector eléctrico salvadoreño, y por qué la respuesta a "quién regula esto" cambió el 2 de julio de 2026. Cuatro funciones, cómo se vota y de qué vive la UT, los mercados que administra desde la reforma de 2026, y la razón por la que el país valoriza la energía a costo de producción declarado y no a ofertas.
 date: 2026-08-16
 lang: es
 topic: Mercado eléctrico
@@ -38,16 +38,113 @@ la segunda. **La UT opera el sistema y administra el mercado. No lo regula.**
 La diferencia se vuelve concreta apenas hay un desacuerdo. Cuando la UT publica
 una indexación o valida un costo declarado, está aplicando una regla que aprobó
 alguien más. Si un participante disputa esa aplicación, la disputa no se
-resuelve en la UT: sube al regulador. La UT ejecuta el reglamento; no lo
-escribe ni lo interpreta con autoridad final.
+resuelve en la UT: sube al regulador.
+
+Conviene ser preciso con el reparto, porque el atajo natural, "la UT no escribe
+las reglas", es falso. El artículo 33 de la LGE dice que las normas de operación
+del sistema y de administración del mercado están contenidas en un Reglamento de
+Operación **que elabora la UT y aprueba el regulador**, previo visto bueno
+expreso de la DGEHM. Si lo que propone la UT no cumple la ley, el regulador le
+indica las modificaciones necesarias y se lo devuelve para su adecuación; si
+vencido el plazo la UT no las incorporó, el regulador puede emitir el acto de
+aprobación con las modificaciones que estime necesarias. Y la DGEHM está
+facultada para modificar de manera directa el Reglamento de Operación cuando haga
+falta para cumplir el artículo 2 de la ley. La UT redacta y ejecuta; no aprueba,
+y no tiene la última palabra sobre su propio texto.
 
 La UT empezó a operar en 1998 y su forma jurídica llama la atención: es una
-sociedad anónima privada que administra un mercado de interés público. Esa
-mezcla de gobernanza privada y función pública es poco común, y conviene entenderla
-antes de asumir cómo se toman las decisiones adentro. La ley explica el diseño:
-la UT se organiza como sociedad de capital cuyo accionariado son los propios
-participantes del mercado (arts. 34 y 35 de la LGE), y tiene prohibido comprar o
-vender energía por cuenta propia (art. 33).
+sociedad anónima privada que administra un mercado de interés público. Esa mezcla
+de gobernanza privada y función pública es poco común, y conviene entenderla
+antes de asumir cómo se toman las decisiones adentro.
+
+## La UT por dentro: quién la posee, quién la manda y de qué vive
+
+La ley arma el diseño en cuatro piezas repartidas en artículos distintos, y
+ninguna de las cuatro se entiende sola.
+
+**Lo que no puede hacer.** La UT se organiza como sociedad de capital
+representado por acciones nominativas (art. 34), y sus accionistas son los
+propios operadores y usuarios finales del sistema, con umbrales de entrada:
+generadores desde cinco megavatios de capacidad nominal total, transmisores cuyas
+instalaciones pertenezcan al sistema, distribuidores desde cinco megavatios
+conectados a la transmisión, usuarios finales desde un megavatio, y
+comercializadores independientes inscritos con más de un año de operación que
+hayan transado al menos un gigavatio hora el año anterior (art. 35). Sobre esa
+sociedad de participantes cae una prohibición de una línea: **la UT no podrá
+efectuar por sí operaciones de compraventa de energía eléctrica** (art. 33). Esa
+frase es el candado del arreglo. Un operador que pudiera tomar posición en el
+mercado que él mismo despacha tendría interés propio en cada decisión de
+despacho; sin poder comprar ni vender, no tiene lado del que ganar.
+
+**Cómo se vota.** Acá está la parte que sorprende, porque el poder de decisión no
+sigue al capital. Las acciones se reparten en series por categoría, una para
+generadores, transmisores, distribuidores, comercializadores independientes y
+usuarios finales, y en las juntas generales **cada serie tiene derecho a dos
+votos, con excepción de los transmisores, que tienen uno solo** (art. 36).
+Adentro de cada serie, cada accionista tiene un voto **independientemente del
+número de acciones que posea**. El capital sí es proporcional: al constituirse la
+sociedad, cada miembro suscribe acciones en relación al valor en libros de sus
+bienes orientados al sector (art. 38). Los votos, no.
+
+La consecuencia es directa y vale enunciarla. Un generador de quinientos
+megavatios y uno de cinco pesan lo mismo dentro de su serie, y la serie entera de
+generadores pesa lo mismo que la de distribuidores. Nadie compra control
+aumentando su participación accionaria, que es exactamente lo que uno querría de
+una sociedad cuyo giro es arbitrar entre sus propios dueños. El mismo artículo
+cierra la puerta por el otro lado: la UT debe acordar aumentos de capital cuando
+lo requieran nuevos operadores, y **las nuevas acciones solo pueden suscribirlas
+participantes nuevos**. El accionariado no se puede cerrar contra quien entra al
+mercado.
+
+**Quién la administra.** La administración está a cargo de un administrador único
+propietario, con su suplente, por un período de cinco años (art. 37), y la
+elección no es libre. La junta general de accionistas necesita el visto bueno de
+la DGEHM sobre las personas a elegir; sin ese visto bueno **la elección no tiene
+ningún efecto jurídico**, y la DGEHM puede elegir directamente por acuerdo. A la
+sesión donde se elige debe asistir un representante de la DGEHM para que sea
+válida. El cargo es inamovible salvo con visto bueno de la misma dirección, y la
+junta general de accionistas **no puede limitar** las facultades del
+administrador. A eso se suma una incompatibilidad que cierra el círculo: no puede
+ser administrador único quien sea socio, accionista o administrador de cualquier
+sociedad vinculada al sector eléctrico o de hidrocarburos, con la salvedad de
+aquellas cuyo accionista, directo o indirecto, sea la CEL.
+
+Léase junto con lo anterior y el diseño aparece completo. Los participantes son
+dueños de la UT, pero no eligen libremente a quien la dirige, no pueden acumular
+votos comprando acciones, no pueden impedir la entrada de un competidor nuevo al
+accionariado y no pueden recortarle atribuciones al administrador. La propiedad
+es privada; el control, no del todo.
+
+**De qué vive.** Si no compra ni vende energía, la pregunta obvia es de dónde
+salen sus ingresos. La UT cobra los cargos por la operación del sistema de
+transmisión y del mercado mayorista **de acuerdo con el método que establece el
+regulador**, y esos cargos deben permitirle obtener ingresos suficientes para
+cubrir los costos operativos razonables aplicables al servicio, impuestos y
+amortizaciones (art. 39). Es un esquema de costo de servicio, no de margen: la UT
+no gana más porque el precio de la energía suba, ni porque se despache una
+máquina en vez de otra. Además puede prestar otros servicios a quien se lo
+solicite (art. 40).
+
+Ese cargo no viaja escondido. Aparece del lado del comprador como uno de los
+cargos del sistema que se suman al costo marginal para formar el precio del MRS,
+junto con el uso de la transmisión, las pérdidas y los servicios auxiliares
+(ROBCP, Anexo 09, 3.2.1). Quien paga la administración del mercado es la demanda,
+en un renglón identificable.
+
+::: nota Lo que me llevo de leer el capítulo de la UT
+Entré a los artículos 33 a 40 buscando una definición y salí con un diseño. Yo
+describía a la UT como "una sociedad privada de los participantes", que es cierto
+y no dice casi nada. Lo que la hace funcionar son cuatro candados que viven en
+artículos distintos y que solo se ven juntos: no puede comprar ni vender energía,
+sus votos no siguen al capital, no elige sola a quien la administra, y sus
+ingresos no dependen del precio de la energía. Quitá cualquiera de los cuatro y
+la misma sociedad se convierte en un participante con poder de despacho.
+
+Me quedó también una corrección para mi propio borrador. Yo había escrito que la
+UT "no escribe las reglas". El artículo 33 dice lo contrario: las escribe, y otro
+las aprueba. La distinción importa porque cambia el lugar donde hay que ir a
+discutir una regla que uno cree mal puesta.
+:::
 
 ## Las reglas, en orden
 
@@ -138,6 +235,37 @@ y la física.
 Dicho de otro modo: los contratos y el despacho responden a lógicas distintas y
 se encuentran recién en la liquidación.
 
+Con números se entiende mejor. Un generador con un contrato por 100 MWh en una
+hora que físicamente inyecta 80 MWh no incumplió nada: le entrega a su comprador
+los 100 que pactó y compra en el MRS los 20 que le faltaron, al precio de esa
+hora. Si el precio del MRS quedó por debajo del precio del contrato, gana en la
+diferencia; si quedó por encima, pierde. Esa es la exposición real de cualquier
+generador contratado, y no depende de su tecnología sino de cuánto se parece su
+perfil físico al perfil que comprometió.
+
+Hay una segunda cuenta que conviene no confundir con la anterior, porque se
+valora distinto. Una cosa es la brecha entre la posición contractual y la física,
+que es la que acabamos de ver. Otra es la desviación respecto del **despacho
+programado**, que la ley valora con una asimetría deliberada (art. 57). Al
+distribuidor o usuario final cuyo consumo difiera del programado se lo abona o se
+lo carga al precio del MRS del nodo donde tenía consumo programado. Al generador
+que produce **en exceso** de lo programado se lo abona a ese mismo precio nodal.
+Pero al generador que produce **por debajo** de lo programado no se lo carga al
+precio del MRS, sino **al costo de la energía necesaria para reponer la energía
+no entregada**, que es otra cifra y en general más alta. Faltar cuesta más que
+sobrar, y esa es la señal.
+
+El literal d del mismo artículo agrega el caso que uno esperaría que quedara sin
+resolver: si la planta generó por debajo de lo programado por fallas de la red de
+transmisión que limitaron su capacidad de entrega, el cargo por el valor de
+reposición no lo paga el generador. Lo paga el transmisor responsable de la
+falla, neto de la energía que la planta sí alcanzó a entregar al MRS.
+
+Un caso límite aclara el resto: un generador que no posea contratos de venta
+puede participar en el MRS, y en ese caso su despacho programado se considera
+igual a cero (art. 56). Vender toda la producción hora a hora al precio del
+mercado es una posición válida, no una anomalía.
+
 <figure class="fig fig-wide">
   <img src="../assets/figures/contratos-despacho.svg"
        alt="Dos planos paralelos entre un generador y un distribuidor: el plano financiero, en ámbar, con un contrato de 100 MWh a precio pactado, y el plano físico, en tinta, con un despacho de 80 MWh inyectados. Ambos bajan al MRS, donde la brecha de 20 MWh se liquida al precio horario."
@@ -160,6 +288,66 @@ La distribución está concentrada en un puñado de empresas con territorios
 definidos. La generación está más fragmentada, y su composición cambió de manera
 importante en los últimos años con la entrada de capacidad grande a gas natural
 y una participación creciente de solar.
+
+## El tercer mercado, y dónde queda la generación distribuida
+
+El título de la sección anterior dice dos mercados y se refiere al mayorista, que
+es de lo que trata esta serie. Desde el Decreto Legislativo No. 548 del 9 de
+abril de 2026 hay uno más, y también lo opera la UT: el artículo 33 le suma como
+objeto operar el **mercado minorista** de electricidad e instruir a las
+distribuidoras sobre la operación de las plantas de generación distribuida
+conectadas en sus redes.
+
+El diseño de ese mercado contesta la pregunta que aparece siempre que alguien
+mira un techo con paneles y se pregunta cómo cobra. Un generador distribuido
+interconectado en una red de distribución que participe en el mercado minorista
+**solo puede vender su energía a las distribuidoras**, y debe hacerlo mediante
+contratos de abastecimiento en distribución (art. 32-A). Esos contratos se
+adjudican por procesos competitivos y transparentes, con lineamientos que emite
+la DGEHM por acuerdo, y con precios que fija la misma DGEHM buscando que el
+beneficio se traslade a la tarifa del usuario final (art. 32-B). Las
+distribuidoras están obligadas a suscribir los contratos que resulten de esos
+procesos.
+
+La regla que ordena todo lo demás está en el tercer inciso del 32-A: **una misma
+planta de generación distribuida no puede formar parte de los mercados mayorista
+y minorista simultáneamente.** Puede optar por el mayorista, cumpliendo los
+requisitos de la ley y del Reglamento de Operación, pero entonces deja de vender
+por contrato de abastecimiento. Son dos caminos, y hay que elegir uno.
+
+De ahí sale la respuesta a la pregunta por la exposición nocturna, con una parte
+que la ley contesta y otra que no. Lo que sí queda cerrado es la contraparte y el
+precio: una planta en el minorista le vende a la distribuidora bajo un contrato
+de abastecimiento cuyo precio fija la DGEHM, y no al MRS hora a hora. Lo que la
+ley no define es el perfil de entrega que ese contrato puede exigir, y de eso
+depende por completo que exista o no exposición: quien se compromete a entregar
+un bloque plano y no puede generarlo a las ocho de la noche tiene que conseguir
+esa energía en otro lado. Los lineamientos de los contratos de abastecimiento los
+emite la DGEHM y no los he leído, así que hasta ahí llego.
+
+Donde la pregunta sí tiene respuesta cerrada es en el mayorista. Una solar de
+escala de utilidad con un contrato de suministro plano queda expuesta al precio
+del MRS en las horas sin sol, exactamente igual que cualquier otro generador cuyo
+perfil físico no se parece a su perfil contractual. No es un riesgo de la
+tecnología solar: es el riesgo de comprometer un perfil que uno no produce.
+
+Estar en el minorista tiene además dos consecuencias que conviene tener a mano.
+Los generadores distribuidos con contrato de abastecimiento **no participan en el
+reconocimiento de la capacidad firme de potencia** (art. 32-G), es decir que
+quedan fuera del mecanismo con el que el sistema retribuye la confiabilidad. Y no
+por eso quedan libres de obligaciones técnicas: deben proporcionar, por cuenta
+propia o comprándola a terceros, la reserva de regulación primaria y secundaria
+de frecuencia en los casos que determine el Reglamento de Operación (art. 32-E),
+pudiendo instalar almacenamiento para prestarla ellos mismos (art. 32-H), y deben
+contar con un sistema de medición comercial conforme al reglamento (art. 32-I).
+También deben poner sus señales de registro, monitoreo y control a disposición de
+la distribuidora, que a su vez las pone a disposición de la UT (art. 32-D).
+
+Cuánto se puede conectar no lo decide el desarrollador ni la distribuidora. La
+DGEHM es la responsable de los estudios de integración a partir de los cuales se
+determina la capacidad máxima de generación distribuida, para todo el sistema y
+**por cada circuito de distribución**, elaborados con el apoyo técnico de la UT
+(art. 32-C).
 
 ## Los tres procesos de la UT
 
@@ -199,6 +387,40 @@ y el de cierre entra en la conciliación y en la conexión regional.
 </figure>
 
 
+## Mínimo costo y neutralidad no se contradicen
+
+Vale despejar una objeción que aparece apenas uno junta las dos obligaciones de
+la UT. Si tiene que despachar al mínimo costo, ¿no está eligiendo ganadores?
+
+No, y la razón es que la función objetivo no mira quién es el dueño. El
+reglamento lo dice con todas las letras: la programación determina los despachos
+y la operación de la transmisión que minimizan los costos totales de operación y
+déficit **con independencia de la propiedad de las instalaciones y de los
+compromisos comerciales de los participantes en el Mercado de Contratos** (ROBCP
+7.6.1). El orden lo produce una sola variable, el costo variable declarado y
+validado, y la máquina más barata entra primero sea de quien sea.
+
+La neutralidad que exige el diseño es de procedimiento, no de resultado. Nadie
+promete que a todas las tecnologías les vaya igual: una máquina cara se despacha
+poco, y eso es la señal funcionando, no un sesgo. Lo que el arreglo sí promete es
+que la regla se aplique igual a todos, y por eso los controles están puestos
+sobre la neutralidad de quien la aplica y no sobre el resultado que produce. El
+administrador único no puede ser accionista ni administrador de ninguna empresa
+del sector (art. 37), la UT no puede comprar ni vender energía (art. 33), sus
+ingresos no dependen del precio (art. 39), y sus decisiones de operación son de
+cumplimiento obligatorio para los operadores (art. 42) precisamente porque quien
+las toma no tiene lado.
+
+Hay una consecuencia que conviene anticipar acá, porque el segundo artículo la
+desarrolla. Que el criterio sea el mínimo costo no significa que el programa de un
+generador varíe solo por causas físicas, como el clima, la disponibilidad de la
+máquina o el estado de la red. Varía también por decisiones regulatorias y
+operativas que rompen el orden de mérito puro: generación obligada, requerimientos
+de reserva, restricciones de transmisión y el valor del agua. Todas están tasadas
+en el reglamento, y las que impiden identificar la unidad marginal obligan a la UT
+a informar sus causas en el posdespacho. Apartarse del orden económico se puede;
+hacerlo sin decir por qué, no.
+
 ## Por qué costos y no ofertas
 
 Esta es la decisión de diseño que da forma a todo el resto de la serie, y la que
@@ -223,12 +445,24 @@ de administrar y le confía la disciplina a la competencia. Un mercado por costo
 es caro de administrar, porque alguien tiene que auditar a cada generador y
 validar cada declaración, y le confía la disciplina a la verificación.
 
+Conviene fijar qué es la tecnología marginal, porque el argumento entero se apoya
+en ella. Marginal no quiere decir pequeña ni residual: es la tecnología de la
+última unidad que entra para cubrir la demanda, la que fija el precio de la hora
+porque es la que respondería si hubiera que servir un megavatio hora más. En un
+sistema como el salvadoreño esa unidad suele ser térmica, y ahí está la clave de
+por qué el esquema por costos resulta viable. El costo de quemar un combustible
+importado se puede reconstruir desde afuera con tres cosas públicas o auditables:
+una cotización internacional publicada, un poder calorífico y una curva de consumo
+específico auditada. El costo de turbinar agua no se puede reconstruir así, porque
+no es un desembolso sino un costo de oportunidad que depende de lo que pase
+después.
+
 Los sistemas pequeños, con generación concentrada y una tecnología marginal que
 quema combustible importado, tienden al segundo esquema, y por dos razones que se
 refuerzan. Con pocos competidores, la competencia sola no disciplina las ofertas.
 Y cuando la unidad marginal quema combustible importado, su costo es observable
 desde afuera, lo que vuelve factible la verificación de un modo que no lo sería
-para, digamos, una hidro con embalse.
+para una hidro con embalse.
 
 El Salvador opera bajo el **Reglamento de Operación del Sistema de Transmisión y
 del Mercado Mayorista Basado en Costos de Producción**, el ROBCP. El nombre
@@ -243,8 +477,20 @@ cargos del sistema.
 Y la propia ley fija ese diseño como estado por defecto: mientras no existan
 condiciones que garanticen competencia en los precios ofertados al MRS, la
 metodología de remuneración se basa en costos marginales de producción, costos
-fijos y de inversión (art. 112-E). El régimen de costos no es una excepción
+fijos y de inversión, y en el valor de reemplazo del agua para las centrales
+hidroeléctricas (art. 112-E). El régimen de costos no es una excepción
 regulatoria: es lo que la ley prescribe hasta que haya competencia suficiente.
+
+Queda entonces la pregunta de quién declara que esa competencia llegó, y el mismo
+artículo la contesta de una forma que no esperaba. La condición del mercado la
+establecen **de manera conjunta** el Superintendente de Electricidad y
+Telecomunicaciones y el Superintendente de Competencia, mediante un acuerdo
+fundamentado en índices técnicos internacionalmente aceptados para medir
+competencia en los mercados eléctricos. No es una decisión del operador, no es
+discrecional, y no basta con la autoridad sectorial: pide una medición y pide que
+la firme también quien vigila la competencia. Con el traslado de julio de 2026,
+esa primera firma es una de las que hay que releer, porque la referencia al
+regulador eléctrico apunta hoy a la DGEHM.
 
 <figure class="fig fig-wide">
   <img src="../assets/figures/mercado-despacho.gif"
@@ -304,10 +550,24 @@ liquidación mensual, y dónde encaja el mercado regional?
 
 - **Ley General de Electricidad (LGE)**, Decreto Legislativo No. 843 del 10 de
   octubre de 1996, Diario Oficial No. 201, Tomo 333, del 25 de octubre de 1996,
-  con reformas hasta el Decreto No. 548 del 9 de abril de 2026. Objeto y
-  gobierno de la UT (arts. 33 a 38), capacidad firme (art. 10-A), los dos
-  mercados (art. 51), contratos de largo plazo (art. 79) y régimen de costos
-  mientras no haya competencia (art. 112-E). Copia local leída:
+  con reformas hasta el Decreto No. 548 del 9 de abril de 2026. Capacidad firme
+  (art. 10-A); generación distribuida y mercado minorista (arts. 32-A a 32-K, en
+  particular 32-A sobre la venta exclusiva a distribuidoras y la incompatibilidad
+  entre mercados, 32-B sobre los contratos de abastecimiento, 32-C sobre los
+  estudios de integración, 32-D, 32-E, 32-G, 32-H y 32-I); objeto de la UT,
+  prohibición de comprar y vender energía y origen del Reglamento de Operación
+  (art. 33); forma societaria y accionistas (arts. 34 y 35); series de acciones,
+  régimen de votos y aumentos de capital para nuevos participantes (art. 36);
+  administrador único y visto bueno de la DGEHM (art. 37); suscripción
+  proporcional al valor en libros (art. 38); cargos e ingresos de la UT (art. 39);
+  otros servicios (art. 40); obligatoriedad de las decisiones de operación
+  (art. 42); los dos mercados del mayorista (art. 51); participación en el MRS sin
+  contrato de venta (art. 56); valoración de las desviaciones respecto del
+  despacho programado y responsabilidad del transmisor (art. 57); contratos de
+  largo plazo (art. 79); y régimen de costos mientras no haya competencia, con la
+  condición del mercado establecida conjuntamente por el Superintendente de
+  Electricidad y Telecomunicaciones y el Superintendente de Competencia
+  (art. 112-E). Copia local leída:
   `normativa/ley-general-electricidad.pdf`. Consultado el 22 de agosto de 2026.
 - **Reglamento de Operación del Sistema de Transmisión y del Mercado Mayorista
   Basado en Costos de Producción (ROBCP)**, versión actualizada a junio de 2026.
@@ -315,7 +575,11 @@ liquidación mensual, y dónde encaja el mercado regional?
   [PDF](https://www.ut.com.sv/documents/10100/279097/ROBCP.pdf/129acc69-cb01-7ed4-7080-88be586df4ec?t=1729522985515).
   Portada, introducción y estructura de capítulos: acuerdo de aprobación,
   publicación en Diario Oficial, fecha de inicio de aplicación y listado de
-  acuerdos modificatorios. Consultado el 22 de agosto de 2026.
+  acuerdos modificatorios. Capítulo 7: función objetivo de la programación, con
+  independencia de la propiedad de las instalaciones y de los compromisos
+  comerciales en el Mercado de Contratos (7.6.1). Anexo 09: los cargos del sistema
+  que se suman al costo marginal para formar el precio del MRS (3.2.1).
+  Consultado el 22 de agosto de 2026.
 - **Unidad de Transacciones**. [Qué hacemos](https://www.ut.com.sv/que-hacemos)
   y [Marco regulatorio](https://www.ut.com.sv/marcoregulatorio). Funciones de la
   UT, categorías de participantes, definición de los dos mercados y jerarquía
