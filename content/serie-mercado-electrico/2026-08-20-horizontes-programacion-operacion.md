@@ -278,24 +278,22 @@ Ese recorrido completo, desde la programación hasta el documento de
 transacciones económicas, y su conexión con el mercado regional, es el artículo
 siguiente.
 
-::: nota Lo que me llevo, viniendo de distribución
-Dos cosas me reordenaron la cabeza al leer estos capítulos.
+::: nota Para retener: dos ideas del capítulo que no son obvias
+**El mantenimiento de distribución es un asunto nacional.** El numeral 16.2.1.2
+literal c mete al mismo Programa Anual de Mantenimientos Mayores la salida de una
+subestación de distribución que afecte la capacidad de transporte en su punto de
+conexión y la de una central de doscientos megavatios, y las evalúa con el mismo
+criterio probabilístico de riesgo semanal. Planeamiento de distribución y
+programación de la operación no son disciplinas distintas: son la misma con
+distinto objeto y con un criterio económico explícito.
 
-La primera es el numeral 16.2.1.2 literal c. Vengo de un lado donde el
-mantenimiento de una subestación se coordina hacia adentro y con el cliente, y
-resulta que si afecta la capacidad de transporte en el punto de conexión entra
-al mismo Programa Anual de Mantenimientos Mayores que una central de doscientos
-megavatios, y se evalúa con el mismo criterio probabilístico de riesgo semanal.
-El planeamiento de distribución que conozco y esto no son disciplinas distintas:
-son la misma con distinto objeto y con un criterio económico explícito.
-
-La segunda es la estructura de dos fases de la programación semanal. Correr un
-modelo de mediano plazo solo para producir una tabla que después alimenta a otro
-modelo es un patrón que no había visto enunciado tan limpio en un reglamento.
-Es descomponer un problema estocástico de tres años en un problema
-determinístico de una semana más un parámetro. Toda la dificultad conceptual
-vive en ese parámetro, y por eso el valor del agua es lo que hay que entender de
-este capítulo, no el calendario.
+**La programación semanal descompone un problema estocástico en uno
+determinístico más un parámetro.** Correr un modelo de mediano plazo solo para
+producir una tabla que después alimenta a otro modelo es el patrón central del
+capítulo: tres años de incertidumbre hidrológica se comprimen en un número por
+nivel de embalse, y a partir de ahí la semana se resuelve como si el futuro no
+existiera. Toda la dificultad conceptual vive en ese parámetro, y por eso lo que
+hay que entender de este capítulo es el valor del agua, no el calendario.
 :::
 
 ## Fuentes
