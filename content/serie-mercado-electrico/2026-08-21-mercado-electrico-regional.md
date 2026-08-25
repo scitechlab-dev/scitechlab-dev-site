@@ -75,7 +75,7 @@ en ese nodo (11.5.3). Todo termina siendo demanda o generación en un nodo.
 ## El piso que impide exportar barato
 
 Acá está la pieza que amarra este artículo con los tres anteriores, y es la
-regla que más me sorprendió del capítulo.
+regla menos evidente del capítulo.
 
 Un participante autorizado en el MER que quiera ofertar al mercado regional la
 generación no requerida en el predespacho nacional inicial no puede poner el
@@ -262,34 +262,38 @@ el participante podrá elevarlo **ante la SIGET con copia a la DGEHM**. La
 transición está escrita dentro del propio reglamento, en la forma de un trámite
 que se presenta en dos lugares a la vez.
 
-## Lo que no pude verificar
+## Qué queda fuera de este artículo, y por qué
 
-Este artículo se apoya enteramente en el ROBCP, que es fuente primaria y la
-tengo leída. Lo que **no** pude leer es el otro lado del acoplamiento: el
-Reglamento del Mercado Eléctrico Regional más allá de su portada, y el
-Procedimiento de Detalle Complementario que lo acompaña desde 2013. Del Tratado
-Marco del Mercado Eléctrico de América Central tampoco localicé el texto.
+Todo lo anterior se apoya en el ROBCP, que es fuente primaria y está leído. El
+otro lado del acoplamiento no lo está: del Reglamento del Mercado Eléctrico
+Regional solo se verificó la portada y su organización en libros, el
+Procedimiento de Detalle Complementario que lo acompaña desde 2013 no está
+localizado, y del Tratado Marco del Mercado Eléctrico de América Central tampoco
+se localizó el texto.
 
-Eso deja tres cosas fuera de este artículo, y prefiero decirlo a rellenarlas: el
+Eso deja tres cosas afuera, y vale enunciarlas en vez de rellenarlas: el
 procedimiento con el que el EOR casa el mercado regional, la definición precisa
 de las categorías de desviación que el numeral 18.5.1 menciona como normales,
 significativas autorizadas o no autorizadas y graves, y las reglas de asignación
 de la red de transmisión regional. Todo eso vive del lado regional y está
 anotado en el registro de fuentes como pendiente.
 
-::: nota Lo que me llevo
-El hallazgo que reordena el capítulo es el piso de la oferta de exportación. Yo
-había entendido la validación de costos como un asunto interno del despacho
-nacional, una especie de contabilidad regulatoria. Resulta que ese mismo número
-validado es el precio mínimo con el que un generador salvadoreño se presenta a
-competir en Centroamérica. Un error en la validación semanal no solo distorsiona
-el precio de acá: le da o le quita competitividad a esa máquina afuera.
+::: nota Para retener: dos ideas que reordenan el capítulo
+**La validación de costos no termina en la frontera.** Es tentador leer todo el
+aparato de declaración y auditoría de los artículos III y IV como contabilidad
+regulatoria interna, útil solo para ordenar el despacho nacional. El numeral
+11.4.4.1.1 dice otra cosa: ese mismo número validado es el precio mínimo con el
+que un generador salvadoreño se presenta a competir en Centroamérica. Un error en
+la validación semanal no solo distorsiona el precio nacional, también le da o le
+quita competitividad a esa máquina afuera.
 
-Lo segundo es la limpieza de las dos reglas de modelado. No hay un capítulo de
-"reglas especiales para importaciones". Hay dos frases que convierten un enlace
-en un elemento del modelo, y a partir de ahí el problema de optimización es el
-mismo de siempre. Es el tipo de decisión de diseño que hace que un sistema
-complejo siga siendo explicable.
+**No hay reglas especiales para importar.** No existe un capítulo de excepciones
+para las transacciones regionales. Hay dos frases, los numerales 11.5.4 y 11.5.5,
+que convierten un enlace en un elemento del modelo: demanda inflexible si exporta,
+generador inflexible si importa. A partir de ahí el problema de optimización es el
+mismo de siempre. Esa economía de reglas es lo que permite que un sistema
+complejo siga siendo explicable, y es la razón por la que este capítulo se
+entiende sin memorizar casos.
 :::
 
 ## Fuentes
