@@ -98,14 +98,14 @@ que puede resultar marginal: una térmica, una geotérmica, una hidroeléctrica,
 una cogeneradora, una no convencional, una oferta de retiro de oportunidad o la
 unidad de racionamiento forzado (3.1.2).
 
-No pongo acá un porcentaje de horas por tecnología porque no lo verifiqué, y en
-esta serie lo que no se leyó no se afirma. Sí anoto que es verificable y con
-fuente pública: la ley obliga a la UT a publicar diariamente el nivel de los
-embalses que reporta CEL y los precios de los combustibles puestos en planta que
-reportan los generadores térmicos (art. 60, literales b y c), y el posdespacho
-identifica la unidad marginal de cada intervalo. Contrastar unos meses de esas
-publicaciones contra la cota del embalse es un ejercicio que sale como artículo
-propio, y me lo anoto.
+Este artículo no pone un porcentaje de horas por tecnología, porque esa cifra no
+sale de ninguna de las fuentes verificadas de la serie y acá lo que no se leyó no
+se afirma. Sí conviene saber que es verificable, y con fuente pública: la ley
+obliga a la UT a publicar diariamente el nivel de los embalses que reporta CEL y
+los precios de los combustibles puestos en planta que reportan los generadores
+térmicos (art. 60, literales b y c), y el posdespacho identifica la unidad
+marginal de cada intervalo. Contrastar unos meses de esas publicaciones contra la
+cota del embalse es el ejercicio que cerraría la pregunta.
 :::
 
 ## Un despacho resuelto a mano
@@ -402,6 +402,28 @@ mide nadie en tiempo real: lo declara el generador y lo valida la UT contra
 una estructura aprobada. Cómo llega ese número, con qué respaldo y contra qué
 referencia se contrasta, es el artículo siguiente.
 
+
+::: nota Para retener: las seis reglas que gobiernan el precio
+Todo el artículo se comprime en seis afirmaciones. Si quedan estas, el resto se
+reconstruye.
+
+1. **El precio lo fija la última unidad que entra, no el promedio.** Ese es el
+   costo marginal, y lo cobran todas las unidades despachadas (Anexo 09, 3.1.1).
+2. **La renta se reparte al revés de lo intuitivo.** Gana más la unidad más
+   barata; la marginal gana cero. Esa renta paga los costos fijos, y por eso la
+   capacidad se retribuye aparte (LGE, art. 10-A).
+3. **El orden de mérito puro es una referencia, no una descripción.** Lo rompen
+   la generación obligada, la reserva, la transmisión, el valor del agua y el
+   costo de arranque, y todas están tasadas en el reglamento.
+4. **Con congestión no hay un precio sino varios.** El sistema se parte en tantos
+   MRS como haga falta (10.6.3.1) y la diferencia entre ellos es de la demanda,
+   no del transmisor (LGE, art. 59).
+5. **El precio del MRS no es el costo marginal a secas**, sino el costo marginal
+   más los cargos del sistema (Anexo 09, 3.3.1).
+6. **El número que liquida no es el que se anunció.** El del predespacho es
+   indicativo; el que se cobra es el ex post, recalculado con las lecturas reales
+   del SIMEC (3.1.14 y 3.8).
+:::
 
 ## Fuentes
 
