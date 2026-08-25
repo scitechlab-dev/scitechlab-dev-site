@@ -221,6 +221,13 @@ const T = {
 };
 const t = (lang) => T[lang] ?? T.en;
 
+/** Labels for the in-article series navigation. */
+const T_SERIE = {
+  en: { of: 'of', prev: 'Previous', next: 'Next', index: 'Series index', nav: 'Series' },
+  es: { of: 'de', prev: 'Anterior', next: 'Siguiente', index: 'Índice de la serie', nav: 'Serie' },
+};
+const tSerie = (lang) => T_SERIE[lang] ?? T_SERIE.en;
+
 /** Apply the shell strings and the language attribute to a rendered template. */
 const localise = (html, lang) => {
   const s = t(lang);
@@ -420,6 +427,66 @@ async function readSeries(posts) {
   return out;
 }
 
+/**
+ * Per-article series navigation, keyed by article slug.
+ *
+ * The manifest lists articles that may not exist yet, so `prev` and `next` walk
+ * to the nearest WRITTEN neighbour rather than to the adjacent entry: pointing
+ * at an unwritten slug would link to a 404. The position shown is still the
+ * manifest position, because "3 de 8" describes the series, not what happens to
+ * be published today.
+ */
+function seriesNavIndex(series) {
+  const index = new Map();
+  for (const s of series) {
+    const total = s.entries.length;
+    const written = s.entries.filter((e) => e.escrito);
+    for (const entry of s.entries) {
+      if (!entry.escrito) continue;
+      const i = written.indexOf(entry);
+      index.set(entry.slug, {
+        serieSlug: s.slug,
+        serieTitle: s.title,
+        n: entry.n,
+        total,
+        prev: i > 0 ? written[i - 1] : null,
+        next: i < written.length - 1 ? written[i + 1] : null,
+      });
+    }
+  }
+  return index;
+}
+
+/** The breadcrumb under an article's date: which series it belongs to, and where. */
+function serieCrumb(nav, lang) {
+  if (!nav) return '';
+  const s = tSerie(lang);
+  return (
+    `\n      <p class="serie-crumb">` +
+    `<a href="../serie/${attr(nav.serieSlug)}">${text(nav.serieTitle)}</a>` +
+    ` <span class="serie-crumb-pos">${nav.n} ${text(s.of)} ${nav.total}</span></p>`
+  );
+}
+
+/** Previous / index / next, at the foot of an article that belongs to a series. */
+function serieNav(nav, lang) {
+  if (!nav) return '';
+  const s = tSerie(lang);
+  const side = (entry, dir, label) =>
+    entry
+      ? `        <a class="serie-nav-${dir}" href="../articles/${attr(entry.slug)}">
+          <span class="serie-nav-dir">${text(label)}</span>
+          <span class="serie-nav-title">${text(entry.titulo)}</span>
+        </a>`
+      : `        <span class="serie-nav-${dir} is-empty" aria-hidden="true"></span>`;
+  return `
+      <nav class="serie-nav" aria-label="${attr(s.nav)}">
+${side(nav.prev, 'prev', `\u2190 ${s.prev}`)}
+        <a class="serie-nav-up" href="../serie/${attr(nav.serieSlug)}">${text(s.index)}</a>
+${side(nav.next, 'next', `${s.next} \u2192`)}
+      </nav>`;
+}
+
 /** Human labels for the `estado` values, plus the derived not-written-yet one. */
 const ESTADO_LABEL = {
   borrador: 'Borrador',
@@ -549,6 +616,7 @@ async function main() {
 
   const pages = await readPages();
   const series = await readSeries(posts);
+  const serieNavBySlug = seriesNavIndex(series);
 
   if (problems.length) {
     console.error('\nBuild failed:\n' + problems.map((p) => `  ✗ ${p}`).join('\n') + '\n');
@@ -586,6 +654,8 @@ async function main() {
       .replace(/\{\{DATE\}\}/g, post.date)
       .replace(/\{\{MATH_HEAD\}\}/g, katexHead(post, '../'))
       .replace(/\{\{TOPIC\}\}/g, post.topic ? `\n        <span>${text(post.topic)}</span>` : '')
+      .replace(/\{\{SERIE_CRUMB\}\}/g, () => serieCrumb(serieNavBySlug.get(post.slug), post.lang))
+      .replace(/\{\{SERIE_NAV\}\}/g, () => serieNav(serieNavBySlug.get(post.slug), post.lang))
       .replace(/\{\{STYLE_V\}\}/g, v.style)
       .replace(/\{\{MAIN_V\}\}/g, v.main);
 

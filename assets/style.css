@@ -1089,3 +1089,64 @@ a { color: inherit; text-decoration: none; }
     justify-self: end;
   }
 }
+
+/* ---- Series navigation inside an article -------------------------------
+   The crumb sits under the date; the nav closes the article. Both only render
+   for articles whose slug appears in a series manifest, so a standalone piece
+   is untouched. The nav keeps three grid columns even when a neighbour is
+   missing, so "Siguiente" stays on the right in the last article of a series. */
+.serie-crumb {
+  margin: 6px 0 0;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--ink-dim);
+}
+.serie-crumb a { color: var(--accent); }
+.serie-crumb a:hover { color: var(--accent-hi); }
+.serie-crumb-pos { color: var(--ink-faint); }
+.serie-crumb-pos::before { content: "· "; }
+
+.serie-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px 20px;
+  align-items: start;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-2);
+}
+.serie-nav > * { min-width: 0; }
+.serie-nav-next { text-align: right; }
+.serie-nav-up {
+  align-self: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+.serie-nav-up:hover { color: var(--ink); }
+.serie-nav-prev,
+.serie-nav-next { display: block; }
+.serie-nav-dir {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  margin-bottom: 4px;
+}
+.serie-nav-title {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.35;
+}
+a.serie-nav-prev:hover .serie-nav-title,
+a.serie-nav-next:hover .serie-nav-title { color: var(--accent-hi); }
+
+@media (max-width: 560px) {
+  .serie-nav { grid-template-columns: 1fr; }
+  .serie-nav-next { text-align: left; }
+  .serie-nav-up { justify-self: start; }
+  .serie-nav .is-empty { display: none; }
+}
