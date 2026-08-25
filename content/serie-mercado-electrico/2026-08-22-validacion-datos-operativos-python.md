@@ -93,7 +93,7 @@ Una de **cruce** necesita una fuente independiente: la estructura aprobada, el
 SIMEC, la referencia internacional. Si la contraparte no llegó, la regla no se
 puede evaluar.
 
-Y acá está la decisión que más discutiría con alguien que ya hizo esto:
+Y acá está la decisión de diseño más discutible del catálogo:
 **"no evaluable" es un resultado, no un silencio.** Si una regla se salta
 porque le faltó el insumo y el informe no lo dice, ese informe no distingue
 entre "esto pasó la revisión" y "esto no se revisó". En una corrida limpia esa
@@ -184,12 +184,12 @@ self-check: los 12 defectos sembrados fueron detectados
 ```
 
 Un validador que no encuentra lo que se le sembró no sirve, y eso hay que
-probarlo, no suponerlo. Esa línea es lo primero que corro después de tocar una
-regla.
+probarlo, no suponerlo. Esa línea es lo primero que hay que correr después de
+tocar cualquier regla.
 
 <figure class="fig fig-wide">
   <img src="../assets/figures/hallazgos-corrida.svg"
-       alt="Barras horizontales, una por regla, con la cantidad de hallazgos de cada una y en gris los casos no evaluables. R01 tiene cinco fallas, R05 dos, R06 cuatro, R11 dos, y el resto una cada una. R05, R11 y R12 acumulan además dieciséis casos no evaluables al inicio de las series. Abajo, seis indicadores: 48 declaraciones, 576 evaluaciones, 22 fallas, 16 no evaluables, 17 rechazadas y 64.6 por ciento de aceptación, más el hash del insumo."
+       alt="Barras horizontales, una por regla, con la cantidad de hallazgos de cada una y en gris los casos no evaluables. R01 tiene cinco fallas, R06 cuatro, y R05, R08 y R11 dos cada una; las siete reglas restantes, una cada una. R05, R11 y R12 acumulan además dieciséis casos no evaluables al inicio de las series. Abajo, seis indicadores: 48 declaraciones, 576 evaluaciones, 22 fallas, 16 no evaluables, 17 rechazadas y 64.6 por ciento de aceptación, más el hash del insumo."
        width="1200" height="760" loading="lazy" />
   <figcaption>Esta figura no está dibujada con cifras escritas a mano: el script
   que la genera lee el JSON que produce la corrida y dibuja lo que encuentra. Si
@@ -273,7 +273,7 @@ contra qué se validó.
 
 ## Lo que le falta
 
-Prefiero enumerarlo a que parezca terminado.
+Vale enumerarlo, para que no parezca terminado.
 
 No hay persistencia: cada corrida es independiente y no se compara con la
 anterior, así que no puede decir "esta regla empeoró respecto del mes pasado".
@@ -282,26 +282,32 @@ quién lo revisó y qué decidió, y sin eso el registro documenta la detección
 no la gestión. No hay agrupación por causa raíz, que es justamente lo que haría
 falta para que la cascada de R01 se lea como un problema y no como cinco. Y las
 tolerancias están declaradas en un solo lugar, que es correcto, pero no están
-justificadas contra ninguna medición: son mi criterio, y un sistema en
-producción debería derivarlas de la dispersión histórica de cada campo.
+justificadas contra ninguna medición: son un criterio razonable y nada más, y un
+sistema en producción debería derivarlas de la dispersión histórica de cada
+campo.
 
-::: nota Por qué esto se parece tanto a mi trabajo actual
-Vengo de validar y conciliar datos entre SCADA, una base de datos en tiempo real
-y sistemas auxiliares de una red de distribución. Cuando empecé a leer el
-Anexo 04 pensé que estaba frente a un dominio nuevo. No lo es: es
-estructuralmente el mismo problema.
+::: nota Para retener: validación normativa contra validación física
+Validar declaraciones regulatorias es, estructuralmente, el mismo problema que
+conciliar datos entre SCADA, un historiador en tiempo real y los sistemas
+auxiliares de una red. El esqueleto es idéntico: un dato llega de una fuente que
+no se controla, tiene que cuadrar con una referencia independiente, y cuando no
+cuadra hay que decidir si se corrige, se alerta o se rechaza, dejando registrada
+esa decisión con su fundamento.
 
-Un dato llega de una fuente que no controlo. Tiene que cuadrar con una
-referencia independiente. Cuando no cuadra hay que decidir si se corrige, se
-alerta o se rechaza, y esa decisión tiene que quedar registrada con su
-fundamento. Cambia el dominio, no el método.
+Lo que cambia, y es lo que hay que tener claro antes de escribir la primera
+regla, es **de dónde sale el fundamento**.
 
-Lo que sí cambia, y es la parte que me costó ver, es de dónde sale el
-fundamento. En operación el fundamento es físico: un valor imposible es
-imposible porque la red no puede estar en ese estado. Acá el fundamento es
-normativo: un valor se rechaza porque un numeral dice que ese valor no es
-válido. Por eso cada regla de este catálogo carga su referencia, y por eso la
-parte difícil de escribirlo no fue el código sino leer el anexo completo.
+| | Validación física | Validación normativa |
+|---|---|---|
+| Por qué se rechaza un valor | Es imposible: la red no puede estar en ese estado | Un numeral dice que ese valor no es válido |
+| Dónde vive el criterio | En el modelo del proceso | En el texto del reglamento |
+| Qué hay que citar | La magnitud o el balance violado | El artículo o numeral |
+| Qué cuesta más | Modelar el proceso | Leer el anexo completo |
+
+De esa diferencia sale la decisión de diseño más importante del catálogo: que
+cada regla cargue su campo `referencia`. En validación física el hallazgo se
+justifica solo; en validación normativa, un hallazgo sin numeral no es un
+hallazgo, es una opinión.
 :::
 
 ## Fuentes
