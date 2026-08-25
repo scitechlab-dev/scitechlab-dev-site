@@ -14,11 +14,11 @@ lado técnico ha leído completa. Se conocen las normas de calidad porque llegan
 como indicadores, y se conoce el pliego tarifario porque llega como precio, pero
 el texto que da origen a las dos suele quedar del lado legal.
 
-Esto es mi lectura de la Ley General de Electricidad desde el lado de la
+Esta es una lectura de la Ley General de Electricidad desde el lado de la
 distribución: qué obliga, con qué plazo, y qué pasa cuando no se cumple. No es
-asesoría legal, es un cuaderno de estudio de un ingeniero. Todos los números de
-artículo salen del texto que leí, con reformas hasta el Decreto 548 del 9 de
-abril de 2026, y cuando algo no lo pude verificar lo digo.
+asesoría legal, es una nota de estudio técnica. Todos los números de artículo
+salen del texto de la ley con reformas hasta el Decreto 548 del 9 de abril de
+2026, y lo que no se pudo verificar queda dicho como tal.
 
 ## Lo primero: no es una sola relación, son cuatro
 
@@ -150,12 +150,12 @@ Informar en los períodos que el regulador indique, **indicando los
 incumplimientos**. Y pagar a sus usuarios las compensaciones reguladas que
 correspondan.
 
-Ese primer literal es el que más me interesa desde donde trabajo, porque no pide
-un reporte: pide un sistema auditable. La diferencia entre las dos cosas es toda
-la diferencia entre poder mostrar un número y poder demostrar cómo se calculó,
-con qué mediciones y con qué tratamiento. Es la misma exigencia que aparece del
-lado del mercado mayorista para los costos declarados, y es la misma que me
-llevó a escribir el validador de la serie sobre el mercado.
+Ese primer literal es el más exigente de los tres, porque no pide un reporte:
+pide un sistema auditable. La diferencia entre las dos cosas es toda la
+diferencia entre poder mostrar un número y poder demostrar cómo se calculó, con
+qué mediciones y con qué tratamiento. Es la misma exigencia que aparece del lado
+del mercado mayorista para los costos declarados, y es la que justifica el
+validador del séptimo artículo de la serie sobre el mercado.
 
 A eso se suma el informe semestral del artículo 32, que debe contener al menos
 la energía entregada por tipo de consumidor, la energía entregada a nombre de
@@ -278,7 +278,7 @@ la salud, el daño causado, los perjuicios a la continuidad y regularidad del
 suministro, el beneficio obtenido, la intencionalidad, la reincidencia en tres
 años y el efecto sobre terceros.
 
-## Tres cosas que me reordenaron la lectura
+## Tres cosas que reordenan la lectura
 
 **La contabilidad separada no es un tecnicismo contable.** El artículo 8 permite
 que una misma entidad haga generación, transmisión, distribución y
@@ -302,12 +302,12 @@ las disposiciones de la LGE prevalecen sobre lo dispuesto en otras leyes. Es út
 tenerlo presente cuando una obligación de la ley eléctrica choca con otra de
 alcance general.
 
-## Lo que no verifiqué
+## Lo que queda sin verificar
 
-Prefiero cerrar con esto antes que dejar la impresión de que la lectura está
+Vale cerrar con esto antes que dejar la impresión de que la lectura está
 completa.
 
-**El Reglamento de la LGE no lo pude abrir.** Está en el catálogo de descargas
+**El Reglamento de la LGE no se pudo abrir.** Está en el catálogo de descargas
 del regulador pero la página no lo expone a una petición directa. Eso importa
 porque la propia ley delega en él varias cosas de las que hablé: la forma y
 condiciones de la compensación por energía no entregada (art. 75), la
@@ -332,20 +332,26 @@ todo lo que cité como SIGET, hay que leer DGEHM para lo eléctrico, con la
 transición corriendo. Esa reforma la desarrollé en el primer artículo de la
 serie sobre el mercado mayorista.
 
-::: nota Por qué me puse a leer esto
-Vengo de operación de red, donde la ley aparece traducida: como un indicador de
+::: nota Para retener: por qué conviene leer el texto y no solo su traducción
+Del lado técnico la ley casi siempre llega traducida: como un indicador de
 calidad que hay que cumplir, como un procedimiento de conexión, como un plazo.
-Leer el texto directo cambia el orden de las cosas. Uno descubre que el
-indicador que persigue tiene detrás un artículo que dice para qué existe, y que
-varias decisiones que parecían criterio de la empresa son en realidad el mínimo
-que la ley fija.
+Leer el texto directo cambia el orden de las cosas, porque el indicador que se
+persigue tiene detrás un artículo que dice para qué existe, y varias decisiones
+que parecen criterio interno de la empresa son en realidad el mínimo que la ley
+fija.
 
-Lo que más me sorprendió fue el artículo 67, y no por lo que dice sino por lo
-que implica. Todo el trabajo de eficiencia operativa que uno hace del lado
-técnico no se traduce en más ingreso: el ingreso ya está fijado sobre una
-empresa eficiente teórica. Se traduce en la diferencia entre ese ingreso y el
-costo real. Es una manera bastante brutal de alinear incentivos, y explica
-cosas del día a día que desde adentro parecen simple presión presupuestaria.
+El artículo 67 es el ejemplo más claro, y no por lo que dice sino por lo que
+implica. La eficiencia operativa **no se traduce en más ingreso**: el ingreso ya
+está fijado sobre una empresa eficiente teórica. Se traduce en la diferencia
+entre ese ingreso regulado y el costo real de operar. Es una manera severa de
+alinear incentivos, y explica desde el diseño lo que desde adentro suele leerse
+como simple presión presupuestaria.
+
+| Si se mejora | El ingreso regulado | El resultado |
+|---|---|---|
+| La eficiencia operativa | No cambia | Sube, por menor costo real |
+| El cumplimiento de calidad | No cambia | Sube, por menos compensaciones |
+| La inversión sobre lo eficiente | No cambia | Baja, la absorbe el accionista |
 :::
 
 ## Fuentes
