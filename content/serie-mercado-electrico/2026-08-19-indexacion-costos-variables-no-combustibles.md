@@ -99,7 +99,7 @@ $$
 y el coeficiente $a$ es la componente variable del costo híbrido, la que se
 suma al CVONC (4.5.3 a 4.5.6).
 
-Acá está el numeral que más me gustó de todo el anexo. Ese coeficiente vale
+Acá está el numeral más severo de todo el anexo. Ese coeficiente vale
 como parte variable **solo si el ajuste supera dos pruebas de bondad**:
 coeficiente de determinación mayor que 0.9 y estadístico t mayor que 2. Si no
 se cumplen, la componente variable del costo híbrido **se asume igual a cero**,
@@ -235,9 +235,9 @@ reglamento no finge que ese combustible cueste lo que costaba en diciembre.
 
 Con una participación de 20 % nacional, 35 % importado y 45 % combustible, y un
 precio que pasa de 13.10 a 14.024 USD/MMBtu, el factor del CAyD llega a 1.0519
-y un CAyD base de 1.85 USD/MWh queda en 1.95. Se movió el doble que el CVNC en
-el mismo período, y por una sola razón: la mitad de su composición es un
-combustible que se encareció un 7 %.
+y un CAyD base de 1.85 USD/MWh queda en 1.95. Subió 5.2 % contra el 3.7 % del
+CVNC en el mismo período, es decir cerca de la mitad más, y por una sola razón:
+casi la mitad de su composición es un combustible que se encareció un 7 %.
 
 Hay una distinción de unidades que conviene no pasar por alto. Para efectos de
 la programación de la operación, los valores vigentes se tratan por separado:
@@ -325,12 +325,12 @@ queda en la contabilidad del generador. Una unidad cuyo CVNC sube 1.42 USD/MWh
 se corre hacia arriba en la curva de oferta, lo que cambia cuándo se la despacha
 y, si resulta marginal, cuánto paga la demanda esa hora.
 
-## Lo que no encontré
+## Lo que el anexo no contiene, y por qué
 
-El plan con el que empecé a estudiar daba por hecho un "proceso de elaboración,
-publicación y conformación con los generadores" para la indexación mensual, con
-plazos, canal y tratamiento de discrepancias. Leído el anexo completo, eso no
-existe como tal, y creo que la razón es de diseño y no un vacío.
+Es natural suponer que la indexación mensual tiene su propio "proceso de
+elaboración, publicación y conformación con los generadores", con plazos, canal y
+tratamiento de discrepancias. Leído el anexo completo, eso no existe, y la
+ausencia parece de diseño y no un vacío.
 
 La conformación con el generador ocurre **en la auditoría**, con sus 55 días
 hábiles, sus ventanas de observación y su regla de cierre a favor del auditor.
@@ -347,20 +347,22 @@ el Anexo 04 lo dice con hora y todo; para los CVNC indexados no encontré la
 disposición equivalente ni el archivo público. Queda anotado en el registro de
 fuentes como una de las cosas que hay que pedir directamente.
 
-::: nota Lo que me llevo
-Vengo de la operación de una red de distribución, donde el mantenimiento se
-planifica por condición y por horas de servicio, y el vínculo entre régimen de
-operación y desgaste es una intuición de todos los días. Lo que no esperaba es
-encontrar esa misma intuición escrita como una fracción dentro de una fórmula
-regulatoria, y que esa fracción tuviera consecuencias sobre el precio horario
-del mercado mayorista.
+::: nota Para retener: dos ideas que se exportan fuera de este anexo
+**El desgaste se mide en horas, no en megavatios hora.** El mantenimiento
+programado lo manda el fabricante en horas de operación, mientras el mercado paga
+por energía. Toda la fracción del numeral 9.3.4 existe para traducir entre esas
+dos unidades, y por eso solo el CVM se reescala. Es la misma intuición con la que
+se planifica mantenimiento por condición en cualquier instalación, escrita como
+una fracción dentro de una fórmula regulatoria y con consecuencias sobre el
+precio horario del mercado.
 
-También me llevo el numeral 4.5.7, el que manda poner la parte variable en cero
-cuando la regresión no ajusta. Es la clase de regla que uno querría en cualquier
-sistema de validación de datos y que casi nunca está: si el modelo no explica el
-dato, el dato no entra, y la ausencia de evidencia se resuelve en contra de
-quien la tenía que aportar. Es exactamente el criterio que quiero implementar en
-el validador que estoy escribiendo, y me ahorró tener que inventarlo.
+**Si el modelo no explica el dato, el dato no entra.** Eso es el numeral 4.5.7:
+cuando la regresión de un costo híbrido no supera las pruebas de bondad, la
+componente variable se asume igual a cero. No se estima, no se promedia, no se
+negocia. La ausencia de evidencia se resuelve en contra de quien tenía que
+aportarla, que es la carga de la prueba puesta donde corresponde. Es un criterio
+trasladable a cualquier sistema de validación de datos, y el séptimo artículo de
+la serie lo usa como principio de diseño.
 :::
 
 ## Fuentes
