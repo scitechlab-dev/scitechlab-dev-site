@@ -1,6 +1,6 @@
 ---
 title: "Mercado mayorista VIII. Pronóstico de demanda, comparación honesta de tres enfoques"
-summary: "Línea base estacional, SARIMAX y gradient boosting, evaluados con origen móvil sobre 182 pronósticos cada uno. El boosting perdió contra la línea base hasta que encontré un error de alineación en mis propios rasgos, el SARIMAX ganó por una razón que invalida parcialmente la comparación, y los intervalos cubren 59 % cuando deberían cubrir 80 %."
+summary: "Línea base estacional, SARIMAX y gradient boosting, evaluados con origen móvil sobre 182 pronósticos cada uno. El boosting perdió contra la línea base hasta que apareció un error de alineación entre entrenamiento y predicción, el SARIMAX ganó por una razón que sesga la comparación, y los intervalos cubren 59 % cuando deberían cubrir 80 %."
 date: 2026-08-23
 lang: es
 topic: Mercado eléctrico
@@ -15,21 +15,23 @@ energía semanal y demanda de potencia horaria por barra (ROBCP 9.3.1 a). Este
 artículo compara tres maneras de producir la primera de esas dos cosas y reporta
 lo que salió, incluido lo que salió mal.
 
-Digo "comparación honesta" y quiero que signifique algo concreto: reportar la
-línea base, evaluar de la única manera que reproduce la situación real, publicar
-las métricas desagregadas en vez del promedio que favorece, evaluar también los
-intervalos, y decir en qué el ejercicio está sesgado a favor de uno de los
-modelos. Los cinco puntos aparecen abajo, y el último es el más incómodo.
+"Comparación honesta" significa acá cinco cosas concretas, y conviene fijarlas
+antes de mirar un solo número, porque son el criterio con el que hay que juzgar
+cualquier informe de pronóstico ajeno: reportar la línea base, evaluar de la
+única manera que reproduce la situación real, publicar las métricas desagregadas
+en vez del promedio que favorece, evaluar también los intervalos, y declarar en
+qué el ejercicio está sesgado a favor de uno de los modelos. Los cinco aparecen
+abajo, y el último es el más incómodo.
 
 El código está en
 [`proyectos/pronostico-demanda`](https://github.com/scitechlab-dev/scitechlab-dev-site/tree/main/proyectos/pronostico-demanda).
 
 ## La serie es sintética, la evaluación no
 
-No tengo la serie de demanda de El Salvador. Podría haber inventado números y
-presentarlos como resultados, o no publicar números. Elegí una tercera cosa:
-generar una serie sintética con la estructura de una demanda real y correr sobre
-ella un experimento de verdad.
+La serie de demanda real de El Salvador no es pública, y hay tres salidas
+posibles ante eso: inventar números y presentarlos como resultados, no publicar
+números, o generar una serie sintética con la estructura de una demanda real y
+correr sobre ella un experimento de verdad. Este artículo toma la tercera.
 
 La serie tiene cuatro años de energía diaria con tendencia, estacionalidad anual
 y semanal (con sábado distinto de domingo), feriados de fecha fija con caída
@@ -37,8 +39,8 @@ fuerte, una serie exógena de temperatura con su propio ciclo, y ruido
 autocorrelacionado AR(1) porque el error de un día se parece al del anterior.
 
 Lo que es real es todo lo demás. Los modelos se ajustan de verdad, el
-backtesting corre de verdad, las métricas son las que salieron, y cuando algo
-falló quedó en el artículo.
+backtesting corre de verdad, las métricas son las que salieron de la corrida, y
+lo que falló quedó escrito en vez de corregirse en silencio.
 
 ## Por qué origen móvil
 
@@ -62,9 +64,9 @@ pronósticos evaluados por modelo.
 Una advertencia que hay que hacer y casi nadie hace: **las exógenas del futuro se
 toman como conocidas.** En operación no lo son. La temperatura de dentro de siete
 días viene de un pronóstico meteorológico que tiene su propio error, y ese error
-se suma al del modelo de demanda. El número que reporto abajo es optimista por
-esa razón, y quien lo lea tiene derecho a saberlo antes de compararlo con el
-error de un sistema en producción.
+se suma al del modelo de demanda. Los números de abajo son optimistas por esa
+razón, y hay que saberlo antes de compararlos con el error de un sistema en
+producción.
 
 ## Los tres modelos
 
@@ -84,20 +86,21 @@ y 364 días, medias móviles de 7 y 28 y desviación de 7. Usa
 `HistGradientBoostingRegressor` de scikit-learn en vez de LightGBM para que el
 proyecto corra sin instalar nada.
 
-## El error que casi publico
+## El error que casi se publica como hallazgo
 
 La primera corrida dio esto: el boosting con un MAE de 1012 MWh por día, contra
 754 de la línea base. Un 34 % **peor** que copiar la semana anterior.
 
-Tuve la tentación de escribir el párrafo que ya conocen: "en series de longitud
-moderada los modelos simples suelen superar a los complejos". Es una frase
-verdadera en general y habría encajado perfecto. Habría sido un error.
+Acá es donde se cuela el error más común de un informe de modelado. Existe un
+párrafo cómodo, verdadero en general, que habría encajado perfecto: "en series de
+longitud moderada los modelos simples suelen superar a los complejos". Escribirlo
+habría cerrado el asunto con una explicación elegante y equivocada.
 
-Un modelo con rezagos, clima y calendario perdiendo contra la línea base no es
-un hallazgo, es un síntoma. Fui a buscar y estaba en mis propios rasgos: los
-construía indexados por el origen y desplazaba el objetivo hacia adelante, de
+Un modelo con rezagos, clima y calendario perdiendo contra la línea base no es un
+hallazgo, es un síntoma. El defecto estaba en la construcción de los rasgos: se
+armaban indexados por el origen y se desplazaba el objetivo hacia adelante, de
 modo que el modelo del horizonte 7 se entrenaba viendo el calendario y la
-temperatura del **origen**, pero al predecir le pasaba el calendario y la
+temperatura del **origen**, pero al predecir recibía el calendario y la
 temperatura del **día objetivo**. Entrenaba con una relación y predecía con otra.
 
 La corrección fue indexar las filas por el día objetivo y desplazar hacia atrás
@@ -119,12 +122,12 @@ def _rasgos(df, objetivo, h):
 Con eso el boosting pasó de 1012 a 429, es decir de un 34 % peor a un 43 % mejor
 que la línea base. Nada más cambió: ni un hiperparámetro, ni un rasgo.
 
-Dejo esto acá porque es la lección más útil del ejercicio. Un desalineamiento
-entre entrenamiento y predicción **no aparece en ninguna métrica de
-entrenamiento**: el modelo ajusta bien lo que le enseñaron, solo que le enseñaron
-otra cosa. Lo único que lo delata es una comparación contra una línea base
-tonta. Si no hubiera reportado la línea base, habría publicado un modelo roto con
-una explicación elegante.
+Esa es la lección más útil del ejercicio, y vale más que cualquiera de las
+métricas de abajo. Un desalineamiento entre entrenamiento y predicción **no
+aparece en ninguna métrica de entrenamiento**: el modelo ajusta bien lo que le
+enseñaron, solo que le enseñaron otra cosa. Lo único que lo delata es una
+comparación contra una línea base tonta. Sin la línea base en el informe, el
+resultado publicado habría sido un modelo roto con una explicación creíble.
 
 ## Los resultados
 
@@ -143,13 +146,14 @@ El SARIMAX gana con claridad: 205.8 MWh de MAE contra 429.1 del boosting y 754.2
 de la línea base. Su degradación con el horizonte es notablemente suave, de 180
 en el día uno a 264 en el día siete, mientras el boosting pasa de 302 a 642.
 
-La forma de las curvas es lo interesante. La línea base es plana pero alta, y no
-se degrada porque no tiene nada que degradar: predice lo mismo con un día o con
-siete. El boosting es el mejor de los tres en el día uno si uno mira solo la
-tendencia, pero pierde precisión rápido porque sus rezagos se alejan: para el
-horizonte 7, el dato más fresco que ve tiene una semana. El SARIMAX modela la
-estructura de la serie en vez de memorizar sus valores recientes, y por eso el
-horizonte lo castiga menos.
+La forma de las curvas es lo interesante. La línea base oscila alto y sin
+tendencia, y no se degrada con el horizonte porque no tiene nada que degradar:
+predice lo mismo con un día que con siete. El boosting arranca bien pero pierde
+precisión rápido, de 302 a 642, porque sus rezagos se alejan: para el horizonte 7
+el dato más fresco que ve tiene una semana. El SARIMAX modela la estructura de la
+serie en vez de memorizar sus valores recientes, y por eso el horizonte lo castiga
+menos: gana en los siete horizontes, incluido el primero, y su curva es casi
+plana.
 
 También vale mirar el sesgo, que la tabla reporta y casi ningún informe incluye.
 La línea base tiene sesgo negativo (−152), el boosting positivo (+165) y el
@@ -161,11 +165,12 @@ constante; uno sin sesgo pero con mucha varianza, no.
 Acá está la parte que hace que esto sea una comparación honesta y no una
 demostración.
 
-**El SARIMAX gana en parte porque la serie está hecha a su medida.** Yo la generé
-con una tendencia lineal, estacionalidades sinusoidales, efectos aditivos de
-calendario y ruido AR(1). Eso es, casi literalmente, la clase de proceso que un
-SARIMAX asume. Le pedí a un modelo que recuperara la estructura que yo mismo
-usé para construir los datos.
+**El SARIMAX gana en parte porque la serie está hecha a su medida.** La serie se
+generó con una tendencia lineal, estacionalidades sinusoidales, efectos aditivos
+de calendario y ruido AR(1). Eso es, casi literalmente, la clase de proceso que
+un SARIMAX asume. El experimento le pidió a un modelo que recuperara la misma
+estructura con la que se construyeron los datos, y conviene desconfiar de
+cualquier comparación que no declare este punto.
 
 Una demanda real no es así. Tiene quiebres estructurales, respuesta no lineal a
 la temperatura, efectos de calendario que interactúan entre sí, y en un sistema
@@ -175,10 +180,11 @@ hay ninguna no linealidad interesante que capturar.
 
 Así que la conclusión defendible **no** es "el SARIMAX es mejor". Es esto: en una
 serie con estructura lineal fuerte y cuatro años de historia, un modelo
-estadístico bien especificado gana, corre en un tercio del tiempo y es
-interpretable. Cuál gana en la serie real es una pregunta empírica que se
-responde repitiendo este mismo backtesting sobre esa serie, y este proyecto es la
-maquinaria para hacerlo, no la respuesta.
+estadístico bien especificado gana, corre en una fracción del tiempo (67 segundos
+contra 415 del boosting, según la propia corrida) y es interpretable. Cuál gana en
+la serie real es una pregunta empírica que se responde repitiendo este mismo
+backtesting sobre esa serie, y este proyecto es la maquinaria para hacerlo, no la
+respuesta.
 
 ## Los intervalos, que es donde de verdad falló
 
@@ -200,42 +206,43 @@ ruido de esta serie está autocorrelacionado, y un modelo que trata cada día co
 independiente subestima la varianza acumulada del horizonte. La regresión
 cuantílica aprende la dispersión condicional que ve en los datos de
 entrenamiento, no la dispersión de un error que se acumula a lo largo de siete
-días. Ensanchar la banda arbitrariamente hasta que la cobertura cuadre sería
-hacer trampa; calibrarla sobre un conjunto aparte sería lo correcto, y no lo
-hice.
+días. Ensanchar la banda arbitrariamente hasta que la cobertura cuadre sería hacer
+trampa; calibrarla sobre un conjunto de datos aparte sería lo correcto, y este
+proyecto no lo hace.
 
-Lo reporto sin arreglarlo porque el arreglo no cabía en el alcance de este
-artículo y porque un intervalo mal calibrado y declarado como tal es más útil
+Queda reportado sin arreglar por dos razones. La calibración no cabe en el alcance
+de este artículo, y un intervalo mal calibrado y declarado como tal es más útil
 que uno mal calibrado y presentado como bueno.
 
-## Cómo elegiría, y con qué argumento
+## Cómo se defiende una elección de modelo
 
-Si tuviera que defender una recomendación ante un panel, sería esta.
+Los números de arriba no eligen solos. Esta es la recomendación que se sostiene
+con ellos, con el argumento que la acompaña, que es la parte que un panel
+pregunta.
 
-Empezaría por el SARIMAX, por tres razones que se sostienen fuera de este
-experimento: es el que menos se degrada con el horizonte, que es lo que la
-programación semanal necesita; corre en un tercio del tiempo, lo que importa
-cuando hay que reajustar seguido; y es interpretable, o sea que ante una
+**En producción, el SARIMAX**, por tres razones que valen fuera de este
+experimento. Es el que menos se degrada con el horizonte, que es exactamente lo
+que la programación semanal necesita. Corre en una fracción del tiempo, lo que
+importa cuando hay que reajustar seguido. Y es interpretable, o sea que ante una
 desviación grande se puede explicar de dónde vino. En una entidad que tiene que
-justificar sus decisiones ante participantes del mercado, la interpretabilidad
-no es un lujo estético: es la diferencia entre poder responder una objeción y
-tener que decir que el modelo lo dijo.
+justificar sus decisiones ante participantes del mercado, la interpretabilidad no
+es un lujo estético: es la diferencia entre poder responder una objeción y tener
+que decir que el modelo lo dijo.
 
-Mantendría el boosting corriendo en paralelo, sin ponerlo en producción, por dos
-motivos. Primero, porque en la serie real puede ganar y la única forma de saberlo
-es medirlo. Segundo, porque su patrón de error es distinto al del SARIMAX, y dos
-modelos que se equivocan de maneras distintas se pueden combinar; uno que se
-equivoca igual, no.
+**El boosting en paralelo, sin producción**, por dos motivos. En la serie real
+puede ganar, y la única forma de saberlo es medirlo. Y su patrón de error es
+distinto al del SARIMAX, y dos modelos que se equivocan de maneras distintas se
+pueden combinar; dos que se equivocan igual, no.
 
-Y mantendría la línea base para siempre, en el informe, como control. El día que
-el modelo bueno se degrade por un cambio en la serie, la comparación contra la
-línea base es lo que lo va a delatar. A mí me delató un error de código.
+**La línea base para siempre, en el informe, como control.** El día que el modelo
+bueno se degrade por un cambio en la serie, la comparación contra la línea base es
+lo que lo va a delatar. En este mismo ejercicio delató un error de código antes de
+que llegara a publicarse.
 
 Sobre las redes recurrentes, que es la pregunta que siempre aparece: tendrían
 sentido con series largas, muchas series relacionadas y alta frecuencia. Acá hay
 1461 observaciones y una sola serie. Un LSTM sobre esto es una respuesta cara a
-una pregunta que ya contestó un modelo de veinte líneas, y en una entrevista
-diría exactamente eso.
+una pregunta que ya contestó un modelo de veinte líneas.
 
 ## Lo que le falta
 
@@ -245,20 +252,21 @@ reconciliación entre horizontes: nada garantiza que la suma de los siete días
 coincida con la energía semanal que produciría un modelo semanal. Los intervalos
 no están calibrados. Y las exógenas se asumen conocidas.
 
-::: nota Lo que me llevo
-Me llevo el error de alineación, y no por el error sino por cómo lo encontré.
+::: nota Para retener: la línea base es un instrumento de medición
+Lo que importa del error de alineación no es el error, es cómo se detecta.
 
-Vengo de trabajar con datos operativos, donde la señal de que algo está mal casi
-siempre es física: un valor imposible, un balance que no cierra, una medición
-que contradice a otra. En modelado predictivo esa señal no existe. Un modelo mal
-entrenado no produce nada imposible: produce números perfectamente razonables,
-con un error perfectamente creíble, y ajusta bien sobre sus propios datos de
-entrenamiento.
+En datos operativos, la señal de que algo está mal casi siempre es física: un
+valor imposible, un balance que no cierra, una medición que contradice a otra. En
+modelado predictivo esa señal no existe. Un modelo mal entrenado no produce nada
+imposible: produce números perfectamente razonables, con un error perfectamente
+creíble, y ajusta bien sobre sus propios datos de entrenamiento. No hay nada en la
+salida que grite.
 
-Lo único que lo delató fue tener una referencia tonta al lado. Y eso me cambió
-la forma de pensar la línea base: dejé de verla como el punto de partida de una
-comparación y empecé a verla como un instrumento de medición. No está ahí para
-que le ganemos; está ahí para avisarnos cuando algo se rompió.
+Lo único que lo delata es tener una referencia tonta al lado. De ahí la manera
+correcta de pensar la línea base: no es el punto de partida de una comparación
+sino un instrumento de medición permanente. No está para que los modelos buenos
+le ganen; está para avisar cuando algo se rompió. Un informe de pronóstico sin
+línea base no es un informe incompleto, es un informe sin control.
 :::
 
 ## Fuentes
