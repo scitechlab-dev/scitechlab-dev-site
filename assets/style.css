@@ -1150,3 +1150,46 @@ a.serie-nav-next:hover .serie-nav-title { color: var(--accent-hi); }
   .serie-nav-up { justify-self: start; }
   .serie-nav .is-empty { display: none; }
 }
+
+/* ---- Table of contents -------------------------------------------------
+   Only rendered for articles with enough top-level sections to be worth
+   jumping around in; the threshold is TOC_MIN_HEADINGS in scripts/build.mjs.
+   Numbered because the reference articles get read in order the first time and
+   by section afterwards, and a number is what someone quotes back. */
+.post-toc {
+  margin: 28px 0 8px;
+  padding: 16px 20px 18px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+.post-toc-title {
+  margin: 0 0 10px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.post-toc ol {
+  margin: 0;
+  padding-left: 22px;
+  columns: 2;
+  column-gap: 28px;
+}
+.post-toc li {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  break-inside: avoid;
+}
+.post-toc a { color: var(--accent); }
+.post-toc a:hover { border-bottom: 1px solid var(--accent); }
+
+/* Room above a heading that was jumped to, so it does not land flush at the
+   top edge of the viewport. */
+.post-body h2[id] { scroll-margin-top: 24px; }
+
+@media (max-width: 560px) {
+  .post-toc ol { columns: 1; }
+}

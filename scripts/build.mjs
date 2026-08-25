@@ -221,6 +221,13 @@ const T = {
 };
 const t = (lang) => T[lang] ?? T.en;
 
+/** Labels for the in-article table of contents. */
+const T_TOC = {
+  en: { title: 'On this page' },
+  es: { title: 'En esta página' },
+};
+const tToc = (lang) => T_TOC[lang] ?? T_TOC.en;
+
 /** Labels for the in-article series navigation. */
 const T_SERIE = {
   en: { of: 'of', prev: 'Previous', next: 'Next', index: 'Series index', nav: 'Series' },
@@ -428,6 +435,61 @@ async function readSeries(posts) {
 }
 
 /**
+ * Anchor ids on every `<h2>`, derived from the heading's own text.
+ *
+ * The ids end up in the URL bar when someone follows a contents link, so they
+ * are built from the text rather than from a counter: `#el-regimen-sancionatorio`
+ * survives a section being moved, `#seccion-7` does not. Duplicates get a
+ * numeric suffix so a repeated heading still yields unique targets.
+ */
+function withHeadingIds(html) {
+  const used = new Set();
+  return html.replace(/<h2>([\s\S]*?)<\/h2>/g, (whole, inner) => {
+    const base =
+      inner
+        .replace(/<[^>]+>/g, '')
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .slice(0, 60) || 'seccion';
+    let id = base;
+    for (let i = 2; used.has(id); i++) id = `${base}-${i}`;
+    used.add(id);
+    return `<h2 id="${id}">${inner}</h2>`;
+  });
+}
+
+/**
+ * A table of contents, but only for articles long enough to need one.
+ *
+ * Below the threshold a contents box is noise: the reader can take in the whole
+ * shape of the piece by scrolling once. The threshold counts top-level sections
+ * rather than words, because what makes something hard to navigate is how many
+ * places one might want to jump to.
+ */
+const TOC_MIN_HEADINGS = 6;
+
+function tableOfContents(html, lang) {
+  const items = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((m) => ({
+    id: m[1],
+    label: m[2].replace(/<[^>]+>/g, '').trim(),
+  }));
+  if (items.length < TOC_MIN_HEADINGS) return '';
+  const rows = items
+    .map((i) => `          <li><a href="#${attr(i.id)}">${text(i.label)}</a></li>`)
+    .join('\n');
+  return `
+      <nav class="post-toc" aria-label="${attr(tToc(lang).title)}">
+        <p class="post-toc-title">${text(tToc(lang).title)}</p>
+        <ol>
+${rows}
+        </ol>
+      </nav>`;
+}
+
+/**
  * Per-article series navigation, keyed by article slug.
  *
  * The manifest lists articles that may not exist yet, so `prev` and `next` walk
@@ -606,11 +668,14 @@ async function main() {
       lang: data.lang ? String(data.lang) : 'en',
       // Wrap tables the way the publications table is wrapped: a table wider
       // than the 660px article column scrolls in its own box rather than
-      // pushing the page sideways on a phone.
-      html: md
-        .parse(body)
-        .replace(/<table>/g, '<div class="table-scroll"><table>')
-        .replace(/<\/table>/g, '</table></div>'),
+      // pushing the page sideways on a phone. Heading ids go on in the same
+      // pass, because the table of contents links to them.
+      html: withHeadingIds(
+        md
+          .parse(body)
+          .replace(/<table>/g, '<div class="table-scroll"><table>')
+          .replace(/<\/table>/g, '</table></div>')
+      ),
     });
   }
 
@@ -654,6 +719,7 @@ async function main() {
       .replace(/\{\{DATE\}\}/g, post.date)
       .replace(/\{\{MATH_HEAD\}\}/g, katexHead(post, '../'))
       .replace(/\{\{TOPIC\}\}/g, post.topic ? `\n        <span>${text(post.topic)}</span>` : '')
+      .replace(/\{\{TOC\}\}/g, () => tableOfContents(post.html, post.lang))
       .replace(/\{\{SERIE_CRUMB\}\}/g, () => serieCrumb(serieNavBySlug.get(post.slug), post.lang))
       .replace(/\{\{SERIE_NAV\}\}/g, () => serieNav(serieNavBySlug.get(post.slug), post.lang))
       .replace(/\{\{STYLE_V\}\}/g, v.style)
