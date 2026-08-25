@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
 tags: [mer, eor, liquidacion, simec, dte, robcp]
-estado: en-revision
+estado: publicado
 math: false
 ---
 

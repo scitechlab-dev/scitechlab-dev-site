@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
 tags: [costo-marginal, despacho]
-estado: en-revision
+estado: publicado
 math: true
 ---
 

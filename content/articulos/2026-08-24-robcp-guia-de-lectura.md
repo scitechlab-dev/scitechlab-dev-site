@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [referencia-normativa]
 tags: [robcp, normativa, referencia]
-estado: en-revision
+estado: publicado
 math: false
 ---
 

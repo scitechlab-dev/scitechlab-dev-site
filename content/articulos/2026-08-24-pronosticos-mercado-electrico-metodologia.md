@@ -6,7 +6,7 @@ lang: es
 topic: Analítica de datos
 categories: [analitica]
 tags: [pronostico, series-de-tiempo, backtesting, incertidumbre, robcp]
-estado: en-revision
+estado: publicado
 math: true
 ---
 

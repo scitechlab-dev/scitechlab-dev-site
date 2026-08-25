@@ -5,7 +5,7 @@ date: 2026-08-14
 lang: es
 topic: Regulación eléctrica
 tags: [lge, distribucion, regulacion, generacion-distribuida]
-estado: en-revision
+estado: publicado
 math: false
 ---
 

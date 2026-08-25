@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
 tags: [costos-variables, combustible, robcp, inventarios]
-estado: en-revision
+estado: publicado
 math: true
 ---
 

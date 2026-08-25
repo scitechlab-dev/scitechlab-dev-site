@@ -6,7 +6,7 @@ lang: es
 topic: Analítica de datos
 categories: [analitica]
 tags: [datos, pandas, modelado, calidad-de-datos, mercado-electrico]
-estado: en-revision
+estado: publicado
 math: true
 ---
 

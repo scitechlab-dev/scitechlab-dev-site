@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
 tags: [instituciones, robcp, mrs]
-estado: en-revision
+estado: publicado
 ---
 
 Este es el primer artículo de una serie sobre el mercado mayorista salvadoreño:

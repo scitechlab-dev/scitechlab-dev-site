@@ -6,7 +6,7 @@ lang: es
 topic: Analítica de datos
 categories: [analitica]
 tags: [estadistica, precios, regresion, series-de-tiempo, robcp]
-estado: en-revision
+estado: publicado
 math: true
 ---
 

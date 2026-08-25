@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
 tags: [cvnc, indexacion, arranque-y-detencion, robcp]
-estado: en-revision
+estado: publicado
 math: true
 ---
 

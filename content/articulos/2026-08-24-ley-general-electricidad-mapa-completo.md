@@ -6,7 +6,7 @@ lang: es
 topic: Regulación eléctrica
 categories: [referencia-normativa]
 tags: [lge, normativa, referencia, sanciones]
-estado: en-revision
+estado: publicado
 math: false
 ---
 

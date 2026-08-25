@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
 tags: [programacion, valor-del-agua, mantenimientos, reserva, robcp]
-estado: en-revision
+estado: publicado
 math: true
 ---
 

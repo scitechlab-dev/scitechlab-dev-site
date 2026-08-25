@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
 tags: [python, calidad-de-datos, validacion, trazabilidad]
-estado: en-revision
+estado: publicado
 math: false
 ---
 

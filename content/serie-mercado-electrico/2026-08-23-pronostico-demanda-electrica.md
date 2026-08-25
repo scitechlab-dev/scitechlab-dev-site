@@ -6,7 +6,7 @@ lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
 tags: [pronostico, series-de-tiempo, backtesting, python]
-estado: en-revision
+estado: publicado
 math: false
 ---
 
