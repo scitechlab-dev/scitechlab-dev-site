@@ -131,19 +131,23 @@ junto con el uso de la transmisión, las pérdidas y los servicios auxiliares
 (ROBCP, Anexo 09, 3.2.1). Quien paga la administración del mercado es la demanda,
 en un renglón identificable.
 
-::: nota Lo que me llevo de leer el capítulo de la UT
-Entré a los artículos 33 a 40 buscando una definición y salí con un diseño. Yo
-describía a la UT como "una sociedad privada de los participantes", que es cierto
-y no dice casi nada. Lo que la hace funcionar son cuatro candados que viven en
-artículos distintos y que solo se ven juntos: no puede comprar ni vender energía,
-sus votos no siguen al capital, no elige sola a quien la administra, y sus
-ingresos no dependen del precio de la energía. Quitá cualquiera de los cuatro y
-la misma sociedad se convierte en un participante con poder de despacho.
+::: nota Para retener: los cuatro candados de la UT
+Decir que la UT es "una sociedad privada de los participantes" es cierto y no
+explica nada. Lo que hace que el arreglo funcione son cuatro restricciones que
+viven en artículos distintos y que solo tienen sentido leídas juntas. Conviene
+memorizarlas como conjunto, porque quitando cualquiera de las cuatro la misma
+sociedad se convierte en un participante con poder de despacho.
 
-Me quedó también una corrección para mi propio borrador. Yo había escrito que la
-UT "no escribe las reglas". El artículo 33 dice lo contrario: las escribe, y otro
-las aprueba. La distinción importa porque cambia el lugar donde hay que ir a
-discutir una regla que uno cree mal puesta.
+| Candado | Artículo | Qué impide |
+|---|---|---|
+| No puede comprar ni vender energía | 33 | Que el operador tenga posición propia en el mercado que despacha |
+| Los votos no siguen al capital | 36 | Que un accionista grande compre control |
+| No elige sola a quien la administra | 37 | Que los regulados nombren a quien los coordina |
+| Sus ingresos no dependen del precio | 39 | Que le convenga un despacho caro |
+
+Y una precisión que se equivoca con frecuencia: la UT **sí** redacta el
+Reglamento de Operación. Lo que no hace es aprobarlo. Saber eso cambia el lugar
+al que hay que ir a discutir una regla mal puesta.
 :::
 
 ## Las reglas, en orden
@@ -323,7 +327,8 @@ ley no define es el perfil de entrega que ese contrato puede exigir, y de eso
 depende por completo que exista o no exposición: quien se compromete a entregar
 un bloque plano y no puede generarlo a las ocho de la noche tiene que conseguir
 esa energía en otro lado. Los lineamientos de los contratos de abastecimiento los
-emite la DGEHM y no los he leído, así que hasta ahí llego.
+emite la DGEHM y no están cubiertos por las fuentes verificadas de esta serie,
+así que la respuesta llega hasta acá.
 
 Donde la pregunta sí tiene respuesta cerrada es en el mayorista. Una solar de
 escala de utilidad con un contrato de suministro plano queda expuesta al precio
