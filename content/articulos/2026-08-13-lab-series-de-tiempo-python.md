@@ -383,7 +383,7 @@ Y las diferencias son chicas frente a una serie con desviación estándar de 169
 
 Escribí primero la versión con una sola ventana de prueba, h = 10, y la
 conclusión que salió fue la contraria: con esa ventana gana entrenar con todo.
-Si me hubiera quedado ahí, habría publicado "más datos empeoraron el pronóstico"
+Quedarse ahí habría significado publicar "más datos empeoraron el pronóstico"
 o su opuesto según qué número hubiera elegido, y las dos afirmaciones habrían
 tenido un respaldo aparente.
 
@@ -414,21 +414,21 @@ El orden que sigo, y que es el orden de las secciones de arriba:
    nuevos.
 9. **Buscar quiebres**, y evaluar en varias ventanas antes de concluir.
 
-::: nota Lo que me llevo
-Dos cosas, y ninguna es un algoritmo.
+::: nota Para retener: dos ideas, y ninguna es un algoritmo
+**El MASE se puede comparar; el MAE no.** Reportar el MAE en unidades originales
+no está mal, simplemente no se puede contrastar contra nada. Un MAE de 0.24 ppm
+no dice si el modelo es bueno, solo dice cuánto se equivoca. Un MASE de 0.18 dice
+que es cinco veces mejor que la alternativa trivial, y esa misma frase sirve para
+un modelo de demanda en MWh sin cambiar de escala mental. Cuando la métrica es
+adimensional, la conversación deja de ser sobre unidades y pasa a ser sobre
+desempeño.
 
-La primera es el MASE. Pasé años reportando MAE en unidades originales, y el
-problema no es que esté mal: es que no se puede comparar contra nada. Un MAE de
-0.24 ppm no dice si el modelo es bueno, solo dice cuánto se equivoca. Un MASE de
-0.18 dice que es cinco veces mejor que la alternativa trivial, y eso mismo se
-puede decir de un modelo de demanda en MWh sin cambiar de escala mental.
-
-La segunda es la sección 6, que reescribí después de que los números
-contradijeran lo que había escrito. La versión original decía que más datos
-empeoraban el pronóstico, con un ejemplo que lo respaldaba. Era cierto para esa
-ventana y falso en general. Es exactamente el error que este cuaderno intenta no
-cometer: elegir el corte que confirma la tesis. Lo dejo escrito porque el
-método que lo detectó, probar varias ventanas, vale más que el resultado.
+**Una sola ventana no demuestra nada.** La sección 6 de este laboratorio existe
+porque el resultado inicial, "más datos empeoraron el pronóstico", era cierto
+para una ventana y falso en general. Ese es el error que un cuaderno de estudio
+tiene que evitar por encima de cualquier otro: elegir el corte que confirma la
+tesis. El método que lo detecta, probar varias ventanas y reportarlas todas, vale
+más que cualquiera de los resultados.
 :::
 
 ## Fuentes

@@ -408,7 +408,7 @@ Acá los dos diagnósticos salen limpios, y por eso los errores robustos HAC cas
 no cambian nada. Ese es justamente el uso del diagnóstico: no es que HAC sobre,
 es que **confirma por otra vía que la inferencia clásica era válida**. Corro los
 errores robustos siempre, incluso cuando el diagnóstico dice que no hacen falta,
-porque el caso en que sí hacían falta y no me di cuenta es mucho más caro que
+porque el caso en que sí hacían falta y pasó inadvertido es mucho más caro que
 los dos segundos que cuesta calcularlos.
 
 Y sobre el R²: 0.553 significa que el modelo explica el 55 % de la varianza
@@ -417,7 +417,7 @@ de ella. La sección anterior mostró que esta misma relación se evapora en las
 décadas siguientes, y ningún R² alto habría avisado de eso. El R² mide ajuste,
 no validez.
 
-## El resumen que me llevaría a una entrevista
+## El resumen, en una página
 
 1. **Mirar la distribución antes que el promedio.** Media contra mediana,
    desviación estándar contra MAD. Si difieren mucho, la media no describe el
@@ -431,13 +431,13 @@ no validez.
    mismo.** Es el error que más caro sale y el más difícil de ver.
 6. **Verificar los supuestos de la regresión**, no solo mirar el R².
 
-::: nota Por qué elegí este dataset y no una serie eléctrica
-Podría haber armado esto con datos de demanda o de precios de energía, que es lo
-que trabajo. Preferí macrodata por dos razones.
+::: nota Por qué este dataset y no una serie eléctrica
+El laboratorio podría haberse armado con datos de demanda o de precios de
+energía. Usa `macrodata` por dos razones.
 
 La primera es reproducibilidad: viene con statsmodels, así que cualquiera puede
 correr el laboratorio y obtener exactamente estos números, sin descargar nada ni
-pedirle permiso a nadie. Un artículo de fundamentos que no se puede reproducir
+pedir acceso a nadie. Un artículo de fundamentos que no se puede reproducir
 enseña la mitad.
 
 La segunda es que la curva de Phillips es un caso donde **la teoría hace una

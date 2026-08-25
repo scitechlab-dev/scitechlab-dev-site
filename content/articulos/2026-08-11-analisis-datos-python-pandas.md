@@ -478,17 +478,21 @@ un PDF, a un informe impreso o a cualquier lado donde no haya un navegador.
 | El lector tiene que explorar los puntos | plotly |
 | Integración continua, servidor sin pantalla | matplotlib con `Agg` |
 
-::: nota Lo que me llevo
-La función que más me cambió el trabajo diario de esta lista no es ninguna de
-las vistosas: es `validate=` en `merge`. Vengo de conciliar datos entre
-sistemas, y el error que más caro sale no es el que rompe el proceso sino el que
-lo deja correr con filas duplicadas. Un total que sale 3 % arriba no levanta
-ninguna alarma, y para cuando alguien lo nota ya se usó para decidir algo.
+::: nota Para retener: el argumento más subestimado de pandas
+De toda la lista, la función que más cambia el trabajo diario no es ninguna de
+las vistosas: es `validate=` en `merge`.
 
-`validate=` convierte ese error silencioso en una excepción. Es la misma idea
-que aplico después en el validador de declaraciones de la serie del mercado
-eléctrico: si el sistema puede detectar una violación de un supuesto, tiene que
-fallar, no adivinar.
+Al conciliar datos entre sistemas, el error que sale más caro no es el que rompe
+el proceso, sino el que lo deja correr con filas duplicadas. Un `merge` que
+duplica y produce un total 3 % más alto no levanta ninguna alarma, no lanza
+ninguna excepción y no se ve raro en un gráfico. Para cuando alguien lo nota, ya
+se usó para decidir algo.
+
+`validate="one_to_one"` o `validate="many_to_one"` convierte ese error silencioso
+en una excepción en el momento exacto en que ocurre. Es el mismo principio que
+gobierna el validador de declaraciones del séptimo artículo de la serie sobre el
+mercado eléctrico: **si el sistema puede detectar la violación de un supuesto,
+tiene que fallar, no adivinar.**
 :::
 
 ## Fuentes
