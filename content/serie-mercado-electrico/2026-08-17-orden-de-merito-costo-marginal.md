@@ -81,6 +81,33 @@ agua; la sección sobre lo que rompe el orden de mérito lo incorpora.
   es un ejemplo para mostrar el mecanismo.</figcaption>
 </figure>
 
+::: nota Qué combustibles hay realmente del otro lado
+El parque de arriba es inventado, así que vale decir con qué se trabaja de
+verdad acá. El reglamento nombra los combustibles que contempla: el Anexo 16 se
+aplica a las unidades térmicas que operan con **Gas Oil, Fuel Oil, Gas Natural y
+Carbón Mineral** (1.1), y el formulario de datos de turbinas a gas del Anexo 06
+le pide a cada generador declarar si su máquina quema diésel, gas natural,
+búnker o combinaciones de ellos. Ese es el universo de lo que un generador
+salvadoreño puede declarar, y por eso el artículo siguiente, el de la
+declaración semanal, trabaja sobre esos combustibles y no sobre otros.
+
+Cuál de ellos fija el precio en una hora concreta ya no lo decide el reglamento
+sino la operación, y cambia con la hidrología, con la hora del día y con lo que
+entre por los enlaces regionales. El propio Anexo 09 deja abierta la lista de lo
+que puede resultar marginal: una térmica, una geotérmica, una hidroeléctrica,
+una cogeneradora, una no convencional, una oferta de retiro de oportunidad o la
+unidad de racionamiento forzado (3.1.2).
+
+No pongo acá un porcentaje de horas por tecnología porque no lo verifiqué, y en
+esta serie lo que no se leyó no se afirma. Sí anoto que es verificable y con
+fuente pública: la ley obliga a la UT a publicar diariamente el nivel de los
+embalses que reporta CEL y los precios de los combustibles puestos en planta que
+reportan los generadores térmicos (art. 60, literales b y c), y el posdespacho
+identifica la unidad marginal de cada intervalo. Contrastar unos meses de esas
+publicaciones contra la cota del embalse es un ejercicio que sale como artículo
+propio, y me lo anoto.
+:::
+
 ## Un despacho resuelto a mano
 
 Con la demanda en 260 MW, el orden de mérito despacha primero todo lo gratis,
@@ -92,11 +119,36 @@ $$
 C = 100 \cdot 0 + 150 \cdot 70 + 10 \cdot 95 = 11\,450 \text{ USD/h}
 $$
 
-Nótese lo que el promedio ocultaría: las tres unidades despachadas cobran 95
-por cada MWh, aunque dos de ellas producen por debajo de ese costo. La
-diferencia entre el costo variable de cada unidad y el precio que cobra es la
-renta que el mercado de corto plazo redistribuye, y la razón por la que a
-nadie le da igual dónde queda la demanda.
+Ese número es lo que costó producir. No es lo que se pagó. Como todas las
+unidades cobran el costo marginal, la liquidación de la hora se separa del costo
+de operación, y la separación se ve mejor en una tabla que en una frase:
+
+| Unidad | Inyección (MWh) | Costo variable (USD/MWh) | Lo que le costó producir (USD) | Lo que cobra a 95 (USD) | Renta (USD) |
+|---|---|---|---|---|---|
+| U1, hidro | 100 | 0 | 0 | 9 500 | 9 500 |
+| U2, gas CC | 150 | 70 | 10 500 | 14 250 | 3 750 |
+| U3, turbina | 10 | 95 | 950 | 950 | 0 |
+| **Total** | **260** | | **11 450** | **24 700** | **13 250** |
+
+La demanda paga 24 700 USD por una hora que costó 11 450 USD producir. Los
+13 250 USD de diferencia son la renta inframarginal, y se reparten al revés de
+como uno esperaría: **la unidad marginal se lleva cero**. U3, la que fija el
+precio, cobra exactamente su costo variable, mientras U1, que no gastó nada en
+combustible, se lleva la renta más grande de la hora. Cada unidad gana el ancho
+del escalón que la separa del precio, y la marginal no tiene escalón.
+
+Conviene no leer esa renta como utilidad neta, porque no lo es. Es de donde
+salen los costos que el costo variable no incluye: personal, seguros,
+mantenimiento mayor y, sobre todo, la inversión en la máquina. Una unidad que
+solo cobrara su costo variable nunca recuperaría lo que costó construirla, y por
+eso el reglamento no le confía toda la retribución al MRS: la capacidad se paga
+aparte, por la capacidad firme del artículo 10-A, como quedó dicho en el primer
+artículo de la serie.
+
+Nótese también lo que el promedio ocultaría. Las tres unidades despachadas cobran
+95 por cada MWh, aunque dos de ellas producen por debajo de ese costo. Esa es la
+razón por la que a nadie le da igual dónde queda la demanda: mover la demanda un
+megavatio hacia arriba no cambia el costo de nadie, cambia el precio de todos.
 
 El mismo despacho, repetido con una restricción por vez, es el ejercicio que
 muestra por qué el orden de mérito puro es una referencia y no una
@@ -160,6 +212,40 @@ despacho óptimo usaría la línea en 20 MW; con el límite activo, el norte
 debe encender su diésel: U1 con 100, la línea con 10 y U4 con 10, mientras
 el sur opera U2 a su tope de 150 para cubrir sus 140 más la exportación.
 
+Puesto nodo a nodo, con la pregunta que fija cada precio escrita al lado:
+
+```
+   NODO NORTE                              NODO SUR
+   demanda 120 MW                          demanda 140 MW
+
+   U1 hidro       0 USD/MWh -> 100 MW      U2 gas CC    70 USD/MWh -> 150 MW  (al tope)
+   U4 diésel    180 USD/MWh ->  10 MW      U3 turbina   95 USD/MWh ->   0 MW  (en cero)
+                                +--- 10 MW ---+
+                                |  línea al   |
+                                |   límite    |
+                       norte <--+-------------+-- sur
+
+   ¿quién daría el próximo MWh?
+     en el norte   U4 ya está en línea y es lo único que queda   ->  180 USD/MWh
+     en el sur     U2 está al tope, así que arrancaría U3        ->   95 USD/MWh
+
+   precio norte 180  -  precio sur 95  =  85 USD/MWh de diferencia
+   cargo por congestión = 10 MW x 85 USD/MWh = 850 USD/h
+```
+
+Tres cosas de ese esquema merecen leerse despacio. La primera es que el precio
+del sur no lo fija la máquina que está inyectando, U2, sino la que **no** está
+inyectando: el precio responde a quién serviría el próximo megavatio hora, y U2
+ya no puede dar más. La segunda es que el norte paga 180 aunque la mitad de su
+energía venga de una hidro a costo cero, porque el precio nunca es un promedio.
+
+La tercera es la que suele quedar sin respuesta: los 850 USD/h de diferencia no
+se los queda nadie de los que aparecen en el dibujo. No son del transmisor cuya
+línea se saturó, ni del generador que quedó del lado caro, ni de la UT. Los
+recauda la UT como cargo por congestión y **son de la demanda**, por mandato del
+artículo 59 de la ley. Cómo llegan hasta la factura, por la vía del monto
+remanente, es materia del sexto artículo de la serie.
+
 <figure class="fig fig-wide">
   <img src="../assets/figures/congestion.svg"
        alt="Dos nodos unidos por una línea congestionada de 10 MW. En el nodo norte, la hidro y el diésel fijan un precio de 180 USD/MWh; en el nodo sur, el gas opera al tope y el precio lo fija la turbina de 95 que quedó en cero. El cargo por congestión es el flujo por la diferencia de precios: 850 USD/h."
@@ -194,13 +280,32 @@ neutralidad que su papel exige.
 **El agua.** En un sistema con embalses, el costo variable de una hidro no es
 cero: es el valor marginal del agua, que los modelos determinan como costo
 futuro en función del volumen del embalse (Anexo 09, 3.1.8, y numeral 10.1.5).
-El agua vale porque turbinarla hoy es no turbinarla mañana, y ese valor
-mueve a la hidro dentro del orden de mérito como si fuera un combustible. Dos
-reglas del anexo muestran que el mecanismo es fino: si la central está
-vertiendo, el valor del agua de ese intervalo es cero (3.1.12), y si el valor
-del agua produjera un costo marginal negativo, el costo marginal del sistema
-se fija en cero (3.1.13). El despacho hidrotérmico convierte así al orden de
-mérito en un problema temporal, no solo económico.
+
+La forma más rápida de entenderlo es dejar de ver el embalse como una central y
+verlo como una cuenta de ahorros que solo recibe depósitos cuando llueve. Sacar
+dinero de una cuenta de ahorros no cuesta comisión, y sin embargo nadie diría
+que es gratis: cuesta exactamente lo que ese dinero habría servido para comprar
+después. Con el agua pasa igual. Turbinar un metro cúbico hoy no consume ningún
+combustible, pero obliga a que alguien queme combustible mañana para reponer esa
+energía. **Ese combustible futuro es el precio del agua de hoy**, y por eso el
+valor del agua se mide en USD/MWh y se apila en el orden de mérito como si fuera
+un combustible más.
+
+De ahí se sigue el resto sin esfuerzo. Con el embalse lleno, la cuenta rebosa y
+el próximo metro cúbico casi no hace falta guardarlo: el agua vale poco y la
+hidro entra primero. Con el embalse bajo, cada metro cúbico es el que va a hacer
+falta en la sequía: el agua vale mucho y la hidro se corre hacia el fondo de la
+fila, a veces detrás del diésel. La central no cambió, ni el caudal, ni ningún
+precio declarado. Cambió cuánto vale lo que queda en la cuenta.
+
+Dos reglas del anexo muestran que el mecanismo es fino, y las dos se leen solas
+con la analogía puesta. Si la central está vertiendo, el valor del agua de ese
+intervalo es cero (3.1.12): la cuenta se está desbordando y el agua que se iba a
+perder de todos modos no tiene ningún valor futuro que proteger. Y si el valor
+del agua produjera un costo marginal negativo, el costo marginal del sistema se
+fija en cero (3.1.13): el precio puede llegar a cero, pero no se paga por
+consumir. El despacho hidrotérmico convierte así al orden de mérito en un
+problema temporal, no solo económico.
 
 **El compromiso de unidades.** El despacho hora a hora supone a cada unidad
 encendida o apagada, pero decidir qué unidades encender es otro problema:
@@ -239,6 +344,29 @@ recordatorio: la lista abre con el cargo por actualización del registro en la
 SIGET, el mismo regulador que desde julio de 2026 dejó de serlo. El texto
 todavía dice SIGET y hoy quiere decir DGEHM. La energía se paga al costo
 marginal; el resto, prorrateado.
+
+Con el despacho de arriba, y tomando como cargo del sistema el mismo valor
+ilustrativo que usa el sexto artículo de esta serie, la suma queda así:
+
+| Componente | USD/MWh | Qué es |
+|---|---|---|
+| CMO | 95.00 | El costo variable de U3, la unidad marginal |
+| Csis | 7.20 | Transmisión, administración del mercado, pérdidas, servicios auxiliares, compensaciones, monto remanente |
+| **Precio del MRS** | **102.20** | Lo que paga quien retira esa hora |
+
+En ese ejemplo los cargos del sistema pesan un 7 % del precio final, y esa es
+toda la lectura que la cifra soporta. **El 7.20 es ilustrativo y no corresponde
+a El Salvador**: no encontré publicado un valor de Csis para citar, uso el mismo
+número del artículo VI para que la cadena de ejemplos de la serie cierre con
+ella misma, y el valor real cambia hora a hora porque cambian las pérdidas, las
+compensaciones y el monto remanente que lo componen.
+
+Lo que sí vale como principio, y no depende del número, es la asimetría entre
+los dos sumandos. El CMO se mueve con violencia: en el mismo ejemplo saltó de 95
+a 180 por una sola unidad obligada. Los Csis son comparativamente estables y
+prorrateados. Cuando el precio del MRS se dispara, casi nunca es por los cargos
+del sistema. Y hay un componente que puede tener signo negativo, el monto
+remanente, así que los Csis no siempre suman.
 
 Tampoco es el mismo número antes y después de la hora. El costo marginal del
 predespacho es ex ante y de carácter indicativo (3.1.14, 10.5.7): sirve para
