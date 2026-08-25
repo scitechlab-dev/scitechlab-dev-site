@@ -296,17 +296,17 @@ Lo que la serie usa de la ley:
 
 | Documento | Dónde está | Qué pasó |
 |---|---|---|
-| **Ley General de Electricidad** | [siget.gob.sv/descargas](https://www.siget.gob.sv/descargas/) → *Leyes* | El catálogo confirma que existe (actualizado 05/02/2021, 188.94 KB), pero la página de descarga es una ficha; no expone el archivo a una petición directa. Hay que bajarlo desde el navegador |
-| Ley General de Electricidad (copia) | asamblea.gob.sv | Error de certificado TLS: *unable to verify the first certificate* |
-| **Reglamento de la Ley General de Electricidad** | [siget.gob.sv/descargas](https://www.siget.gob.sv/descargas/) → *Reglamentos* | Mismo caso que la ley |
+| **Reglamento de la Ley General de Electricidad** | [siget.gob.sv/descargas](https://www.siget.gob.sv/descargas/) → *Reglamentos* | El catálogo confirma que existe, pero la página de descarga es una ficha y no expone el archivo a una petición directa. Hay que bajarlo desde el navegador |
 | Reglamento de la LGE (copia a sep-2018) | sc.gob.sv | HTTP 403 Forbidden |
 | Reglamento de Operación de 1999 (**derogado**) | [jurisprudencia.gob.sv](https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/1990-1999/1999/07/89141.PDF) | Localizado, no abierto. Sirve sólo como contraste histórico para el artículo 1 |
 | Documento de justificación de modificación a Anexos 4 y 6 del ROBCP | [siget.gob.sv](https://www.siget.gob.sv/wp-content/uploads/2021/11/Anexo-I-Documento-de-justificacion-de-propuesta-de-modificacion-Anexos-4-y-6-ROBCP.pdf) | Localizado, no abierto. Relevante para el artículo 3 |
 | Programación diaria, semanal y anual de la UT | [ut.com.sv](https://www.ut.com.sv/programacion-semanal1) | Las páginas existen y ofrecen archivo histórico por año (2010–2030), pero no verifiqué qué contienen los archivos ni en qué formato |
 
-Las dos primeras filas importan: **la ley y su reglamento son la base de todo el
-artículo 1 y no los pude leer.** Bajalos vos desde el navegador y los movemos al
-bloque A.
+La primera fila es la que importa. **La ley ya está leída y vive en el bloque
+A.6**, bajada del mismo catálogo desde el navegador. El que sigue pendiente es su
+reglamento, y pesa porque la propia ley le delega la forma de la compensación por
+energía no entregada (art. 75), la metodología de los precios del pliego
+(art. 79) y el tratamiento del desajuste financiero (art. 78).
 
 ## C. Necesarios y sin rastro público
 
@@ -332,12 +332,12 @@ Esta es la lista para pedir directamente a la UT, a SIGET o al CNE.
    como documento ni en CRIE ni en EOR. Es el instrumento fundacional del MER y
    debería estar publicado; probablemente está, y no di con él.
 5. **Procedimiento de Detalle Complementario (PDC).** Referenciado
-   repetidamente, entró en vigencia en 2013 junto al RMER, pero no localicé el
+   repetidamente, entró en vigencia en 2013 junto al RMER, pero no está localizado el
    documento.
-6. **Acuerdos individuales de SIGET y de la DGEHM.** Tengo los **números y
-   fechas exactas de los ~30 acuerdos** desde la introducción del ROBCP, pero no
-   encontré un repositorio público donde abrirlos uno por uno. Para citar la
-   redacción de una reforma concreta hay que solicitarlos.
+6. **Acuerdos individuales de SIGET y de la DGEHM.** Los **números y fechas
+   exactas de los ~30 acuerdos** están registrados desde la introducción del
+   ROBCP, pero no hay un repositorio público donde abrirlos uno por uno. Para
+   citar la redacción de una reforma concreta hay que solicitarlos.
 7. **Ejemplos de Documento de Transacciones Económicas (DTE).** El numeral 18.7
    lo define; no hay ejemplos públicos.
 8. **Resoluciones de SIGET sobre estructuras de costos variables como acto
