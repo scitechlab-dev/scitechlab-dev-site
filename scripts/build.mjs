@@ -670,6 +670,8 @@ async function main() {
   const urls = [
     `  <url><loc>${SITE}/</loc></url>`,
     `  <url><loc>${SITE}/articles/</loc></url>`,
+    ...pages.map((p) => `  <url><loc>${SITE}/${p.slug}</loc></url>`),
+    ...series.map((s) => `  <url><loc>${SITE}/serie/${s.slug}</loc></url>`),
     ...posts.map(
       (p) =>
         `  <url><loc>${SITE}/articles/${p.slug}</loc><lastmod>${p.date}</lastmod></url>`
