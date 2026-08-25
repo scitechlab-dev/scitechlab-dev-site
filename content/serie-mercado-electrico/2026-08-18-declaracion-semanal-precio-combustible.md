@@ -297,8 +297,8 @@ un reporte **diario**, y el régimen de infracciones del anexo sanciona no
 proporcionar "los PCpep diarios" en plazo (12.1 a), mientras el numeral que fija
 la obligación operativa habla del jueves antes de las diez (10.1). Las dos
 lecturas son compatibles si el reporte del jueves cubre los días de la semana
-programada, pero el texto no lo dice con esas palabras. Es de las cosas que hay
-que confirmar con la UT antes de afirmarlas.
+programada, pero el texto no lo dice con esas palabras. Queda como punto a
+confirmar con la UT antes de darlo por resuelto.
 
 Para la programación anual la UT no usa el dato semanal sino el promedio de los
 precios utilizados en la actualización de la programación vigente (10.2). Los
@@ -383,12 +383,13 @@ confiabilidad. Dicho sin rodeos: quedarse corto de combustible le baja al
 generador el ingreso por capacidad. La sanción está en la misma moneda que el
 riesgo que crea.
 
-## Cómo yo validaría una declaración
+## Cómo se valida una declaración, punto por punto
 
-Lo que sigue no está en el reglamento como lista. Es mi reconstrucción, en
-orden de criticidad, de lo que el propio texto obliga a verificar. La ordené
-poniendo primero lo que invalida la declaración entera y al final lo que
-solamente merece una alerta.
+El reglamento no trae esta lista escrita como lista. Es la reconstrucción, en
+orden de criticidad, de lo que el propio texto obliga a verificar: primero lo que
+invalida la declaración entera, al final lo que solamente merece una alerta. Cada
+punto lleva el numeral que lo obliga, y el séptimo artículo de la serie convierte
+esta misma lista en código que corre.
 
 1. **Vigencia de la estructura.** ¿Cuál es la estructura de costos aprobada que
    aplica a esta central y este combustible? Si venció y no hay una nueva
@@ -441,30 +442,29 @@ falta de combustible y **reportar datos falsos o erróneos sobre la
 disponibilidad** (12.1). La UT informa al regulador y notifica al participante
 en un plazo no mayor de cinco días hábiles (12.2 y 12.3).
 
-::: nota Lo que me llevo de leer el anexo completo
-El hallazgo que me obligó a reescribir el arranque de este artículo fue el
-numeral 7.4.3.7.1 del Anexo 06, una sola frase al pie de un formulario: el
-precio que se declara ahí no se usa para la programación. Yo había armado todo
-el borrador sobre el supuesto contrario, que es el supuesto natural. Sirve de
-recordatorio de que en un cuerpo normativo de mil páginas la frase que cambia
-el sentido de un proceso puede estar en la letra chica de un formato, no en el
-capítulo que lleva el nombre del proceso.
+::: nota Para retener: los tres errores frecuentes de este anexo
+Son tres confusiones que cambian el sentido de todo el proceso y que el texto
+del reglamento resuelve en lugares poco visibles.
 
-Venía además con una idea equivocada del plan de estudio con el que empecé: que
-la revisión de las estructuras de combustible era anual. El texto dice dos años,
-tanto para la estructura de costos (4.3) como para las curvas de consumo de
-calor (Anexo 16, 2.2). Lo anual es otra cosa: la actualización de la
-programación de la operación, que corre con periodicidad mensual sobre un
-horizonte anual. Confundir las dos cadencias hace que todo el encadenamiento se
-cuente mal.
+**Creer que el precio declarado despacha.** No lo hace. La frase que lo dice no
+está en el capítulo que lleva el nombre del proceso, sino al pie de un
+formulario: numeral 7.4.3.7.1 del Anexo 06. En un cuerpo normativo de cientos
+de páginas, la letra chica de un formato puede invertir el sentido de un
+mecanismo entero, y este es el ejemplo.
 
-Lo segundo que no esperaba es cuánto del diseño descansa en instrumentación y
-no en documentos. Las tablas de calibración de tanques, los 60 °F, la norma
-ISO 13443 y los instrumentos certificados no son formalismos: son las
+**Creer que las estructuras se revisan cada año.** El texto dice **dos años**,
+tanto para la estructura de costos del combustible (Anexo 04, 4.3) como para las
+curvas de consumo de calor (Anexo 16, 2.2). Lo anual es otra cosa: la
+actualización de la programación de la operación, que corre con periodicidad
+mensual sobre un horizonte anual. Confundir las dos cadencias desordena todo el
+encadenamiento.
+
+**Creer que el control es documental.** Buena parte del diseño descansa en
+instrumentación, no en papeles. Las tablas de calibración de tanques, la
+referencia a 60 °F, la norma ISO 13443 y los instrumentos certificados son las
 condiciones que hacen que un inventario declarado sea una cantidad física y no
-una opinión. Viniendo de trabajar con datos de SCADA, esa parte me resulta
-familiar de una forma incómoda. Un dato mal referenciado no se ve mal. Se ve
-perfectamente normal y está mal.
+una opinión. Es la clase de requisito que parece formalismo y no lo es: un dato
+mal referenciado no se ve mal, se ve perfectamente normal y está mal.
 :::
 
 ## Fuentes
