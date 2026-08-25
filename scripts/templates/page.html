@@ -8,9 +8,16 @@
   minus the dated article furniture — no <time>, no topic chip, no "back to
   Writing" link — because these pages are not entries in the archive.
 
-  {{UP}} is the prefix back to the site root: empty for a page at /<slug>, and
+  {{UP}} is the prefix back to the site root: "/" for a page at /<slug>, and
   "../" for one nested under /serie/. Every same-site href and asset path in
   here must go through it, or the page works at one depth and 404s at the other.
+
+  For a root page the prefix is "/" and not the empty string, because three of
+  these links are the root itself or a fragment of it. An empty prefix leaves
+  the brand with an empty href, which a browser resolves to the current page
+  and so reloads instead of going home, and leaves the two nav links as bare
+  fragments pointing at sections that exist only on the home page. Both fail
+  silently, which is how they survived a build and a deploy.
 -->
 <html lang="{{LANG}}">
 <head>

@@ -754,7 +754,7 @@ async function main() {
       .replace(/\{\{SUMMARY\}\}/g, attr(page.summary))
       .replace(/\{\{SLUG\}\}/g, page.slug)
       .replace(/\{\{MATH_HEAD\}\}/g, katexHead(page, ''))
-      .replace(/\{\{UP\}\}/g, '')
+      .replace(/\{\{UP\}\}/g, '/')
       .replace(/\{\{STYLE_V\}\}/g, v.style)
       .replace(/\{\{MAIN_V\}\}/g, v.main);
     await writeFile(path.join(DIST, `${page.slug}.html`), localise(html, page.lang));
