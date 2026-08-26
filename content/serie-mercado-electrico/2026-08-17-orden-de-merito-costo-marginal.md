@@ -1,11 +1,11 @@
 ---
 title: "Mercado mayorista II. Del orden de mérito al precio"
-summary: "Cómo se construye la curva de oferta agregada y qué la rompe: un despacho de cuatro unidades resuelto a mano, con mínimo técnico y restricción de transmisión, y el salto del costo marginal al precio del MRS según el Anexo 09 del ROBCP."
+summary: "Cómo se construye la curva de oferta agregada y qué la rompe: un despacho de cuatro unidades resuelto a mano, el salto del costo marginal al precio del MRS según el Anexo 09 del ROBCP, y cuánto termina cobrando el generador."
 date: 2026-08-17
 lang: es
 topic: Mercado eléctrico
 categories: [mercado-electrico]
-tags: [costo-marginal, despacho]
+tags: [costo-marginal, despacho, liquidacion, dte, robcp]
 estado: publicado
 math: true
 ---
@@ -396,6 +396,86 @@ costos declarados, la replicabilidad del despacho es la contraparte operativa
 de la auditoría: el mismo diseño que obliga a declarar obliga a que el
 resultado se pueda verificar desde afuera.
 
+## Costos declarados, no ofertas libres
+
+El nombre completo del reglamento dice qué clase de mercado administra:
+Reglamento de Operación del Sistema de Transmisión y del Mercado Mayorista
+**Basado en Costos de Producción**. La escalera de la sección anterior no se
+arma con lo que cada generador querría cobrar, sino con lo que le cuesta
+producir, declarado en los formatos del reglamento y validado por la UT. El
+diseño alternativo, el de los mercados basados en ofertas, ordena exactamente la
+misma escalera, pero cada escalón es el precio que la unidad ofrece, y ese
+precio es una decisión comercial.
+
+La diferencia no está en la regla de precio. En los dos diseños paga la última
+unidad que entra y cobran todas por igual. La diferencia está en qué número
+forma el escalón, y de ahí sale todo lo demás: un generador inframarginal no
+gana su escalón sino el precio de la marginal, así que en un mercado de ofertas
+tiene un incentivo directo a subir su oferta hasta justo debajo del siguiente
+escalón. Mientras no lo pase, el orden de despacho no cambia y la unidad
+marginal es la misma, pero el precio que paga la demanda sube, y sube para toda
+la energía de la hora, no solo para la del que ofertó de más.
+
+<figure class="fig fig-wide">
+  <img src="../assets/figures/costos-vs-ofertas.gif"
+       alt="Dos curvas de oferta lado a lado sobre el mismo parque de solar e hidro a 0, gas a 70 y diésel a 150 USD/MWh. En el panel izquierdo, el mercado basado en costos, los escalones son los costos reales y el precio queda en 70 o en 150 según dónde caiga la demanda. En el panel derecho, el mercado basado en ofertas, el escalón del gas y el del diésel crecen con un sobreprecio sombreado que sube hasta 120 y 240 USD/MWh, y la línea de precio sube con ellos aunque el orden de despacho no cambie."
+       width="1589" height="886" loading="lazy" />
+  <figcaption>El mismo parque despachado bajo las dos reglas. A la izquierda el
+  escalón es el costo variable auditado y el precio se queda pegado al costo de
+  la unidad marginal. A la derecha cada unidad oferta, el sobreprecio se apila
+  sobre su costo real y la línea de precio sube con él, con el mismo orden de
+  mérito y la misma unidad marginal: lo que cambia no es quién genera, sino
+  cuánto paga la demanda por lo mismo. <strong>Las cifras son ilustrativas y no
+  corresponden a El Salvador</strong>: el parque de tres tecnologías y los
+  sobreprecios son un ejemplo para mostrar el mecanismo.</figcaption>
+</figure>
+
+Que acá el escalón sea un costo y no una oferta no es una preferencia de la UT,
+es un mandato: mientras no existan condiciones de competencia en el MRS, el
+artículo 112-E de la LGE obliga a que la metodología se base en costos. De ahí
+que la serie entera se ocupe tanto de cómo se declara y se valida un costo
+variable. En un mercado de ofertas ese número sería una estrategia comercial y
+la regulación miraría hacia el abuso de posición dominante. Acá es un dato
+declarado bajo formato, contrastado contra referencias y replicable desde
+afuera, y toda la integridad del precio descansa en eso.
+
+## Cuánto termina cobrando el generador
+
+El orden de mérito responde quién genera y en qué orden. Cuánto cobra es una
+cuenta aparte, y no sale solo del costo variable que lo ordenó.
+
+Por la energía, el punto de partida es lo ya dicho: cada MWh inyectado se
+valoriza al precio del MRS, no al costo propio. Pero casi ninguna inyección se
+liquida entera contra ese precio, porque la mayor parte de la energía está
+comprometida en contratos y el reglamento los trata como compromisos puramente
+financieros. El despacho se hace por costos variables y valor del agua, con
+independencia de lo pactado (4.2.2), y las transacciones bilaterales no tienen
+ningún efecto en la determinación del despacho (4.5.1). Lo que el MRS liquida es
+la diferencia: el generador que inyecta menos de lo comprometido queda como
+comprador en el MRS por el faltante, y el que inyecta de más como vendedor por
+el excedente, ambos valorados al costo marginal de operación (4.8.3 y 4.8.4). El
+precio del contrato lo cobra de su contraparte; el spot solo salda el desvío.
+
+Sobre esa cuenta se apilan las demás. Al cierre de cada mes la UT integra para
+cada participante un Documento de Transacciones Económicas, y su resultado neto
+suma el resultado en el MRS, el balance de capacidad firme, los servicios
+auxiliares, las pérdidas, los cargos por congestión, las compensaciones y cargos
+por generación obligada y energía no servida, las inyecciones de unidades en
+pruebas, los cargos del sistema y la interiorización de las transacciones
+regionales (Anexo 14, 2.1). Ahí entra lo que el precio horario no paga: la
+capacidad firme retribuye estar disponible aunque no se despache (Anexo 15,
+1.2 a, y artículo 10-A de la LGE), los servicios auxiliares retribuyen regular
+frecuencia y voltaje, y la compensación del Anexo 09 cubre a la unidad obligada
+a operar por encima del costo marginal.
+
+La respuesta corta, entonces, tiene dos mitades que conviene no confundir. El
+costo variable declarado decide el orden y, si la unidad resulta marginal, el
+precio de todos. Lo que el generador cobra es el precio del MRS por su energía,
+más o menos el desvío contra sus contratos, más lo que le sumen o le resten los
+demás conceptos del DTE. Un generador barato puede cobrar mucho más que su costo
+por la vía de la renta inframarginal, y uno caro obligado a entrar puede
+terminar cobrando su costo declarado y nada más.
+
 Y ahí queda abierta la pregunta que ordena el resto de la serie. Todo este
 mecanismo toma los costos variables como dato de entrada, y ese dato no lo
 mide nadie en tiempo real: lo declara el generador y lo valida la UT contra
@@ -403,8 +483,8 @@ una estructura aprobada. Cómo llega ese número, con qué respaldo y contra qu�
 referencia se contrasta, es el artículo siguiente.
 
 
-::: nota Para retener: las seis reglas que gobiernan el precio
-Todo el artículo se comprime en seis afirmaciones. Si quedan estas, el resto se
+::: nota Para retener: las ocho reglas que gobiernan el precio
+Todo el artículo se comprime en ocho afirmaciones. Si quedan estas, el resto se
 reconstruye.
 
 1. **El precio lo fija la última unidad que entra, no el promedio.** Ese es el
@@ -423,6 +503,13 @@ reconstruye.
 6. **El número que liquida no es el que se anunció.** El del predespacho es
    indicativo; el que se cobra es el ex post, recalculado con las lecturas reales
    del SIMEC (3.1.14 y 3.8).
+7. **El escalón es un costo auditado, no una oferta.** Un mercado de ofertas
+   ordenaría igual y fijaría el precio igual, pero el escalón sería una decisión
+   comercial. Acá la ley lo impide mientras no haya competencia (LGE, art. 112-E).
+8. **El despacho dice quién genera; el DTE dice cuánto cobra.** Al resultado del
+   MRS se le suman capacidad firme, servicios auxiliares, pérdidas, congestión y
+   compensaciones, y los contratos solo se saldan por su desvío (Anexo 14, 2.1;
+   ROBCP 4.8.3 y 4.8.4).
 :::
 
 ## Fuentes
@@ -433,14 +520,24 @@ reconstruye.
   [PDF](https://www.ut.com.sv/documents/10100/279097/ROBCP.pdf/129acc69-cb01-7ed4-7080-88be586df4ec?t=1729522985515).
   Capítulo 10, Programación Diaria o Predespacho: objeto de mínimo costo
   (10.1.1), el SAM y sus requisitos (10.2.1), replicabilidad del predespacho
-  (10.3.7) y costo marginal por MRS con congestión (10.6). Copia local:
-  `normativa/robcp.pdf`. Consultado el 22 de agosto de 2026.
+  (10.3.7) y costo marginal por MRS con congestión (10.6). Capítulo 4, Mercado
+  de Contratos: las transacciones son compromisos financieros y el despacho se
+  hace por costos variables con independencia de ellas (4.2.2 y 4.5.1), y las
+  desviaciones entre lo inyectado y lo comprometido se valoran al costo marginal
+  de operación (4.8.3 y 4.8.4). Copia local: `normativa/robcp.pdf`. Consultado el
+  22 de agosto de 2026.
 - **ROBCP, Anexos**, misma versión. Anexo 09, Cálculo del Precio en el MRS:
   definición del costo marginal (3.1.1), costos variables por tecnología
   (3.1.5 a 3.1.13), premisas del cálculo (3.1.15), precio igual a costo
   marginal más cargos del sistema (3.3.1), congestión (3.5), reserva faltante
   (3.6) y emergencia (3.7). Copia local: `normativa/robcp-anexos.pdf`.
   Consultado el 22 de agosto de 2026.
+- **ROBCP, Anexos**, misma versión. Anexo 14, Administración de los Procesos de
+  Facturación y Liquidación: componentes del resultado neto mensual de cada
+  participante en el Documento de Transacciones Económicas (2.1). Anexo 15,
+  Determinación de la Capacidad Firme: la capacidad firme se remunera a los
+  generadores por procedimiento propio (1.2 a). Copia local:
+  `normativa/robcp-anexos.pdf`. Consultado el 25 de agosto de 2026.
 - **ROBCP, Anexos**, misma versión. Anexo 11, Servicios Auxiliares: aporte
   obligatorio del 3 % de reserva de potencia activa para regulación primaria de
   frecuencia (2.1). Copia local: `normativa/robcp-anexos.pdf`. Consultado el 22
